@@ -37,8 +37,8 @@ SiliconPlay is free. Optionally support the project
  controls:{t:'Controls.png',w:400,h:360,html:`<div class="keysbig"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></div><p style="text-align:center">Move with <b>WASD</b>. Attack with <b>J</b>. Skills on <b>1–6</b>.</p><div class="krow"><kbd>J</kbd><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd><kbd>5</kbd><kbd>6</kbd></div><p style="text-align:center;color:var(--mut);margin-top:12px">Remap keys or use a gamepad from the overlay.</p>`},
  donate:{t:'Donate.app',w:360,h:330,html:`<h3 style="font-size:20px">Free. Optionally support the project.</h3><p style="color:var(--mut);margin-top:6px">Supporters get an ad-free app. The ad never covers your game.</p><div class="tiers"><a class="main" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2GR38954JS846013SNLPWRTY" target="_blank" rel="noopener"><b>$2/month</b><span>No ads</span></a><a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-1L50440531901720SNLPWR5Q" target="_blank" rel="noopener"><b>$5/month</b><span>No ads + early builds</span></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=siliconplay.app@gmail.com&amp;item_name=SiliconPlay&amp;currency_code=USD&amp;no_recurring=1" target="_blank" rel="noopener"><b>One time</b><span>Any amount</span></a></div>`},
  faq:{t:'FAQ.txt',w:470,h:340,cls:'mono',html:`<span class="h">Q: Which Macs does it work on?</span>
-A: Mac computers with Apple silicon (M1, M2, M3, M4)
-   running macOS 14 or later. Intel Macs: no.
+A: Mac computers with Apple silicon (M1, M2, M3, M4, M5,
+   and newer) running macOS 14 or later. Intel Macs: no.
 
 <span class="h">Q: Is my game account safe?</span>
 A: SiliconPlay includes optional root and does not
