@@ -38,6 +38,8 @@ button{font:inherit;color:inherit}
 .drop hr{border:0;border-top:1px solid var(--winb);margin:4px 6px}
 .mb-right{margin-left:auto;display:flex;align-items:center;gap:12px}
 .mb-theme{background:none;border:0;display:flex;padding:3px;border-radius:5px;cursor:pointer}.mb-theme:hover{background:rgba(127,127,127,.25)}
+.mb-link{padding:3px 9px;border-radius:5px;color:var(--fg);text-decoration:none}
+.mb-link:hover,.mb-link:focus-visible{background:rgba(127,127,127,.25)}
 #clock{font-variant-numeric:tabular-nums}
 /* desktop icons */
 .icons{position:absolute;top:46px;right:22px;display:grid;grid-auto-flow:row;gap:14px;z-index:1}
@@ -387,3 +389,23 @@ body.docpage{background:var(--bg)}
 #features ul{display:grid;grid-template-columns:1fr 1fr;gap:12px;list-style:none;padding:0}
 #features li{margin:0;padding:14px 14px 12px;border:1px solid var(--winb);border-radius:12px;background:var(--win)}
 @media (max-width:640px){#features ul{grid-template-columns:1fr}#seo h1{font-size:34px}}
+
+/* blog */
+.doc.article{font-size:17px;line-height:1.65}
+.doc.article h1{font-size:clamp(28px,5vw,40px)}
+.doc .byline{color:var(--mut);font-size:14px;margin:0 0 18px}
+.doc .post-list{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:12px}
+.doc .post-list a{display:block;padding:16px;border:1px solid var(--winb);border-radius:var(--r-win);color:inherit;text-decoration:none}
+.doc .post-list a:hover,.doc .post-list a:focus-visible{border-color:var(--accent)}
+.doc .post-list b{display:block;font-size:18px;letter-spacing:-.02em;line-height:1.3}
+.doc .post-list small,.doc .post-list span{display:block;margin-top:6px}
+.doc .post-list small{color:var(--mut);font-size:13px}
+.doc ol{padding-left:1.2em}
+.doc .table-wrap{overflow-x:auto;margin:12px 0 4px}
+.doc table{width:100%;border-collapse:collapse;font-size:15px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--winb);vertical-align:top}
+.doc th{font-size:13px;font-weight:600}
+.doc caption{text-align:left;color:var(--mut);font-size:13px;margin-bottom:6px}
+.doc a.cta{display:inline-block;margin-top:8px;padding:10px 16px;border-radius:var(--r-ctl);background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+.doc a.cta:hover{filter:brightness(1.06)}
+.doc .more{margin-top:28px}
