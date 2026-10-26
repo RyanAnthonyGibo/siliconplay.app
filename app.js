@@ -2,7 +2,7 @@ const CONTACT_EMAIL = "katzdoll@gmail.com"; // contact address used by every env
 (()=>{
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const root=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
-const DL='#DOWNLOAD_URL';
+const DL='https://github.com/RyanAnthonyGibo/siliconplay.app/releases/latest/download/SiliconPlay.dmg'; // #DOWNLOAD_URL
 const C={
  readme:{t:'readme.md',w:520,h:470,cls:'mono',html:`<span class="h"># SiliconPlay</span>
 Android emulator for macOS. Play Android games on
@@ -49,16 +49,23 @@ A: No. Licenses for third-party components are
 
 <span class="h">Q: Is it free?</span>
 A: Yes. Ad-free from US$2/month.`},
- licenses:{t:'LICENSES.txt',w:460,h:260,cls:'mono',html:`Open-source notices
+ licenses:{t:'LICENSES.txt',w:480,h:420,cls:'mono',html:`Open-source notices
 ===================
 
-SiliconPlay includes third-party open-source
-components. Their licenses and notices ship with
-the app and are listed here:
+SiliconPlay includes third-party components.
+Full notices are on the website and are also
+bundled inside the app.
 
-→ <a href="#LICENSES">Licenses &amp; open-source notices</a>
+<span class="h">Android Emulator / Android SDK</span>
+Apache License 2.0, and the Android SDK terms.
 
-<a href="#PRIVACY">Privacy</a> · <a href="mailto:${CONTACT_EMAIL}">Contact</a>`},
+<span class="h">QEMU</span>
+Included as part of the emulator.
+GNU GPL version 2.
+
+→ <a href="licenses.html">Licenses &amp; open-source notices</a>
+
+<a href="privacy.html">Privacy</a> · <a href="mailto:${CONTACT_EMAIL}">Contact</a>`},
  terminal:{t:'Terminal — zsh',w:540,h:300,cls:'term',html:`<span class="p">~ %</span> siliconplay --version
 SiliconPlay 1.0
   guest      Android 16 (arm64)
