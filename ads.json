@@ -1,0 +1,20 @@
+{
+  "ads": [
+    {
+      "id": "support-monthly",
+      "imageURL": "https://siliconplay.app/ads/support.png",
+      "title": "Support SiliconPlay from US$2/month",
+      "subtitle": "A supporter key removes the banner.",
+      "clickURL": "https://siliconplay.app/#support",
+      "weight": 1
+    },
+    {
+      "id": "siliconplay-mac",
+      "imageURL": "https://siliconplay.app/ads/mac.png",
+      "title": "SiliconPlay for Mac",
+      "subtitle": "Android games on Apple Silicon.",
+      "clickURL": "https://siliconplay.app/",
+      "weight": 2
+    }
+  ]
+}
