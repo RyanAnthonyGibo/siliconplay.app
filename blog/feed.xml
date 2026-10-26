@@ -8,12 +8,12 @@
     <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>The Free Android Emulator for Mac M1, M2, M3 and M4</title>
+      <title>Free Android Emulator for Mac M1, M2, M3, M4 &amp; M5 (and newer)</title>
       <link>https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4</link>
       <guid isPermaLink="true">https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Run Android games and apps natively on Apple Silicon. SiliconPlay is free, ARM64, with Metal graphics, keyboard and gamepad controls, and optional root for developers.</description>
+      <description>Free Android emulator for Mac M1, M2, M3, M4, and M5 (and newer). Native ARM64, Metal graphics, keyboard and gamepad controls, optional root for developers.</description>
     </item>
     <item>
       <title>Looking for a BlueStacks Alternative on Mac? Try SiliconPlay</title>
@@ -21,7 +21,7 @@
       <guid isPermaLink="true">https://siliconplay.app/blog/bluestacks-alternative-mac</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Looking for a BlueStacks alternative on Mac? SiliconPlay is a free, native ARM64 Android emulator for M1–M4 with Metal graphics and optional root.</description>
+      <description>Looking for a BlueStacks alternative on Mac? SiliconPlay is a free, native ARM64 Android emulator for M1, M2, M3, M4, M5, and newer chips, with Metal graphics and optional root.</description>
     </item>
   </channel>
 </rss>
