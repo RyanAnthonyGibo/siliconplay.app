@@ -1,15 +1,42 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SiliconPlay — Android emulator for macOS</title>
-<meta name="description" content="SiliconPlay runs Android games on Mac computers with Apple silicon. Native ARM64, Metal graphics, keyboard and gamepad controls. Free, ad-free from $2/month.">
+<title>SiliconPlay — Free Android emulator for Apple Silicon Macs (M1-M4)</title>
+<meta name="description" content="Free Android emulator for Apple Silicon Macs (M1-M4). SiliconPlay runs Android games and development on native ARM64 with Metal graphics.">
 <meta name="color-scheme" content="light dark">
-<meta property="og:title" content="SiliconPlay">
-<meta property="og:description" content="The Android emulator for Mac.">
-<meta property="og:url" content="https://siliconplay.app">
+<link rel="canonical" href="https://siliconplay.app/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:title" content="SiliconPlay — Free Android emulator for Apple Silicon Macs (M1-M4)">
+<meta property="og:description" content="Free Android emulator for Apple Silicon Macs (M1-M4). SiliconPlay runs Android games and development on native ARM64 with Metal graphics.">
+<meta property="og:url" content="https://siliconplay.app/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://siliconplay.app/assets/icon-512.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SiliconPlay — Free Android emulator for Apple Silicon Macs (M1-M4)">
+<meta name="twitter:description" content="Free Android emulator for Apple Silicon Macs (M1-M4). SiliconPlay runs Android games and development on native ARM64 with Metal graphics.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SiliconPlay",
+  "operatingSystem": "macOS",
+  "applicationCategory": "DeveloperApplication",
+  "url": "https://siliconplay.app/",
+  "downloadUrl": "https://github.com/RyanAnthonyGibo/siliconplay.app/releases/latest/download/SiliconPlay.dmg",
+  "image": "https://siliconplay.app/assets/og.png",
+  "description": "Free Android emulator for Apple Silicon Macs (M1-M4). SiliconPlay runs Android games and development on native ARM64 with Metal graphics.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -56,7 +83,7 @@
       <rect x="22" y="26" width="12" height="12" rx="3"/>
       <rect x="35" y="26" width="12" height="12" rx="3"/>
     </g>
-    <g fill="#f4f6fb" font-family="Inter,system-ui,sans-serif" font-size="7.5" font-weight="650" text-anchor="middle">
+    <g fill="#f4f6fb" font-family="Inter,system-ui,sans-serif" font-size="7.5" text-anchor="middle" style="font-weight:650">
       <text x="28" y="19.4">W</text>
       <text x="15" y="34.4">A</text>
       <text x="28" y="34.4">S</text>
@@ -65,7 +92,7 @@
   </symbol>
   <symbol id="ic-donate" viewBox="0 0 56 56">
     <rect width="56" height="56" rx="14" fill="url(#gDon)"/>
-    <text x="28" y="31" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-size="26" font-weight="650">$</text>
+    <text x="28" y="31" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-size="26" style="font-weight:650">$</text>
   </symbol>
   <symbol id="ic-term" viewBox="0 0 56 56">
     <rect width="56" height="56" rx="14" fill="#14151c"/>
@@ -110,9 +137,9 @@
 <!-- Indexable / no-JS content -->
 <main id="seo">
   <header class="seo-hero">
-    <p class="eyebrow">Android emulator for macOS</p>
+    <p class="eyebrow">Free Android emulator for Apple Silicon Macs</p>
     <h1>SiliconPlay</h1>
-    <p>SiliconPlay runs Android games on Mac computers with Apple silicon. Android runs directly on the Mac’s ARM cores through Apple’s Hypervisor framework, and graphics are drawn by Metal. Nothing is translated from x86.</p>
+    <p>SiliconPlay is a free Android emulator for Apple Silicon Macs (M1-M4). It runs Android games and Android development directly on the Mac’s ARM cores through Apple’s Hypervisor framework, and graphics are drawn by Metal. Nothing is translated from x86.</p>
     <p><a class="seo-cta" href="https://github.com/RyanAnthonyGibo/siliconplay.app/releases/latest/download/SiliconPlay.dmg">Download SiliconPlay for Mac</a></p>
   </header>
   <section id="features"><h2>Features</h2><ul>
@@ -123,11 +150,12 @@
   <section id="specs"><h2>Measured on a MacBook Pro with M3 Max</h2><ul>
     <li>Up to 60 fps in a demanding 3D game.</li><li>Render resolution up to 2560×1440.</li><li>7–43 ms measured key-to-game input latency.</li></ul>
     <p>Requires a Mac with Apple silicon (M1 or later) and macOS 14 or later. Results vary by game, Mac and settings.</p></section>
-  <section id="donate"><h2>Free. Support it from $2/month.</h2><p>Supporters get an ad-free app. The ad never covers your game.</p>
+  <section id="donate"><h2>Free. Optionally support the project.</h2><p>Supporters get an ad-free app. The ad never covers your game.</p>
     <p><a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2GR38954JS846013SNLPWRTY" target="_blank" rel="noopener">$2/month</a> · <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-1L50440531901720SNLPWR5Q" target="_blank" rel="noopener">$5/month</a> · <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=siliconplay.app@gmail.com&amp;item_name=SiliconPlay&amp;currency_code=USD&amp;no_recurring=1" target="_blank" rel="noopener">One time</a></p></section>
   <section id="faq"><h2>FAQ</h2>
     <h3>Which Macs does it work on?</h3><p>Mac computers with Apple silicon (M1, M2, M3, M4) running macOS 14 or later.</p>
-    <h3>Is my game account safe?</h3><p>SiliconPlay doesn’t root Android or modify games. Follow each game’s terms of service.</p>
+    <h3>Is my game account safe?</h3><p>SiliconPlay includes optional root and does not modify games. Follow each game’s terms of service.</p>
+    <h3>Is it free?</h3><p>Yes. SiliconPlay is free. Supporting the project is optional.</p>
     <h3>Is the source code available?</h3><p>No. Licenses for third-party components are included with the app.</p></section>
   <section id="projects"><h2>More from Ryan</h2><ul>
     <li><a href="https://github.com/RyanAnthonyGibo" target="_blank" rel="noopener">GitHub</a> — Ryan’s profile.</li>
@@ -139,10 +167,10 @@
 </main>
 
 <!-- Desktop -->
-<div id="desk" aria-label="SiliconPlay desktop">
+<div id="desk" role="region" aria-label="SiliconPlay desktop">
   <div class="wall" aria-hidden="true"></div>
-  <header class="menubar" role="menubar">
-    <span class="mb-logo" aria-hidden="true"><img src="assets/favicon-32.png" alt="" width="14" height="14"></span>
+  <div class="menubar" role="menubar">
+    <span class="mb-logo" aria-hidden="true"><img src="assets/favicon-32.png" alt="SiliconPlay icon" width="14" height="14"></span>
     <div class="menu"><button class="mb-app" aria-haspopup="true" aria-expanded="false">SiliconPlay</button>
       <div class="drop" role="menu"><a role="menuitem" href="#" data-open="readme">About SiliconPlay</a><a role="menuitem" href="https://github.com/RyanAnthonyGibo/siliconplay.app/releases/latest/download/SiliconPlay.dmg">Download for Mac…</a><hr><a role="menuitem" href="#" data-open="donate">Donate…</a></div></div>
     <div class="menu"><button aria-haspopup="true" aria-expanded="false">File</button>
@@ -153,8 +181,8 @@
       <div class="drop" role="menu"><a role="menuitem" href="#" data-theme-toggle>Toggle light / dark</a><a role="menuitem" href="#" data-open="controls">Controls</a><a role="menuitem" href="#" data-open="terminal">Terminal</a></div></div>
     <div class="menu"><button aria-haspopup="true" aria-expanded="false">Help</button>
       <div class="drop" role="menu"><a role="menuitem" href="#" data-open="faq">FAQ</a><a role="menuitem" href="licenses.html">Licenses &amp; open-source notices</a><a role="menuitem" href="mailto:katzdoll@gmail.com">Contact</a><a role="menuitem" href="privacy.html">Privacy</a></div></div>
-    <span class="mb-right"><button class="mb-theme" data-theme-toggle aria-label="Toggle light or dark appearance"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button><time id="clock" aria-live="off"></time></span>
-  </header>
+    <span class="mb-right"><button class="mb-theme" data-theme-toggle aria-label="Toggle light or dark appearance"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button><span id="clock" aria-live="off"></span></span>
+  </div>
 
   <div class="icons" role="listbox" aria-label="Desktop files">
     <button class="dicon" role="option" data-win="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-doc"/></svg><b class="doc-tag">MD</b></span><span class="lbl">readme.md</span></button>
@@ -170,7 +198,7 @@
 
   <section class="hero" aria-label="About SiliconPlay">
     <div class="hero-top">
-      <img src="assets/icon-tile.png" width="64" height="64" alt="">
+      <img src="assets/icon-tile.png" width="64" height="64" alt="SiliconPlay app icon">
       <div>
         <p class="eyebrow">Android emulator for macOS</p>
         <p class="hero-title">SiliconPlay</p>
@@ -196,18 +224,18 @@
     <button class="dk" data-win="trash" aria-label="Trash"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-trash"/></svg></span></button>
     <div class="sp-wrap">
       <a class="bubble" href="https://github.com/RyanAnthonyGibo/siliconplay.app/releases/latest/download/SiliconPlay.dmg" data-win="installer"><b>Download SiliconPlay</b><br>The Android emulator for Mac.</a>
-      <button class="dk sp" data-win="installer" aria-label="SiliconPlay: download"><img src="assets/icon-tile.png" alt="" width="60" height="60"></button>
+      <button class="dk sp" data-win="installer" aria-label="SiliconPlay: download"><img src="assets/icon-tile.png" alt="SiliconPlay app icon in the Dock" width="60" height="60"></button>
     </div>
   </nav>
 </div>
 
 <!-- Phone -->
-<div id="phone" aria-label="SiliconPlay phone home screen">
+<div id="phone" role="region" aria-label="SiliconPlay phone home screen">
   <div class="wall" aria-hidden="true"></div>
   <div class="frame">
-    <div class="status"><time id="pclock"></time><span class="pill-cam" aria-hidden="true"></span><span class="sig" aria-hidden="true">●●●</span></div>
+    <div class="status"><span id="pclock"></span><span class="pill-cam" aria-hidden="true"></span><span class="sig" aria-hidden="true">●●●</span></div>
     <section class="phero" aria-label="About SiliconPlay">
-      <img src="assets/icon-tile.png" width="40" height="40" alt="">
+      <img src="assets/icon-tile.png" width="40" height="40" alt="SiliconPlay app icon on iPhone">
       <div><b>SiliconPlay</b><small>Android games on Apple silicon</small></div>
       <ul>
         <li>Native ARM64</li>
@@ -216,7 +244,7 @@
       </ul>
     </section>
     <div class="grid">
-      <button class="app" data-sheet="mac"><img src="assets/icon-tile.png" alt=""><span>SiliconPlay</span></button>
+      <button class="app" data-sheet="mac"><img src="assets/icon-tile.png" alt="SiliconPlay home screen icon"><span>SiliconPlay</span></button>
       <button class="app" data-sheet="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-doc"/></svg><b class="doc-tag">MD</b></span><span>Readme</span></button>
       <button class="app" data-sheet="controls"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-keys"/></svg></span><span>Controls</span></button>
       <button class="app" data-sheet="donate"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span><span>Donate</span></button>
@@ -227,17 +255,17 @@
       <button class="app" data-theme-toggle><span class="gl gl-theme"><svg viewBox="0 0 56 56"><use href="#ic-theme"/></svg></span><span>Appearance</span></button>
     </div>
     <div class="pnote">made in Brazil 🇧🇷</div>
-    <div class="pdock"><button class="app" data-sheet="mac"><img src="assets/icon-tile.png" alt=""></button><button class="app" data-sheet="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-notes"/></svg></span></button><button class="app" data-sheet="donate"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span></button><a class="app" data-mail href="mailto:katzdoll@gmail.com" aria-label="Email Ryan"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-mail"/></svg></span></a></div>
+    <div class="pdock"><button class="app" data-sheet="mac"><img src="assets/icon-tile.png" alt="SiliconPlay icon in the iPhone dock"></button><button class="app" data-sheet="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-notes"/></svg></span></button><button class="app" data-sheet="donate"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span></button><a class="app" data-mail href="mailto:katzdoll@gmail.com" aria-label="Email Ryan"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-mail"/></svg></span></a></div>
     <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-t" hidden>
       <div class="grab" aria-hidden="true"></div>
-      <header><h2 id="sheet-t"></h2><button class="sclose" aria-label="Close">Done</button></header>
+      <header><h2 id="sheet-t">SiliconPlay</h2><button class="sclose" aria-label="Close">Done</button></header>
       <div class="sbody"></div>
     </section>
     <div class="homebar" aria-hidden="true"></div>
   </div>
 </div>
 
-<div class="intro" id="intro" aria-hidden="true"><img src="assets/icon-tile.png" alt=""><div class="bar"><i></i></div><small>Click to skip</small></div>
+<div class="intro" id="intro" aria-hidden="true"><img src="assets/icon-tile.png" alt="SiliconPlay startup icon"><div class="bar"><i></i></div><small>Click to skip</small></div>
 
 <script src="app.js"></script>
 </body></html>
