@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="100 100 824 824">
+<defs>
+<radialGradient id="bl" cx="100" cy="924" r="754.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF8FC4" stop-opacity=".95"/><stop offset=".3" stop-color="#C46BFF" stop-opacity=".55"/><stop offset=".65" stop-color="#5B3BD9" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<radialGradient id="tr" cx="924" cy="100" r="812.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7FE6FF" stop-opacity=".85"/><stop offset=".28" stop-color="#2C6BFF" stop-opacity=".55"/><stop offset=".65" stop-color="#1A1F8F" stop-opacity=".2"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<linearGradient id="txt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3EEFB"/><stop offset=".55" stop-color="#DCD3EE"/><stop offset="1" stop-color="#C9BEE3"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FF9FD0"/><stop offset=".35" stop-color="#7B61FF" stop-opacity=".25"/><stop offset=".65" stop-color="#2C6BFF" stop-opacity=".25"/><stop offset="1" stop-color="#9FEFFF"/></linearGradient>
+<filter id="b"><feGaussianBlur stdDeviation="8.7"/></filter>
+<clipPath id="c"><path d="M512 100c215 0 300 0 356 56s56 141 56 356 0 300-56 356-141 56-356 56-300 0-356-56-56-141-56-356 0-300 56-356 141-56 356-56z"/></clipPath></defs>
+<g clip-path="url(#c)"><rect width="64" height="64" viewBox="100 100 824 824" fill="#030305"/>
+<rect width="64" height="64" viewBox="100 100 824 824" fill="url(#bl)"/><rect width="64" height="64" viewBox="100 100 824 824" fill="url(#tr)"/>
+<path d="M512 100c215 0 300 0 356 56s56 141 56 356 0 300-56 356-141 56-356 56-300 0-356-56-56-141-56-356 0-300 56-356 141-56 356-56z" fill="none" stroke="url(#edge)" stroke-width="14.5" filter="url(#b)" opacity=".9"/>
+<path d="M512 100c215 0 300 0 356 56s56 141 56 356 0 300-56 356-141 56-356 56-300 0-356-56-56-141-56-356 0-300 56-356 141-56 356-56z" fill="none" stroke="url(#edge)" stroke-width="3" opacity=".8"/>
+<g font-family="Inter" text-anchor="middle" fill="url(#txt)">
+<text x="512" y="660" font-size="500" font-weight="700" letter-spacing="-10">Si</text>
+
+
+
+</g></g></svg>
