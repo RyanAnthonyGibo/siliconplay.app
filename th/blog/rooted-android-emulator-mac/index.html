@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="th"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>อีมูเลเตอร์ Android รูทบน Mac | SiliconPlay</title>
+<meta name="description" content="รูทเป็นทางเลือก ติดตั้งด้วย adb และแท็บเล็ต ARM64 Android 16 บน Apple Silicon ทดสอบ APK โดยไม่ต้องเปิด IDE ค้างไว้">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/th/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/rooted-android-emulator-mac">
+<link rel="alternate" type="application/rss+xml" title="บล็อก SiliconPlay" href="https://siliconplay.app/th/blog/feed.xml">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:title" content="อีมูเลเตอร์ Android รูทบน Mac | SiliconPlay">
+<meta property="og:description" content="รูทเป็นทางเลือก ติดตั้งด้วย adb และแท็บเล็ต ARM64 Android 16 บน Apple Silicon ทดสอบ APK โดยไม่ต้องเปิด IDE ค้างไว้">
+<meta property="og:url" content="https://siliconplay.app/th/blog/rooted-android-emulator-mac">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="th_TH">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ไอคอน SiliconPlay และข้อความอีมูเลเตอร์ Android ฟรีสำหรับ Mac">
+<meta property="article:published_time" content="2026-10-27">
+<meta property="article:modified_time" content="2026-10-27">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="อีมูเลเตอร์ Android รูทบน Mac | SiliconPlay">
+<meta name="twitter:description" content="รูทเป็นทางเลือก ติดตั้งด้วย adb และแท็บเล็ต ARM64 Android 16 บน Apple Silicon ทดสอบ APK โดยไม่ต้องเปิด IDE ค้างไว้">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="ไอคอน SiliconPlay และข้อความอีมูเลเตอร์ Android ฟรีสำหรับ Mac">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "อีมูเลเตอร์ Android ที่รูทได้ สำหรับนักพัฒนาบน Mac Apple Silicon",
+  "description": "รูทเป็นทางเลือก ติดตั้งด้วย adb และแท็บเล็ต ARM64 Android 16 บน Apple Silicon ทดสอบ APK โดยไม่ต้องเปิด IDE ค้างไว้",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "inLanguage": "th",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/th/blog/rooted-android-emulator-mac",
+  "url": "https://siliconplay.app/th/blog/rooted-android-emulator-mac"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ต้องรูทหรือไม่",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ต้อง รูทเป็นทางเลือกและปิดไว้ตั้งแต่ต้น รูทใช้ภาพ Google APIs ภาพ Play ปฏิเสธ adb root และแท็บเล็ตที่รูทแล้วไม่มี Play Store"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ติดตั้ง APK อย่างไร",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "เปิดอินสแตนซ์ก่อน แล้ววางไฟล์ APK หรือกด Command-I เพื่อนำเข้า ติดตั้งด้วย adb ก็ได้ Split APK และไฟล์ XAPK ไม่ถูกติดตั้งในรุ่นนี้ ไฟล์ที่คัดลอกด้วย adb ไปที่ /sdcard/SiliconPlay"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต้องเปิด Android Studio ค้างไว้ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ต้อง ติดตั้ง APK แล้วลองใช้ได้โดยไม่ต้องมี IDE เต็มๆ มาขวาง แอปจะดาวน์โหลดอีมูเลเตอร์ทางการกับภาพ Play arm64 หรือใช้ SDK ที่คุณมีอยู่แล้ว"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ใช้กับ Mac และ macOS รุ่นไหน",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "เฉพาะ Apple Silicon: M1, M2, M3, M4, M5 และรุ่นใหม่กว่า รวม Pro, Max และ Ultra ไม่ใช่ Mac Intel ตอนนี้ทดสอบบน macOS Tahoe"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/th/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "บล็อก",
+      "item": "https://siliconplay.app/th/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "อีมูเลเตอร์ Android ที่รูทได้ สำหรับนักพัฒนาบน Mac Apple Silicon",
+      "item": "https://siliconplay.app/th/blog/rooted-android-emulator-mac"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "ติดตั้ง APK ใน SiliconPlay",
+  "description": "ติดตั้ง APK บนแท็บเล็ต Android 16 ด้วย Command-I การวางไฟล์ หรือ adb",
+  "inLanguage": "th",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "เปิดอินสแตนซ์",
+      "text": "อินสแตนซ์ต้องกำลังรันอยู่ก่อนจะติดตั้ง"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "นำเข้า APK",
+      "text": "วางไฟล์ .apk หรือกด Command-I เพื่อนำเข้า APK แล้วติดตั้งเข้า Android"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "หรือใช้ adb",
+      "text": "ติดตั้งด้วย adb ก็ได้ ไฟล์ที่คัดลอกแบบนั้นไปที่ /sdcard/SiliconPlay"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "รู้ขีดจำกัดไว้",
+      "text": "Split APK และไฟล์ XAPK ไม่ถูกติดตั้งในรุ่นนี้ ภาพไม่ได้เมานต์โฟลเดอร์โฮสต์เป็นดิสก์ที่ใช้งานสด"
+    }
+  ]
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/th/"><img src="/assets/favicon-32.png" width="16" height="16" alt="ไอคอน SiliconPlay"> SiliconPlay</a> · <a href="/th/blog/">บล็อก</a></p><label class="langswitch"><span class="vh">ภาษา</span><select aria-label="ภาษา" onchange="if(this.value)location.href=this.value"><option value="/blog/rooted-android-emulator-mac">English</option><option value="/pt-br/blog/rooted-android-emulator-mac">Português</option><option value="/es-mx/blog/rooted-android-emulator-mac">Español (MX)</option><option value="/es-es/blog/rooted-android-emulator-mac">Español (ES)</option><option value="/fr/blog/rooted-android-emulator-mac">Français</option><option value="/de/blog/rooted-android-emulator-mac">Deutsch</option><option value="/it/blog/rooted-android-emulator-mac">Italiano</option><option value="/nl/blog/rooted-android-emulator-mac">Nederlands</option><option value="/pl/blog/rooted-android-emulator-mac">Polski</option><option value="/ru/blog/rooted-android-emulator-mac">Русский</option><option value="/uk/blog/rooted-android-emulator-mac">Українська</option><option value="/tr/blog/rooted-android-emulator-mac">Türkçe</option><option value="/ar/blog/rooted-android-emulator-mac">العربية</option><option value="/hi/blog/rooted-android-emulator-mac">हिन्दी</option><option value="/id/blog/rooted-android-emulator-mac">Indonesia</option><option value="/th/blog/rooted-android-emulator-mac" selected>ไทย</option><option value="/vi/blog/rooted-android-emulator-mac">Tiếng Việt</option><option value="/ja/blog/rooted-android-emulator-mac">日本語</option><option value="/ko/blog/rooted-android-emulator-mac">한국어</option><option value="/zh-hans/blog/rooted-android-emulator-mac">简体中文</option><option value="/zh-hant/blog/rooted-android-emulator-mac">繁體中文</option></select></label></div>
+  <article>
+    <h1>อีมูเลเตอร์ Android ที่รูทได้ สำหรับนักพัฒนาบน Mac Apple Silicon</h1>
+    <p class="byline">โดย Ryan Gibo · <time datetime="2026-10-27">27 ตุลาคม 2026</time></p>
+    <p>ถ้าคุณแค่อยากรู้ว่า APK รันได้หรือไม่ การเปิด IDE ทั้งชุดเสียเวลามาก <a href="/th/">SiliconPlay</a> เป็นแอป Mac ตัวเล็กที่อยู่หน้าแท็บเล็ต Android จริง: ARM64, Android 16, บน Apple Silicon ผมชื่อ Ryan และผมสร้างแอปนี้ขึ้นมาเองตั้งแต่ต้น ข้างในใช้ Android Emulator ตัวทางการ <a href="/licenses.html">ประกาศสัญญาอนุญาต</a>ระบุชื่ออีมูเลเตอร์นั้นและชิ้นส่วน SDK ที่มาด้วย</p>
+    <p>ใช้ได้เฉพาะ Apple Silicon ตั้งแต่ M1 ถึง M5 และชิปรุ่นใหม่กว่าในสายเดียวกัน รวม Pro, Max และ Ultra ไม่รองรับ Mac Intel ตอนนี้ผมทดสอบแค่บน macOS Tahoe ถ้าคุณลอง macOS รุ่นอื่น <a href="mailto:katzdoll@gmail.com">เล่าให้ผมฟัง</a>ว่าเป็นอย่างไร ผมอยากได้เรื่องจริงมากกว่าการเดา</p>
+    <h2>สิ่งที่คุณได้จริงๆ</h2>
+    <p>ไฟล์ที่ดาวน์โหลดมาไม่ได้บรรจุอีมูเลเตอร์ของ Google และไม่มี system image อยู่ข้างใน ครั้งแรกรัน แอปจะขอให้ดาวน์โหลด Android แล้วเริ่มทำงาน ขั้นตอนนั้นยอมรับสัญญาอนุญาต Android SDK บน Mac เครื่องนี้ จากนั้นดาวน์โหลด command-line tools ของ Google, อีมูเลเตอร์ Apple silicon, platform-tools และ system image แบบ Play arm64 ลงโฟลเดอร์ SDK ที่คุณเลือก แอปสร้างแท็บเล็ตแนวนอนหนึ่งเครื่องชื่อ Android 16 Tablet แล้วเปิดในหน้าต่างของมันเอง แท็บเล็ตเริ่มต้นคือ 1920×1080 ที่ 320 dpi แนวนอน ปิด auto-rotate บนภาพ Android 16 Play</p>
+    <p>Google Play จะปรากฏหลังจากภาพนั้นเข้าที่แล้ว นี่ไม่ใช่ร้านค้าที่ถูกบรรจุมากับแอป บนหน้าโฮมของ Android เปิด Play Store แล้วลงชื่อเข้าใช้ SiliconPlay ไม่เห็นรหัสผ่านนั้น ถ้าคุณมี SDK ที่มี emulator, adb และ sdkmanager อยู่แล้ว ชี้แอปไปที่โฟลเดอร์นั้นได้ ไม่ต้องดาวน์โหลดสำเนาที่สอง</p>
+    <p>ถ้าการตั้งค่าหยุดเพราะ macOS ไม่มี JDK แอปจะบอกเอง <code>/usr/bin/java</code> บน macOS เป็นแค่ stub ข้อความในแอปชี้ไปที่ <code>brew install openjdk@17</code> แล้วรันขั้นตอนแพ็กเกจนั้นอีกครั้ง</p>
+    <h2>ติดตั้ง APK โดยไม่ต้องอยู่ใน IDE</h2>
+    <p>เปิดอินสแตนซ์ก่อน แล้วค่อยติดตั้ง จากนั้นวางไฟล์ <code>.apk</code> หรือกด Command-I เพื่อนำเข้า APK แล้วติดตั้ง Split APK และไฟล์เก็บถาวร XAPK ไม่ถูกติดตั้งในรุ่นนี้ ดังนั้นบันเดิลที่มีแค่รูปแบบนั้นจะไม่เข้าไป นี่พอสำหรับเช็กปกติว่าบิลด์ติดตั้งแล้วเปิดได้หรือยัง คุณไม่ต้องเปิด Android Studio ค้างไว้ระหว่างแตะลองแอป</p>
+    <p>ติดตั้งด้วย adb ก็ได้ ไฟล์ที่คัดลอกแบบนั้นไปที่ <code>/sdcard/SiliconPlay</code> ภาพเหล่านี้ไม่เมานต์โฟลเดอร์ของเครื่องโฮสต์เป็นดิสก์ที่ใช้งานสด อย่าคาดว่าโฟลเดอร์ที่ใช้ร่วมกันจะโผล่ใน Android เอง</p>
+    <p>Pro Mode ปิดอยู่จนกว่าคุณจะเปิด มันอยู่ในทูลบาร์ เมนู View และ Settings เมื่อปิด หน้าต่างหลักมี Start, Stop และ Create New Instance เมื่อเปิด หน้าต่างหลักยังแสดงฮาร์ดแวร์ keymap และการวินิจฉัยเพิ่ม</p>
+    <h2>รูทเป็นทางเลือก และเริ่มต้นแบบปิด</h2>
+    <p>รูทเป็นทางเลือกและปิดไว้เป็นค่าเริ่มต้น ปล่อยปิดไว้สำหรับแท็บเล็ต Play ปกติ เปิดเฉพาะตอนที่คุณต้องการ adb root</p>
+    <p>แท็บเล็ตที่รูทใช้ภาพ Google APIs เพราะภาพ Play ปฏิเสธ adb root แท็บเล็ตนั้นไม่มี Play Store ภาพ APIs จะถูกดาวน์โหลดครั้งแรกที่คุณสร้าง ถ้าคุณต้องการทั้งการลงชื่อเข้า Play และรูท นั่นคือคนละแท็บเล็ต ไม่ใช่สวิตช์ที่พลิกบนภาพ Play ได้</p>
+    <p>ไม่มีส่วนขยายเคอร์เนล และไม่มีบริการเบื้องหลังให้ไปถอนทีหลัง ลบแอปเมื่อเลิกใช้ ไฟล์ SDK อยู่ที่โฟลเดอร์ SDK ที่คุณเลือก ไฟล์ของ SiliconPlay เองอยู่ที่ <code>~/Library/Application Support/SiliconPlay</code></p>
+    <h2>คีย์บอร์ด ถ้าแอปที่คุณทดสอบไม่มีแป้น</h2>
+    <p>การแตะตรงคือค่าเริ่มต้น ซึ่งมักเป็นสิ่งที่คุณต้องการสำหรับหน้าจอที่คุณสร้างเอง ถ้าคุณกำลังคลิกผ่านเกม <a href="/th/blog/android-emulator-mac-keyboard-mapping">keymap บนจอ</a> และ <a href="/th/blog/android-emulator-mac-shortcuts">รายการทางลัด</a> คืออีกครึ่งหนึ่งของเรื่องนี้</p>
+    <h2>คำถาม</h2>
+    <h3>ต้องรูทหรือไม่</h3>
+    <p>ไม่ต้อง รูทเป็นทางเลือกและปิดไว้ตั้งแต่ต้น รูทใช้ภาพ Google APIs ภาพ Play ปฏิเสธ adb root และแท็บเล็ตที่รูทแล้วไม่มี Play Store</p>
+    <h3>ติดตั้ง APK อย่างไร</h3>
+    <p>เปิดอินสแตนซ์ก่อน แล้ววางไฟล์ APK หรือกด Command-I เพื่อนำเข้า ติดตั้งด้วย adb ก็ได้ Split APK และไฟล์ XAPK ไม่ถูกติดตั้งในรุ่นนี้ ไฟล์ที่คัดลอกด้วย adb ไปที่ /sdcard/SiliconPlay</p>
+    <h3>ต้องเปิด Android Studio ค้างไว้ไหม</h3>
+    <p>ไม่ต้อง ติดตั้ง APK แล้วลองใช้ได้โดยไม่ต้องมี IDE เต็มๆ มาขวาง แอปจะดาวน์โหลดอีมูเลเตอร์ทางการกับภาพ Play arm64 หรือใช้ SDK ที่คุณมีอยู่แล้ว</p>
+    <h3>ใช้กับ Mac และ macOS รุ่นไหน</h3>
+    <p>เฉพาะ Apple Silicon: M1, M2, M3, M4, M5 และรุ่นใหม่กว่า รวม Pro, Max และ Ultra ไม่ใช่ Mac Intel ตอนนี้ทดสอบบน macOS Tahoe</p>
+    <p><a class="cta" href="/download/">ดาวน์โหลด SiliconPlay สำหรับ Mac</a></p>
+    <p class="more">อ่านต่อในบล็อก: <a href="/th/blog/android-emulator-mac-keyboard-mapping">จับคู่คีย์บอร์ดและคอนโทรลเลอร์</a>, <a href="/th/blog/android-emulator-mac-shortcuts">ปุ่มลัดคีย์บอร์ด</a> และ <a href="/th/blog/android-emulator-mac-m1-m2-m3-m4">SiliconPlay บน M1 ถึง M5 และรุ่นใหม่กว่า</a> หรือกลับไปที่ <a href="/th/">หน้าแรกของ SiliconPlay</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay ไม่ได้เกี่ยวข้องกับ Apple Inc. หรือ Google LLC. Android เป็นเครื่องหมายการค้าของ Google LLC. Mac, macOS และ Metal เป็นเครื่องหมายการค้าของ Apple Inc.</p>
+    <p><a href="/privacy.html">ความเป็นส่วนตัว</a> · <a href="/licenses.html">สัญญาอนุญาตและหมายเหตุโอเพนซอร์ส</a> · <a href="mailto:katzdoll@gmail.com">ติดต่อ</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

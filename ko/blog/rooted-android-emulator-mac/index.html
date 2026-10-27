@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>맥용 루팅 안드로이드 에뮬 | SiliconPlay</title>
+<meta name="description" content="선택형 루팅, adb 설치, Apple Silicon의 ARM64 Android 16 태블릿입니다. IDE를 열어 두지 않고 APK를 시험합니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/ko/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/rooted-android-emulator-mac">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay 블로그" href="https://siliconplay.app/ko/blog/feed.xml">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:title" content="맥용 루팅 안드로이드 에뮬 | SiliconPlay">
+<meta property="og:description" content="선택형 루팅, adb 설치, Apple Silicon의 ARM64 Android 16 태블릿입니다. IDE를 열어 두지 않고 APK를 시험합니다.">
+<meta property="og:url" content="https://siliconplay.app/ko/blog/rooted-android-emulator-mac">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay 아이콘과 Mac용 무료 안드로이드 에뮬레이터 문구">
+<meta property="article:published_time" content="2026-10-27">
+<meta property="article:modified_time" content="2026-10-27">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="맥용 루팅 안드로이드 에뮬 | SiliconPlay">
+<meta name="twitter:description" content="선택형 루팅, adb 설치, Apple Silicon의 ARM64 Android 16 태블릿입니다. IDE를 열어 두지 않고 APK를 시험합니다.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay 아이콘과 Mac용 무료 안드로이드 에뮬레이터 문구">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "Apple Silicon 맥을 위한, 루팅할 수 있는 안드로이드 환경",
+  "description": "선택형 루팅, adb 설치, Apple Silicon의 ARM64 Android 16 태블릿입니다. IDE를 열어 두지 않고 APK를 시험합니다.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "inLanguage": "ko",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/ko/blog/rooted-android-emulator-mac",
+  "url": "https://siliconplay.app/ko/blog/rooted-android-emulator-mac"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "루팅은 필수입니까?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아닙니다. 루팅은 선택이며 기본으로 꺼져 있습니다. 루팅은 Google APIs 이미지를 씁니다. Play 이미지는 adb root를 거부하고, 그 루팅된 태블릿에는 Play Store가 없습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "APK는 어떻게 설치합니까?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "인스턴스를 시작한 다음 APK를 떨어뜨리거나 Command-I로 가져옵니다. adb로도 설치합니다. Split APK와 XAPK 보관 파일은 이 버전에서 설치되지 않습니다. adb로 복사한 파일은 /sdcard/SiliconPlay로 갑니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Android Studio를 열어 두어야 합니까?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "그렇지 않습니다. 전체 IDE를 앞에 두지 않고도 APK를 넣어 시험할 수 있습니다. 앱이 공식 에뮬레이터와 Play arm64 이미지를 받거나, 이미 가진 SDK를 씁니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "어떤 Mac과 어떤 macOS입니까?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apple Silicon만 됩니다. M1, M2, M3, M4, M5와 더 새로운 칩이며 Pro, Max, Ultra를 포함합니다. Intel Mac은 아닙니다. 지금까지는 macOS Tahoe에서만 시험했습니다."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/ko/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "블로그",
+      "item": "https://siliconplay.app/ko/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Apple Silicon 맥을 위한, 루팅할 수 있는 안드로이드 환경",
+      "item": "https://siliconplay.app/ko/blog/rooted-android-emulator-mac"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "SiliconPlay에 APK 설치하기",
+  "description": "Command-I, 파일 놓기, 또는 adb로 Android 16 태블릿에 APK를 설치합니다.",
+  "inLanguage": "ko",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "인스턴스를 시작합니다",
+      "text": "설치 전에 인스턴스가 실행 중이어야 합니다."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "APK를 가져옵니다",
+      "text": ".apk 파일을 떨어뜨리거나 Command-I로 APK를 가져와 안드로이드에 설치합니다."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "또는 adb를 씁니다",
+      "text": "adb로도 설치할 수 있습니다. 그 방식으로 복사한 파일은 /sdcard/SiliconPlay로 갑니다."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "한계를 알아 둡니다",
+      "text": "Split APK와 XAPK 보관 파일은 이 버전에서 설치되지 않습니다. 이미지는 호스트 폴더를 살아 있는 디스크로 마운트하지 않습니다."
+    }
+  ]
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/ko/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay 아이콘"> SiliconPlay</a> · <a href="/ko/blog/">블로그</a></p><label class="langswitch"><span class="vh">언어</span><select aria-label="언어" onchange="if(this.value)location.href=this.value"><option value="/blog/rooted-android-emulator-mac">English</option><option value="/pt-br/blog/rooted-android-emulator-mac">Português</option><option value="/es-mx/blog/rooted-android-emulator-mac">Español (MX)</option><option value="/es-es/blog/rooted-android-emulator-mac">Español (ES)</option><option value="/fr/blog/rooted-android-emulator-mac">Français</option><option value="/de/blog/rooted-android-emulator-mac">Deutsch</option><option value="/it/blog/rooted-android-emulator-mac">Italiano</option><option value="/nl/blog/rooted-android-emulator-mac">Nederlands</option><option value="/pl/blog/rooted-android-emulator-mac">Polski</option><option value="/ru/blog/rooted-android-emulator-mac">Русский</option><option value="/uk/blog/rooted-android-emulator-mac">Українська</option><option value="/tr/blog/rooted-android-emulator-mac">Türkçe</option><option value="/ar/blog/rooted-android-emulator-mac">العربية</option><option value="/hi/blog/rooted-android-emulator-mac">हिन्दी</option><option value="/id/blog/rooted-android-emulator-mac">Indonesia</option><option value="/th/blog/rooted-android-emulator-mac">ไทย</option><option value="/vi/blog/rooted-android-emulator-mac">Tiếng Việt</option><option value="/ja/blog/rooted-android-emulator-mac">日本語</option><option value="/ko/blog/rooted-android-emulator-mac" selected>한국어</option><option value="/zh-hans/blog/rooted-android-emulator-mac">简体中文</option><option value="/zh-hant/blog/rooted-android-emulator-mac">繁體中文</option></select></label></div>
+  <article>
+    <h1>Apple Silicon 맥을 위한, 루팅할 수 있는 안드로이드 환경</h1>
+    <p class="byline">작성: Ryan Gibo · <time datetime="2026-10-27">2026년 10월 27일</time></p>
+    <p>APK가 실행되는지만 보고 싶을 때, IDE를 통째로 여는 일은 절차가 많습니다. <a href="/ko/">SiliconPlay</a>는 실제 안드로이드 태블릿 앞에 두는 작은 맥 앱입니다. ARM64, Android 16, Apple Silicon입니다. 저는 Ryan이고, 이 앱을 처음부터 만들었습니다. 속에서는 공식 Android Emulator를 씁니다. <a href="/licenses.html">라이선스 고지</a>에 그 에뮬레이터와 함께 오는 SDK 조각의 이름이 있습니다.</p>
+    <p>Apple Silicon만 대상입니다. M1부터 M5와 그 계열의 더 새로운 칩이며 Pro, Max, Ultra를 포함합니다. Intel Mac과는 호환되지 않습니다. 지금까지 저는 macOS Tahoe에서만 시험했습니다. 다른 macOS를 써 보셨다면 결과를 <a href="mailto:katzdoll@gmail.com">들려 주십시오</a>. 짐작보다는 실제 이야기를 듣고 싶습니다.</p>
+    <h2>실제로 받는 것</h2>
+    <p>다운로드 안에는 Google의 에뮬레이터도 system image도 들어 있지 않습니다. 처음 실행하면 안드로이드를 받고 시작하라고 합니다. 그 단계는 이 맥에서 Android SDK 라이선스에 동의한 뒤, Google의 command-line tools, Apple silicon 에뮬레이터, platform-tools, Play arm64 시스템 이미지를 고른 SDK 폴더로 받습니다. 가로 태블릿을 하나 만들고 이름은 Android 16 Tablet입니다. 자기 창에서 엽니다. 기본 태블릿은 1920×1080, 320 dpi, 가로, 자동 회전 끄기이며, Android 16 Play 이미지입니다.</p>
+    <p>그 이미지가 자리 잡은 뒤에 Google Play가 나타납니다. 앱 안에 상점을 넣어 둔 것이 아닙니다. 안드로이드 홈 화면에서 Play Store를 열고 로그인하십시오. SiliconPlay는 그 암호를 보지 않습니다. emulator, adb, sdkmanager가 있는 SDK가 이미 있다면, 두 번째 사본을 받지 않고 그 폴더를 앱에 지정할 수 있습니다.</p>
+    <p>macOS에 JDK가 없어 준비가 멈추면 앱이 그렇게 말합니다. macOS의 <code>/usr/bin/java</code>는 스텁입니다. 앱 안의 메시지는 <code>brew install openjdk@17</code>을 가리킵니다. 그다음 패키지 단계를 다시 실행하십시오.</p>
+    <h2>IDE에 머물지 않고 APK 설치하기</h2>
+    <p>설치하기 전에 인스턴스를 시작하십시오. 그런 다음 <code>.apk</code> 파일을 떨어뜨리거나 Command-I로 APK를 가져와 설치합니다. Split APK와 XAPK 보관 파일은 이 버전에서 설치되지 않으므로, 그 형식뿐인 번들은 들어가지 않습니다. 늘 하던 확인, 즉 빌드가 설치되어 열리는지 보기에는 충분합니다. 앱을 눌러 보는 동안 Android Studio를 열어 둘 필요는 없습니다.</p>
+    <p>adb로도 설치할 수 있습니다. 그 방식으로 복사한 파일은 <code>/sdcard/SiliconPlay</code>로 갑니다. 이 이미지들은 호스트 폴더를 살아 있는 디스크로 마운트하지 않습니다. 공유 폴더가 안드로이드 안에 저절로 나타날 것이라고 기대하지 마십시오.</p>
+    <p>Pro Mode는 직접 켜기 전까지 꺼져 있습니다. 도구 막대, View 메뉴, Settings에 있습니다. 꺼져 있으면 메인 창은 Start, Stop, Create New Instance입니다. 켜면 하드웨어, 키 맵, 진단도 나옵니다.</p>
+    <h2>루팅은 선택이며, 처음에는 꺼져 있습니다</h2>
+    <p>루팅은 선택이며 기본으로 꺼져 있습니다. 평범한 Play 태블릿에서는 꺼 두십시오. adb root가 필요할 때만 켜십시오.</p>
+    <p>루팅한 태블릿은 Google APIs 이미지를 씁니다. Play 이미지가 adb root를 거부하기 때문입니다. 그 태블릿에는 Play Store가 포함되지 않습니다. APIs 이미지는 그런 태블릿을 처음 만들 때 받아집니다. Play 로그인과 루팅이 둘 다 필요하면 태블릿이 두 대입니다. Play 이미지 위에서 뒤집는 스위치가 아닙니다.</p>
+    <p>커널 확장도 없고, 나중에 지울 백그라운드 서비스도 없습니다. 일이 끝나면 앱을 지우십시오. SDK 파일은 고른 SDK 폴더에 남습니다. SiliconPlay 자신의 파일은 <code>~/Library/Application Support/SiliconPlay</code>에 있습니다.</p>
+    <h2>시험 중인 앱에 키가 없을 때</h2>
+    <p>직접 터치가 기본이며, 직접 만든 화면에는 대개 그것으로 충분합니다. 게임을 클릭하며 볼 때는 <a href="/ko/blog/android-emulator-mac-keyboard-mapping">화면 키 맵</a>과 <a href="/ko/blog/android-emulator-mac-shortcuts">단축키 목록</a>이 나머지 절반입니다.</p>
+    <h2>질문</h2>
+    <h3>루팅은 필수입니까?</h3>
+    <p>아닙니다. 루팅은 선택이며 기본으로 꺼져 있습니다. 루팅은 Google APIs 이미지를 씁니다. Play 이미지는 adb root를 거부하고, 그 루팅된 태블릿에는 Play Store가 없습니다.</p>
+    <h3>APK는 어떻게 설치합니까?</h3>
+    <p>인스턴스를 시작한 다음 APK를 떨어뜨리거나 Command-I로 가져옵니다. adb로도 설치합니다. Split APK와 XAPK 보관 파일은 이 버전에서 설치되지 않습니다. adb로 복사한 파일은 /sdcard/SiliconPlay로 갑니다.</p>
+    <h3>Android Studio를 열어 두어야 합니까?</h3>
+    <p>그렇지 않습니다. 전체 IDE를 앞에 두지 않고도 APK를 넣어 시험할 수 있습니다. 앱이 공식 에뮬레이터와 Play arm64 이미지를 받거나, 이미 가진 SDK를 씁니다.</p>
+    <h3>어떤 Mac과 어떤 macOS입니까?</h3>
+    <p>Apple Silicon만 됩니다. M1, M2, M3, M4, M5와 더 새로운 칩이며 Pro, Max, Ultra를 포함합니다. Intel Mac은 아닙니다. 지금까지는 macOS Tahoe에서만 시험했습니다.</p>
+    <p><a class="cta" href="/download/">Mac용 SiliconPlay 다운로드</a></p>
+    <p class="more">블로그에서 더 보기: <a href="/ko/blog/android-emulator-mac-keyboard-mapping">키보드와 컨트롤러 키 매핑</a>, <a href="/ko/blog/android-emulator-mac-shortcuts">키보드 단축키</a>, <a href="/ko/blog/android-emulator-mac-m1-m2-m3-m4">M1부터 M5와 그 이후의 SiliconPlay</a>. 또는 <a href="/ko/">SiliconPlay 홈</a>으로 돌아갑니다.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay는 Apple Inc. 및 Google LLC와 관련이 없습니다. Android는 Google LLC의 상표입니다. Mac, macOS, Metal은 Apple Inc.의 상표입니다.</p>
+    <p><a href="/privacy.html">개인정보</a> · <a href="/licenses.html">라이선스와 오픈소스 고지</a> · <a href="mailto:katzdoll@gmail.com">연락</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

@@ -5,8 +5,32 @@
     <link>https://siliconplay.app/zh-hant/blog/</link>
     <description>關於 SiliconPlay 的文章。給 Apple 晶片 Mac 用的免費安卓模擬器：ARM64、Metal，以及可選的 root。</description>
     <language>zh-Hant</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/zh-hant/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>在 Mac 上為安卓遊戲做按鍵對應：畫面上的按鈕，還有各遊戲自己的配置</title>
+      <link>https://siliconplay.app/zh-hant/blog/android-emulator-mac-keyboard-mapping</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hant/blog/android-emulator-mac-keyboard-mapping</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>鍵盤和手把在 SiliconPlay 裡會變成畫面上的觸控。按鈕怎麼擺、各遊戲的配置，以及預設的 WASD，都寫在這裡。</description>
+    </item>
+    <item>
+      <title>Mac 上這套安卓環境的快速鍵：SiliconPlay 實際寫出來的那些</title>
+      <link>https://siliconplay.app/zh-hant/blog/android-emulator-mac-shortcuts</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hant/blog/android-emulator-mac-shortcuts</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>SiliconPlay 在 Mac 上的快速鍵：Command-I 用來裝 APK，另外還有輸入模式、全螢幕、Back 和疊加層。</description>
+    </item>
+    <item>
+      <title>在 Apple Silicon 的 Mac 上，一台可以選擇 root 的安卓環境</title>
+      <link>https://siliconplay.app/zh-hant/blog/rooted-android-emulator-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hant/blog/rooted-android-emulator-mac</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>root 可開可關，也能用 adb 安裝。這是 Apple Silicon 上的 ARM64 Android 16 平板，試 APK 時不用把 IDE 一直開著。</description>
+    </item>
     <item>
       <title>M1、M2、M3、M4、M5（及更新晶片）Mac 的免費安卓模擬器</title>
       <link>https://siliconplay.app/zh-hant/blog/android-emulator-mac-m1-m2-m3-m4</link>

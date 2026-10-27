@@ -5,8 +5,32 @@
     <link>https://siliconplay.app/id/blog/</link>
     <description>Tulisan tentang SiliconPlay, emulator Android gratis untuk Mac Apple Silicon: ARM64, Metal, dan root opsional.</description>
     <language>id</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/id/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Pemetaan keyboard di emulator Android untuk Mac: tombol layar dan tata letak tiap game</title>
+      <link>https://siliconplay.app/id/blog/android-emulator-mac-keyboard-mapping</link>
+      <guid isPermaLink="true">https://siliconplay.app/id/blog/android-emulator-mac-keyboard-mapping</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Petakan keyboard dan kontroler jadi sentuhan di SiliconPlay pada Mac. Tombol di layar, tata letak tiap game, dan keymap WASD bawaan.</description>
+    </item>
+    <item>
+      <title>Pintasan emulator Android di Mac: daftar keyboard SiliconPlay</title>
+      <link>https://siliconplay.app/id/blog/android-emulator-mac-shortcuts</link>
+      <guid isPermaLink="true">https://siliconplay.app/id/blog/android-emulator-mac-shortcuts</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Pintasan SiliconPlay di Mac: Command-I memasang APK, plus mode ketik, layar penuh, Back, dan overlay.</description>
+    </item>
+    <item>
+      <title>Emulator Android ber-root untuk pengembang di Mac Apple Silicon</title>
+      <link>https://siliconplay.app/id/blog/rooted-android-emulator-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/id/blog/rooted-android-emulator-mac</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Root opsional, pasang lewat adb, dan tablet ARM64 Android 16 di Apple Silicon. Uji APK tanpa IDE yang tetap terbuka.</description>
+    </item>
     <item>
       <title>Emulator Android gratis untuk Mac M1, M2, M3, M4, dan M5 (serta yang lebih baru)</title>
       <link>https://siliconplay.app/id/blog/android-emulator-mac-m1-m2-m3-m4</link>

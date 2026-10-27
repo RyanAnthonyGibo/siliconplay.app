@@ -5,8 +5,32 @@
     <link>https://siliconplay.app/hi/blog/</link>
     <description>SiliconPlay पर लेख, Apple Silicon वाले Mac के लिए मुफ़्त Android एमुलेटर: ARM64, Metal और वैकल्पिक रूट.</description>
     <language>hi</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/hi/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mac पर Android कीबोर्ड मैपिंग: स्क्रीन के बटन और हर गेम का लेआउट</title>
+      <link>https://siliconplay.app/hi/blog/android-emulator-mac-keyboard-mapping</link>
+      <guid isPermaLink="true">https://siliconplay.app/hi/blog/android-emulator-mac-keyboard-mapping</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Mac पर SiliconPlay में कीबोर्ड और कंट्रोलर स्क्रीन के बटन दबाते हैं. गेम लेआउट और WASD.</description>
+    </item>
+    <item>
+      <title>Mac पर Android एमुलेटर के शॉर्टकट: SiliconPlay की कुंजी सूची</title>
+      <link>https://siliconplay.app/hi/blog/android-emulator-mac-shortcuts</link>
+      <guid isPermaLink="true">https://siliconplay.app/hi/blog/android-emulator-mac-shortcuts</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Mac पर SiliconPlay शॉर्टकट: Command-I APK लगाता है. Typing, फुलस्क्रीन, Back और ओवरले.</description>
+    </item>
+    <item>
+      <title>Apple Silicon Mac पर डेवलपरों के लिए रूट वाला Android एमुलेटर</title>
+      <link>https://siliconplay.app/hi/blog/rooted-android-emulator-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/hi/blog/rooted-android-emulator-mac</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>वैकल्पिक रूट, adb इंस्टॉल और ARM64 Android 16 टैबलेट. IDE खोले बिना APK आज़माएँ.</description>
+    </item>
     <item>
       <title>Mac M1, M2, M3, M4 और M5 के लिए मुफ़्त Android एमुलेटर (और नए)</title>
       <link>https://siliconplay.app/hi/blog/android-emulator-mac-m1-m2-m3-m4</link>
