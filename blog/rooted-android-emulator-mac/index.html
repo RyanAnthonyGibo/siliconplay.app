@@ -64,7 +64,7 @@
       "name": "How do I install an APK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Start the instance, then drop an APK file. Split APKs and XAPK archives are not installed by this version. Files copied with adb land in /sdcard/SiliconPlay. The image does not mount a host folder as a live disk."
+        "text": "Start the instance, then drop an APK file or press Command-I to import one and install it. You can also install with adb. Split APKs and XAPK archives are not installed by this version. Files copied with adb land in /sdcard/SiliconPlay. The image does not mount a host folder as a live disk."
       }
     },
     {
@@ -107,8 +107,8 @@
     <p>If setup stops because macOS has no JDK, the app says so. <code>/usr/bin/java</code> on macOS is a stub. The message in the app points at <code>brew install openjdk@17</code>, then run the package step again.</p>
 
     <h2>Install an APK without living in an IDE</h2>
-    <p>Start the instance first. Then drop an <code>.apk</code> file. Split APKs and XAPK archives are not installed by this version, so a bundle that is only those formats will not go on. That is enough for the usual “did my build install and open” check. You do not have to keep Android Studio in front while you tap through the app.</p>
-    <p>Files copied with adb go to <code>/sdcard/SiliconPlay</code>. These images do not mount a host folder as a live disk, so do not expect a shared directory to appear inside Android on its own.</p>
+    <p>Start the instance first. Then drop an <code>.apk</code> file, or press Command-I to import an APK and install it. Split APKs and XAPK archives are not installed by this version, so a bundle that is only those formats will not go on. That is enough for the usual “did my build install and open” check. You do not have to keep Android Studio in front while you tap through the app.</p>
+    <p>You can also install with adb. Files copied that way go to <code>/sdcard/SiliconPlay</code>. These images do not mount a host folder as a live disk, so do not expect a shared directory to appear inside Android on its own.</p>
     <p>Pro Mode is off until you turn it on. It lives in the toolbar, the View menu, and Settings. On, the main window also shows hardware, keymaps, and diagnostics. Off, the main window stays on Start, Stop, and Create New Instance.</p>
 
     <h2>Root is optional, and it starts off</h2>
@@ -123,7 +123,7 @@
     <h3>Is root required?</h3>
     <p>No. It is optional and off by default. Root uses the Google APIs image. The Play image refuses adb root, and that rooted tablet does not include Play Store.</p>
     <h3>How do I install an APK?</h3>
-    <p>Start the instance, then drop an APK. Split APKs and XAPK archives are not installed by this version. adb copies go to <code>/sdcard/SiliconPlay</code>.</p>
+    <p>Start the instance, then drop an APK or press Command-I to import one. You can also install with adb. Split APKs and XAPK archives are not installed by this version. adb copies go to <code>/sdcard/SiliconPlay</code>.</p>
     <h3>Do I need Android Studio open?</h3>
     <p>No. You can install an APK and try it without a full IDE in the way. The app downloads the official emulator and the Play arm64 image, or uses an SDK you already have.</p>
     <h3>Which Macs and which macOS?</h3>

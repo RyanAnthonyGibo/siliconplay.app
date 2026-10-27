@@ -66,7 +66,7 @@
       "name": "Como instalo um APK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Inicie a instância e solte um arquivo APK. APK dividido e arquivo XAPK não são instalados nesta versão. Arquivos copiados com adb vão para /sdcard/SiliconPlay. A imagem não monta uma pasta do Mac como disco ao vivo."
+        "text": "Inicie a instância e solte um arquivo APK, ou aperte Command-I para importar e instalar. Dá para instalar com adb também. APK dividido e arquivo XAPK não são instalados nesta versão. Arquivos copiados com adb vão para /sdcard/SiliconPlay. A imagem não monta uma pasta do Mac como disco ao vivo."
       }
     },
     {
@@ -110,8 +110,8 @@
     <p>Se a instalação parar porque o macOS não tem JDK, o app avisa. O <code>/usr/bin/java</code> no macOS é só um atalho. A mensagem do app aponta para <code>brew install openjdk@17</code>, e depois você roda o passo dos pacotes de novo.</p>
 
     <h2>Instalar um APK sem morar numa IDE</h2>
-    <p>Inicie a instância primeiro. Depois solte um arquivo <code>.apk</code>. APK dividido e arquivo XAPK não são instalados nesta versão, então um pacote que só existe nesses formatos não entra. Isso cobre o teste comum de “meu build instalou e abriu”. Você não precisa deixar o Android Studio na frente enquanto toca no app.</p>
-    <p>Arquivos copiados com adb vão para <code>/sdcard/SiliconPlay</code>. Essas imagens não montam uma pasta do Mac como disco ao vivo, então não espere uma pasta compartilhada aparecer sozinha dentro do Android.</p>
+    <p>Inicie a instância primeiro. Depois solte um arquivo <code>.apk</code>, ou aperte Command-I para importar um APK e instalar. APK dividido e arquivo XAPK não são instalados nesta versão, então um pacote que só existe nesses formatos não entra. Isso cobre o teste comum de “meu build instalou e abriu”. Você não precisa deixar o Android Studio na frente enquanto toca no app.</p>
+    <p>Dá para instalar com adb também. Arquivos copiados por esse caminho vão para <code>/sdcard/SiliconPlay</code>. Essas imagens não montam uma pasta do Mac como disco ao vivo, então não espere uma pasta compartilhada aparecer sozinha dentro do Android.</p>
     <p>O Pro Mode fica desligado até você ligar. Ele está na barra de ferramentas, no menu View e em Settings. Ligado, a janela principal também mostra hardware, keymaps e diagnóstico. Desligado, a janela principal fica em Start, Stop e Create New Instance.</p>
 
     <h2>Root é opcional, e começa desligado</h2>
@@ -126,7 +126,7 @@
     <h3>Precisa de root?</h3>
     <p>Não. É opcional e vem desligado. O root usa a imagem Google APIs. A imagem Play recusa o adb root, e esse tablet com root não inclui a Play Store.</p>
     <h3>Como instalo um APK?</h3>
-    <p>Inicie a instância e solte um APK. APK dividido e XAPK não são instalados nesta versão. Cópias pelo adb vão para <code>/sdcard/SiliconPlay</code>.</p>
+    <p>Inicie a instância e solte um APK, ou aperte Command-I para importar. Dá para instalar com adb também. APK dividido e XAPK não são instalados nesta versão. Cópias pelo adb vão para <code>/sdcard/SiliconPlay</code>.</p>
     <h3>Preciso deixar o Android Studio aberto?</h3>
     <p>Não. Dá para instalar um APK e testar sem uma IDE inteira no caminho. O app baixa o emulador oficial e a imagem Play arm64, ou usa um SDK que você já tem.</p>
     <h3>Quais Macs e qual macOS?</h3>
