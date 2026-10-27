@@ -35,7 +35,7 @@ svg{width:100%;height:120px;display:block}
   <div><h1>Painel SiliconPlay</h1><div class="mu" id="upd">Carregando…</div></div>
   <div class="ctl">
     <select id="rng" title="Período"><option value="d1">Últimas 24 h</option><option value="d7">Últimos 7 dias</option></select>
-    <label class="mu"><input type="checkbox" id="auto" checked> Atualizar a cada 60 s</label>
+    <label class="mu"><input type="checkbox" id="auto" checked> Atualizar a cada 90 s</label>
     <button class="pri" id="btn">Atualizar</button>
   </div>
 </header>
@@ -133,7 +133,7 @@ function refresh(){
     busy=false;$("btn").disabled=false;$("btn").textContent="Atualizar";
   });
 }
-function sched(){clearInterval(timer);if($("auto").checked)timer=setInterval(function(){if(!document.hidden)refresh()},60000)}
+function sched(){clearInterval(timer);if($("auto").checked)timer=setInterval(function(){if(!document.hidden)refresh()},90000)}
 $("btn").onclick=refresh;$("auto").onchange=sched;$("rng").onchange=renderCf;
 if(location.hash)history.replaceState(null,"",location.pathname);
 refresh();sched();
