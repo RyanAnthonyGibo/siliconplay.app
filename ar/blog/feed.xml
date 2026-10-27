@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>مدونة SiliconPlay</title>
+    <link>https://siliconplay.app/ar/blog/</link>
+    <description>كتابات عن SiliconPlay، محاكي أندرويد مجاني للماك بمعالج Apple Silicon: ARM64 وMetal وروت اختياري.</description>
+    <language>ar</language>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://siliconplay.app/ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>محاكي أندرويد مجاني للماك M1 وM2 وM3 وM4 وM5 (والأحدث)</title>
+      <link>https://siliconplay.app/ar/blog/android-emulator-mac-m1-m2-m3-m4</link>
+      <guid isPermaLink="true">https://siliconplay.app/ar/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>محاكي أندرويد مجاني للماك بمعالجات M1 وM2 وM3 وM4 وM5 والأحدث. ARM64 مباشرة، وMetal، ولوحة مفاتيح، وذراع، وروت اختياري للتطوير.</description>
+    </item>
+    <item>
+      <title>تبحث عن بديل لـ BlueStacks على الماك؟ جرّب SiliconPlay</title>
+      <link>https://siliconplay.app/ar/blog/bluestacks-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/ar/blog/bluestacks-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>تبحث عن بديل لـ BlueStacks على الماك؟ SiliconPlay محاكي أندرويد مجاني من M1 إلى M5 والأحدث، مع Metal وروت اختياري.</description>
+    </item>
+    <item>
+      <title>تبحث عن بديل لـ MuMu Player على الماك؟ جرّب SiliconPlay</title>
+      <link>https://siliconplay.app/ar/blog/mumu-player-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/ar/blog/mumu-player-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>تبحث عن بديل لـ MuMu Player على الماك؟ SiliconPlay محاكي أندرويد مجاني من M1 إلى M5 والأحدث، مع Metal وروت اختياري.</description>
+    </item>
+  </channel>
+</rss>

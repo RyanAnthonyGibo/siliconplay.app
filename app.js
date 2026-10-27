@@ -91,11 +91,14 @@ SiliconPlay 1.0
  trash:{t:'Trash',w:360,h:220,html:`<p style="color:var(--mut);text-align:center;margin-top:40px">Trash is empty.<br>No bundled software here either.</p>`},
  mac:{t:'SiliconPlay',html:`<div style="text-align:center"><img src="assets/icon-tile.png" alt="SiliconPlay app icon" width="110" style="margin:10px auto"><h3 style="font-size:22px;margin-top:8px">SiliconPlay is for Mac.</h3><p style="color:var(--mut);margin-top:6px">It runs Android games on Mac computers with Apple silicon. Send yourself the link and download it on your Mac.</p><button class="btnp" data-copy>Copy Link</button><a class="btng" href="${DL}">Download</a><p class="copied" style="color:var(--mut);margin-top:10px" aria-live="polite"></p></div>`}
 };
+const I18N=window.SP_I18N||null;
+if(I18N&&I18N.windows){for(const id in I18N.windows){if(C[id])Object.assign(C[id],I18N.windows[id])}}
+const UI=(I18N&&I18N.ui)||{};
 
 /* theme */
 function toggleTheme(e){e&&e.preventDefault();const c=root.dataset.theme||(mq.matches?'dark':'light'),n=c==='dark'?'light':'dark';root.dataset.theme=n;try{localStorage.setItem('sp-theme',n)}catch(_){}closeMenus()}
 /* copy */
-function copyLink(e){e&&e.preventDefault();const u=location.href.split('#')[0];(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>say('Link copied.'),()=>say(u));closeMenus()}
+function copyLink(e){e&&e.preventDefault();const u=location.href.split('#')[0];(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>say(UI.copied||'Link copied.'),()=>say(u));closeMenus()}
 function say(m){$$('.copied').forEach(p=>p.textContent=m)}
 document.addEventListener('click',e=>{
  const t=e.target.closest('[data-theme-toggle]');if(t)return toggleTheme(e);
@@ -103,7 +106,8 @@ document.addEventListener('click',e=>{
  const o=e.target.closest('[data-open]');if(o){e.preventDefault();closeMenus();openWin(o.dataset.open)}
 });
 /* clock */
-const fmt=new Intl.DateTimeFormat(undefined,{weekday:'short',hour:'numeric',minute:'2-digit'}),pf=new Intl.DateTimeFormat(undefined,{hour:'numeric',minute:'2-digit'});
+const loc=document.documentElement.lang||undefined;
+const fmt=new Intl.DateTimeFormat(loc,{weekday:'short',hour:'numeric',minute:'2-digit'}),pf=new Intl.DateTimeFormat(loc,{hour:'numeric',minute:'2-digit'});
 function tick(){const d=new Date();$('#clock').textContent=fmt.format(d);$('#pclock').textContent=pf.format(d).replace(/\s?[AP]M/i,'')}
 tick();setInterval(tick,15000);
 /* menus */
@@ -122,7 +126,7 @@ function openWin(id){
  const W=innerWidth,H=innerHeight,ww=Math.min(d.w||420,W-40),hh=Math.min(d.h||300,H-150);
  w.style.width=ww+'px';w.style.height=hh+'px';
  w.style.left=Math.max(12,Math.round((W-ww)/2-160+(n%5)*70))+'px';w.style.top=Math.max(36,Math.round((H-hh)/2-70+(n%5)*40))+'px';n++;
- w.innerHTML=`<div class="tb"><div class="lights"><button class="c" aria-label="Close"></button><button class="m" aria-label="Minimize"></button><button class="z" aria-label="Zoom"></button></div><h2>${d.t}</h2></div><div class="body ${d.cls||''}" tabindex="0">${d.html}</div>`;
+ w.innerHTML=`<div class="tb"><div class="lights"><button class="c" aria-label="${UI.close||'Close'}"></button><button class="m" aria-label="${UI.min||'Minimize'}"></button><button class="z" aria-label="${UI.zoom||'Zoom'}"></button></div><h2>${d.t}</h2></div><div class="body ${d.cls||''}" tabindex="0">${d.html}</div>`;
  wins.appendChild(w);open[id]=w;front(w);mark();
  $('.c',w).onclick=()=>{w.remove();delete open[id];mark()};
  $('.m',w).onclick=()=>{w.classList.add('min');mark()};
@@ -147,7 +151,7 @@ document.addEventListener('keydown',e=>{const i=e.target.closest&&e.target.close
 $$('.dock [data-win]').forEach(b=>b.addEventListener('click',e=>{if(b.classList.contains('bubble')||b.classList.contains('sp')){e.preventDefault();$('.bubble').classList.add('gone')}openWin(b.dataset.win)}));
 /* phone sheets */
 const sheet=$('#sheet');let last=null;
-function openSheet(id){const d=C[id];if(!d)return;last=document.activeElement;$('#sheet-t').textContent=id==='mac'?'SiliconPlay':d.t.replace(/\.(md|txt|png|app)$/,'').replace(' — zsh','').replace(/^./,c=>c.toUpperCase());const b=$('.sbody',sheet);b.className='sbody '+(d.cls||'');b.innerHTML=d.html;sheet.hidden=false;$('.sclose',sheet).focus()}
+function openSheet(id){const d=C[id];if(!d)return;last=document.activeElement;let title=id==='mac'?'SiliconPlay':d.t.replace(/\.(md|txt|png|app)$/i,'').replace(/ — zsh$/,'');if(!I18N&&id!=='mac')title=title.replace(/^./,c=>c.toUpperCase());$('#sheet-t').textContent=title;const b=$('.sbody',sheet);b.className='sbody '+(d.cls||'');b.innerHTML=d.html;sheet.hidden=false;$('.sclose',sheet).focus()}
 function closeSheet(){if(sheet.hidden)return;sheet.hidden=true;last&&last.focus()}
 $$('#phone [data-sheet]').forEach(b=>b.addEventListener('click',()=>openSheet(b.dataset.sheet)));
 $('.sclose').onclick=closeSheet;

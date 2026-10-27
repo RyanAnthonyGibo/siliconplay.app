@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SiliconPlay-Blog</title>
+    <link>https://siliconplay.app/de/blog/</link>
+    <description>Texte über SiliconPlay, einen kostenlosen Android-Emulator für Macs mit Apple Silicon: ARM64, Metal und optionales Root.</description>
+    <language>de</language>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://siliconplay.app/de/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Kostenloser Android-Emulator für Mac M1, M2, M3, M4 und M5 (und neuer)</title>
+      <link>https://siliconplay.app/de/blog/android-emulator-mac-m1-m2-m3-m4</link>
+      <guid isPermaLink="true">https://siliconplay.app/de/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Kostenloser Android-Emulator für Mac mit M1, M2, M3, M4, M5 und neueren Chips. Natives ARM64, Metal, Tastatur, Gamepad und optionales Root für die Entwicklung.</description>
+    </item>
+    <item>
+      <title>Du suchst eine BlueStacks-Alternative für den Mac? Probier SiliconPlay</title>
+      <link>https://siliconplay.app/de/blog/bluestacks-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/de/blog/bluestacks-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Du suchst eine BlueStacks-Alternative für den Mac? SiliconPlay ist ein kostenloser Android-Emulator von M1 bis M5 und neuer, mit Metal und optionalem Root.</description>
+    </item>
+    <item>
+      <title>Du suchst eine MuMu-Player-Alternative für den Mac? Probier SiliconPlay</title>
+      <link>https://siliconplay.app/de/blog/mumu-player-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/de/blog/mumu-player-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Du suchst eine MuMu-Player-Alternative für den Mac? SiliconPlay ist ein kostenloser Android-Emulator von M1 bis M5 und neuer, mit Metal und optionalem Root.</description>
+    </item>
+  </channel>
+</rss>
