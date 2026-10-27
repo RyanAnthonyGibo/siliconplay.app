@@ -9,8 +9,7 @@ Android emulator for macOS. Play Android games on
 your Mac with Apple silicon.
 
 <span class="h">## Why it's fast</span>
-- Android 16 runs natively on the ARM cores
-  (Apple Hypervisor framework). No x86 translation.
+- Android 16 runs natively on the Mac’s ARM cores (Apple Hypervisor framework).
 - Vulkan is drawn by Metal.
 - Shaders compiled in safe math mode, so foliage
   renders correctly.
@@ -35,10 +34,10 @@ SiliconPlay is free. Optionally support the project
 
 <a href="${DL}">Download SiliconPlay for Mac</a>`},
  controls:{t:'Controls.png',w:400,h:360,html:`<div class="keysbig"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></div><p style="text-align:center">Move with <b>WASD</b>. Attack with <b>J</b>. Skills on <b>1–6</b>.</p><div class="krow"><kbd>J</kbd><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd><kbd>5</kbd><kbd>6</kbd></div><p style="text-align:center;color:var(--mut);margin-top:12px">Remap keys or use a gamepad from the overlay.</p>`},
- donate:{t:'Donate.app',w:360,h:330,html:`<h3 style="font-size:20px">Free. Optionally support the project.</h3><p style="color:var(--mut);margin-top:6px">Supporters get an ad-free app. The ad never covers your game.</p><div class="tiers"><a class="main" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2GR38954JS846013SNLPWRTY" target="_blank" rel="noopener"><b>$2/month</b><span>No ads</span></a><a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-1L50440531901720SNLPWR5Q" target="_blank" rel="noopener"><b>$5/month</b><span>No ads + early builds</span></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=siliconplay.app@gmail.com&amp;item_name=SiliconPlay&amp;currency_code=USD&amp;no_recurring=1" target="_blank" rel="noopener"><b>One time</b><span>Any amount</span></a></div>`},
+ donate:{t:'Donate.app',w:360,h:330,html:`<h3 style="font-size:20px">Free. Optionally support the project.</h3><p style="color:var(--mut);margin-top:6px">Supporters get an ad-free app. The ad never covers your game.</p><div class="tiers"><a class="main" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2GR38954JS846013SNLPWRTY" target="_blank" rel="noopener"><b>Support</b><span>No ads</span></a><a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-1L50440531901720SNLPWR5Q" target="_blank" rel="noopener"><b>Support more</b><span>No ads + early builds</span></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=siliconplay.app@gmail.com&amp;item_name=SiliconPlay&amp;currency_code=USD&amp;no_recurring=1" target="_blank" rel="noopener"><b>One time</b><span>Optional</span></a></div>`},
  faq:{t:'FAQ.txt',w:470,h:340,cls:'mono',html:`<span class="h">Q: Which Macs does it work on?</span>
 A: Mac computers with Apple silicon (M1, M2, M3, M4, M5,
-   and newer) running macOS 14 or later. Intel Macs: no.
+   and newer) running macOS 14 or later. It runs natively on Apple Silicon, M1 to M5 and newer.
 
 <span class="h">Q: Is my game account safe?</span>
 A: SiliconPlay includes optional root and does not
@@ -81,7 +80,7 @@ SiliconPlay 1.0
   input      7–43 ms key-to-game
 
 <span class="p">~ %</span> <span class="cursor"></span>`},
- installer:{t:'Install SiliconPlay',w:440,h:260,html:`<div class="inst"><img src="assets/icon-tile.png" alt="SiliconPlay app icon"><div><h3 style="font-size:18px">SiliconPlay</h3><p style="color:var(--mut)">Android emulator for macOS<br>Apple silicon · macOS 14+</p></div></div><div class="prog"><i></i></div><a class="btnp" href="${DL}">Download for Mac</a><a class="btng" href="#" data-open="donate">Donate</a>`},
+ installer:{t:'Install SiliconPlay',w:440,h:260,html:`<div class="inst"><img src="assets/icon-tile-128.webp" alt="SiliconPlay app icon" width="96" height="96"><div><h3 style="font-size:18px">SiliconPlay</h3><p style="color:var(--mut)">Android emulator for macOS<br>Apple silicon · macOS 14+</p></div></div><div class="prog"><i></i></div><a class="btnp" href="${DL}">Download for Mac</a><a class="btng" href="#" data-open="donate">Donate</a>`},
  projects:{t:'More from Ryan',w:480,h:340,html:`<p class="pj-h">Other projects</p><div class="pj">
 <a href="https://github.com/RyanAnthonyGibo" target="_blank" rel="noopener"><span class="pg pg-gh"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M8 7 3 12l5 5 1.4-1.4L5.8 12l3.6-3.6zm8 0-1.4 1.4 3.6 3.6-3.6 3.6L16 17l5-5z"/></svg></span><span><b>GitHub</b><small>My profile and public work</small></span><i>↗</i></a>
 <a href="https://www.alequeria.com.br" target="_blank" rel="noopener"><span class="pg pg-lq"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 20 3.5 9.5A11 11 0 0 1 20.5 9.5z" opacity=".9"/><path d="M12 20V7M12 20 7 8.2M12 20l5-11.8" stroke="#fff" stroke-width="1" opacity=".7"/></svg></span><span><b>a Lequeria</b><small>Handmade bamboo hand fans for the electronic music crowd</small></span><i>↗</i></a>
@@ -89,7 +88,7 @@ SiliconPlay 1.0
 <a href="https://instagram.com/fcknstar" target="_blank" rel="noopener"><span class="pg pg-ig"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6" fill="currentColor"/></svg></span><span><b>Instagram</b><small>@fcknstar · personal</small></span><i>↗</i></a>
 </div>`},
  trash:{t:'Trash',w:360,h:220,html:`<p style="color:var(--mut);text-align:center;margin-top:40px">Trash is empty.<br>No bundled software here either.</p>`},
- mac:{t:'SiliconPlay',html:`<div style="text-align:center"><img src="assets/icon-tile.png" alt="SiliconPlay app icon" width="110" style="margin:10px auto"><h3 style="font-size:22px;margin-top:8px">SiliconPlay is for Mac.</h3><p style="color:var(--mut);margin-top:6px">It runs Android games on Mac computers with Apple silicon. Send yourself the link and download it on your Mac.</p><button class="btnp" data-copy>Copy Link</button><a class="btng" href="${DL}">Download</a><p class="copied" style="color:var(--mut);margin-top:10px" aria-live="polite"></p></div>`}
+ mac:{t:'SiliconPlay',html:`<div style="text-align:center"><img src="assets/icon-tile-128.webp" alt="SiliconPlay app icon" width="110" style="margin:10px auto"><h3 style="font-size:22px;margin-top:8px">SiliconPlay is for Mac.</h3><p style="color:var(--mut);margin-top:6px">It runs Android games on Mac computers with Apple silicon. Send yourself the link and download it on your Mac.</p><button class="btnp" data-copy>Copy Link</button><a class="btng" href="${DL}">Download</a><p class="copied" style="color:var(--mut);margin-top:10px" aria-live="polite"></p></div>`}
 };
 const I18N=window.SP_I18N||null;
 if(I18N&&I18N.windows){for(const id in I18N.windows){if(C[id])Object.assign(C[id],I18N.windows[id])}}

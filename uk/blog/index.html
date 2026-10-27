@@ -27,6 +27,10 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/">
 <link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="es" href="https://siliconplay.app/es-mx/blog/">
+<link rel="alternate" hreflang="pt" href="https://siliconplay.app/pt-br/blog/">
+<link rel="alternate" hreflang="zh" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" type="application/rss+xml" title="Блог SiliconPlay" href="https://siliconplay.app/uk/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="Блог SiliconPlay">
@@ -61,7 +65,7 @@
       "@type": "BlogPosting",
       "headline": "Призначення клавіш в емуляторі Android на Mac: екранні кнопки й розкладки під гру",
       "description": "Клавіатура й геймпад тиснуть екранні кнопки в SiliconPlay на Mac. Розкладки під гру й WASD.",
-      "url": "https://siliconplay.app/uk/blog/android-emulator-mac-keyboard-mapping",
+      "url": "https://siliconplay.app/uk/blog/android-emulator-mac-keyboard-mapping/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "uk",
@@ -74,7 +78,7 @@
       "@type": "BlogPosting",
       "headline": "Гарячі клавіші емулятора Android на Mac: список SiliconPlay",
       "description": "Гарячі клавіші SiliconPlay на Mac: Command-I ставить APK, а ще Typing, повний екран, Back і оверлей.",
-      "url": "https://siliconplay.app/uk/blog/android-emulator-mac-shortcuts",
+      "url": "https://siliconplay.app/uk/blog/android-emulator-mac-shortcuts/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "uk",
@@ -87,7 +91,7 @@
       "@type": "BlogPosting",
       "headline": "Емулятор Android з root для розробників на Mac з Apple Silicon",
       "description": "Необов’язковий root, встановлення через adb і планшет ARM64 на Android 16. Перевірка APK на Apple Silicon.",
-      "url": "https://siliconplay.app/uk/blog/rooted-android-emulator-mac",
+      "url": "https://siliconplay.app/uk/blog/rooted-android-emulator-mac/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "uk",
@@ -100,7 +104,7 @@
       "@type": "BlogPosting",
       "headline": "Безкоштовний емулятор Android для Mac M1, M2, M3, M4 і M5 (і новіші)",
       "description": "Безкоштовний емулятор Android для Mac з M1, M2, M3, M4, M5 і новішими чипами. Рідний ARM64, Metal, клавіатура, геймпад і необов’язковий root для розробки.",
-      "url": "https://siliconplay.app/uk/blog/android-emulator-mac-m1-m2-m3-m4",
+      "url": "https://siliconplay.app/uk/blog/android-emulator-mac-m1-m2-m3-m4/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "uk",
@@ -113,7 +117,7 @@
       "@type": "BlogPosting",
       "headline": "Шукаєте альтернативу BlueStacks на Mac? Спробуйте SiliconPlay",
       "description": "Шукаєте альтернативу BlueStacks на Mac? SiliconPlay — безкоштовний емулятор Android з M1 до M5 і новіших, з Metal і необов’язковим root.",
-      "url": "https://siliconplay.app/uk/blog/bluestacks-alternative-mac",
+      "url": "https://siliconplay.app/uk/blog/bluestacks-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "uk",
@@ -126,7 +130,7 @@
       "@type": "BlogPosting",
       "headline": "Шукаєте альтернативу MuMu Player на Mac? Спробуйте SiliconPlay",
       "description": "Шукаєте альтернативу MuMu Player на Mac? SiliconPlay — безкоштовний емулятор Android з M1 до M5 і новіших, з Metal і необов’язковим root.",
-      "url": "https://siliconplay.app/uk/blog/mumu-player-alternative-mac",
+      "url": "https://siliconplay.app/uk/blog/mumu-player-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "uk",
@@ -141,9 +145,28 @@
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script>
+(function(){
+  var done=false;
+  function load(){
+    if(done)return;
+    done=true;
+    var s=document.createElement("script");
+    s.async=true;
+    s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277";
+    s.crossOrigin="anonymous";
+    document.head.appendChild(s);
+  }
+  ["pointerdown","keydown","scroll","touchstart"].forEach(function(ev){
+    addEventListener(ev,load,{once:true,passive:true});
+  });
+  addEventListener("load",function(){
+    var ric=window.requestIdleCallback||function(fn){setTimeout(fn,1200);};
+    ric(function(){setTimeout(load,1200);});
+  });
+})();
+</script>
 </head>
 <body class="docpage">
 <div class="wall" aria-hidden="true"></div>
@@ -152,36 +175,36 @@
   <h1>Блог</h1>
   <p class="doc-meta">Нотатки про SiliconPlay, безкоштовний емулятор Android для Mac на Apple Silicon.</p>
   <ul class="post-list">
-    <li><a href="/uk/blog/android-emulator-mac-keyboard-mapping">
+    <li><a href="/uk/blog/android-emulator-mac-keyboard-mapping/">
       <b>Призначення клавіш в емуляторі Android на Mac: екранні кнопки й розкладки під гру</b>
       <small>27 жовтня 2026 · Ryan Gibo</small>
       <span>Клавіатура й геймпад стають дотиками. Екранні кнопки, розкладки під гру і WASD типово.</span>
     </a></li>
-    <li><a href="/uk/blog/android-emulator-mac-shortcuts">
+    <li><a href="/uk/blog/android-emulator-mac-shortcuts/">
       <b>Гарячі клавіші емулятора Android на Mac: список SiliconPlay</b>
       <small>27 жовтня 2026 · Ryan Gibo</small>
       <span>Command-I ставить APK. Ще набір тексту, повний екран, Back, шар кнопок і WASD типово.</span>
     </a></li>
-    <li><a href="/uk/blog/rooted-android-emulator-mac">
+    <li><a href="/uk/blog/rooted-android-emulator-mac/">
       <b>Емулятор Android з root для розробників на Mac з Apple Silicon</b>
       <small>27 жовтня 2026 · Ryan Gibo</small>
       <span>Root за бажанням, встановлення через adb і справжній планшет ARM64 на Android 16. Перевірка APK без відкритої IDE.</span>
     </a></li>
-    <li><a href="/uk/blog/android-emulator-mac-m1-m2-m3-m4">
+    <li><a href="/uk/blog/android-emulator-mac-m1-m2-m3-m4/">
       <b>Безкоштовний емулятор Android для Mac M1, M2, M3, M4 і M5 (і новіші)</b>
       <small>26 жовтня 2026 · Ryan Gibo</small>
       <span>Безкоштовний емулятор Android для Mac з M1, M2, M3, M4, M5 і новішими чипами. Рідний ARM64, Metal, клавіатура, геймпад і необов’язковий root для розробки.</span>
-    </a></li><li><a href="/uk/blog/bluestacks-alternative-mac">
+    </a></li><li><a href="/uk/blog/bluestacks-alternative-mac/">
       <b>Шукаєте альтернативу BlueStacks на Mac? Спробуйте SiliconPlay</b>
       <small>26 жовтня 2026 · Ryan Gibo</small>
       <span>Шукаєте альтернативу BlueStacks на Mac? SiliconPlay — безкоштовний емулятор Android з M1 до M5 і новіших, з Metal і необов’язковим root.</span>
-    </a></li><li><a href="/uk/blog/mumu-player-alternative-mac">
+    </a></li><li><a href="/uk/blog/mumu-player-alternative-mac/">
       <b>Шукаєте альтернативу MuMu Player на Mac? Спробуйте SiliconPlay</b>
       <small>26 жовтня 2026 · Ryan Gibo</small>
       <span>Шукаєте альтернативу MuMu Player на Mac? SiliconPlay — безкоштовний емулятор Android з M1 до M5 і новіших, з Metal і необов’язковим root.</span>
     </a></li>
   </ul>
-  <p class="more"><a href="/uk/">Сторінка SiliconPlay</a> · <a href="/download/">Завантажити для Mac</a> · <a href="/uk/blog/feed.xml">RSS</a></p>
+  <p class="more"><a href="https://siliconplay.app/uk/compare/">Порівняти емулятори Android для Mac</a> · <a href="/uk/">Сторінка SiliconPlay</a> · <a href="/download/">Завантажити для Mac</a> · <a href="/uk/blog/feed.xml">RSS</a></p>
   <footer>
     <p>SiliconPlay не пов’язаний з Apple Inc. чи Google LLC. Android є товарним знаком Google LLC. Mac, macOS і Metal є товарними знаками Apple Inc.</p>
     <p><a href="/privacy.html">Приватність</a> · <a href="/licenses.html">Ліцензії та примітки щодо відкритого коду</a> · <a href="mailto:katzdoll@gmail.com">Контакт</a> · © 2026 SiliconPlay</p>

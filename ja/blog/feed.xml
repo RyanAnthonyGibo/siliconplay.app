@@ -9,48 +9,48 @@
     <atom:link href="https://siliconplay.app/ja/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>MacのAndroidエミュレータでキーマッピングする: 画面上のボタンとゲーム別の配置</title>
-      <link>https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping</link>
-      <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping</guid>
+      <link>https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>MacのSiliconPlayでキーボードとコントローラーをタッチにします。画面上のボタン、ゲーム別の配置、標準のWASDキー配置です。</description>
     </item>
     <item>
       <title>Mac版Androidのショートカット: SiliconPlayのキーボード一覧</title>
-      <link>https://siliconplay.app/ja/blog/android-emulator-mac-shortcuts</link>
-      <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-shortcuts</guid>
+      <link>https://siliconplay.app/ja/blog/android-emulator-mac-shortcuts/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-shortcuts/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>Mac版SiliconPlayのショートカットです。Command-IでAPKを取り込み、入力モード、全画面、Back、オーバーレイも含みます。</description>
     </item>
     <item>
       <title>Apple SiliconのMac向け、rootできるAndroid環境</title>
-      <link>https://siliconplay.app/ja/blog/rooted-android-emulator-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/ja/blog/rooted-android-emulator-mac</guid>
+      <link>https://siliconplay.app/ja/blog/rooted-android-emulator-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/rooted-android-emulator-mac/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>必要なときだけのroot、adbでのインストール、Apple Silicon上のARM64 Android 16タブレットです。IDEを開いたままにしなくてもAPKを試せます。</description>
     </item>
     <item>
       <title>Mac M1、M2、M3、M4、M5（とそれ以降）向けの無料Androidエミュレーター</title>
-      <link>https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4</link>
-      <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <link>https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>M1、M2、M3、M4、M5とそれ以降のMac向け無料Androidエミュレーター。ネイティブARM64、Metal、キーボード、ゲームパッド、開発用の任意root。</description>
     </item>
     <item>
       <title>MacのBlueStacks代替を探していますか？ SiliconPlayを試してください</title>
-      <link>https://siliconplay.app/ja/blog/bluestacks-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/ja/blog/bluestacks-alternative-mac</guid>
+      <link>https://siliconplay.app/ja/blog/bluestacks-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>MacのBlueStacks代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
     </item>
     <item>
       <title>MacのMuMu Player代替を探していますか？ SiliconPlayを試してください</title>
-      <link>https://siliconplay.app/ja/blog/mumu-player-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/ja/blog/mumu-player-alternative-mac</guid>
+      <link>https://siliconplay.app/ja/blog/mumu-player-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>MacのMuMu Player代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
