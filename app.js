@@ -2,7 +2,7 @@ const CONTACT_EMAIL = "katzdoll@gmail.com"; // contact address used by every env
 (()=>{
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const root=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
-const DL='https://siliconplay.app/download/'; // #DOWNLOAD_URL
+const DL='/download/'; // #DOWNLOAD_URL
 const C={
  readme:{t:'readme.md',w:520,h:470,cls:'mono',html:`<span class="h"># SiliconPlay</span>
 Android emulator for macOS. Play Android games on
