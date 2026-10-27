@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SiliconPlayブログ</title>
+    <link>https://siliconplay.app/ja/blog/</link>
+    <description>SiliconPlayについての記事。AppleシリコンのMac向け無料Androidエミュレーター。ARM64、Metal、任意のroot。</description>
+    <language>ja</language>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://siliconplay.app/ja/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mac M1、M2、M3、M4、M5（とそれ以降）向けの無料Androidエミュレーター</title>
+      <link>https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>M1、M2、M3、M4、M5とそれ以降のMac向け無料Androidエミュレーター。ネイティブARM64、Metal、キーボード、ゲームパッド、開発用の任意root。</description>
+    </item>
+    <item>
+      <title>MacのBlueStacks代替を探していますか？ SiliconPlayを試してください</title>
+      <link>https://siliconplay.app/ja/blog/bluestacks-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/bluestacks-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>MacのBlueStacks代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
+    </item>
+    <item>
+      <title>MacのMuMu Player代替を探していますか？ SiliconPlayを試してください</title>
+      <link>https://siliconplay.app/ja/blog/mumu-player-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/ja/blog/mumu-player-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>MacのMuMu Player代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
+    </item>
+  </channel>
+</rss>

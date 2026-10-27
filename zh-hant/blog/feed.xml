@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SiliconPlay 部落格</title>
+    <link>https://siliconplay.app/zh-hant/blog/</link>
+    <description>關於 SiliconPlay 的文章。給 Apple 晶片 Mac 用的免費安卓模擬器：ARM64、Metal，以及可選的 root。</description>
+    <language>zh-Hant</language>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://siliconplay.app/zh-hant/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>M1、M2、M3、M4、M5（及更新晶片）Mac 的免費安卓模擬器</title>
+      <link>https://siliconplay.app/zh-hant/blog/android-emulator-mac-m1-m2-m3-m4</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hant/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>給 M1、M2、M3、M4、M5 及更新晶片的 Mac 用的免費安卓模擬器。原生 ARM64、Metal、鍵盤、手把，以及給開發用的可選 root。</description>
+    </item>
+    <item>
+      <title>在找 Mac 上的 BlueStacks 替代？試試 SiliconPlay</title>
+      <link>https://siliconplay.app/zh-hant/blog/bluestacks-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hant/blog/bluestacks-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>在找 Mac 上的 BlueStacks 替代？SiliconPlay 是從 M1 到 M5 及更新晶片的免費安卓模擬器，有 Metal，root 可選。</description>
+    </item>
+    <item>
+      <title>在找 Mac 上的 MuMu Player 替代？試試 SiliconPlay</title>
+      <link>https://siliconplay.app/zh-hant/blog/mumu-player-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hant/blog/mumu-player-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>在找 Mac 上的 MuMu Player 替代？SiliconPlay 是從 M1 到 M5 及更新晶片的免費安卓模擬器，有 Metal，root 可選。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SiliconPlay ब्लॉग</title>
+    <link>https://siliconplay.app/hi/blog/</link>
+    <description>SiliconPlay पर लेख, Apple Silicon वाले Mac के लिए मुफ़्त Android एमुलेटर: ARM64, Metal और वैकल्पिक रूट.</description>
+    <language>hi</language>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://siliconplay.app/hi/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mac M1, M2, M3, M4 और M5 के लिए मुफ़्त Android एमुलेटर (और नए)</title>
+      <link>https://siliconplay.app/hi/blog/android-emulator-mac-m1-m2-m3-m4</link>
+      <guid isPermaLink="true">https://siliconplay.app/hi/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>M1, M2, M3, M4, M5 और नए चिप वाले Mac के लिए मुफ़्त Android एमुलेटर. नेटिव ARM64, Metal, कीबोर्ड, गेमपैड और डेवलपमेंट के लिए वैकल्पिक रूट.</description>
+    </item>
+    <item>
+      <title>Mac पर BlueStacks का विकल्प ढूँढ रहे हैं? SiliconPlay आज़माएँ</title>
+      <link>https://siliconplay.app/hi/blog/bluestacks-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/hi/blog/bluestacks-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Mac पर BlueStacks का विकल्प ढूँढ रहे हैं? SiliconPlay M1 से M5 और नए चिप के लिए मुफ़्त Android एमुलेटर है, Metal के साथ, रूट वैकल्पिक.</description>
+    </item>
+    <item>
+      <title>Mac पर MuMu Player का विकल्प ढूँढ रहे हैं? SiliconPlay आज़माएँ</title>
+      <link>https://siliconplay.app/hi/blog/mumu-player-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/hi/blog/mumu-player-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Mac पर MuMu Player का विकल्प ढूँढ रहे हैं? SiliconPlay M1 से M5 और नए चिप के लिए मुफ़्त Android एमुलेटर है, Metal के साथ, रूट वैकल्पिक.</description>
+    </item>
+  </channel>
+</rss>

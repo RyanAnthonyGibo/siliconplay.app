@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Blog SiliconPlay</title>
+    <link>https://siliconplay.app/vi/blog/</link>
+    <description>Bài về SiliconPlay, trình giả lập Android miễn phí cho Mac Apple Silicon: ARM64, Metal và root tùy chọn.</description>
+    <language>vi</language>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://siliconplay.app/vi/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Giả lập Android miễn phí cho Mac M1, M2, M3, M4 và M5 (và đời mới hơn)</title>
+      <link>https://siliconplay.app/vi/blog/android-emulator-mac-m1-m2-m3-m4</link>
+      <guid isPermaLink="true">https://siliconplay.app/vi/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Giả lập Android miễn phí cho Mac M1, M2, M3, M4, M5 và chip mới hơn. ARM64 gốc, Metal, bàn phím, tay cầm và root tùy chọn để lập trình.</description>
+    </item>
+    <item>
+      <title>Đang tìm thứ thay BlueStacks trên Mac? Thử SiliconPlay</title>
+      <link>https://siliconplay.app/vi/blog/bluestacks-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/vi/blog/bluestacks-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Đang tìm thứ thay BlueStacks trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.</description>
+    </item>
+    <item>
+      <title>Đang tìm thứ thay MuMu Player trên Mac? Thử SiliconPlay</title>
+      <link>https://siliconplay.app/vi/blog/mumu-player-alternative-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/vi/blog/mumu-player-alternative-mac</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Đang tìm thứ thay MuMu Player trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.</description>
+    </item>
+  </channel>
+</rss>
