@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel SiliconPlay</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/favicon.svg">
+<style>
+:root{--bg:#f4f4f5;--card:#fff;--tx:#18181b;--mu:#71717a;--bd:#e4e4e7;--ac:#2563eb;--ok:#16a34a;--bar:#dbeafe}
+@media (prefers-color-scheme:dark){:root{--bg:#0f0f11;--card:#18181b;--tx:#f4f4f5;--mu:#a1a1aa;--bd:#2a2a2e;--ac:#60a5fa;--ok:#4ade80;--bar:#1e3a5f}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
+h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 12px;color:var(--mu);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button,select{font:inherit;padding:7px 14px;border-radius:9px;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer}
+button.pri{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.mu{color:var(--mu);font-size:13px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.big{font-size:34px;font-weight:700;line-height:1.1}.delta{color:var(--ok);font-weight:600;font-size:14px}
+table{width:100%;border-collapse:collapse}td,th{padding:6px 4px;border-bottom:1px solid var(--bd);text-align:left;font-size:14px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}th{color:var(--mu);font-weight:600;font-size:12px}
+.barc{position:relative}.barc span{position:relative;z-index:1}.barc i{position:absolute;left:0;top:3px;bottom:3px;background:var(--bar);border-radius:4px;z-index:0}
+.note{font-size:13px;color:var(--mu);margin-top:8px}.err{color:#dc2626}
+svg{width:100%;height:120px;display:block}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div><h1>Painel SiliconPlay</h1><div class="mu" id="upd">Carregando…</div></div>
+  <div class="ctl">
+    <select id="rng" title="Período"><option value="d1">Últimas 24 h</option><option value="d7">Últimos 7 dias</option></select>
+    <label class="mu"><input type="checkbox" id="auto" checked> Atualizar a cada 60 s</label>
+    <button class="pri" id="btn">Atualizar</button>
+  </div>
+</header>
+
+<div class="grid">
+  <div class="card"><h2>Downloads (total)</h2><div class="big" id="dlTotal">–</div><div class="delta" id="dlDelta"></div></div>
+  <div class="card"><h2>Visitas</h2><div class="big" id="visits">–</div><div class="mu" id="visitsSub"></div></div>
+  <div class="card"><h2>Visualizações de página</h2><div class="big" id="views">–</div><div class="mu" id="viewsSub"></div></div>
+  <div class="card"><h2>Cliques em Baixar</h2><div class="big" id="dlClicks">–</div><div class="mu">página /download/ no período</div></div>
+</div>
+
+<div class="grid">
+  <div class="card"><h2>Downloads por versão</h2><table id="rel"></table><div class="note">Fonte: GitHub Releases, ao vivo.</div></div>
+  <div class="card"><h2>Downloads por país</h2><table id="dlc"></table><div class="note">Contagem de quem passou por siliconplay.app/download/. Links diretos para o GitHub não entram aqui.</div></div>
+</div>
+
+<div class="card" style="margin-bottom:14px"><h2>Visitas por hora</h2><svg id="chart" viewBox="0 0 1000 120" preserveAspectRatio="none"></svg><div class="mu" id="chartLbl"></div></div>
+
+<div class="grid">
+  <div class="card"><h2>Países (visitas)</h2><table id="ctry"></table></div>
+  <div class="card"><h2>De onde vêm (referências)</h2><table id="ref"></table></div>
+  <div class="card"><h2>Páginas mais vistas</h2><table id="paths"></table></div>
+</div>
+<div class="note" id="cfNote"></div>
+</main>
+<script>
+(function(){
+var REPO="RyanAnthonyGibo/siliconplay.app";
+var hp=new URLSearchParams(location.hash.slice(1));
+if(hp.get("k")){localStorage.setItem("spk",hp.get("k"));}
+if(hp.get("api")){localStorage.setItem("spapi",hp.get("api"));}
+var KEY=localStorage.getItem("spk")||"", API=localStorage.getItem("spapi")||"";
+var cf=null, timer=null, busy=false;
+var $=function(id){return document.getElementById(id)};
+var fmt=new Intl.NumberFormat("pt-BR");
+var dn; try{dn=new Intl.DisplayNames(["pt-BR"],{type:"region"})}catch(e){}
+function flag(cc){if(!cc||cc.length!==2)return "";return String.fromCodePoint.apply(null,cc.toUpperCase().split("").map(function(c){return 127397+c.charCodeAt(0)}))}
+function cname(cc){if(!cc)return "Desconhecido";var n=cc;try{n=dn?dn.of(cc.toUpperCase()):cc}catch(e){}return flag(cc)+" "+n}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function when(d){return new Date(d).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit"})}
+function table(el,head,rows,valIdx){
+  var max=0;rows.forEach(function(r){max=Math.max(max,+r[valIdx]||0)});
+  var h="<tr>"+head.map(function(x,i){return "<th"+(i>0?' class="n"':"")+">"+x+"</th>"}).join("")+"</tr>";
+  rows.forEach(function(r){h+="<tr>"+r.map(function(c,i){
+    if(i===0){var w=max?Math.round(100*(+r[valIdx]||0)/max):0;return '<td class="barc"><i style="width:'+w+'%"></i><span>'+c+"</span></td>"}
+    return '<td class="n">'+(typeof c==="number"?fmt.format(c):c)+"</td>"}).join("")+"</tr>"});
+  el.innerHTML=h;
+}
+function gh(){
+  return fetch("https://api.github.com/repos/"+REPO+"/releases?per_page=50",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("GitHub "+r.status);return r.json()}).then(function(rels){
+    var total=0,rows=[];
+    rels.forEach(function(r){(r.assets||[]).forEach(function(a){total+=a.download_count;rows.push([esc(r.tag_name)+' <span class="mu">'+esc(a.name)+"</span>",new Date(r.published_at).toLocaleDateString("pt-BR",{timeZone:"America/Sao_Paulo"}),a.download_count])})});
+    $("dlTotal").textContent=fmt.format(total);
+    table($("rel"),["Versão","Publicada","Downloads"],rows,2);
+    var prev=JSON.parse(localStorage.getItem("spdl")||"null"), now=Date.now();
+    if(!prev){prev={n:total,t:now};localStorage.setItem("spdl",JSON.stringify(prev))}
+    var day=JSON.parse(localStorage.getItem("spdlday")||"null");
+    if(!day||now-day.t>36e5*24){day={n:total,t:now};localStorage.setItem("spdlday",JSON.stringify(day))}
+    var d=total-day.n;
+    $("dlDelta").textContent=d>0?("+"+fmt.format(d)+" desde "+when(day.t)):"";
+  });
+}
+function cfLoad(){
+  if(!KEY||!API){return Promise.resolve(null)}
+  return fetch(API.replace(/\/$/,"")+"/?k="+encodeURIComponent(KEY),{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){if(!j.ok)throw new Error(j.error||"Cloudflare");cf=j;return j});
+}
+function renderCf(){
+  if(!cf){
+    $("cfNote").innerHTML=(KEY&&API)?"":"Visitas e países ficam disponíveis quando a conexão com o Cloudflare estiver ativa.";
+    ["visits","views","dlClicks"].forEach(function(id){$(id).textContent="–"});
+    return;
+  }
+  var r=cf[$("rng").value], lbl=$("rng").value==="d1"?"últimas 24 h":"últimos 7 dias";
+  $("visits").textContent=fmt.format(r.visits);$("visitsSub").textContent=lbl;
+  $("views").textContent=fmt.format(r.views);$("viewsSub").textContent=lbl;
+  var dsum=0;r.downloadsByCountry.forEach(function(x){dsum+=x.views});$("dlClicks").textContent=fmt.format(dsum);
+  table($("dlc"),["País","Downloads"],r.downloadsByCountry.map(function(x){return [cname(x.k),x.views]}),1);
+  if(!r.downloadsByCountry.length)$("dlc").innerHTML='<tr><td class="mu">Ainda sem registros neste período.</td></tr>';
+  table($("ctry"),["País","Visitas","Views"],r.countries.map(function(x){return [cname(x.k),x.visits,x.views]}),1);
+  table($("ref"),["Origem","Visitas"],r.referers.map(function(x){return [esc(x.k||"Direto / sem referência"),x.visits]}),1);
+  table($("paths"),["Página","Views"],r.paths.map(function(x){return [esc(x.k),x.views]}),1);
+  var hs=r.hourly, mx=1; hs.forEach(function(x){mx=Math.max(mx,x.visits)});
+  var w=1000/Math.max(hs.length,1), s="";
+  hs.forEach(function(x,i){var h=Math.max(1,110*x.visits/mx);s+='<rect x="'+(i*w+1)+'" y="'+(118-h)+'" width="'+Math.max(1,w-2)+'" height="'+h+'" fill="var(--ac)" rx="2"><title>'+when(x.k)+": "+x.visits+" visitas</title></rect>"});
+  $("chart").innerHTML=s;
+  $("chartLbl").textContent=hs.length?("de "+when(hs[0].k)+" até "+when(hs[hs.length-1].k)+" · pico "+fmt.format(mx)+" visitas/h"):"";
+  $("cfNote").textContent="";
+}
+function refresh(){
+  if(busy)return;busy=true;$("btn").disabled=true;$("btn").textContent="Atualizando…";
+  var errs=[];
+  Promise.all([gh().catch(function(e){errs.push("GitHub: "+e.message)}),cfLoad().catch(function(e){errs.push("Cloudflare: "+e.message)})]).then(function(){
+    renderCf();
+    $("upd").innerHTML="Atualizado em "+when(Date.now())+" (horário de Brasília)"+(errs.length?' · <span class="err">'+esc(errs.join(" · "))+"</span>":"");
+    busy=false;$("btn").disabled=false;$("btn").textContent="Atualizar";
+  });
+}
+function sched(){clearInterval(timer);if($("auto").checked)timer=setInterval(function(){if(!document.hidden)refresh()},60000)}
+$("btn").onclick=refresh;$("auto").onchange=sched;$("rng").onchange=renderCf;
+if(location.hash)history.replaceState(null,"",location.pathname);
+refresh();sched();
+})();
+</script>
+</body>
+</html>
