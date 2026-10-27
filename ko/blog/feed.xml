@@ -9,48 +9,48 @@
     <atom:link href="https://siliconplay.app/ko/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>맥 안드로이드 에뮬레이터의 키 매핑: 화면 버튼과 게임별 배치</title>
-      <link>https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping</link>
-      <guid isPermaLink="true">https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping</guid>
+      <link>https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>맥의 SiliconPlay에서 키보드와 컨트롤러를 터치로 바꿉니다. 화면 버튼, 게임별 배치, 기본 WASD 키 맵을 다룹니다.</description>
     </item>
     <item>
       <title>맥 안드로이드 에뮬레이터 단축키: SiliconPlay 키보드 목록</title>
-      <link>https://siliconplay.app/ko/blog/android-emulator-mac-shortcuts</link>
-      <guid isPermaLink="true">https://siliconplay.app/ko/blog/android-emulator-mac-shortcuts</guid>
+      <link>https://siliconplay.app/ko/blog/android-emulator-mac-shortcuts/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/android-emulator-mac-shortcuts/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>맥용 SiliconPlay 단축키입니다. Command-I로 APK를 설치하고, 입력 모드, 전체 화면, Back, 오버레이를 적습니다.</description>
     </item>
     <item>
       <title>Apple Silicon 맥을 위한, 루팅할 수 있는 안드로이드 환경</title>
-      <link>https://siliconplay.app/ko/blog/rooted-android-emulator-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/ko/blog/rooted-android-emulator-mac</guid>
+      <link>https://siliconplay.app/ko/blog/rooted-android-emulator-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/rooted-android-emulator-mac/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>선택형 루팅, adb 설치, Apple Silicon의 ARM64 Android 16 태블릿입니다. IDE를 열어 두지 않고 APK를 시험합니다.</description>
     </item>
     <item>
       <title>Mac M1, M2, M3, M4, M5(와 그 이후)용 무료 안드로이드 에뮬레이터</title>
-      <link>https://siliconplay.app/ko/blog/android-emulator-mac-m1-m2-m3-m4</link>
-      <guid isPermaLink="true">https://siliconplay.app/ko/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <link>https://siliconplay.app/ko/blog/android-emulator-mac-m1-m2-m3-m4/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>M1, M2, M3, M4, M5와 그 이후 Mac용 무료 안드로이드 에뮬레이터. 네이티브 ARM64, Metal, 키보드, 게임패드, 개발용 선택 루트.</description>
     </item>
     <item>
       <title>Mac용 BlueStacks 대안을 찾나요? SiliconPlay를 써 보세요</title>
-      <link>https://siliconplay.app/ko/blog/bluestacks-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/ko/blog/bluestacks-alternative-mac</guid>
+      <link>https://siliconplay.app/ko/blog/bluestacks-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>Mac용 BlueStacks 대안을 찾나요? SiliconPlay는 M1부터 M5 이후까지 쓰는 무료 안드로이드 에뮬레이터입니다. Metal이 있고 루트는 선택입니다.</description>
     </item>
     <item>
       <title>Mac용 MuMu Player 대안을 찾나요? SiliconPlay를 써 보세요</title>
-      <link>https://siliconplay.app/ko/blog/mumu-player-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/ko/blog/mumu-player-alternative-mac</guid>
+      <link>https://siliconplay.app/ko/blog/mumu-player-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>Mac용 MuMu Player 대안을 찾나요? SiliconPlay는 M1부터 M5 이후까지 쓰는 무료 안드로이드 에뮬레이터입니다. Metal이 있고 루트는 선택입니다.</description>

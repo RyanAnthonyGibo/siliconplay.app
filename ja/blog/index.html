@@ -27,6 +27,10 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/">
 <link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="es" href="https://siliconplay.app/es-mx/blog/">
+<link rel="alternate" hreflang="pt" href="https://siliconplay.app/pt-br/blog/">
+<link rel="alternate" hreflang="zh" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" type="application/rss+xml" title="SiliconPlayブログ" href="https://siliconplay.app/ja/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="SiliconPlayブログ">
@@ -61,7 +65,7 @@
       "@type": "BlogPosting",
       "headline": "MacのAndroidエミュレータでキーマッピングする: 画面上のボタンとゲーム別の配置",
       "description": "MacのSiliconPlayでキーボードとコントローラーをタッチにします。画面上のボタン、ゲーム別の配置、標準のWASDキー配置です。",
-      "url": "https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping",
+      "url": "https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "ja",
@@ -74,7 +78,7 @@
       "@type": "BlogPosting",
       "headline": "Mac版Androidのショートカット: SiliconPlayのキーボード一覧",
       "description": "Mac版SiliconPlayのショートカットです。Command-IでAPKを取り込み、入力モード、全画面、Back、オーバーレイも含みます。",
-      "url": "https://siliconplay.app/ja/blog/android-emulator-mac-shortcuts",
+      "url": "https://siliconplay.app/ja/blog/android-emulator-mac-shortcuts/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "ja",
@@ -87,7 +91,7 @@
       "@type": "BlogPosting",
       "headline": "Apple SiliconのMac向け、rootできるAndroid環境",
       "description": "必要なときだけのroot、adbでのインストール、Apple Silicon上のARM64 Android 16タブレットです。IDEを開いたままにしなくてもAPKを試せます。",
-      "url": "https://siliconplay.app/ja/blog/rooted-android-emulator-mac",
+      "url": "https://siliconplay.app/ja/blog/rooted-android-emulator-mac/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "ja",
@@ -100,7 +104,7 @@
       "@type": "BlogPosting",
       "headline": "Mac M1、M2、M3、M4、M5（とそれ以降）向けの無料Androidエミュレーター",
       "description": "M1、M2、M3、M4、M5とそれ以降のMac向け無料Androidエミュレーター。ネイティブARM64、Metal、キーボード、ゲームパッド、開発用の任意root。",
-      "url": "https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4",
+      "url": "https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "ja",
@@ -113,7 +117,7 @@
       "@type": "BlogPosting",
       "headline": "MacのBlueStacks代替を探していますか？ SiliconPlayを試してください",
       "description": "MacのBlueStacks代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。",
-      "url": "https://siliconplay.app/ja/blog/bluestacks-alternative-mac",
+      "url": "https://siliconplay.app/ja/blog/bluestacks-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "ja",
@@ -126,7 +130,7 @@
       "@type": "BlogPosting",
       "headline": "MacのMuMu Player代替を探していますか？ SiliconPlayを試してください",
       "description": "MacのMuMu Player代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。",
-      "url": "https://siliconplay.app/ja/blog/mumu-player-alternative-mac",
+      "url": "https://siliconplay.app/ja/blog/mumu-player-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "ja",
@@ -141,9 +145,28 @@
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script>
+(function(){
+  var done=false;
+  function load(){
+    if(done)return;
+    done=true;
+    var s=document.createElement("script");
+    s.async=true;
+    s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277";
+    s.crossOrigin="anonymous";
+    document.head.appendChild(s);
+  }
+  ["pointerdown","keydown","scroll","touchstart"].forEach(function(ev){
+    addEventListener(ev,load,{once:true,passive:true});
+  });
+  addEventListener("load",function(){
+    var ric=window.requestIdleCallback||function(fn){setTimeout(fn,1200);};
+    ric(function(){setTimeout(load,1200);});
+  });
+})();
+</script>
 </head>
 <body class="docpage">
 <div class="wall" aria-hidden="true"></div>
@@ -152,36 +175,36 @@
   <h1>ブログ</h1>
   <p class="doc-meta">AppleシリコンのMac向け無料Androidエミュレーター、SiliconPlayのメモ。</p>
   <ul class="post-list">
-    <li><a href="/ja/blog/android-emulator-mac-keyboard-mapping">
+    <li><a href="/ja/blog/android-emulator-mac-keyboard-mapping/">
       <b>MacのAndroidエミュレータでキーマッピングする: 画面上のボタンとゲーム別の配置</b>
       <small>2026年10月27日 · Ryan Gibo</small>
       <span>キーボードとコントローラーをタッチに変えます。画面上のボタン、ゲーム別の配置、標準のWASD配置です。</span>
     </a></li>
-    <li><a href="/ja/blog/android-emulator-mac-shortcuts">
+    <li><a href="/ja/blog/android-emulator-mac-shortcuts/">
       <b>Mac版Androidのショートカット: SiliconPlayのキーボード一覧</b>
       <small>2026年10月27日 · Ryan Gibo</small>
       <span>Command-IでAPKを取り込みます。入力モード、全画面、Back、オーバーレイ、標準のWASDキーマップもあります。</span>
     </a></li>
-    <li><a href="/ja/blog/rooted-android-emulator-mac">
+    <li><a href="/ja/blog/rooted-android-emulator-mac/">
       <b>Apple SiliconのMac向け、rootできるAndroid環境</b>
       <small>2026年10月27日 · Ryan Gibo</small>
       <span>必要なときだけのroot、adbでのインストール、本物のARM64 Android 16タブレットです。IDEを開いたままにしなくてもAPKを試せます。</span>
     </a></li>
-    <li><a href="/ja/blog/android-emulator-mac-m1-m2-m3-m4">
+    <li><a href="/ja/blog/android-emulator-mac-m1-m2-m3-m4/">
       <b>Mac M1、M2、M3、M4、M5（とそれ以降）向けの無料Androidエミュレーター</b>
       <small>2026年10月26日 · Ryan Gibo</small>
       <span>M1、M2、M3、M4、M5とそれ以降のMac向け無料Androidエミュレーター。ネイティブARM64、Metal、キーボード、ゲームパッド、開発用の任意root。</span>
-    </a></li><li><a href="/ja/blog/bluestacks-alternative-mac">
+    </a></li><li><a href="/ja/blog/bluestacks-alternative-mac/">
       <b>MacのBlueStacks代替を探していますか？ SiliconPlayを試してください</b>
       <small>2026年10月26日 · Ryan Gibo</small>
       <span>MacのBlueStacks代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</span>
-    </a></li><li><a href="/ja/blog/mumu-player-alternative-mac">
+    </a></li><li><a href="/ja/blog/mumu-player-alternative-mac/">
       <b>MacのMuMu Player代替を探していますか？ SiliconPlayを試してください</b>
       <small>2026年10月26日 · Ryan Gibo</small>
       <span>MacのMuMu Player代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</span>
     </a></li>
   </ul>
-  <p class="more"><a href="/ja/">SiliconPlayのページ</a> · <a href="/download/">Mac版をダウンロード</a> · <a href="/ja/blog/feed.xml">RSS</a></p>
+  <p class="more"><a href="https://siliconplay.app/ja/compare/">MacのAndroidエミュレーターを比べる</a> · <a href="/ja/">SiliconPlayのページ</a> · <a href="/download/">Mac版をダウンロード</a> · <a href="/ja/blog/feed.xml">RSS</a></p>
   <footer>
     <p>SiliconPlayはApple Inc.およびGoogle LLCとは関係ありません。AndroidはGoogle LLCの商標です。Mac、macOS、MetalはApple Inc.の商標です。</p>
     <p><a href="/privacy.html">プライバシー</a> · <a href="/licenses.html">ライセンスとオープンソースの表記</a> · <a href="mailto:katzdoll@gmail.com">連絡</a> · © 2026 SiliconPlay</p>

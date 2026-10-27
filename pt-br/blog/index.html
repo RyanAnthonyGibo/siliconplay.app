@@ -27,6 +27,10 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/">
 <link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="es" href="https://siliconplay.app/es-mx/blog/">
+<link rel="alternate" hreflang="pt" href="https://siliconplay.app/pt-br/blog/">
+<link rel="alternate" hreflang="zh" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" type="application/rss+xml" title="Blog do SiliconPlay" href="https://siliconplay.app/pt-br/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="Blog do SiliconPlay">
@@ -61,7 +65,7 @@
       "@type": "BlogPosting",
       "headline": "Mapeamento de teclado no emulador de Android para Mac: botões na tela e layout por jogo",
       "description": "Teclado e controle viram toque no emulador de Android para Mac. Botões na tela, layout por jogo e o keymap WASD padrão.",
-      "url": "https://siliconplay.app/pt-br/blog/android-emulator-mac-keyboard-mapping",
+      "url": "https://siliconplay.app/pt-br/blog/android-emulator-mac-keyboard-mapping/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "pt-BR",
@@ -74,7 +78,7 @@
       "@type": "BlogPosting",
       "headline": "Atalhos do emulador de Android no Mac: a lista de teclado do SiliconPlay",
       "description": "Atalhos do SiliconPlay no Mac: Command-I importa um APK. Também Typing, tela cheia, Back e a sobreposição dos botões.",
-      "url": "https://siliconplay.app/pt-br/blog/android-emulator-mac-shortcuts",
+      "url": "https://siliconplay.app/pt-br/blog/android-emulator-mac-shortcuts/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "pt-BR",
@@ -87,7 +91,7 @@
       "@type": "BlogPosting",
       "headline": "Um emulador de Android com root para quem desenvolve no Mac com Apple Silicon",
       "description": "Root opcional, instalação por adb e um tablet ARM64 com Android 16 no Apple Silicon. Teste um APK sem deixar o IDE aberto.",
-      "url": "https://siliconplay.app/pt-br/blog/rooted-android-emulator-mac",
+      "url": "https://siliconplay.app/pt-br/blog/rooted-android-emulator-mac/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "pt-BR",
@@ -100,7 +104,7 @@
       "@type": "BlogPosting",
       "headline": "Emulador de Android grátis para Mac M1, M2, M3, M4 e M5 (e os mais novos)",
       "description": "Emulador de Android grátis para Mac com M1, M2, M3, M4, M5 e chips mais novos. ARM64 nativo, Metal, teclado, controle e root opcional para desenvolver.",
-      "url": "https://siliconplay.app/pt-br/blog/android-emulator-mac-m1-m2-m3-m4",
+      "url": "https://siliconplay.app/pt-br/blog/android-emulator-mac-m1-m2-m3-m4/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "pt-BR",
@@ -113,7 +117,7 @@
       "@type": "BlogPosting",
       "headline": "Procurando uma alternativa ao BlueStacks no Mac? Experimenta o SiliconPlay",
       "description": "Procurando uma alternativa ao BlueStacks no Mac? O SiliconPlay é um emulador de Android grátis para M1 até M5 e chips mais novos, com Metal e root opcional.",
-      "url": "https://siliconplay.app/pt-br/blog/bluestacks-alternative-mac",
+      "url": "https://siliconplay.app/pt-br/blog/bluestacks-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "pt-BR",
@@ -126,7 +130,7 @@
       "@type": "BlogPosting",
       "headline": "Procurando uma alternativa ao MuMu Player no Mac? Experimenta o SiliconPlay",
       "description": "Procurando uma alternativa ao MuMu Player no Mac? O SiliconPlay é um emulador de Android grátis para M1 até M5 e chips mais novos, com Metal e root opcional.",
-      "url": "https://siliconplay.app/pt-br/blog/mumu-player-alternative-mac",
+      "url": "https://siliconplay.app/pt-br/blog/mumu-player-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "pt-BR",
@@ -141,9 +145,28 @@
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script>
+(function(){
+  var done=false;
+  function load(){
+    if(done)return;
+    done=true;
+    var s=document.createElement("script");
+    s.async=true;
+    s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277";
+    s.crossOrigin="anonymous";
+    document.head.appendChild(s);
+  }
+  ["pointerdown","keydown","scroll","touchstart"].forEach(function(ev){
+    addEventListener(ev,load,{once:true,passive:true});
+  });
+  addEventListener("load",function(){
+    var ric=window.requestIdleCallback||function(fn){setTimeout(fn,1200);};
+    ric(function(){setTimeout(load,1200);});
+  });
+})();
+</script>
 </head>
 <body class="docpage">
 <div class="wall" aria-hidden="true"></div>
@@ -152,36 +175,36 @@
   <h1>Blog</h1>
   <p class="doc-meta">Notas sobre o SiliconPlay, um emulador de Android grátis para Mac com Apple Silicon.</p>
   <ul class="post-list">
-    <li><a href="/pt-br/blog/android-emulator-mac-keyboard-mapping">
+    <li><a href="/pt-br/blog/android-emulator-mac-keyboard-mapping/">
       <b>Mapeamento de teclado no emulador de Android para Mac: botões na tela e layout por jogo</b>
       <small>27 de outubro de 2026 · Ryan Gibo</small>
       <span>Teclado e controle viram toque. Botões na tela, um layout por jogo e o keymap WASD que já vem no app.</span>
     </a></li>
-    <li><a href="/pt-br/blog/android-emulator-mac-shortcuts">
+    <li><a href="/pt-br/blog/android-emulator-mac-shortcuts/">
       <b>Atalhos do emulador de Android no Mac: a lista de teclado do SiliconPlay</b>
       <small>27 de outubro de 2026 · Ryan Gibo</small>
       <span>Command-I importa um APK. Também o modo Typing, tela cheia, Back, a sobreposição e o keymap WASD padrão.</span>
     </a></li>
-    <li><a href="/pt-br/blog/rooted-android-emulator-mac">
+    <li><a href="/pt-br/blog/rooted-android-emulator-mac/">
       <b>Um emulador de Android com root para quem desenvolve no Mac com Apple Silicon</b>
       <small>27 de outubro de 2026 · Ryan Gibo</small>
       <span>Root opcional, instalação por adb e um tablet ARM64 de verdade com Android 16. Teste um APK sem deixar um IDE inteiro aberto.</span>
     </a></li>
-    <li><a href="/pt-br/blog/android-emulator-mac-m1-m2-m3-m4">
+    <li><a href="/pt-br/blog/android-emulator-mac-m1-m2-m3-m4/">
       <b>Emulador de Android grátis para Mac M1, M2, M3, M4 e M5 (e os mais novos)</b>
       <small>26 de outubro de 2026 · Ryan Gibo</small>
       <span>Emulador de Android grátis para Mac com M1, M2, M3, M4, M5 e chips mais novos. ARM64 nativo, Metal, teclado, controle e root opcional para desenvolver.</span>
-    </a></li><li><a href="/pt-br/blog/bluestacks-alternative-mac">
+    </a></li><li><a href="/pt-br/blog/bluestacks-alternative-mac/">
       <b>Procurando uma alternativa ao BlueStacks no Mac? Experimenta o SiliconPlay</b>
       <small>26 de outubro de 2026 · Ryan Gibo</small>
       <span>Procurando uma alternativa ao BlueStacks no Mac? O SiliconPlay é um emulador de Android grátis para M1 até M5 e chips mais novos, com Metal e root opcional.</span>
-    </a></li><li><a href="/pt-br/blog/mumu-player-alternative-mac">
+    </a></li><li><a href="/pt-br/blog/mumu-player-alternative-mac/">
       <b>Procurando uma alternativa ao MuMu Player no Mac? Experimenta o SiliconPlay</b>
       <small>26 de outubro de 2026 · Ryan Gibo</small>
       <span>Procurando uma alternativa ao MuMu Player no Mac? O SiliconPlay é um emulador de Android grátis para M1 até M5 e chips mais novos, com Metal e root opcional.</span>
     </a></li>
   </ul>
-  <p class="more"><a href="/pt-br/">Página do SiliconPlay</a> · <a href="/download/">Baixar para Mac</a> · <a href="/pt-br/blog/feed.xml">RSS</a></p>
+  <p class="more"><a href="https://siliconplay.app/pt-br/compare/">Comparar emuladores de Android para Mac</a> · <a href="/pt-br/">Página do SiliconPlay</a> · <a href="/download/">Baixar para Mac</a> · <a href="/pt-br/blog/feed.xml">RSS</a></p>
   <footer>
     <p>O SiliconPlay não tem ligação com a Apple Inc. nem com a Google LLC. Android é marca da Google LLC. Mac, macOS e Metal são marcas da Apple Inc.</p>
     <p><a href="/privacy.html">Privacidade</a> · <a href="/licenses.html">Licenças e avisos de código aberto</a> · <a href="mailto:katzdoll@gmail.com">Contato</a> · © 2026 SiliconPlay</p>

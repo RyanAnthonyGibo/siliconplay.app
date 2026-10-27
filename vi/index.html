@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="vi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Giả lập Android miễn phí cho Mac (M1, M2, M3, M4, M5 và đời mới hơn) | SiliconPlay</title>
+<title>Giả lập Android miễn phí cho Mac (M1–M5) | SiliconPlay</title>
 <meta name="description" content="Giả lập Android cho Mac Apple Silicon. SiliconPlay chạy game và cũng dùng để lập trình, ARM64 gốc, đồ họa Metal. Root là tùy chọn.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://siliconplay.app/vi/">
@@ -27,9 +27,13 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/">
 <link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/">
 <link rel="alternate" hreflang="x-default" href="https://siliconplay.app/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/">
+<link rel="alternate" hreflang="es" href="https://siliconplay.app/es-mx/">
+<link rel="alternate" hreflang="pt" href="https://siliconplay.app/pt-br/">
+<link rel="alternate" hreflang="zh" href="https://siliconplay.app/zh-hans/">
 <link rel="alternate" type="application/rss+xml" title="Blog SiliconPlay" href="https://siliconplay.app/vi/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
-<meta property="og:title" content="Giả lập Android miễn phí cho Mac (M1, M2, M3, M4, M5 và đời mới hơn) | SiliconPlay">
+<meta property="og:title" content="Giả lập Android miễn phí cho Mac (M1–M5) | SiliconPlay">
 <meta property="og:description" content="Giả lập Android cho Mac Apple Silicon. SiliconPlay chạy game và cũng dùng để lập trình, ARM64 gốc, đồ họa Metal. Root là tùy chọn.">
 <meta property="og:url" content="https://siliconplay.app/vi/">
 <meta property="og:type" content="website">
@@ -39,36 +43,103 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Biểu tượng SiliconPlay và dòng chữ giả lập Android miễn phí cho Mac">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Giả lập Android miễn phí cho Mac (M1, M2, M3, M4, M5 và đời mới hơn) | SiliconPlay">
+<meta name="twitter:title" content="Giả lập Android miễn phí cho Mac (M1–M5) | SiliconPlay">
 <meta name="twitter:description" content="Giả lập Android cho Mac Apple Silicon. SiliconPlay chạy game và cũng dùng để lập trình, ARM64 gốc, đồ họa Metal. Root là tùy chọn.">
 <meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
 <meta name="twitter:image:alt" content="Biểu tượng SiliconPlay và dòng chữ giả lập Android miễn phí cho Mac">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "SiliconPlay",
-  "operatingSystem": "macOS",
-  "applicationCategory": "DeveloperApplication",
-  "inLanguage": "vi",
-  "url": "https://siliconplay.app/vi/",
-  "downloadUrl": "https://siliconplay.app/download/",
-  "image": "https://siliconplay.app/assets/og.png",
-  "description": "Giả lập Android cho Mac Apple Silicon. SiliconPlay chạy game và cũng dùng để lập trình, ARM64 gốc, đồ họa Metal. Root là tùy chọn.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "SiliconPlay",
+      "operatingSystem": "macOS 14 or later (Apple Silicon)",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "GameApplication",
+      "softwareVersion": "1.0.0",
+      "inLanguage": "vi",
+      "url": "https://siliconplay.app/vi/",
+      "downloadUrl": "https://siliconplay.app/download/",
+      "description": "Giả lập Android cho Mac Apple Silicon. SiliconPlay chạy game và cũng dùng để lập trình, ARM64 gốc, đồ họa Metal. Root là tùy chọn.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://siliconplay.app/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://siliconplay.app/#organization",
+      "name": "SiliconPlay",
+      "url": "https://siliconplay.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://siliconplay.app/assets/icon-512.png"
+      },
+      "sameAs": [
+        "https://github.com/RyanAnthonyGibo/siliconplay.app"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "SiliconPlay",
+      "url": "https://siliconplay.app/",
+      "inLanguage": "vi",
+      "publisher": {
+        "@id": "https://siliconplay.app/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "url": "https://siliconplay.app/vi/",
+      "inLanguage": "vi",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Chạy trên Mac nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mac Apple Silicon (M1, M2, M3, M4, M5 và đời mới hơn) chạy macOS 14 trở lên."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tài khoản game của tôi có an toàn không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Root là tùy chọn và SiliconPlay không sửa game. Hãy theo điều khoản của từng game."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Có miễn phí không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có. SiliconPlay miễn phí. Ủng hộ dự án là tùy bạn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Có mã nguồn không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không. Giấy phép của thành phần bên thứ ba đi kèm ứng dụng."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<script>document.documentElement.classList.add('js');try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');var seo=document.getElementById('seo');if(seo)seo.setAttribute('aria-hidden','true');try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
 </head>
 <body>
 <svg class="sprite" aria-hidden="true" width="0" height="0">
@@ -161,8 +232,8 @@
 <main id="seo">
   <header class="seo-hero">
     <p class="eyebrow">Giả lập Android miễn phí cho Mac Apple Silicon</p>
-    <h1>SiliconPlay</h1>
-    <p>SiliconPlay là trình giả lập Android miễn phí cho Mac Apple Silicon (M1, M2, M3, M4, M5 và đời mới hơn). Dùng để chơi game và để lập trình: Android chạy trên nhân ARM của Mac qua Hypervisor của Apple, Metal vẽ hình. Không dịch từ x86.</p>
+    <h1>SiliconPlay: giả lập Android miễn phí cho Mac (M1 đến M5)</h1>
+    <p>SiliconPlay là trình giả lập Android miễn phí cho Mac Apple Silicon (M1, M2, M3, M4, M5 và đời mới hơn). Dùng để chơi game và để lập trình: Android chạy trên nhân ARM của Mac qua Hypervisor của Apple, Metal vẽ hình. Chạy gốc trên nhân ARM của Mac.</p>
     <p><a class="seo-cta" href="/download/">Tải SiliconPlay cho Mac</a></p>
   </header>
   <section id="features"><h2>Có gì</h2><ul>
@@ -180,12 +251,13 @@
     <h3>Có miễn phí không?</h3><p>Có. SiliconPlay miễn phí. Ủng hộ dự án là tùy bạn.</p>
     <h3>Có mã nguồn không?</h3><p>Không. Giấy phép của thành phần bên thứ ba đi kèm ứng dụng.</p></section>
   <section id="blog"><h2>Blog</h2><ul>
-    <li><a href="/vi/blog/android-emulator-mac-keyboard-mapping">Gán phím trên giả lập Android cho Mac</a></li>
-    <li><a href="/vi/blog/android-emulator-mac-shortcuts">Phím tắt giả lập Android trên Mac</a></li>
-    <li><a href="/vi/blog/rooted-android-emulator-mac">Giả lập Android có root cho người phát triển trên Apple Silicon</a></li>
-    <li><a href="/vi/blog/android-emulator-mac-m1-m2-m3-m4">Giả lập Android miễn phí cho Mac M1, M2, M3, M4 và M5 (và đời mới hơn)</a></li>
-    <li><a href="/vi/blog/bluestacks-alternative-mac">Đang tìm thứ thay BlueStacks trên Mac? Thử SiliconPlay</a></li>
-    <li><a href="/vi/blog/mumu-player-alternative-mac">Đang tìm thứ thay MuMu Player trên Mac? Thử SiliconPlay</a></li></ul></section>
+    <li><a href="/vi/blog/android-emulator-mac-keyboard-mapping/">Gán phím trên giả lập Android cho Mac</a></li>
+    <li><a href="/vi/blog/android-emulator-mac-shortcuts/">Phím tắt giả lập Android trên Mac</a></li>
+    <li><a href="/vi/blog/rooted-android-emulator-mac/">Giả lập Android có root cho người phát triển trên Apple Silicon</a></li>
+    <li><a href="/vi/blog/android-emulator-mac-m1-m2-m3-m4/">Giả lập Android miễn phí cho Mac M1, M2, M3, M4 và M5 (và đời mới hơn)</a></li>
+    <li><a href="/vi/blog/bluestacks-alternative-mac/">Đang tìm thứ thay BlueStacks trên Mac? Thử SiliconPlay</a></li>
+    <li><a href="/vi/blog/mumu-player-alternative-mac/">Đang tìm thứ thay MuMu Player trên Mac? Thử SiliconPlay</a></li></ul>
+    <p><a href="/vi/compare/">So sánh giả lập Android cho Mac</a></p></section>
   <section id="projects"><h2>Việc khác của Ryan</h2><ul>
     <li>GitHub, trang của Ryan.</li>
     <li>a Lequeria, quạt tre làm tay cho dân nhạc điện tử.</li>
@@ -209,7 +281,7 @@
     <div class="menu"><button aria-haspopup="true" aria-expanded="false">Xem</button>
       <div class="drop" role="menu"><a role="menuitem" href="#" data-theme-toggle>Đổi sáng / tối</a><a role="menuitem" href="#" data-open="controls">Điều khiển</a><a role="menuitem" href="#" data-open="terminal">Terminal</a></div></div>
     <div class="menu"><button aria-haspopup="true" aria-expanded="false">Trợ giúp</button>
-      <div class="drop" role="menu"><a role="menuitem" href="#" data-open="faq">Câu hỏi</a><a role="menuitem" href="/vi/blog/">Blog</a><a role="menuitem" href="/licenses.html">Giấy phép và ghi chú mã nguồn mở</a><a role="menuitem" href="mailto:katzdoll@gmail.com">Liên hệ</a><a role="menuitem" href="/privacy.html">Quyền riêng tư</a></div></div>
+      <div class="drop" role="menu"><a role="menuitem" href="#" data-open="faq">Câu hỏi</a><a role="menuitem" href="/vi/blog/">Blog</a><a role="menuitem" href="/vi/compare/">So sánh giả lập Android cho Mac</a><a role="menuitem" href="/licenses.html">Giấy phép và ghi chú mã nguồn mở</a><a role="menuitem" href="mailto:katzdoll@gmail.com">Liên hệ</a><a role="menuitem" href="/privacy.html">Quyền riêng tư</a></div></div>
     <a class="mb-link" href="/vi/blog/">Blog</a>
     <span class="mb-right"><label class="langswitch"><span class="vh">Ngôn ngữ</span><select aria-label="Ngôn ngữ" onchange="if(this.value)location.href=this.value"><option value="/">English</option><option value="/pt-br/">Português</option><option value="/es-mx/">Español (MX)</option><option value="/es-es/">Español (ES)</option><option value="/fr/">Français</option><option value="/de/">Deutsch</option><option value="/it/">Italiano</option><option value="/nl/">Nederlands</option><option value="/pl/">Polski</option><option value="/ru/">Русский</option><option value="/uk/">Українська</option><option value="/tr/">Türkçe</option><option value="/ar/">العربية</option><option value="/hi/">हिन्दी</option><option value="/id/">Indonesia</option><option value="/th/">ไทย</option><option value="/vi/" selected>Tiếng Việt</option><option value="/ja/">日本語</option><option value="/ko/">한국어</option><option value="/zh-hans/">简体中文</option><option value="/zh-hant/">繁體中文</option></select></label><button class="mb-theme" data-theme-toggle aria-label="Đổi giao diện sáng hoặc tối"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button><span id="clock" aria-live="off"></span></span>
   </div>
@@ -225,16 +297,16 @@
   <aside class="sticky" aria-label="Giấy nhớ">làm ở Brasil 🇧🇷<br><small>với nhiều cà phê</small></aside>
   <section class="hero" aria-label="Về SiliconPlay">
     <div class="hero-top">
-      <img src="/assets/icon-tile.png" width="64" height="64" alt="Biểu tượng SiliconPlay">
+      <img src="/assets/icon-tile-128.webp" width="64" height="64" alt="Biểu tượng SiliconPlay">
       <div>
         <p class="eyebrow">Giả lập Android cho macOS</p>
-        <p class="hero-title">SiliconPlay</p>
+        <h1 class="hero-title"><span class="brand">SiliconPlay</span><span class="vh">: </span><span class="hero-sub">giả lập Android miễn phí cho Mac (M1 đến M5)</span></h1>
       </div>
     </div>
     <p class="lede">Chơi Android và thử ứng dụng trên Mac Apple Silicon. Android chạy trên nhân ARM của Mac, Metal vẽ hình.</p>
     <p class="eyebrow feats-label">Có gì</p>
     <ul class="feats">
-      <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-chip"/></svg></span><span><b>ARM64 gốc</b><span>Android 16 trên nhân của Mac. Không dịch từ x86.</span></span></li>
+      <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-chip"/></svg></span><span><b>ARM64 gốc</b><span>Android 16 trên nhân của Mac. Chạy gốc trên nhân ARM của Mac.</span></span></li>
       <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-metal"/></svg></span><span><b>Đồ họa Metal</b><span>Vulkan do Metal vẽ, shader ở chế độ an toàn.</span></span></li>
       <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-pad"/></svg></span><span><b>Bàn phím và tay cầm</b><span>WASD để đi, J để đánh, 1-6 cho kỹ năng.</span></span></li>
     </ul>
@@ -249,7 +321,7 @@
     <button class="dk" data-win="trash" aria-label="Thùng rác"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-trash"/></svg></span></button>
     <div class="sp-wrap">
       <a class="bubble" href="/download/" data-win="installer"><b>Tải SiliconPlay</b><br>Trình giả lập Android cho Mac.</a>
-      <button class="dk sp" data-win="installer" aria-label="SiliconPlay: tải"><img src="/assets/icon-tile.png" alt="Biểu tượng SiliconPlay" width="60" height="60"></button>
+      <button class="dk sp" data-win="installer" aria-label="SiliconPlay: tải"><img src="/assets/icon-tile-128.webp" alt="Biểu tượng SiliconPlay" width="60" height="60"></button>
     </div>
   </nav>
 </div>
@@ -259,8 +331,8 @@
     <div class="status"><span id="pclock"></span><span class="pill-cam" aria-hidden="true"></span><span class="sig" aria-hidden="true">●●●</span></div>
     <div class="phone-langwrap"><label class="langswitch"><span class="vh">Ngôn ngữ</span><select aria-label="Ngôn ngữ" onchange="if(this.value)location.href=this.value"><option value="/">English</option><option value="/pt-br/">Português</option><option value="/es-mx/">Español (MX)</option><option value="/es-es/">Español (ES)</option><option value="/fr/">Français</option><option value="/de/">Deutsch</option><option value="/it/">Italiano</option><option value="/nl/">Nederlands</option><option value="/pl/">Polski</option><option value="/ru/">Русский</option><option value="/uk/">Українська</option><option value="/tr/">Türkçe</option><option value="/ar/">العربية</option><option value="/hi/">हिन्दी</option><option value="/id/">Indonesia</option><option value="/th/">ไทย</option><option value="/vi/" selected>Tiếng Việt</option><option value="/ja/">日本語</option><option value="/ko/">한국어</option><option value="/zh-hans/">简体中文</option><option value="/zh-hant/">繁體中文</option></select></label></div>
     <section class="phero" aria-label="Về SiliconPlay">
-      <img src="/assets/icon-tile.png" width="40" height="40" alt="Biểu tượng SiliconPlay">
-      <div><b>SiliconPlay</b><small>Game Android trên Apple Silicon</small></div>
+      <img src="/assets/icon-tile-128.webp" width="40" height="40" alt="Biểu tượng SiliconPlay">
+      <div><h1 class="ph-h"><b>SiliconPlay</b><span class="vh">: </span><small>giả lập Android miễn phí cho Mac (M1 đến M5)</small></h1></div>
       <ul>
         <li>ARM64 gốc</li>
         <li>Đồ họa Metal</li>
@@ -268,7 +340,7 @@
       </ul>
     </section>
     <div class="grid">
-      <button class="app" data-sheet="mac"><img src="/assets/icon-tile.png" alt="Biểu tượng SiliconPlay"><span>SiliconPlay</span></button>
+      <button class="app" data-sheet="mac"><img src="/assets/icon-tile-128.webp" alt="Biểu tượng SiliconPlay" width="60" height="60"><span>SiliconPlay</span></button>
       <button class="app" data-sheet="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-doc"/></svg><b class="doc-tag">MD</b></span><span>Đọc tôi</span></button>
       <button class="app" data-sheet="controls"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-keys"/></svg></span><span>Điều khiển</span></button>
       <button class="app" data-sheet="donate"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span><span>Ủng hộ</span></button>
@@ -280,7 +352,7 @@
       <button class="app" data-theme-toggle><span class="gl gl-theme"><svg viewBox="0 0 56 56"><use href="#ic-theme"/></svg></span><span>Giao diện</span></button>
     </div>
     <div class="pnote">làm ở Brasil 🇧🇷</div>
-    <div class="pdock"><button class="app" data-sheet="mac"><img src="/assets/icon-tile.png" alt="Biểu tượng SiliconPlay"></button><button class="app" data-sheet="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-notes"/></svg></span></button><button class="app" data-sheet="donate"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span></button><a class="app" data-mail href="mailto:katzdoll@gmail.com" aria-label="Viết cho Ryan"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-mail"/></svg></span></a></div>
+    <div class="pdock"><button class="app" data-sheet="mac"><img src="/assets/icon-tile-128.webp" alt="Biểu tượng SiliconPlay" width="60" height="60"></button><button class="app" data-sheet="readme" aria-label="Ghi chú: docfile"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-notes"/></svg></span></button><button class="app" data-sheet="donate" aria-label="Ungho.app"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span></button><a class="app" data-mail href="mailto:katzdoll@gmail.com" aria-label="Viết cho Ryan"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-mail"/></svg></span></a></div>
     <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-t" hidden>
       <div class="grab" aria-hidden="true"></div>
       <header><h2 id="sheet-t">SiliconPlay</h2><button class="sclose" aria-label="Đóng">Xong</button></header>
@@ -289,8 +361,8 @@
     <div class="homebar" aria-hidden="true"></div>
   </div>
 </div>
-<div class="intro" id="intro" aria-hidden="true"><img src="/assets/icon-tile.png" alt="Biểu tượng SiliconPlay"><div class="bar"><i></i></div><small>Bấm để bỏ qua</small></div>
-<script>window.SP_I18N={"ui": {"copied": "Đã chép liên kết.", "close": "Đóng", "min": "Thu nhỏ", "zoom": "Phóng"}, "windows": {"readme": {"t": "docfile.md", "html": "\u003cspan class=\"h\"># SiliconPlay\u003c/span>\nGiả lập Android cho macOS. Game và thử ứng dụng trên Mac Apple Silicon.\n\n\u003cspan class=\"h\">## Vì sao nhanh\u003c/span>\n- Android 16 chạy gốc trên nhân ARM (Hypervisor của Apple). Không dịch từ x86.\n- Vulkan do Metal vẽ.\n- Shader ở chế độ an toàn để cây cối hiện đúng.\n\n\u003cspan class=\"h\">## Có gì\u003c/span>\n- Lớp phủ bàn phím và tay cầm (WASD, J, 1-6).\n- Bố cục có sẵn, bạn sắp lại được.\n- Không kext, không dịch vụ nền, không ứng dụng kèm.\n\n\u003cspan class=\"h\">## Đã đo\u003c/span>\n- tới 60 fps trong game 3D nặng\n- độ phân giải tới 2560×1440\n- 7 đến 43 ms từ phím tới game\n\n\u003cspan class=\"h\">## Cần có\u003c/span>\n- Mac Apple Silicon (M1 trở lên)\n- macOS 14 trở lên\n\n\u003cspan class=\"h\">## Miễn phí. Ủng hộ dự án là tùy bạn.\u003c/span>\nSiliconPlay miễn phí để chơi và để thử ứng dụng. Ủng hộ dự án hay không là việc của bạn.\n\n\u003ca href=\"/download/\">Tải SiliconPlay cho Mac\u003c/a>"}, "controls": {"t": "Dieukhien.png", "html": "\u003cdiv class=\"keysbig\">\u003ckbd>W\u003c/kbd>\u003ckbd>A\u003c/kbd>\u003ckbd>S\u003c/kbd>\u003ckbd>D\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center\">Đi bằng \u003cb>WASD\u003c/b>. Đánh bằng \u003cb>J\u003c/b>. Kỹ năng ở \u003cb>1-6\u003c/b>.\u003c/p>\u003cdiv class=\"krow\">\u003ckbd>J\u003c/kbd>\u003ckbd>1\u003c/kbd>\u003ckbd>2\u003c/kbd>\u003ckbd>3\u003c/kbd>\u003ckbd>4\u003c/kbd>\u003ckbd>5\u003c/kbd>\u003ckbd>6\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center;color:var(--mut);margin-top:12px\">Bạn gán lại phím hoặc dùng tay cầm từ lớp phủ.\u003c/p>"}, "donate": {"t": "Ungho.app", "html": "\u003ch3 style=\"font-size:20px\">Miễn phí. Ủng hộ dự án là tùy bạn.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">SiliconPlay miễn phí để chơi và để thử ứng dụng. Ủng hộ dự án hay không là việc của bạn.\u003c/p>\u003cp style=\"margin-top:14px\">\u003ca class=\"btnp\" href=\"/download/\">Tải SiliconPlay cho Mac\u003c/a>\u003c/p>"}, "faq": {"t": "Cauhoi.txt", "html": "\u003cspan class=\"h\">Chạy trên Mac nào?\u003c/span>\nMac Apple Silicon (M1, M2, M3, M4, M5 và đời mới hơn) chạy macOS 14 trở lên.\n\n\u003cspan class=\"h\">Tài khoản game của tôi có an toàn không?\u003c/span>\nRoot là tùy chọn và SiliconPlay không sửa game. Hãy theo điều khoản của từng game.\n\n\u003cspan class=\"h\">Có miễn phí không?\u003c/span>\nCó. SiliconPlay miễn phí. Ủng hộ dự án là tùy bạn.\n\n\u003cspan class=\"h\">Có mã nguồn không?\u003c/span>\nKhông. Giấy phép của thành phần bên thứ ba đi kèm ứng dụng."}, "licenses": {"t": "GIAYPHEP.txt", "html": "SiliconPlay gồm thành phần của bên khác. Ghi chú đầy đủ nằm trên trang và trong ứng dụng.\n\n→ \u003ca href=\"/licenses.html\">Giấy phép và ghi chú mã nguồn mở\u003c/a>\n\n\u003ca href=\"/privacy.html\">Quyền riêng tư\u003c/a> · \u003ca href=\"mailto:katzdoll@gmail.com\">Liên hệ\u003c/a>"}, "terminal": {"t": "Terminal", "html": "\u003cspan class=\"p\">~ %\u003c/span> siliconplay --version\nSiliconPlay 1.0\n  guest      Android 16 (arm64)\n  hypervisor Apple Hypervisor.framework\n  graphics   Vulkan → Metal\n  requires   Apple silicon M1+, macOS 14+\n\n\u003cspan class=\"p\">~ %\u003c/span> siliconplay bench \u003cspan class=\"d\"># MacBook Pro, M3 Max\u003c/span>\n  fps        60\n  resolution 2560×1440\n  input      7-43 ms\n\n\u003cspan class=\"p\">~ %\u003c/span> \u003cspan class=\"cursor\">\u003c/span>"}, "installer": {"t": "Cài SiliconPlay", "html": "\u003cdiv class=\"inst\">\u003cimg src=\"/assets/icon-tile.png\" alt=\"Biểu tượng SiliconPlay\">\u003cdiv>\u003ch3 style=\"font-size:18px\">SiliconPlay\u003c/h3>\u003cp style=\"color:var(--mut)\">Giả lập Android cho macOS. Apple Silicon, macOS 14 trở lên.\u003c/p>\u003c/div>\u003c/div>\u003cdiv class=\"prog\">\u003ci>\u003c/i>\u003c/div>\u003ca class=\"btnp\" href=\"/download/\">Tải cho Mac\u003c/a>"}, "projects": {"t": "Việc khác của Ryan", "html": "\u003cp class=\"pj-h\">Việc khác của Ryan\u003c/p>\u003cdiv class=\"pj\">\u003cp>GitHub, trang của Ryan.\u003c/p>\u003cp>a Lequeria, quạt tre làm tay cho dân nhạc điện tử.\u003c/p>\u003cp>CVT Ingressos, chỗ mua, bán, đổi và tặng vé.\u003c/p>\u003cp>Instagram @fcknstar, cá nhân.\u003c/p>\u003c/div>"}, "trash": {"t": "Thùng rác", "html": "\u003cp style=\"color:var(--mut);text-align:center;margin-top:40px\">Thùng rác trống. Ở đây cũng không có phần mềm kèm theo.\u003c/p>"}, "mac": {"t": "SiliconPlay", "html": "\u003cdiv style=\"text-align:center\">\u003cimg src=\"/assets/icon-tile.png\" alt=\"Biểu tượng SiliconPlay\" width=\"110\" style=\"margin:10px auto\">\u003ch3 style=\"font-size:22px;margin-top:8px\">SiliconPlay dành cho Mac.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">Nó chạy game Android trên Mac Apple Silicon. Gửi liên kết cho chính bạn rồi tải trên Mac.\u003c/p>\u003cbutton class=\"btnp\" data-copy>Chép liên kết\u003c/button>\u003ca class=\"btng\" href=\"/download/\">Tải\u003c/a>\u003cp class=\"copied\" style=\"color:var(--mut);margin-top:10px\" aria-live=\"polite\">\u003c/p>\u003c/div>"}}};</script>
+<div class="intro" id="intro" aria-hidden="true"><img src="/assets/icon-tile-128.webp" alt="Biểu tượng SiliconPlay" width="96" height="96"><div class="bar"><i></i></div><small>Bấm để bỏ qua</small></div>
+<script>window.SP_I18N={"ui": {"copied": "Đã chép liên kết.", "close": "Đóng", "min": "Thu nhỏ", "zoom": "Phóng"}, "windows": {"readme": {"t": "docfile.md", "html": "\u003cspan class=\"h\"># SiliconPlay\u003c/span>\nGiả lập Android cho macOS. Game và thử ứng dụng trên Mac Apple Silicon.\n\n\u003cspan class=\"h\">## Vì sao nhanh\u003c/span>\n- Android 16 chạy gốc trên nhân ARM (Hypervisor của Apple). Chạy gốc trên nhân ARM của Mac.\n- Vulkan do Metal vẽ.\n- Shader ở chế độ an toàn để cây cối hiện đúng.\n\n\u003cspan class=\"h\">## Có gì\u003c/span>\n- Lớp phủ bàn phím và tay cầm (WASD, J, 1-6).\n- Bố cục có sẵn, bạn sắp lại được.\n- Không kext, không dịch vụ nền, không ứng dụng kèm.\n\n\u003cspan class=\"h\">## Đã đo\u003c/span>\n- tới 60 fps trong game 3D nặng\n- độ phân giải tới 2560×1440\n- 7 đến 43 ms từ phím tới game\n\n\u003cspan class=\"h\">## Cần có\u003c/span>\n- Mac Apple Silicon (M1 trở lên)\n- macOS 14 trở lên\n\n\u003cspan class=\"h\">## Miễn phí. Ủng hộ dự án là tùy bạn.\u003c/span>\nSiliconPlay miễn phí để chơi và để thử ứng dụng. Ủng hộ dự án hay không là việc của bạn.\n\n\u003ca href=\"/download/\">Tải SiliconPlay cho Mac\u003c/a>"}, "controls": {"t": "Dieukhien.png", "html": "\u003cdiv class=\"keysbig\">\u003ckbd>W\u003c/kbd>\u003ckbd>A\u003c/kbd>\u003ckbd>S\u003c/kbd>\u003ckbd>D\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center\">Đi bằng \u003cb>WASD\u003c/b>. Đánh bằng \u003cb>J\u003c/b>. Kỹ năng ở \u003cb>1-6\u003c/b>.\u003c/p>\u003cdiv class=\"krow\">\u003ckbd>J\u003c/kbd>\u003ckbd>1\u003c/kbd>\u003ckbd>2\u003c/kbd>\u003ckbd>3\u003c/kbd>\u003ckbd>4\u003c/kbd>\u003ckbd>5\u003c/kbd>\u003ckbd>6\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center;color:var(--mut);margin-top:12px\">Bạn gán lại phím hoặc dùng tay cầm từ lớp phủ.\u003c/p>"}, "donate": {"t": "Ungho.app", "html": "\u003ch3 style=\"font-size:20px\">Miễn phí. Ủng hộ dự án là tùy bạn.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">SiliconPlay miễn phí để chơi và để thử ứng dụng. Ủng hộ dự án hay không là việc của bạn.\u003c/p>\u003cp style=\"margin-top:14px\">\u003ca class=\"btnp\" href=\"/download/\">Tải SiliconPlay cho Mac\u003c/a>\u003c/p>"}, "faq": {"t": "Cauhoi.txt", "html": "\u003cspan class=\"h\">Chạy trên Mac nào?\u003c/span>\nMac Apple Silicon (M1, M2, M3, M4, M5 và đời mới hơn) chạy macOS 14 trở lên.\n\n\u003cspan class=\"h\">Tài khoản game của tôi có an toàn không?\u003c/span>\nRoot là tùy chọn và SiliconPlay không sửa game. Hãy theo điều khoản của từng game.\n\n\u003cspan class=\"h\">Có miễn phí không?\u003c/span>\nCó. SiliconPlay miễn phí. Ủng hộ dự án là tùy bạn.\n\n\u003cspan class=\"h\">Có mã nguồn không?\u003c/span>\nKhông. Giấy phép của thành phần bên thứ ba đi kèm ứng dụng."}, "licenses": {"t": "GIAYPHEP.txt", "html": "SiliconPlay gồm thành phần của bên khác. Ghi chú đầy đủ nằm trên trang và trong ứng dụng.\n\n→ \u003ca href=\"/licenses.html\">Giấy phép và ghi chú mã nguồn mở\u003c/a>\n\n\u003ca href=\"/privacy.html\">Quyền riêng tư\u003c/a> · \u003ca href=\"mailto:katzdoll@gmail.com\">Liên hệ\u003c/a>"}, "terminal": {"t": "Terminal", "html": "\u003cspan class=\"p\">~ %\u003c/span> siliconplay --version\nSiliconPlay 1.0\n  guest      Android 16 (arm64)\n  hypervisor Apple Hypervisor.framework\n  graphics   Vulkan → Metal\n  requires   Apple silicon M1+, macOS 14+\n\n\u003cspan class=\"p\">~ %\u003c/span> siliconplay bench \u003cspan class=\"d\"># MacBook Pro, M3 Max\u003c/span>\n  fps        60\n  resolution 2560×1440\n  input      7-43 ms\n\n\u003cspan class=\"p\">~ %\u003c/span> \u003cspan class=\"cursor\">\u003c/span>"}, "installer": {"t": "Cài SiliconPlay", "html": "\u003cdiv class=\"inst\">\u003cimg src=\"/assets/icon-tile-128.webp\" alt=\"Biểu tượng SiliconPlay\">\u003cdiv>\u003ch3 style=\"font-size:18px\">SiliconPlay\u003c/h3>\u003cp style=\"color:var(--mut)\">Giả lập Android cho macOS. Apple Silicon, macOS 14 trở lên.\u003c/p>\u003c/div>\u003c/div>\u003cdiv class=\"prog\">\u003ci>\u003c/i>\u003c/div>\u003ca class=\"btnp\" href=\"/download/\">Tải cho Mac\u003c/a>"}, "projects": {"t": "Việc khác của Ryan", "html": "\u003cp class=\"pj-h\">Việc khác của Ryan\u003c/p>\u003cdiv class=\"pj\">\u003cp>GitHub, trang của Ryan.\u003c/p>\u003cp>a Lequeria, quạt tre làm tay cho dân nhạc điện tử.\u003c/p>\u003cp>CVT Ingressos, chỗ mua, bán, đổi và tặng vé.\u003c/p>\u003cp>Instagram @fcknstar, cá nhân.\u003c/p>\u003c/div>"}, "trash": {"t": "Thùng rác", "html": "\u003cp style=\"color:var(--mut);text-align:center;margin-top:40px\">Thùng rác trống. Ở đây cũng không có phần mềm kèm theo.\u003c/p>"}, "mac": {"t": "SiliconPlay", "html": "\u003cdiv style=\"text-align:center\">\u003cimg src=\"/assets/icon-tile-128.webp\" alt=\"Biểu tượng SiliconPlay\" width=\"110\" style=\"margin:10px auto\">\u003ch3 style=\"font-size:22px;margin-top:8px\">SiliconPlay dành cho Mac.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">Nó chạy game Android trên Mac Apple Silicon. Gửi liên kết cho chính bạn rồi tải trên Mac.\u003c/p>\u003cbutton class=\"btnp\" data-copy>Chép liên kết\u003c/button>\u003ca class=\"btng\" href=\"/download/\">Tải\u003c/a>\u003cp class=\"copied\" style=\"color:var(--mut);margin-top:10px\" aria-live=\"polite\">\u003c/p>\u003c/div>"}}};</script>
 <script src="/app.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

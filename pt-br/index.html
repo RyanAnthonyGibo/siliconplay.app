@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Emulador de Android grátis para Mac (M1, M2, M3, M4, M5 e mais novos) | SiliconPlay</title>
+<title>Emulador de Android grátis para Mac (M1–M5) | SiliconPlay</title>
 <meta name="description" content="Emulador de Android para Mac com Apple Silicon. O SiliconPlay roda jogos e serve para testar apps, em ARM64 nativo, com gráficos Metal. O root é opcional.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://siliconplay.app/pt-br/">
@@ -27,9 +27,13 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/">
 <link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/">
 <link rel="alternate" hreflang="x-default" href="https://siliconplay.app/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/">
+<link rel="alternate" hreflang="es" href="https://siliconplay.app/es-mx/">
+<link rel="alternate" hreflang="pt" href="https://siliconplay.app/pt-br/">
+<link rel="alternate" hreflang="zh" href="https://siliconplay.app/zh-hans/">
 <link rel="alternate" type="application/rss+xml" title="Blog do SiliconPlay" href="https://siliconplay.app/pt-br/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
-<meta property="og:title" content="Emulador de Android grátis para Mac (M1, M2, M3, M4, M5 e mais novos) | SiliconPlay">
+<meta property="og:title" content="Emulador de Android grátis para Mac (M1–M5) | SiliconPlay">
 <meta property="og:description" content="Emulador de Android para Mac com Apple Silicon. O SiliconPlay roda jogos e serve para testar apps, em ARM64 nativo, com gráficos Metal. O root é opcional.">
 <meta property="og:url" content="https://siliconplay.app/pt-br/">
 <meta property="og:type" content="website">
@@ -39,36 +43,103 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Ícone do SiliconPlay e o texto emulador de Android grátis para Mac">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Emulador de Android grátis para Mac (M1, M2, M3, M4, M5 e mais novos) | SiliconPlay">
+<meta name="twitter:title" content="Emulador de Android grátis para Mac (M1–M5) | SiliconPlay">
 <meta name="twitter:description" content="Emulador de Android para Mac com Apple Silicon. O SiliconPlay roda jogos e serve para testar apps, em ARM64 nativo, com gráficos Metal. O root é opcional.">
 <meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
 <meta name="twitter:image:alt" content="Ícone do SiliconPlay e o texto emulador de Android grátis para Mac">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "SiliconPlay",
-  "operatingSystem": "macOS",
-  "applicationCategory": "DeveloperApplication",
-  "inLanguage": "pt-BR",
-  "url": "https://siliconplay.app/pt-br/",
-  "downloadUrl": "https://siliconplay.app/download/",
-  "image": "https://siliconplay.app/assets/og.png",
-  "description": "Emulador de Android para Mac com Apple Silicon. O SiliconPlay roda jogos e serve para testar apps, em ARM64 nativo, com gráficos Metal. O root é opcional.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "SiliconPlay",
+      "operatingSystem": "macOS 14 or later (Apple Silicon)",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "GameApplication",
+      "softwareVersion": "1.0.0",
+      "inLanguage": "pt-BR",
+      "url": "https://siliconplay.app/pt-br/",
+      "downloadUrl": "https://siliconplay.app/download/",
+      "description": "Emulador de Android para Mac com Apple Silicon. O SiliconPlay roda jogos e serve para testar apps, em ARM64 nativo, com gráficos Metal. O root é opcional.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://siliconplay.app/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://siliconplay.app/#organization",
+      "name": "SiliconPlay",
+      "url": "https://siliconplay.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://siliconplay.app/assets/icon-512.png"
+      },
+      "sameAs": [
+        "https://github.com/RyanAnthonyGibo/siliconplay.app"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "SiliconPlay",
+      "url": "https://siliconplay.app/",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://siliconplay.app/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "url": "https://siliconplay.app/pt-br/",
+      "inLanguage": "pt-BR",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Em quais Macs funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mac com Apple Silicon (M1, M2, M3, M4, M5 e os mais novos) e macOS 14 ou posterior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minha conta do jogo corre risco?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O root é opcional e o SiliconPlay não modifica o jogo. Siga os termos de cada jogo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É grátis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O SiliconPlay é grátis. Apoiar o projeto é opcional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O código-fonte está disponível?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. As licenças dos componentes de terceiros vêm com o app."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<script>document.documentElement.classList.add('js');try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');var seo=document.getElementById('seo');if(seo)seo.setAttribute('aria-hidden','true');try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
 </head>
 <body>
 <svg class="sprite" aria-hidden="true" width="0" height="0">
@@ -161,8 +232,8 @@
 <main id="seo">
   <header class="seo-hero">
     <p class="eyebrow">Emulador de Android grátis para Mac com Apple Silicon</p>
-    <h1>SiliconPlay</h1>
-    <p>O SiliconPlay é um emulador de Android grátis para Mac com Apple Silicon (M1, M2, M3, M4, M5 e os mais novos). Ele roda jogos de Android e também serve para desenvolvimento: o sistema usa os núcleos ARM do Mac pelo Hypervisor da Apple, e o Metal desenha os gráficos. Nada é traduzido de x86.</p>
+    <h1>SiliconPlay: emulador de Android grátis para Mac (M1 a M5)</h1>
+    <p>O SiliconPlay é um emulador de Android grátis para Mac com Apple Silicon (M1, M2, M3, M4, M5 e os mais novos). Ele roda jogos de Android e também serve para desenvolvimento: o sistema usa os núcleos ARM do Mac pelo Hypervisor da Apple, e o Metal desenha os gráficos. Roda nativo nos núcleos ARM do Mac.</p>
     <p><a class="seo-cta" href="/download/">Baixar o SiliconPlay para Mac</a></p>
   </header>
   <section id="features"><h2>O que ele faz</h2><ul>
@@ -180,12 +251,13 @@
     <h3>É grátis?</h3><p>Sim. O SiliconPlay é grátis. Apoiar o projeto é opcional.</p>
     <h3>O código-fonte está disponível?</h3><p>Não. As licenças dos componentes de terceiros vêm com o app.</p></section>
   <section id="blog"><h2>Blog</h2><ul>
-    <li><a href="/pt-br/blog/android-emulator-mac-keyboard-mapping">Mapeamento de teclado no Mac</a></li>
-    <li><a href="/pt-br/blog/android-emulator-mac-shortcuts">Atalhos do emulador no Mac</a></li>
-    <li><a href="/pt-br/blog/rooted-android-emulator-mac">Emulador de Android com root para desenvolvedores</a></li>
-    <li><a href="/pt-br/blog/android-emulator-mac-m1-m2-m3-m4">Emulador de Android grátis para Mac M1, M2, M3, M4 e M5 (e os mais novos)</a></li>
-    <li><a href="/pt-br/blog/bluestacks-alternative-mac">Procurando uma alternativa ao BlueStacks no Mac? Experimenta o SiliconPlay</a></li>
-    <li><a href="/pt-br/blog/mumu-player-alternative-mac">Procurando uma alternativa ao MuMu Player no Mac? Experimenta o SiliconPlay</a></li></ul></section>
+    <li><a href="/pt-br/blog/android-emulator-mac-keyboard-mapping/">Mapeamento de teclado no Mac</a></li>
+    <li><a href="/pt-br/blog/android-emulator-mac-shortcuts/">Atalhos do emulador no Mac</a></li>
+    <li><a href="/pt-br/blog/rooted-android-emulator-mac/">Emulador de Android com root para desenvolvedores</a></li>
+    <li><a href="/pt-br/blog/android-emulator-mac-m1-m2-m3-m4/">Emulador de Android grátis para Mac M1, M2, M3, M4 e M5 (e os mais novos)</a></li>
+    <li><a href="/pt-br/blog/bluestacks-alternative-mac/">Procurando uma alternativa ao BlueStacks no Mac? Experimenta o SiliconPlay</a></li>
+    <li><a href="/pt-br/blog/mumu-player-alternative-mac/">Procurando uma alternativa ao MuMu Player no Mac? Experimenta o SiliconPlay</a></li></ul>
+    <p><a href="/pt-br/compare/">Comparar emuladores de Android para Mac</a></p></section>
   <section id="projects"><h2>Outros projetos do Ryan</h2><ul>
     <li>GitHub, o perfil do Ryan.</li>
     <li>a Lequeria, leques de bambu feitos à mão para quem vive de música eletrônica.</li>
@@ -209,7 +281,7 @@
     <div class="menu"><button aria-haspopup="true" aria-expanded="false">Visualizar</button>
       <div class="drop" role="menu"><a role="menuitem" href="#" data-theme-toggle>Alternar claro / escuro</a><a role="menuitem" href="#" data-open="controls">Controles</a><a role="menuitem" href="#" data-open="terminal">Terminal</a></div></div>
     <div class="menu"><button aria-haspopup="true" aria-expanded="false">Ajuda</button>
-      <div class="drop" role="menu"><a role="menuitem" href="#" data-open="faq">Perguntas</a><a role="menuitem" href="/pt-br/blog/">Blog</a><a role="menuitem" href="/licenses.html">Licenças e avisos de código aberto</a><a role="menuitem" href="mailto:katzdoll@gmail.com">Contato</a><a role="menuitem" href="/privacy.html">Privacidade</a></div></div>
+      <div class="drop" role="menu"><a role="menuitem" href="#" data-open="faq">Perguntas</a><a role="menuitem" href="/pt-br/blog/">Blog</a><a role="menuitem" href="/pt-br/compare/">Comparar emuladores de Android para Mac</a><a role="menuitem" href="/licenses.html">Licenças e avisos de código aberto</a><a role="menuitem" href="mailto:katzdoll@gmail.com">Contato</a><a role="menuitem" href="/privacy.html">Privacidade</a></div></div>
     <a class="mb-link" href="/pt-br/blog/">Blog</a>
     <span class="mb-right"><label class="langswitch"><span class="vh">Idioma</span><select aria-label="Idioma" onchange="if(this.value)location.href=this.value"><option value="/">English</option><option value="/pt-br/" selected>Português</option><option value="/es-mx/">Español (MX)</option><option value="/es-es/">Español (ES)</option><option value="/fr/">Français</option><option value="/de/">Deutsch</option><option value="/it/">Italiano</option><option value="/nl/">Nederlands</option><option value="/pl/">Polski</option><option value="/ru/">Русский</option><option value="/uk/">Українська</option><option value="/tr/">Türkçe</option><option value="/ar/">العربية</option><option value="/hi/">हिन्दी</option><option value="/id/">Indonesia</option><option value="/th/">ไทย</option><option value="/vi/">Tiếng Việt</option><option value="/ja/">日本語</option><option value="/ko/">한국어</option><option value="/zh-hans/">简体中文</option><option value="/zh-hant/">繁體中文</option></select></label><button class="mb-theme" data-theme-toggle aria-label="Alternar aparência clara ou escura"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button><span id="clock" aria-live="off"></span></span>
   </div>
@@ -225,16 +297,16 @@
   <aside class="sticky" aria-label="Bilhete">feito no Brasil 🇧🇷<br><small>com bastante café</small></aside>
   <section class="hero" aria-label="Sobre o SiliconPlay">
     <div class="hero-top">
-      <img src="/assets/icon-tile.png" width="64" height="64" alt="Ícone do SiliconPlay">
+      <img src="/assets/icon-tile-128.webp" width="64" height="64" alt="Ícone do SiliconPlay">
       <div>
         <p class="eyebrow">Emulador de Android para macOS</p>
-        <p class="hero-title">SiliconPlay</p>
+        <h1 class="hero-title"><span class="brand">SiliconPlay</span><span class="vh">: </span><span class="hero-sub">emulador de Android grátis para Mac (M1 a M5)</span></h1>
       </div>
     </div>
     <p class="lede">Jogue Android e teste apps num Mac com Apple Silicon. O sistema roda nos núcleos ARM do Mac, e o Metal desenha os gráficos.</p>
     <p class="eyebrow feats-label">O que ele faz</p>
     <ul class="feats">
-      <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-chip"/></svg></span><span><b>ARM64 nativo</b><span>Android 16 nos núcleos do Mac. Sem tradução de x86.</span></span></li>
+      <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-chip"/></svg></span><span><b>ARM64 nativo</b><span>Android 16 nos núcleos do Mac. Roda nativo nos núcleos ARM do Mac.</span></span></li>
       <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-metal"/></svg></span><span><b>Gráficos Metal</b><span>O Vulkan é desenhado pelo Metal, com shaders em modo seguro.</span></span></li>
       <li><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-pad"/></svg></span><span><b>Teclado e controle</b><span>WASD para andar, J para atacar, 1-6 para as skills.</span></span></li>
     </ul>
@@ -249,7 +321,7 @@
     <button class="dk" data-win="trash" aria-label="Lixeira"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-trash"/></svg></span></button>
     <div class="sp-wrap">
       <a class="bubble" href="/download/" data-win="installer"><b>Baixar o SiliconPlay</b><br>O emulador de Android para Mac.</a>
-      <button class="dk sp" data-win="installer" aria-label="SiliconPlay: baixar"><img src="/assets/icon-tile.png" alt="Ícone do SiliconPlay" width="60" height="60"></button>
+      <button class="dk sp" data-win="installer" aria-label="SiliconPlay: baixar"><img src="/assets/icon-tile-128.webp" alt="Ícone do SiliconPlay" width="60" height="60"></button>
     </div>
   </nav>
 </div>
@@ -259,8 +331,8 @@
     <div class="status"><span id="pclock"></span><span class="pill-cam" aria-hidden="true"></span><span class="sig" aria-hidden="true">●●●</span></div>
     <div class="phone-langwrap"><label class="langswitch"><span class="vh">Idioma</span><select aria-label="Idioma" onchange="if(this.value)location.href=this.value"><option value="/">English</option><option value="/pt-br/" selected>Português</option><option value="/es-mx/">Español (MX)</option><option value="/es-es/">Español (ES)</option><option value="/fr/">Français</option><option value="/de/">Deutsch</option><option value="/it/">Italiano</option><option value="/nl/">Nederlands</option><option value="/pl/">Polski</option><option value="/ru/">Русский</option><option value="/uk/">Українська</option><option value="/tr/">Türkçe</option><option value="/ar/">العربية</option><option value="/hi/">हिन्दी</option><option value="/id/">Indonesia</option><option value="/th/">ไทย</option><option value="/vi/">Tiếng Việt</option><option value="/ja/">日本語</option><option value="/ko/">한국어</option><option value="/zh-hans/">简体中文</option><option value="/zh-hant/">繁體中文</option></select></label></div>
     <section class="phero" aria-label="Sobre o SiliconPlay">
-      <img src="/assets/icon-tile.png" width="40" height="40" alt="Ícone do SiliconPlay">
-      <div><b>SiliconPlay</b><small>Jogos de Android no Apple Silicon</small></div>
+      <img src="/assets/icon-tile-128.webp" width="40" height="40" alt="Ícone do SiliconPlay">
+      <div><h1 class="ph-h"><b>SiliconPlay</b><span class="vh">: </span><small>emulador de Android grátis para Mac (M1 a M5)</small></h1></div>
       <ul>
         <li>ARM64 nativo</li>
         <li>Gráficos Metal</li>
@@ -268,7 +340,7 @@
       </ul>
     </section>
     <div class="grid">
-      <button class="app" data-sheet="mac"><img src="/assets/icon-tile.png" alt="Ícone do SiliconPlay"><span>SiliconPlay</span></button>
+      <button class="app" data-sheet="mac"><img src="/assets/icon-tile-128.webp" alt="Ícone do SiliconPlay" width="60" height="60"><span>SiliconPlay</span></button>
       <button class="app" data-sheet="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-doc"/></svg><b class="doc-tag">MD</b></span><span>Leia-me</span></button>
       <button class="app" data-sheet="controls"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-keys"/></svg></span><span>Controles</span></button>
       <button class="app" data-sheet="donate"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span><span>Apoiar</span></button>
@@ -280,7 +352,7 @@
       <button class="app" data-theme-toggle><span class="gl gl-theme"><svg viewBox="0 0 56 56"><use href="#ic-theme"/></svg></span><span>Aparência</span></button>
     </div>
     <div class="pnote">feito no Brasil 🇧🇷</div>
-    <div class="pdock"><button class="app" data-sheet="mac"><img src="/assets/icon-tile.png" alt="Ícone do SiliconPlay"></button><button class="app" data-sheet="readme"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-notes"/></svg></span></button><button class="app" data-sheet="donate"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span></button><a class="app" data-mail href="mailto:katzdoll@gmail.com" aria-label="Escrever para o Ryan"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-mail"/></svg></span></a></div>
+    <div class="pdock"><button class="app" data-sheet="mac"><img src="/assets/icon-tile-128.webp" alt="Ícone do SiliconPlay" width="60" height="60"></button><button class="app" data-sheet="readme" aria-label="Notas: leia-me"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-notes"/></svg></span></button><button class="app" data-sheet="donate" aria-label="Apoio.app"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-donate"/></svg></span></button><a class="app" data-mail href="mailto:katzdoll@gmail.com" aria-label="Escrever para o Ryan"><span class="gl"><svg viewBox="0 0 56 56"><use href="#ic-mail"/></svg></span></a></div>
     <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-t" hidden>
       <div class="grab" aria-hidden="true"></div>
       <header><h2 id="sheet-t">SiliconPlay</h2><button class="sclose" aria-label="Fechar">OK</button></header>
@@ -289,8 +361,8 @@
     <div class="homebar" aria-hidden="true"></div>
   </div>
 </div>
-<div class="intro" id="intro" aria-hidden="true"><img src="/assets/icon-tile.png" alt="Ícone do SiliconPlay"><div class="bar"><i></i></div><small>Clique para pular</small></div>
-<script>window.SP_I18N={"ui": {"copied": "Link copiado.", "close": "Fechar", "min": "Minimizar", "zoom": "Zoom"}, "windows": {"readme": {"t": "leia-me.md", "html": "\u003cspan class=\"h\"># SiliconPlay\u003c/span>\nEmulador de Android para macOS. Jogos e testes de app num Mac com Apple Silicon.\n\n\u003cspan class=\"h\">## Por que é rápido\u003c/span>\n- O Android 16 roda nativo nos núcleos ARM (Hypervisor da Apple). Sem tradução de x86.\n- O Vulkan é desenhado pelo Metal.\n- Shaders em modo seguro, para a folhagem sair certa.\n\n\u003cspan class=\"h\">## O que ele faz\u003c/span>\n- Overlay de teclado e controle (WASD, J, 1-6).\n- Layouts prontos, e você pode rearrumar.\n- Sem kext, sem serviço em segundo plano, sem app extra.\n\n\u003cspan class=\"h\">## Medido\u003c/span>\n- até 60 fps num jogo 3D pesado\n- resolução até 2560×1440\n- 7 a 43 ms da tecla até o jogo\n\n\u003cspan class=\"h\">## Requisitos\u003c/span>\n- Mac com Apple Silicon (M1 ou mais novo)\n- macOS 14 ou posterior\n\n\u003cspan class=\"h\">## É grátis. Apoiar o projeto é opcional.\u003c/span>\nO SiliconPlay é grátis para jogar e para testar apps. Se quiser ajudar o projeto, isso fica por sua conta.\n\n\u003ca href=\"/download/\">Baixar o SiliconPlay para Mac\u003c/a>"}, "controls": {"t": "Controles.png", "html": "\u003cdiv class=\"keysbig\">\u003ckbd>W\u003c/kbd>\u003ckbd>A\u003c/kbd>\u003ckbd>S\u003c/kbd>\u003ckbd>D\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center\">Ande com \u003cb>WASD\u003c/b>. Ataque com \u003cb>J\u003c/b>. Skills no \u003cb>1-6\u003c/b>.\u003c/p>\u003cdiv class=\"krow\">\u003ckbd>J\u003c/kbd>\u003ckbd>1\u003c/kbd>\u003ckbd>2\u003c/kbd>\u003ckbd>3\u003c/kbd>\u003ckbd>4\u003c/kbd>\u003ckbd>5\u003c/kbd>\u003ckbd>6\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center;color:var(--mut);margin-top:12px\">Remapeie as teclas ou use um controle pelo overlay.\u003c/p>"}, "donate": {"t": "Apoio.app", "html": "\u003ch3 style=\"font-size:20px\">É grátis. Apoiar o projeto é opcional.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">O SiliconPlay é grátis para jogar e para testar apps. Se quiser ajudar o projeto, isso fica por sua conta.\u003c/p>\u003cp style=\"margin-top:14px\">\u003ca class=\"btnp\" href=\"/download/\">Baixar o SiliconPlay para Mac\u003c/a>\u003c/p>"}, "faq": {"t": "Perguntas.txt", "html": "\u003cspan class=\"h\">Em quais Macs funciona?\u003c/span>\nMac com Apple Silicon (M1, M2, M3, M4, M5 e os mais novos) e macOS 14 ou posterior.\n\n\u003cspan class=\"h\">Minha conta do jogo corre risco?\u003c/span>\nO root é opcional e o SiliconPlay não modifica o jogo. Siga os termos de cada jogo.\n\n\u003cspan class=\"h\">É grátis?\u003c/span>\nSim. O SiliconPlay é grátis. Apoiar o projeto é opcional.\n\n\u003cspan class=\"h\">O código-fonte está disponível?\u003c/span>\nNão. As licenças dos componentes de terceiros vêm com o app."}, "licenses": {"t": "LICENCAS.txt", "html": "O SiliconPlay inclui componentes de terceiros. Os avisos completos estão no site e também dentro do app.\n\n→ \u003ca href=\"/licenses.html\">Licenças e avisos de código aberto\u003c/a>\n\n\u003ca href=\"/privacy.html\">Privacidade\u003c/a> · \u003ca href=\"mailto:katzdoll@gmail.com\">Contato\u003c/a>"}, "terminal": {"t": "Terminal", "html": "\u003cspan class=\"p\">~ %\u003c/span> siliconplay --version\nSiliconPlay 1.0\n  guest      Android 16 (arm64)\n  hypervisor Apple Hypervisor.framework\n  graphics   Vulkan → Metal\n  requires   Apple silicon M1+, macOS 14+\n\n\u003cspan class=\"p\">~ %\u003c/span> siliconplay bench \u003cspan class=\"d\"># MacBook Pro, M3 Max\u003c/span>\n  fps        60\n  resolution 2560×1440\n  input      7-43 ms\n\n\u003cspan class=\"p\">~ %\u003c/span> \u003cspan class=\"cursor\">\u003c/span>"}, "installer": {"t": "Instalar SiliconPlay", "html": "\u003cdiv class=\"inst\">\u003cimg src=\"/assets/icon-tile.png\" alt=\"Ícone do SiliconPlay\">\u003cdiv>\u003ch3 style=\"font-size:18px\">SiliconPlay\u003c/h3>\u003cp style=\"color:var(--mut)\">Emulador de Android para macOS. Apple Silicon, macOS 14 ou posterior.\u003c/p>\u003c/div>\u003c/div>\u003cdiv class=\"prog\">\u003ci>\u003c/i>\u003c/div>\u003ca class=\"btnp\" href=\"/download/\">Baixar para Mac\u003c/a>"}, "projects": {"t": "Outros projetos do Ryan", "html": "\u003cp class=\"pj-h\">Outros projetos do Ryan\u003c/p>\u003cdiv class=\"pj\">\u003cp>GitHub, o perfil do Ryan.\u003c/p>\u003cp>a Lequeria, leques de bambu feitos à mão para quem vive de música eletrônica.\u003c/p>\u003cp>CVT Ingressos, lugar para comprar, vender, trocar e doar ingresso.\u003c/p>\u003cp>Instagram @fcknstar, pessoal.\u003c/p>\u003c/div>"}, "trash": {"t": "Lixeira", "html": "\u003cp style=\"color:var(--mut);text-align:center;margin-top:40px\">A lixeira está vazia. Aqui também não tem programa escondido.\u003c/p>"}, "mac": {"t": "SiliconPlay", "html": "\u003cdiv style=\"text-align:center\">\u003cimg src=\"/assets/icon-tile.png\" alt=\"Ícone do SiliconPlay\" width=\"110\" style=\"margin:10px auto\">\u003ch3 style=\"font-size:22px;margin-top:8px\">O SiliconPlay é para Mac.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">Ele roda jogos de Android em Mac com Apple Silicon. Manda o link para você mesmo e baixa no Mac.\u003c/p>\u003cbutton class=\"btnp\" data-copy>Copiar link\u003c/button>\u003ca class=\"btng\" href=\"/download/\">Baixar\u003c/a>\u003cp class=\"copied\" style=\"color:var(--mut);margin-top:10px\" aria-live=\"polite\">\u003c/p>\u003c/div>"}}};</script>
+<div class="intro" id="intro" aria-hidden="true"><img src="/assets/icon-tile-128.webp" alt="Ícone do SiliconPlay" width="96" height="96"><div class="bar"><i></i></div><small>Clique para pular</small></div>
+<script>window.SP_I18N={"ui": {"copied": "Link copiado.", "close": "Fechar", "min": "Minimizar", "zoom": "Zoom"}, "windows": {"readme": {"t": "leia-me.md", "html": "\u003cspan class=\"h\"># SiliconPlay\u003c/span>\nEmulador de Android para macOS. Jogos e testes de app num Mac com Apple Silicon.\n\n\u003cspan class=\"h\">## Por que é rápido\u003c/span>\n- O Android 16 roda nativo nos núcleos ARM (Hypervisor da Apple). Roda nativo nos núcleos ARM do Mac.\n- O Vulkan é desenhado pelo Metal.\n- Shaders em modo seguro, para a folhagem sair certa.\n\n\u003cspan class=\"h\">## O que ele faz\u003c/span>\n- Overlay de teclado e controle (WASD, J, 1-6).\n- Layouts prontos, e você pode rearrumar.\n- Sem kext, sem serviço em segundo plano, sem app extra.\n\n\u003cspan class=\"h\">## Medido\u003c/span>\n- até 60 fps num jogo 3D pesado\n- resolução até 2560×1440\n- 7 a 43 ms da tecla até o jogo\n\n\u003cspan class=\"h\">## Requisitos\u003c/span>\n- Mac com Apple Silicon (M1 ou mais novo)\n- macOS 14 ou posterior\n\n\u003cspan class=\"h\">## É grátis. Apoiar o projeto é opcional.\u003c/span>\nO SiliconPlay é grátis para jogar e para testar apps. Se quiser ajudar o projeto, isso fica por sua conta.\n\n\u003ca href=\"/download/\">Baixar o SiliconPlay para Mac\u003c/a>"}, "controls": {"t": "Controles.png", "html": "\u003cdiv class=\"keysbig\">\u003ckbd>W\u003c/kbd>\u003ckbd>A\u003c/kbd>\u003ckbd>S\u003c/kbd>\u003ckbd>D\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center\">Ande com \u003cb>WASD\u003c/b>. Ataque com \u003cb>J\u003c/b>. Skills no \u003cb>1-6\u003c/b>.\u003c/p>\u003cdiv class=\"krow\">\u003ckbd>J\u003c/kbd>\u003ckbd>1\u003c/kbd>\u003ckbd>2\u003c/kbd>\u003ckbd>3\u003c/kbd>\u003ckbd>4\u003c/kbd>\u003ckbd>5\u003c/kbd>\u003ckbd>6\u003c/kbd>\u003c/div>\u003cp style=\"text-align:center;color:var(--mut);margin-top:12px\">Remapeie as teclas ou use um controle pelo overlay.\u003c/p>"}, "donate": {"t": "Apoio.app", "html": "\u003ch3 style=\"font-size:20px\">É grátis. Apoiar o projeto é opcional.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">O SiliconPlay é grátis para jogar e para testar apps. Se quiser ajudar o projeto, isso fica por sua conta.\u003c/p>\u003cp style=\"margin-top:14px\">\u003ca class=\"btnp\" href=\"/download/\">Baixar o SiliconPlay para Mac\u003c/a>\u003c/p>"}, "faq": {"t": "Perguntas.txt", "html": "\u003cspan class=\"h\">Em quais Macs funciona?\u003c/span>\nMac com Apple Silicon (M1, M2, M3, M4, M5 e os mais novos) e macOS 14 ou posterior.\n\n\u003cspan class=\"h\">Minha conta do jogo corre risco?\u003c/span>\nO root é opcional e o SiliconPlay não modifica o jogo. Siga os termos de cada jogo.\n\n\u003cspan class=\"h\">É grátis?\u003c/span>\nSim. O SiliconPlay é grátis. Apoiar o projeto é opcional.\n\n\u003cspan class=\"h\">O código-fonte está disponível?\u003c/span>\nNão. As licenças dos componentes de terceiros vêm com o app."}, "licenses": {"t": "LICENCAS.txt", "html": "O SiliconPlay inclui componentes de terceiros. Os avisos completos estão no site e também dentro do app.\n\n→ \u003ca href=\"/licenses.html\">Licenças e avisos de código aberto\u003c/a>\n\n\u003ca href=\"/privacy.html\">Privacidade\u003c/a> · \u003ca href=\"mailto:katzdoll@gmail.com\">Contato\u003c/a>"}, "terminal": {"t": "Terminal", "html": "\u003cspan class=\"p\">~ %\u003c/span> siliconplay --version\nSiliconPlay 1.0\n  guest      Android 16 (arm64)\n  hypervisor Apple Hypervisor.framework\n  graphics   Vulkan → Metal\n  requires   Apple silicon M1+, macOS 14+\n\n\u003cspan class=\"p\">~ %\u003c/span> siliconplay bench \u003cspan class=\"d\"># MacBook Pro, M3 Max\u003c/span>\n  fps        60\n  resolution 2560×1440\n  input      7-43 ms\n\n\u003cspan class=\"p\">~ %\u003c/span> \u003cspan class=\"cursor\">\u003c/span>"}, "installer": {"t": "Instalar SiliconPlay", "html": "\u003cdiv class=\"inst\">\u003cimg src=\"/assets/icon-tile-128.webp\" alt=\"Ícone do SiliconPlay\">\u003cdiv>\u003ch3 style=\"font-size:18px\">SiliconPlay\u003c/h3>\u003cp style=\"color:var(--mut)\">Emulador de Android para macOS. Apple Silicon, macOS 14 ou posterior.\u003c/p>\u003c/div>\u003c/div>\u003cdiv class=\"prog\">\u003ci>\u003c/i>\u003c/div>\u003ca class=\"btnp\" href=\"/download/\">Baixar para Mac\u003c/a>"}, "projects": {"t": "Outros projetos do Ryan", "html": "\u003cp class=\"pj-h\">Outros projetos do Ryan\u003c/p>\u003cdiv class=\"pj\">\u003cp>GitHub, o perfil do Ryan.\u003c/p>\u003cp>a Lequeria, leques de bambu feitos à mão para quem vive de música eletrônica.\u003c/p>\u003cp>CVT Ingressos, lugar para comprar, vender, trocar e doar ingresso.\u003c/p>\u003cp>Instagram @fcknstar, pessoal.\u003c/p>\u003c/div>"}, "trash": {"t": "Lixeira", "html": "\u003cp style=\"color:var(--mut);text-align:center;margin-top:40px\">A lixeira está vazia. Aqui também não tem programa escondido.\u003c/p>"}, "mac": {"t": "SiliconPlay", "html": "\u003cdiv style=\"text-align:center\">\u003cimg src=\"/assets/icon-tile-128.webp\" alt=\"Ícone do SiliconPlay\" width=\"110\" style=\"margin:10px auto\">\u003ch3 style=\"font-size:22px;margin-top:8px\">O SiliconPlay é para Mac.\u003c/h3>\u003cp style=\"color:var(--mut);margin-top:6px\">Ele roda jogos de Android em Mac com Apple Silicon. Manda o link para você mesmo e baixa no Mac.\u003c/p>\u003cbutton class=\"btnp\" data-copy>Copiar link\u003c/button>\u003ca class=\"btng\" href=\"/download/\">Baixar\u003c/a>\u003cp class=\"copied\" style=\"color:var(--mut);margin-top:10px\" aria-live=\"polite\">\u003c/p>\u003c/div>"}}};</script>
 <script src="/app.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

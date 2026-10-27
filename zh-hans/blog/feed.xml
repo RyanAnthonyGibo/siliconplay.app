@@ -9,48 +9,48 @@
     <atom:link href="https://siliconplay.app/zh-hans/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Mac安卓模拟器的按键映射：屏幕按钮和分游戏布局</title>
-      <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping</link>
-      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping</guid>
+      <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping/</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>在 Mac 上的 SiliconPlay 里把键盘和手柄映射成触摸。含屏幕按钮、分游戏布局，以及默认 WASD 键位。</description>
     </item>
     <item>
       <title>Mac安卓模拟器快捷键：SiliconPlay 的键盘清单</title>
-      <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-shortcuts</link>
-      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/android-emulator-mac-shortcuts</guid>
+      <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-shortcuts/</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/android-emulator-mac-shortcuts/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>Mac 上 SiliconPlay 的快捷键：Command-I 安装 APK，以及输入模式、全屏、Back 和悬浮层。</description>
     </item>
     <item>
       <title>给 Apple Silicon 上的开发者用的、可以 root 的安卓模拟器</title>
-      <link>https://siliconplay.app/zh-hans/blog/rooted-android-emulator-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/rooted-android-emulator-mac</guid>
+      <link>https://siliconplay.app/zh-hans/blog/rooted-android-emulator-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/rooted-android-emulator-mac/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>可选 root、adb 安装，以及 Apple Silicon 上的 ARM64 Android 16 平板。不必一直开着 IDE 也能测 APK。</description>
     </item>
     <item>
       <title>M1、M2、M3、M4、M5（及更新芯片）Mac 的免费安卓模拟器</title>
-      <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m2-m3-m4</link>
-      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m2-m3-m4/</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>给 M1、M2、M3、M4、M5 及更新芯片的 Mac 用的免费安卓模拟器。原生 ARM64、Metal、键盘、手柄，以及给开发用的可选 root。</description>
     </item>
     <item>
       <title>在找 Mac 上的 BlueStacks 替代？试试 SiliconPlay</title>
-      <link>https://siliconplay.app/zh-hans/blog/bluestacks-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/bluestacks-alternative-mac</guid>
+      <link>https://siliconplay.app/zh-hans/blog/bluestacks-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>在找 Mac 上的 BlueStacks 替代？SiliconPlay 是从 M1 到 M5 及更新芯片的免费安卓模拟器，有 Metal，root 可选。</description>
     </item>
     <item>
       <title>在找 Mac 上的 MuMu Player 替代？试试 SiliconPlay</title>
-      <link>https://siliconplay.app/zh-hans/blog/mumu-player-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/mumu-player-alternative-mac</guid>
+      <link>https://siliconplay.app/zh-hans/blog/mumu-player-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>在找 Mac 上的 MuMu Player 替代？SiliconPlay 是从 M1 到 M5 及更新芯片的免费安卓模拟器，有 Metal，root 可选。</description>

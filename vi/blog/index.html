@@ -27,6 +27,10 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/">
 <link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/">
+<link rel="alternate" hreflang="es" href="https://siliconplay.app/es-mx/blog/">
+<link rel="alternate" hreflang="pt" href="https://siliconplay.app/pt-br/blog/">
+<link rel="alternate" hreflang="zh" href="https://siliconplay.app/zh-hans/blog/">
 <link rel="alternate" type="application/rss+xml" title="Blog SiliconPlay" href="https://siliconplay.app/vi/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="Blog SiliconPlay">
@@ -61,7 +65,7 @@
       "@type": "BlogPosting",
       "headline": "Gán phím trên giả lập Android cho Mac: nút trên màn hình và bố cục từng game",
       "description": "Gán bàn phím và tay cầm thành chạm trong SiliconPlay trên Mac. Nút trên màn hình, bố cục từng game, và keymap WASD mặc định.",
-      "url": "https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping",
+      "url": "https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "vi",
@@ -74,7 +78,7 @@
       "@type": "BlogPosting",
       "headline": "Phím tắt giả lập Android trên Mac: danh sách bàn phím của SiliconPlay",
       "description": "Phím tắt SiliconPlay trên Mac: Command-I cài APK, cùng chế độ gõ, toàn màn hình, Back, và overlay.",
-      "url": "https://siliconplay.app/vi/blog/android-emulator-mac-shortcuts",
+      "url": "https://siliconplay.app/vi/blog/android-emulator-mac-shortcuts/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "vi",
@@ -87,7 +91,7 @@
       "@type": "BlogPosting",
       "headline": "Giả lập Android có root cho người phát triển trên Mac Apple Silicon",
       "description": "Root tùy chọn, cài bằng adb, và máy tính bảng ARM64 Android 16 trên Apple Silicon. Thử APK mà không cần giữ IDE mở.",
-      "url": "https://siliconplay.app/vi/blog/rooted-android-emulator-mac",
+      "url": "https://siliconplay.app/vi/blog/rooted-android-emulator-mac/",
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
       "inLanguage": "vi",
@@ -100,7 +104,7 @@
       "@type": "BlogPosting",
       "headline": "Giả lập Android miễn phí cho Mac M1, M2, M3, M4 và M5 (và đời mới hơn)",
       "description": "Giả lập Android miễn phí cho Mac M1, M2, M3, M4, M5 và chip mới hơn. ARM64 gốc, Metal, bàn phím, tay cầm và root tùy chọn để lập trình.",
-      "url": "https://siliconplay.app/vi/blog/android-emulator-mac-m1-m2-m3-m4",
+      "url": "https://siliconplay.app/vi/blog/android-emulator-mac-m1-m2-m3-m4/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "vi",
@@ -113,7 +117,7 @@
       "@type": "BlogPosting",
       "headline": "Đang tìm thứ thay BlueStacks trên Mac? Thử SiliconPlay",
       "description": "Đang tìm thứ thay BlueStacks trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.",
-      "url": "https://siliconplay.app/vi/blog/bluestacks-alternative-mac",
+      "url": "https://siliconplay.app/vi/blog/bluestacks-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "vi",
@@ -126,7 +130,7 @@
       "@type": "BlogPosting",
       "headline": "Đang tìm thứ thay MuMu Player trên Mac? Thử SiliconPlay",
       "description": "Đang tìm thứ thay MuMu Player trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.",
-      "url": "https://siliconplay.app/vi/blog/mumu-player-alternative-mac",
+      "url": "https://siliconplay.app/vi/blog/mumu-player-alternative-mac/",
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "vi",
@@ -141,9 +145,28 @@
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script>
+(function(){
+  var done=false;
+  function load(){
+    if(done)return;
+    done=true;
+    var s=document.createElement("script");
+    s.async=true;
+    s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277";
+    s.crossOrigin="anonymous";
+    document.head.appendChild(s);
+  }
+  ["pointerdown","keydown","scroll","touchstart"].forEach(function(ev){
+    addEventListener(ev,load,{once:true,passive:true});
+  });
+  addEventListener("load",function(){
+    var ric=window.requestIdleCallback||function(fn){setTimeout(fn,1200);};
+    ric(function(){setTimeout(load,1200);});
+  });
+})();
+</script>
 </head>
 <body class="docpage">
 <div class="wall" aria-hidden="true"></div>
@@ -152,36 +175,36 @@
   <h1>Blog</h1>
   <p class="doc-meta">Ghi chú về SiliconPlay, trình giả lập Android miễn phí cho Mac Apple Silicon.</p>
   <ul class="post-list">
-    <li><a href="/vi/blog/android-emulator-mac-keyboard-mapping">
+    <li><a href="/vi/blog/android-emulator-mac-keyboard-mapping/">
       <b>Gán phím trên giả lập Android cho Mac: nút trên màn hình và bố cục từng game</b>
       <small>27 tháng 10 năm 2026 · Ryan Gibo</small>
       <span>Bàn phím và tay cầm thành thao tác chạm. Có nút trên màn hình, bố cục từng game, và keymap WASD mặc định.</span>
     </a></li>
-    <li><a href="/vi/blog/android-emulator-mac-shortcuts">
+    <li><a href="/vi/blog/android-emulator-mac-shortcuts/">
       <b>Phím tắt giả lập Android trên Mac: danh sách bàn phím của SiliconPlay</b>
       <small>27 tháng 10 năm 2026 · Ryan Gibo</small>
       <span>Command-I nhập một APK. Còn có chế độ gõ, toàn màn hình, Back, lớp phủ, và keymap WASD mặc định.</span>
     </a></li>
-    <li><a href="/vi/blog/rooted-android-emulator-mac">
+    <li><a href="/vi/blog/rooted-android-emulator-mac/">
       <b>Giả lập Android có root cho người phát triển trên Mac Apple Silicon</b>
       <small>27 tháng 10 năm 2026 · Ryan Gibo</small>
       <span>Root tùy chọn, cài bằng adb, và một máy tính bảng ARM64 Android 16 thật. Thử APK mà không cần giữ IDE mở.</span>
     </a></li>
-    <li><a href="/vi/blog/android-emulator-mac-m1-m2-m3-m4">
+    <li><a href="/vi/blog/android-emulator-mac-m1-m2-m3-m4/">
       <b>Giả lập Android miễn phí cho Mac M1, M2, M3, M4 và M5 (và đời mới hơn)</b>
       <small>26 tháng 10 năm 2026 · Ryan Gibo</small>
       <span>Giả lập Android miễn phí cho Mac M1, M2, M3, M4, M5 và chip mới hơn. ARM64 gốc, Metal, bàn phím, tay cầm và root tùy chọn để lập trình.</span>
-    </a></li><li><a href="/vi/blog/bluestacks-alternative-mac">
+    </a></li><li><a href="/vi/blog/bluestacks-alternative-mac/">
       <b>Đang tìm thứ thay BlueStacks trên Mac? Thử SiliconPlay</b>
       <small>26 tháng 10 năm 2026 · Ryan Gibo</small>
       <span>Đang tìm thứ thay BlueStacks trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.</span>
-    </a></li><li><a href="/vi/blog/mumu-player-alternative-mac">
+    </a></li><li><a href="/vi/blog/mumu-player-alternative-mac/">
       <b>Đang tìm thứ thay MuMu Player trên Mac? Thử SiliconPlay</b>
       <small>26 tháng 10 năm 2026 · Ryan Gibo</small>
       <span>Đang tìm thứ thay MuMu Player trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.</span>
     </a></li>
   </ul>
-  <p class="more"><a href="/vi/">Trang SiliconPlay</a> · <a href="/download/">Tải cho Mac</a> · <a href="/vi/blog/feed.xml">RSS</a></p>
+  <p class="more"><a href="https://siliconplay.app/vi/compare/">So sánh giả lập Android cho Mac</a> · <a href="/vi/">Trang SiliconPlay</a> · <a href="/download/">Tải cho Mac</a> · <a href="/vi/blog/feed.xml">RSS</a></p>
   <footer>
     <p>SiliconPlay không liên kết với Apple Inc. hay Google LLC. Android là nhãn hiệu của Google LLC. Mac, macOS và Metal là nhãn hiệu của Apple Inc.</p>
     <p><a href="/privacy.html">Quyền riêng tư</a> · <a href="/licenses.html">Giấy phép và ghi chú mã nguồn mở</a> · <a href="mailto:katzdoll@gmail.com">Liên hệ</a> · © 2026 SiliconPlay</p>

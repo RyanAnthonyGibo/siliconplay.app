@@ -9,48 +9,48 @@
     <atom:link href="https://siliconplay.app/th/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>จับคู่ปุ่มบนอีมูเลเตอร์ Android สำหรับ Mac: ปุ่มบนจอและเลย์เอาต์รายเกม</title>
-      <link>https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping</link>
-      <guid isPermaLink="true">https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping</guid>
+      <link>https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping/</link>
+      <guid isPermaLink="true">https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>จับคู่คีย์บอร์ดและคอนโทรลเลอร์เป็นการแตะใน SiliconPlay บน Mac มีปุ่มบนจอ เลย์เอาต์รายเกม และ keymap WASD</description>
     </item>
     <item>
       <title>ปุ่มลัดของอีมูเลเตอร์ Android บน Mac: รายการคีย์บอร์ดใน SiliconPlay</title>
-      <link>https://siliconplay.app/th/blog/android-emulator-mac-shortcuts</link>
-      <guid isPermaLink="true">https://siliconplay.app/th/blog/android-emulator-mac-shortcuts</guid>
+      <link>https://siliconplay.app/th/blog/android-emulator-mac-shortcuts/</link>
+      <guid isPermaLink="true">https://siliconplay.app/th/blog/android-emulator-mac-shortcuts/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>ปุ่มลัด SiliconPlay บน Mac: Command-I ติดตั้ง APK รวมโหมดพิมพ์ เต็มจอ Back และ overlay</description>
     </item>
     <item>
       <title>อีมูเลเตอร์ Android ที่รูทได้ สำหรับนักพัฒนาบน Mac Apple Silicon</title>
-      <link>https://siliconplay.app/th/blog/rooted-android-emulator-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/th/blog/rooted-android-emulator-mac</guid>
+      <link>https://siliconplay.app/th/blog/rooted-android-emulator-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/th/blog/rooted-android-emulator-mac/</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>รูทเป็นทางเลือก ติดตั้งด้วย adb และแท็บเล็ต ARM64 Android 16 บน Apple Silicon ทดสอบ APK โดยไม่ต้องเปิด IDE ค้างไว้</description>
     </item>
     <item>
       <title>อีมูเลเตอร์ Android ฟรีสำหรับ Mac M1, M2, M3, M4 และ M5 (และรุ่นใหม่กว่า)</title>
-      <link>https://siliconplay.app/th/blog/android-emulator-mac-m1-m2-m3-m4</link>
-      <guid isPermaLink="true">https://siliconplay.app/th/blog/android-emulator-mac-m1-m2-m3-m4</guid>
+      <link>https://siliconplay.app/th/blog/android-emulator-mac-m1-m2-m3-m4/</link>
+      <guid isPermaLink="true">https://siliconplay.app/th/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>อีมูเลเตอร์ Android ฟรีสำหรับ Mac ชิป M1, M2, M3, M4, M5 และรุ่นใหม่กว่า. ARM64 เนทีฟ, Metal, คีย์บอร์ด, เกมแพด และรูทแบบเลือกได้สำหรับงานพัฒนา.</description>
     </item>
     <item>
       <title>กำลังหาทางเลือกแทน BlueStacks บน Mac อยู่ใช่ไหม? ลอง SiliconPlay</title>
-      <link>https://siliconplay.app/th/blog/bluestacks-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/th/blog/bluestacks-alternative-mac</guid>
+      <link>https://siliconplay.app/th/blog/bluestacks-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/th/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>กำลังหาทางเลือกแทน BlueStacks บน Mac อยู่ใช่ไหม? SiliconPlay คืออีมูเลเตอร์ Android ฟรีตั้งแต่ M1 ถึง M5 และรุ่นใหม่กว่า มี Metal และรูทแบบเลือกได้.</description>
     </item>
     <item>
       <title>กำลังหาทางเลือกแทน MuMu Player บน Mac อยู่ใช่ไหม? ลอง SiliconPlay</title>
-      <link>https://siliconplay.app/th/blog/mumu-player-alternative-mac</link>
-      <guid isPermaLink="true">https://siliconplay.app/th/blog/mumu-player-alternative-mac</guid>
+      <link>https://siliconplay.app/th/blog/mumu-player-alternative-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/th/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
       <description>กำลังหาทางเลือกแทน MuMu Player บน Mac อยู่ใช่ไหม? SiliconPlay คืออีมูเลเตอร์ Android ฟรีตั้งแต่ M1 ถึง M5 และรุ่นใหม่กว่า มี Metal และรูทแบบเลือกได้.</description>
