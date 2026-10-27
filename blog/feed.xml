@@ -5,8 +5,32 @@
     <link>https://siliconplay.app/blog/</link>
     <description>Articles about SiliconPlay, a free Android emulator for Apple Silicon Macs.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Android emulator keyboard mapping on Mac: on-screen buttons and per-game layouts</title>
+      <link>https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Map a keyboard and a controller to touch in SiliconPlay on a Mac. On-screen buttons, per-game layouts, and the default WASD keymap.</description>
+    </item>
+    <item>
+      <title>Android emulator shortcuts on Mac: the SiliconPlay keyboard list</title>
+      <link>https://siliconplay.app/blog/android-emulator-mac-shortcuts</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/android-emulator-mac-shortcuts</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Keyboard shortcuts in SiliconPlay on a Mac: Command-I imports an APK, plus typing mode, fullscreen, Back, and the overlay.</description>
+    </item>
+    <item>
+      <title>A rooted Android emulator for developers on Apple Silicon Macs</title>
+      <link>https://siliconplay.app/blog/rooted-android-emulator-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/rooted-android-emulator-mac</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Optional root, adb install, and a real ARM64 Android 16 tablet on Apple Silicon. Test an APK without keeping a full IDE open.</description>
+    </item>
     <item>
       <title>Free Android Emulator for Mac M1, M2, M3, M4 &amp; M5 (and newer)</title>
       <link>https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4</link>

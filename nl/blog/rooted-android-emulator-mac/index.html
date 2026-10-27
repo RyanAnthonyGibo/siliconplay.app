@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="nl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Android-emulator met root voor Mac | SiliconPlay</title>
+<meta name="description" content="Optionele root, adb en een ARM64-tablet met Android 16 op Apple Silicon. Een APK testen zonder de IDE open te laten.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/nl/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/rooted-android-emulator-mac">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/rooted-android-emulator-mac">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay-blog" href="https://siliconplay.app/nl/blog/feed.xml">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:title" content="Android-emulator met root voor Mac | SiliconPlay">
+<meta property="og:description" content="Optionele root, adb en een ARM64-tablet met Android 16 op Apple Silicon. Een APK testen zonder de IDE open te laten.">
+<meta property="og:url" content="https://siliconplay.app/nl/blog/rooted-android-emulator-mac">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay-pictogram en de tekst gratis Android-emulator voor de Mac">
+<meta property="article:published_time" content="2026-10-27">
+<meta property="article:modified_time" content="2026-10-27">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Android-emulator met root voor Mac | SiliconPlay">
+<meta name="twitter:description" content="Optionele root, adb en een ARM64-tablet met Android 16 op Apple Silicon. Een APK testen zonder de IDE open te laten.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay-pictogram en de tekst gratis Android-emulator voor de Mac">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "Een Android-emulator met root voor ontwikkelaars op Apple Silicon",
+  "description": "Optionele root, adb en een ARM64-tablet met Android 16 op Apple Silicon. Een APK testen zonder de IDE open te laten.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "inLanguage": "nl",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/nl/blog/rooted-android-emulator-mac",
+  "url": "https://siliconplay.app/nl/blog/rooted-android-emulator-mac"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is root verplicht?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee. Het is optioneel en staat aan het begin uit. Root gebruikt het Google-APIs-image. Het Play-image weigert adb root, en op die tablet zit de Play Store niet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe installeer ik een APK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start de instantie, sleep dan een APK erin of druk op Command-I om er een te importeren. Installeren kan ook met adb. Split-APK's en XAPK-archieven installeert deze versie niet. Kopiëren via adb gaat naar /sdcard/SiliconPlay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Moet Android Studio open blijven?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee. Je installeert een APK en probeert hem zonder een hele IDE in de weg. De app haalt de officiële emulator en het Play-arm64-image op, of gebruikt een SDK die je al hebt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke Macs en welke macOS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alleen Apple Silicon: M1, M2, M3, M4, M5 en nieuwer, ook Pro, Max en Ultra. Geen Intel-Macs. Ik heb alleen op macOS Tahoe getest."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/nl/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://siliconplay.app/nl/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Een Android-emulator met root voor ontwikkelaars op Apple Silicon",
+      "item": "https://siliconplay.app/nl/blog/rooted-android-emulator-mac"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Een APK installeren in SiliconPlay",
+  "description": "Installeer een APK op de tablet met Android 16, met Command-I, door het bestand te slepen of met adb.",
+  "inLanguage": "nl",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Start de instantie",
+      "text": "Druk op Start. De instantie moet draaien voordat een installatie kan."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Sleep de APK of druk op Command-I",
+      "text": "Sleep een .apk-bestand op het venster, of druk op Command-I om een APK te importeren en in Android te installeren."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Of gebruik adb",
+      "text": "Installeren kan ook met adb. Bestanden die je zo kopieert gaan naar /sdcard/SiliconPlay."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Ken de grenzen",
+      "text": "Split-APK's en XAPK-archieven installeert deze versie niet. Het image koppelt geen map van de Mac als schijf."
+    }
+  ]
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/nl/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay-pictogram"> SiliconPlay</a> · <a href="/nl/blog/">Blog</a></p><label class="langswitch"><span class="vh">Taal</span><select aria-label="Taal" onchange="if(this.value)location.href=this.value"><option value="/blog/rooted-android-emulator-mac">English</option><option value="/pt-br/blog/rooted-android-emulator-mac">Português</option><option value="/es-mx/blog/rooted-android-emulator-mac">Español (MX)</option><option value="/es-es/blog/rooted-android-emulator-mac">Español (ES)</option><option value="/fr/blog/rooted-android-emulator-mac">Français</option><option value="/de/blog/rooted-android-emulator-mac">Deutsch</option><option value="/it/blog/rooted-android-emulator-mac">Italiano</option><option value="/nl/blog/rooted-android-emulator-mac" selected>Nederlands</option><option value="/pl/blog/rooted-android-emulator-mac">Polski</option><option value="/ru/blog/rooted-android-emulator-mac">Русский</option><option value="/uk/blog/rooted-android-emulator-mac">Українська</option><option value="/tr/blog/rooted-android-emulator-mac">Türkçe</option><option value="/ar/blog/rooted-android-emulator-mac">العربية</option><option value="/hi/blog/rooted-android-emulator-mac">हिन्दी</option><option value="/id/blog/rooted-android-emulator-mac">Indonesia</option><option value="/th/blog/rooted-android-emulator-mac">ไทย</option><option value="/vi/blog/rooted-android-emulator-mac">Tiếng Việt</option><option value="/ja/blog/rooted-android-emulator-mac">日本語</option><option value="/ko/blog/rooted-android-emulator-mac">한국어</option><option value="/zh-hans/blog/rooted-android-emulator-mac">简体中文</option><option value="/zh-hant/blog/rooted-android-emulator-mac">繁體中文</option></select></label></div>
+  <article>
+    <h1>Een Android-emulator met root voor ontwikkelaars op Apple Silicon</h1>
+    <p class="byline">Door Ryan Gibo · <time datetime="2026-10-27">27 oktober 2026</time></p>
+    <p>Wil je alleen zien of een APK start, dan is een hele IDE een lange omweg. <a href="/nl/">SiliconPlay</a> is een Android-emulator voor de Mac, een kleine app voor een echte tablet: ARM64, Android 16, op Apple Silicon. Ik heb de app zelf vanaf nul gebouwd. Onder de motorkap draait de officiële Android Emulator. De <a href="/licenses.html">licentievermelding</a> noemt die emulator en de SDK-onderdelen die erbij horen.</p>
+    <p>Alleen voor Apple Silicon, M1 tot en met M5 en nieuwere chips in die lijn, inclusief Pro, Max en Ultra. Niet compatibel met Intel-Macs. Ik heb alleen op macOS Tahoe getest. Probeer je een andere macOS-versie, <a href="mailto:katzdoll@gmail.com">schrijf me</a> hoe het ging. Liever dat horen dan gokken.</p>
+    <h2>Wat je echt krijgt</h2>
+    <p>SiliconPlay levert de emulator van Google en het systeemimage niet mee in de download. De eerste start vraagt je Android te downloaden en te beginnen. Die stap aanvaardt de licentie van de Android-SDK op deze Mac en downloadt daarna de command-line tools van Google, de emulator voor Apple Silicon, platform-tools en het Play-arm64-systeemimage naar een SDK-map die jij kiest. Er komt één liggende tablet met de naam Android 16 Tablet, en die opent in een eigen venster. De tablet is 1920×1080 bij 320 dpi, liggend, automatisch draaien uit, op het Android 16 Play-image.</p>
+    <p>Google Play verschijnt zodra dat image er staat. Het is geen winkel die ik heb meegeleverd. Op het Android-startscherm open je de Play Store en meld je je aan. Dat wachtwoord ziet SiliconPlay nooit. Heb je al een SDK met emulator, adb en sdkmanager, dan kun je de app naar die map wijzen in plaats van een tweede kopie te downloaden.</p>
+    <p>Stopt het inrichten omdat macOS geen JDK heeft, dan zegt de app dat. <code>/usr/bin/java</code> op macOS is een stub. Het bericht in de app wijst naar <code>brew install openjdk@17</code>, daarna doe je de pakketstap opnieuw.</p>
+    <h2>Een APK installeren zonder in een IDE te wonen</h2>
+    <p>Start eerst de instantie. Sleep daarna een <code>.apk</code>-bestand op het venster, of druk op Command-I om een APK te importeren en te installeren. Split-APK's en XAPK-archieven installeert deze versie niet, dus een bundel die alleen uit die formaten bestaat komt er niet op. Dat is genoeg voor de gewone check of je build installeert en opent. Je hoeft Android Studio er niet bij open te houden terwijl je door de app tikt.</p>
+    <p>Installeren kan ook met adb. Bestanden die je zo kopieert, gaan naar <code>/sdcard/SiliconPlay</code>. Deze images koppelen geen map van de Mac als schijf, dus een gedeelde map verschijnt niet vanzelf in Android.</p>
+    <p>Pro Mode staat uit tot je het aanzet. Het zit in de balk, het menu View en Settings. Aan toont het hoofdvenster ook hardware, keymaps en diagnostiek. Uit blijft het hoofdvenster bij Start, Stop en Create New Instance.</p>
+    <h2>Root is optioneel en begint uit</h2>
+    <p>Root is optioneel en staat aan het begin uit. Laat het uit voor een gewone Play-tablet. Zet het alleen aan als je adb root nodig hebt.</p>
+    <p>Een tablet met root gebruikt het Google-APIs-image, omdat het Play-image adb root weigert. De Play Store zit niet op die tablet. Het APIs-image wordt gedownload de eerste keer dat je er een maakt. Heb je zowel Play-aanmelden als root nodig, dan zijn dat twee tablets, geen schakelaar op een Play-image.</p>
+    <p>Er is geen kernelextensie en geen achtergrondservice die je later moet weghalen. Verwijder de app als je klaar bent. SDK-bestanden blijven in de SDK-map die je koos. De eigen bestanden van SiliconPlay staan in <code>~/Library/Application Support/SiliconPlay</code>.</p>
+    <h2>Toetsenbord, als de app die je test geen toetsen heeft</h2>
+    <p>Directe aanraking is de standaard, en dat is meestal wat je wilt voor een scherm dat je zelf hebt gebouwd. Klik je door een game, dan zijn de <a href="/nl/blog/android-emulator-mac-keyboard-mapping">toetsenbordindeling op het beeld</a> en de <a href="/nl/blog/android-emulator-mac-shortcuts">sneltoetsen</a> de andere helft.</p>
+    <h2>Vragen</h2>
+    <h3>Is root verplicht?</h3>
+    <p>Nee. Het is optioneel en staat aan het begin uit. Root gebruikt het Google-APIs-image. Het Play-image weigert adb root, en op die tablet zit de Play Store niet.</p>
+    <h3>Hoe installeer ik een APK?</h3>
+    <p>Start de instantie, sleep dan een APK erin of druk op Command-I om er een te importeren. Installeren kan ook met adb. Split-APK's en XAPK-archieven installeert deze versie niet. Kopiëren via adb gaat naar /sdcard/SiliconPlay.</p>
+    <h3>Moet Android Studio open blijven?</h3>
+    <p>Nee. Je installeert een APK en probeert hem zonder een hele IDE in de weg. De app haalt de officiële emulator en het Play-arm64-image op, of gebruikt een SDK die je al hebt.</p>
+    <h3>Welke Macs en welke macOS?</h3>
+    <p>Alleen Apple Silicon: M1, M2, M3, M4, M5 en nieuwer, ook Pro, Max en Ultra. Geen Intel-Macs. Ik heb alleen op macOS Tahoe getest.</p>
+    <p><a class="cta" href="/download/">Download SiliconPlay voor de Mac</a></p>
+    <p class="more">Meer op de blog: <a href="/nl/blog/android-emulator-mac-keyboard-mapping">toetsenbord en controller koppelen</a>, <a href="/nl/blog/android-emulator-mac-shortcuts">de sneltoetsen</a> en <a href="/nl/blog/android-emulator-mac-m1-m2-m3-m4">SiliconPlay op M1 tot en met M5 en nieuwer</a>. Of terug naar de <a href="/nl/">startpagina van SiliconPlay</a>.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay is niet gelieerd aan Apple Inc. of Google LLC. Android is een merk van Google LLC. Mac, macOS en Metal zijn merken van Apple Inc.</p>
+    <p><a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenties en open-sourcevermeldingen</a> · <a href="mailto:katzdoll@gmail.com">Contact</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

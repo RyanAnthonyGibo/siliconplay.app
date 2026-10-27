@@ -5,8 +5,32 @@
     <link>https://siliconplay.app/fr/blog/</link>
     <description>Textes sur SiliconPlay, un émulateur Android gratuit pour Mac Apple Silicon : ARM64, Metal et root en option.</description>
     <language>fr</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/fr/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mappage clavier sur l&#x27;émulateur Android pour Mac : boutons à l&#x27;écran et dispositions par jeu</title>
+      <link>https://siliconplay.app/fr/blog/android-emulator-mac-keyboard-mapping</link>
+      <guid isPermaLink="true">https://siliconplay.app/fr/blog/android-emulator-mac-keyboard-mapping</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Le clavier et la manette deviennent des touchers dans l&#x27;émulateur Android pour Mac. Boutons à l&#x27;écran, une disposition par jeu, WASD inclus.</description>
+    </item>
+    <item>
+      <title>Raccourcis de l&#x27;émulateur Android sur Mac : la liste clavier de SiliconPlay</title>
+      <link>https://siliconplay.app/fr/blog/android-emulator-mac-shortcuts</link>
+      <guid isPermaLink="true">https://siliconplay.app/fr/blog/android-emulator-mac-shortcuts</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Raccourcis clavier de SiliconPlay sur Mac : Command-I importe un APK. Aussi Typing, plein écran, Retour et la surcouche.</description>
+    </item>
+    <item>
+      <title>Un émulateur Android rooté pour développer sur un Mac Apple Silicon</title>
+      <link>https://siliconplay.app/fr/blog/rooted-android-emulator-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/fr/blog/rooted-android-emulator-mac</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Root en option, installation adb, et une vraie tablette ARM64 sous Android 16 sur Apple Silicon. Teste un APK sans garder l&#x27;IDE ouvert.</description>
+    </item>
     <item>
       <title>Émulateur Android gratuit pour Mac M1, M2, M3, M4 et M5 (et les suivants)</title>
       <link>https://siliconplay.app/fr/blog/android-emulator-mac-m1-m2-m3-m4</link>

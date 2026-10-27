@@ -5,8 +5,32 @@
     <link>https://siliconplay.app/vi/blog/</link>
     <description>Bài về SiliconPlay, trình giả lập Android miễn phí cho Mac Apple Silicon: ARM64, Metal và root tùy chọn.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/vi/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Gán phím trên giả lập Android cho Mac: nút trên màn hình và bố cục từng game</title>
+      <link>https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping</link>
+      <guid isPermaLink="true">https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Gán bàn phím và tay cầm thành chạm trong SiliconPlay trên Mac. Nút trên màn hình, bố cục từng game, và keymap WASD mặc định.</description>
+    </item>
+    <item>
+      <title>Phím tắt giả lập Android trên Mac: danh sách bàn phím của SiliconPlay</title>
+      <link>https://siliconplay.app/vi/blog/android-emulator-mac-shortcuts</link>
+      <guid isPermaLink="true">https://siliconplay.app/vi/blog/android-emulator-mac-shortcuts</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Phím tắt SiliconPlay trên Mac: Command-I cài APK, cùng chế độ gõ, toàn màn hình, Back, và overlay.</description>
+    </item>
+    <item>
+      <title>Giả lập Android có root cho người phát triển trên Mac Apple Silicon</title>
+      <link>https://siliconplay.app/vi/blog/rooted-android-emulator-mac</link>
+      <guid isPermaLink="true">https://siliconplay.app/vi/blog/rooted-android-emulator-mac</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Root tùy chọn, cài bằng adb, và máy tính bảng ARM64 Android 16 trên Apple Silicon. Thử APK mà không cần giữ IDE mở.</description>
+    </item>
     <item>
       <title>Giả lập Android miễn phí cho Mac M1, M2, M3, M4 và M5 (và đời mới hơn)</title>
       <link>https://siliconplay.app/vi/blog/android-emulator-mac-m1-m2-m3-m4</link>
