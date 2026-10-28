@@ -40,7 +40,7 @@
       <description>root 可開可關，也能用 adb 安裝。這是 Apple Silicon 上的 ARM64 Android 16 平板，試 APK 時不用把 IDE 一直開著。</description>
     </item>
     <item>
-      <title>M1、M2、M3、M4、M5（及更新晶片）Mac 的免費安卓模擬器</title>
+      <title>M1、M2、M3、M4、M5 Mac 的安卓模擬器</title>
       <link>https://siliconplay.app/zh-hant/blog/android-emulator-mac-m1-m2-m3-m4/</link>
       <guid isPermaLink="true">https://siliconplay.app/zh-hant/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>

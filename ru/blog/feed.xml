@@ -40,7 +40,7 @@
       <description>Необязательный root, установка через adb и планшет ARM64 с Android 16. Проверка APK на Apple Silicon.</description>
     </item>
     <item>
-      <title>Бесплатный эмулятор Android для Mac M1, M2, M3, M4 и M5 (и новее)</title>
+      <title>Эмулятор Android для Mac M1, M2, M3, M4 и M5</title>
       <link>https://siliconplay.app/ru/blog/android-emulator-mac-m1-m2-m3-m4/</link>
       <guid isPermaLink="true">https://siliconplay.app/ru/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>

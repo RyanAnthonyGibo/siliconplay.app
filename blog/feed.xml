@@ -40,7 +40,7 @@
       <description>Optional root, adb install, and a real ARM64 Android 16 tablet on Apple Silicon. Test an APK without keeping a full IDE open.</description>
     </item>
     <item>
-      <title>Free Android Emulator for Mac M1, M2, M3, M4 &amp; M5 (and newer)</title>
+      <title>Android Emulator for Mac M1, M2, M3, M4 &amp; M5</title>
       <link>https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4/</link>
       <guid isPermaLink="true">https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
