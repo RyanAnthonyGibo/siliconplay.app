@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/ar/blog/</link>
     <description>كتابات عن SiliconPlay، محاكي أندرويد مجاني للماك بمعالج Apple Silicon: ARM64 وMetal وروت اختياري.</description>
     <language>ar</language>
-    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>محاكي أندرويد مجاني لأجهزة ماك M1 وM2 وM3 وM4 وM5: مقارنة SiliconPlay مع BlueStacks وMuMu وغيرها</title>
+      <link>https://siliconplay.app/ar/blog/free-android-emulator-mac-m1-m5-comparison/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ar/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>مقارنة محاكيات أندرويد المجانية لأجهزة ماك M1–M5: SiliconPlay وBlueStacks Air وMuMu Player Pro وAndroid Studio وGenymotion وUTM. الأسعار والإعلانات وتعيين المفاتيح والروت، تم التحقق في 28/10/2026.</description>
+    </item>
     <item>
       <title>محاكي أندرويد للماك M1 وM4: التثبيت خطوة بخطوة</title>
       <link>https://siliconplay.app/ar/blog/android-emulator-mac-m1-m4-setup/</link>
