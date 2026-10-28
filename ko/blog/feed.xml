@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/ko/blog/</link>
     <description>SiliconPlay 글. Apple Silicon Mac용 무료 안드로이드 에뮬레이터. ARM64, Metal, 선택적 루트.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/ko/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>맥 M1, M2, M3, M4, M5용 무료 안드로이드 에뮬레이터(앱플레이어): SiliconPlay vs BlueStacks, MuMu 등 비교</title>
+      <link>https://siliconplay.app/ko/blog/free-android-emulator-mac-m1-m5-comparison/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>맥 M1~M5용 무료 안드로이드 에뮬레이터 비교: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion, UTM. 가격, 광고, 키 매핑, 루팅을 2026년 10월 28일에 확인했습니다.</description>
+    </item>
     <item>
       <title>맥북 M1·M4 안드로이드 에뮬레이터(앱플레이어) 설치 방법</title>
       <link>https://siliconplay.app/ko/blog/android-emulator-mac-m1-m4-setup/</link>

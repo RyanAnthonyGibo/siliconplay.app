@@ -35,6 +35,7 @@ POSTS = [
     "bluestacks-alternative-mac",
     "mumu-player-alternative-mac",
     "android-emulator-mac-m1-m4-setup",
+    "free-android-emulator-mac-m1-m5-comparison",
 ]
 PREFIXES = [
     "", "pt-br", "es-mx", "es-es", "fr", "de", "it", "nl", "pl", "ru", "uk",
@@ -95,8 +96,8 @@ def check_urls() -> None:
     seen = []
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     locs = re.findall(r"<loc>([^<]+)</loc>", sitemap)
-    if len(locs) != 212:
-        fail(f"sitemap has {len(locs)} urls, expected 212")
+    if len(locs) != 233:
+        fail(f"sitemap has {len(locs)} urls, expected 233")
     if sitemap.count("<lastmod>") != len(locs):
         fail("a sitemap url is missing lastmod")
     if "/download/" in sitemap or "painel-f25ce03a71c3" in sitemap:

@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/blog/</link>
     <description>Articles about SiliconPlay, a free Android emulator for Apple Silicon Macs.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Free Android emulator for Mac M1, M2, M3, M4 and M5: SiliconPlay vs BlueStacks, MuMu and more</title>
+      <link>https://siliconplay.app/blog/free-android-emulator-mac-m1-m5-comparison/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Free Android emulators for Mac M1 to M5 compared: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion and UTM. Prices, ads, key mapping and root, checked 28 Oct 2026.</description>
+    </item>
     <item>
       <title>Android emulator on a Mac M1 or M4: step-by-step setup</title>
       <link>https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/</link>
