@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/hi/blog/</link>
     <description>SiliconPlay पर लेख, Apple Silicon वाले Mac के लिए मुफ़्त Android एमुलेटर: ARM64, Metal और वैकल्पिक रूट.</description>
     <language>hi</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/hi/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mac M1 और M4 के लिए Android emulator: स्टेप बाय स्टेप सेटअप</title>
+      <link>https://siliconplay.app/hi/blog/android-emulator-mac-m1-m4-setup/</link>
+      <guid isPermaLink="true">https://siliconplay.app/hi/blog/android-emulator-mac-m1-m4-setup/</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Mac M1, M2, M3, M4 या M5 पर Android emulator कैसे सेट करें: SiliconPlay, Google Play, Command-I से APK और की मैपिंग।</description>
+    </item>
     <item>
       <title>Mac पर Android कीबोर्ड मैपिंग: स्क्रीन के बटन और हर गेम का लेआउट</title>
       <link>https://siliconplay.app/hi/blog/android-emulator-mac-keyboard-mapping/</link>

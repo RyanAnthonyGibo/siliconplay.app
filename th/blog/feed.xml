@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/th/blog/</link>
     <description>บทความเกี่ยวกับ SiliconPlay, อีมูเลเตอร์ Android ฟรีสำหรับ Mac ชิป Apple Silicon: ARM64, Metal และรูทแบบเลือกได้.</description>
     <language>th</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/th/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>โปรแกรมจำลอง Android สำหรับ Mac M1 และ M4: ติดตั้งทีละขั้นตอน</title>
+      <link>https://siliconplay.app/th/blog/android-emulator-mac-m1-m4-setup/</link>
+      <guid isPermaLink="true">https://siliconplay.app/th/blog/android-emulator-mac-m1-m4-setup/</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>วิธีติดตั้งอีมูเลเตอร์ Android บน Mac M1, M2, M3, M4 หรือ M5: SiliconPlay, Google Play, ติดตั้ง APK ด้วย Command-I และการแมปปุ่ม</description>
+    </item>
     <item>
       <title>จับคู่ปุ่มบนอีมูเลเตอร์ Android สำหรับ Mac: ปุ่มบนจอและเลย์เอาต์รายเกม</title>
       <link>https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping/</link>

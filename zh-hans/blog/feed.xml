@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/zh-hans/blog/</link>
     <description>关于 SiliconPlay 的文章。面向 Apple 芯片 Mac 的免费安卓模拟器：ARM64、Metal，以及可选的 root。</description>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/zh-hans/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mac M1、M4 安卓模拟器：一步步安装教程</title>
+      <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m4-setup/</link>
+      <guid isPermaLink="true">https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m4-setup/</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>在 Mac M1、M2、M3、M4、M5 上安装安卓模拟器：SiliconPlay、Google Play、用 Command-I 安装 APK，以及按键映射。</description>
+    </item>
     <item>
       <title>Mac安卓模拟器的按键映射：屏幕按钮和分游戏布局</title>
       <link>https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping/</link>

@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/ko/blog/</link>
     <description>SiliconPlay 글. Apple Silicon Mac용 무료 안드로이드 에뮬레이터. ARM64, Metal, 선택적 루트.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/ko/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>맥북 M1·M4 안드로이드 에뮬레이터(앱플레이어) 설치 방법</title>
+      <link>https://siliconplay.app/ko/blog/android-emulator-mac-m1-m4-setup/</link>
+      <guid isPermaLink="true">https://siliconplay.app/ko/blog/android-emulator-mac-m1-m4-setup/</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Mac M1, M2, M3, M4, M5에 안드로이드 에뮬레이터(앱플레이어)를 설치하는 방법: SiliconPlay, Google Play, Command-I로 APK 설치, 키 매핑.</description>
+    </item>
     <item>
       <title>맥 안드로이드 에뮬레이터의 키 매핑: 화면 버튼과 게임별 배치</title>
       <link>https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping/</link>

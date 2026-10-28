@@ -25,7 +25,7 @@ LANGS = [
 GENERIC = {"en", "es", "pt", "zh"}
 PROTECTED = {
     "download/index.html": "b55b8c873ff665e21acb238c571c2a5418ba16b92e38e5c12d30c0719af78106",
-    "painel-f25ce03a71c3/index.html": "893ce001e3c90a0b97c7aefbcaa19818e138e4438a577b9cd8e2657b1ce952b9",
+    "painel-f25ce03a71c3/index.html": "3d352f5bd7f82c58df515c5c31cc68c84a9d742363d7e13c9a85263a655db24a",
 }
 POSTS = [
     "android-emulator-mac-keyboard-mapping",
@@ -34,6 +34,7 @@ POSTS = [
     "android-emulator-mac-m1-m2-m3-m4",
     "bluestacks-alternative-mac",
     "mumu-player-alternative-mac",
+    "android-emulator-mac-m1-m4-setup",
 ]
 PREFIXES = [
     "", "pt-br", "es-mx", "es-es", "fr", "de", "it", "nl", "pl", "ru", "uk",
@@ -94,8 +95,8 @@ def check_urls() -> None:
     seen = []
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     locs = re.findall(r"<loc>([^<]+)</loc>", sitemap)
-    if len(locs) != 191:
-        fail(f"sitemap has {len(locs)} urls, expected 191")
+    if len(locs) != 212:
+        fail(f"sitemap has {len(locs)} urls, expected 212")
     if sitemap.count("<lastmod>") != len(locs):
         fail("a sitemap url is missing lastmod")
     if "/download/" in sitemap or "painel-f25ce03a71c3" in sitemap:
