@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/fr/blog/</link>
     <description>Textes sur SiliconPlay, un émulateur Android gratuit pour Mac Apple Silicon : ARM64, Metal et root en option.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/fr/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Émulateur Android pour Mac M1 et M4 : installation pas à pas</title>
+      <link>https://siliconplay.app/fr/blog/android-emulator-mac-m1-m4-setup/</link>
+      <guid isPermaLink="true">https://siliconplay.app/fr/blog/android-emulator-mac-m1-m4-setup/</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Comment installer un émulateur Android sur un Mac M1, M2, M3, M4 ou M5 : SiliconPlay, Google Play, un APK avec Command-I et le mappage des touches.</description>
+    </item>
     <item>
       <title>Mappage clavier sur l&#x27;émulateur Android pour Mac : boutons à l&#x27;écran et dispositions par jeu</title>
       <link>https://siliconplay.app/fr/blog/android-emulator-mac-keyboard-mapping/</link>

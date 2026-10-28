@@ -5,8 +5,16 @@
     <link>https://siliconplay.app/nl/blog/</link>
     <description>Stukken over SiliconPlay, een gratis Android-emulator voor Macs met Apple Silicon: ARM64, Metal en optionele root.</description>
     <language>nl</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Android-emulator voor Mac M1 en M4: stap voor stap installeren</title>
+      <link>https://siliconplay.app/nl/blog/android-emulator-mac-m1-m4-setup/</link>
+      <guid isPermaLink="true">https://siliconplay.app/nl/blog/android-emulator-mac-m1-m4-setup/</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Zo installeer je een Android-emulator op een Mac M1, M2, M3, M4 of M5: SiliconPlay, Google Play, een APK met Command-I en toetsen koppelen.</description>
+    </item>
     <item>
       <title>Toetsenbordindeling op de Mac: knoppen in beeld en een indeling per game</title>
       <link>https://siliconplay.app/nl/blog/android-emulator-mac-keyboard-mapping/</link>

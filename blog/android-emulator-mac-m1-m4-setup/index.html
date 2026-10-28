@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Android emulator on a Mac M1 or M4: step-by-step setup | SiliconPlay</title>
+<meta name="description" content="How to set up an Android emulator on a Mac M1, M2, M3, M4 or M5: install SiliconPlay, sign in to Google Play, install an APK with Command-I and map your keys.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="es" href="https://siliconplay.app/es-mx/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="pt" href="https://siliconplay.app/pt-br/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="zh" href="https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m4-setup/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Android emulator on a Mac M1 or M4: step-by-step setup | SiliconPlay">
+<meta property="og:description" content="How to set up an Android emulator on a Mac M1, M2, M3, M4 or M5: install SiliconPlay, sign in to Google Play, install an APK with Command-I and map your keys.">
+<meta property="og:url" content="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-10-28">
+<meta property="article:modified_time" content="2026-10-28">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Android emulator on a Mac M1 or M4: step-by-step setup | SiliconPlay">
+<meta name="twitter:description" content="How to set up an Android emulator on a Mac M1, M2, M3, M4 or M5: install SiliconPlay, sign in to Google Play, install an APK with Command-I and map your keys.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "Android emulator on a Mac M1 or M4: step-by-step setup",
+  "description": "How to set up an Android emulator on a Mac M1, M2, M3, M4 or M5: install SiliconPlay, sign in to Google Play, install an APK with Command-I and map your keys.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/",
+  "url": "https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://siliconplay.app/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Android emulator on a Mac M1 or M4: step-by-step setup",
+      "item": "https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4/"
+    }
+  ]
+}
+</script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a></p><label class="langswitch"><span class="vh">Language</span><select aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/blog/android-emulator-mac-m1-m4-setup/" selected>English</option><option value="/pt-br/blog/android-emulator-mac-m1-m4-setup/">Português</option><option value="/es-mx/blog/android-emulator-mac-m1-m4-setup/">Español (MX)</option><option value="/es-es/blog/android-emulator-mac-m1-m4-setup/">Español (ES)</option><option value="/fr/blog/android-emulator-mac-m1-m4-setup/">Français</option><option value="/de/blog/android-emulator-mac-m1-m4-setup/">Deutsch</option><option value="/it/blog/android-emulator-mac-m1-m4-setup/">Italiano</option><option value="/nl/blog/android-emulator-mac-m1-m4-setup/">Nederlands</option><option value="/pl/blog/android-emulator-mac-m1-m4-setup/">Polski</option><option value="/ru/blog/android-emulator-mac-m1-m4-setup/">Русский</option><option value="/uk/blog/android-emulator-mac-m1-m4-setup/">Українська</option><option value="/tr/blog/android-emulator-mac-m1-m4-setup/">Türkçe</option><option value="/ar/blog/android-emulator-mac-m1-m4-setup/">العربية</option><option value="/hi/blog/android-emulator-mac-m1-m4-setup/">हिन्दी</option><option value="/id/blog/android-emulator-mac-m1-m4-setup/">Indonesia</option><option value="/th/blog/android-emulator-mac-m1-m4-setup/">ไทย</option><option value="/vi/blog/android-emulator-mac-m1-m4-setup/">Tiếng Việt</option><option value="/ja/blog/android-emulator-mac-m1-m4-setup/">日本語</option><option value="/ko/blog/android-emulator-mac-m1-m4-setup/">한국어</option><option value="/zh-hans/blog/android-emulator-mac-m1-m4-setup/">简体中文</option><option value="/zh-hant/blog/android-emulator-mac-m1-m4-setup/">繁體中文</option></select></label></div>
+  <article>
+    <h1>Android emulator on a Mac M1 or M4: step-by-step setup</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-10-28">28 October 2026</time></p>
+    <p>If you searched for “Android emulator Mac M1” or “Android emulator Mac M4”, a lot of what comes up was written before Apple Silicon. This is the short, current version: how to get Android games and apps running on an M-series Mac with <a href="/">SiliconPlay</a>, the app I build for Apple Silicon.</p>
+
+    <h2>What you are installing</h2>
+    <p>Underneath, SiliconPlay runs Google’s official Android Emulator, natively on the Mac’s ARM cores. The Mac app around it, the interface and the control mapping, I wrote from scratch. It is made only for Apple Silicon, from M1 to M5, and I have tested it on macOS Tahoe.</p>
+
+    <h2>What you need</h2>
+    <ul>
+      <li>A Mac with an M1, M2, M3, M4 or M5 chip (Pro, Max and Ultra included).</li>
+      <li>macOS Tahoe. That is the version I have tested on.</li>
+      <li>A Google account, if you want to install from Google Play.</li>
+    </ul>
+
+    <h2>Setup, step by step</h2>
+    <ol>
+      <li><a href="/download/">Download SiliconPlay.dmg</a>.</li>
+      <li>Open the DMG and drag SiliconPlay to Applications.</li>
+      <li>Open SiliconPlay and start Android.</li>
+      <li>Sign in to Google Play and install your games and apps. To install an APK file instead, press Command-I.</li>
+      <li>Click the Android image. Direct touch is the default. For keys, accept the preset SiliconPlay offers for your game, or apply MMORPG (WASD) and move the buttons.</li>
+    </ol>
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+
+    <h2>The shortcuts to learn first</h2>
+    <ul>
+      <li>Command-I: import an APK and install it into Android.</li>
+      <li>F12 or Command-K: switch between Typing and Game keys.</li>
+      <li>Command-Shift-G: show or hide the on-screen game buttons.</li>
+      <li>Escape: leave fullscreen. Outside fullscreen it is Android Back.</li>
+      <li>Shift-Escape: release every virtual finger.</li>
+    </ul>
+
+    <h2>M1 or M4: what changes?</h2>
+    <p>The app is the same on every chip from M1 to M5. I have not published per-chip benchmarks, so I will not give you numbers for an M1 or an M4. Newer chips have more headroom, which matters most in heavy 3D games. If a game stutters, lower its graphics settings first. Apps that ship without an ARM build will not run on any of them, but most current apps include one.</p>
+
+    <h2>FAQ</h2>
+    <h3>Does it work on a Mac M1?</h3>
+    <p>Yes. M1, M2, M3, M4 and M5, including Pro, Max and Ultra.</p>
+    <h3>Which macOS version do I need?</h3>
+    <p>I have tested SiliconPlay on macOS Tahoe. If another version behaves differently, tell me.</p>
+    <h3>Is it Google’s emulator?</h3>
+    <p>Underneath, yes: Google’s official Android Emulator. The interface and the control mapping are SiliconPlay’s own, written from scratch.</p>
+    <h3>Do I need root?</h3>
+    <p>No. Root is optional and off by default. It is there for developers who need it.</p>
+
+    <p class="more">More from the blog: <a href="/blog/android-emulator-mac-shortcuts/">Android emulator shortcuts on Mac</a>, <a href="/blog/android-emulator-mac-keyboard-mapping/">Android emulator keyboard mapping on Mac</a> and <a href="/blog/android-emulator-mac-m1-m2-m3-m4/">Free Android emulator for Mac M1, M2, M3, M4 &amp; M5 (and newer)</a>. Or go back to the <a href="/">SiliconPlay homepage</a>.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · <a href="mailto:katzdoll@gmail.com">Contact</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>
