@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>When keys go to the wrong place in SiliconPlay</title>
+<meta name="description" content="Fix keys that type into macOS, miss the game, or stick a finger down. Accessibility, focus, Typing, and Shift-Escape.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="When keys go to the wrong place in SiliconPlay">
+<meta property="og:description" content="Fix keys that type into macOS, miss the game, or stick a finger down. Accessibility, focus, Typing, and Shift-Escape.">
+<meta property="og:url" content="https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="When keys go to the wrong place in SiliconPlay">
+<meta name="twitter:description" content="Fix keys that type into macOS, miss the game, or stick a finger down. Accessibility, focus, Typing, and Shift-Escape.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "When keys go to the wrong place: focus, Accessibility, and stuck fingers",
+  "description": "Fix keys that type into macOS, miss the game, or stick a finger down. Accessibility, focus, Typing, and Shift-Escape.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/",
+  "url": "https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "When keys go to the wrong place: focus, Accessibility, and stuck fingers", "item": "https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>When keys go to the wrong place: focus, Accessibility, and stuck fingers</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>When a key does the wrong thing in <a href="/">SiliconPlay</a>, it is almost never a broken keyboard. The key went to macOS, or it went to Android as text, or it became a touch on a button that is not where the game’s art is, or a previous touch never came up. This page is those four outcomes and the one control that fixes each of them. I am not adding a fifth cause I have not seen in version 1.0.0.</p>
+
+    <h2>Outcome 1: the key went to the Mac</h2>
+    <p>Command-key shortcuts stay with macOS. They are not typed into the game. Command-I imports an APK. That is correct even when a text field is focused. If you wanted the letter i, you wanted Typing, and you wanted the i key without Command.</p>
+    <p>Keys still work while the SiliconPlay window is focused. The emulator also has its own window. The first time the app follows that window, macOS asks for Accessibility. Until you allow that, keep the SiliconPlay window focused and the keys still land. If you click the emulator window and the keys start driving a different Mac app, Accessibility was not granted, or the follow has not happened yet. Click back into the SiliconPlay window. Or allow Accessibility for this app in macOS and try the follow again. I am not going to redraw Apple’s Settings panes from memory. The prompt is the one macOS shows. The behavior if you refuse it is the one I just described: focus the SiliconPlay window.</p>
+
+    <h2>Outcome 2: the key became text</h2>
+    <p>A focused text field switches the toolbar to Typing, and then the keyboard goes to Android as text. That is right for a login and wrong for a fight. F12 or Command-K toggles Typing and Game keys. Look at the toolbar before you rebind anything. If it says Typing and you are holding W expecting to walk, you are typing the letter w into whatever field still has focus. Close the field, or press F12 or Command-K.</p>
+    <p>The field can switch you into Typing by itself. A game that opens chat has done that. Closing the chat does not always switch you back. Check the toolbar.</p>
+
+    <h2>Outcome 3: the key became a touch in the wrong spot</h2>
+    <p>Game keys use the keymap, and only after a keymap is loaded. Direct touch is the default. A suggested preset stays off until you accept it. If you never accepted one and never applied MMORPG (WASD), game keys have nothing useful to press. Apply the layout or accept the preset.</p>
+    <p>If the layout is loaded and the touch hits the wrong button, the position is a fraction of the picture, origin at the top left. Fullscreen changes the picture’s size. Drag the button in Edit layout until it sits on the art. Click a chip to rebind. Drag the gold dot to resize. Done saves. Cancel restores the profile to how it was when you opened Edit. Escape during a rebind cancels the capture only.</p>
+    <p>The default stick moves from the center of its button while WASD or the arrows are held, and it returns to the center when you let go. If the character walks when you wanted a menu, you are still on the stick. F10 switches to direct touch so a menu can have a real finger. Command-Shift-G hides the overlay if a chip is covering the control you need to see. Empty space on the picture still clicks the game.</p>
+
+    <h2>Outcome 4: a finger stayed down</h2>
+    <p>Attack on the default layout is J, held. The finger stays down while J is held. If the key-up is lost, the finger stays down after you let go. Shift-Escape releases every virtual finger. That is the chord. It is not Escape. Escape leaves fullscreen, and when the window is not fullscreen it is Android Back while the display is focused. People press Escape, the game goes Back, and the stuck finger is still down. Press Shift-Escape.</p>
+    <p>A repeat chip that you added in the editor will keep firing because you asked it to. Shift-Escape releases fingers. It does not delete the chip. Open Edit and remove the repeat if that is what you added.</p>
+
+    <h2>The chords, in the order I want you to try them</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>What to press when input is in the wrong place</caption>
+        <thead><tr><th>Keys</th><th>Use it when</th></tr></thead>
+        <tbody>
+          <tr><td>Command-I</td><td>You actually needed to install an APK, and the “wrong key” was this Mac shortcut working as designed.</td></tr>
+          <tr><td>F12, or Command-K</td><td>The toolbar is on Typing and you wanted the keymap, or the other way around.</td></tr>
+          <tr><td>Command-Shift-G</td><td>The overlay is covering the game, or you need the buttons back.</td></tr>
+          <tr><td>Escape</td><td>You want to leave fullscreen, or you want Android Back while the window is not fullscreen.</td></tr>
+          <tr><td>Shift-Escape</td><td>A virtual finger is stuck down.</td></tr>
+          <tr><td>F10</td><td>You want direct touch for a menu.</td></tr>
+          <tr><td>Escape, while rebinding</td><td>You are stuck in “press a key or mouse button” and you want out without binding.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>A pass that takes a minute</h2>
+    <ol>
+      <li>Click the SiliconPlay window so focus is not in some other Mac app. If following the emulator window matters to you, allow Accessibility when macOS asks.</li>
+      <li>Read the toolbar. Press F12 or Command-K until it matches what you are doing. Typing for a field. Game keys for a layout you have accepted or applied.</li>
+      <li>If a finger is stuck, Shift-Escape before you touch the keymap.</li>
+      <li>If the touch is in the wrong place, Edit layout and drag the chip. Do not start by changing the key. The key is probably fine.</li>
+      <li>If the menu wants a finger, F10.</li>
+      <li>If none of that matches, and Command-I still installs an APK, the Mac side of the keyboard is fine. Say which of the four outcomes you still see when you <a href="/contact/">write to me</a>, and name the game.</li>
+    </ol>
+    <p>A controller uses the same chips as the keyboard. If the pad does the wrong thing and the keyboard does the right thing on that chip, the binding for the pad is the one to edit, not the Mac’s keyboard settings. The default pad buttons are listed in <a href="/blog/wasd-gamepad-and-on-screen-buttons/">WASD and the gamepad</a>. The full shortcut article is <a href="/blog/android-emulator-mac-shortcuts/">the keyboard list from version 1.0.0</a>.</p>
+    <p>This is the same on M1 through M6, tested on macOS Tahoe and macOS 27 Golden Gate. A different macOS version can ask for Accessibility with a different screen. The focus rule does not change: until follow is allowed, keep the SiliconPlay window focused.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

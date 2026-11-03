@@ -24,9 +24,32 @@ LANGS = [
 ]
 GENERIC = {"en", "es", "pt", "zh"}
 PROTECTED = {
-    "download/index.html": "b55b8c873ff665e21acb238c571c2a5418ba16b92e38e5c12d30c0719af78106",
-    "painel-f25ce03a71c3/index.html": "3d352f5bd7f82c58df515c5c31cc68c84a9d742363d7e13c9a85263a655db24a",
+    "download/index.html": "0213a24079008de006b47dcd83ee1cb7639d188dd3a11e5e1734772525e99c90",
+    "painel-f25ce03a71c3/index.html": "685b49924876be11f3e5d4bf9d703043286bb88b568ff5e37a579f60cab72285",
 }
+EN_HREFLANG = {"en-US", "en", "x-default"}
+ADSENSE_SCRIPT = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>'
+ADSENSE_META = '<meta name="google-adsense-account" content="ca-pub-8721719872183277">'
+# English-only guides. Translations of these slugs are not published.
+EN_ONLY_POSTS = [
+    "first-run-android-16-on-mac",
+    "install-apk-with-command-i",
+    "typing-game-keys-and-direct-touch",
+    "root-versus-play-store-image",
+    "vulkan-metal-and-safe-math-shaders",
+    "which-macs-run-siliconplay",
+    "wasd-gamepad-and-on-screen-buttons",
+    "pro-mode-sdk-folder-and-app-files",
+    "google-play-sign-in-on-the-tablet",
+    "when-keys-go-to-the-wrong-place",
+    "apks-that-do-not-install-or-open",
+    "test-a-build-without-android-studio",
+]
+LONG_POSTS = EN_ONLY_POSTS + [
+    "android-emulator-mac-m1-m2-m3-m4",
+    "bluestacks-alternative-mac",
+    "mumu-player-alternative-mac",
+]
 POSTS = [
     "android-emulator-mac-keyboard-mapping",
     "android-emulator-mac-shortcuts",
@@ -92,12 +115,45 @@ def public_text_files():
         yield path
 
 
+def is_translated(path: Path) -> bool:
+    rel = path.relative_to(ROOT)
+    return bool(rel.parts) and rel.parts[0] in {p for p in PREFIXES if p}
+
+
+def public_url(path: Path) -> str:
+    rel = path.relative_to(ROOT).as_posix()
+    if rel == "index.html":
+        return f"{HOST}/"
+    if rel.endswith("/index.html"):
+        return f"{HOST}/" + rel[: -len("index.html")]
+    return f"{HOST}/{rel}"
+
+
+def indexable_english_urls() -> set[str]:
+    urls = set()
+    for path in ROOT.rglob("*.html"):
+        if is_translated(path):
+            continue
+        if any(part in SKIP_PARTS for part in path.parts):
+            continue
+        text = path.read_text(encoding="utf-8")
+        if 'name="robots"' in text and "noindex" in text:
+            continue
+        urls.add(public_url(path))
+    return urls
+
+
 def check_urls() -> None:
     seen = []
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     locs = re.findall(r"<loc>([^<]+)</loc>", sitemap)
-    if len(locs) != 233:
-        fail(f"sitemap has {len(locs)} urls, expected 233")
+    expected = indexable_english_urls()
+    if set(locs) != expected:
+        missing = sorted(expected - set(locs))[:8]
+        extra = sorted(set(locs) - expected)[:8]
+        fail(f"sitemap urls {len(locs)} != english indexable {len(expected)} missing {missing} extra {extra}")
+    if any("/pt-br/" in loc or "/de/" in loc or "/ja/" in loc for loc in locs):
+        fail("sitemap still lists a translation")
     if sitemap.count("<lastmod>") != len(locs):
         fail("a sitemap url is missing lastmod")
     if "/download/" in sitemap or "painel-f25ce03a71c3" in sitemap:
@@ -105,7 +161,8 @@ def check_urls() -> None:
     for loc in locs:
         seen.append(("sitemap", loc))
         hrefs = []
-    # hreflang inside each url block
+    # hreflang inside each url block: English self-references only.
+    # Translations are noindex, so they are not alternates.
     for block in re.findall(r"<url>(.*?)</url>", sitemap, re.S):
         loc = re.search(r"<loc>([^<]+)</loc>", block).group(1)
         alts = re.findall(r'hreflang="([^"]+)" href="([^"]+)"', block)
@@ -114,10 +171,11 @@ def check_urls() -> None:
                 fail(f"privacy/licenses should not carry hreflang: {loc}")
             continue
         codes = {code for code, _ in alts}
-        need = set(LANGS) | GENERIC | {"x-default"}
-        if codes != need:
+        if codes != EN_HREFLANG:
             fail(f"sitemap hreflang set for {loc} is {sorted(codes)}")
         for code, href in alts:
+            if href != loc:
+                fail(f"sitemap hreflang {code} for {loc} points at {href}")
             seen.append((f"sitemap:{code}", href))
 
     for path in html_files():
@@ -128,11 +186,15 @@ def check_urls() -> None:
             seen.append((f"canonical:{rel}", canon.group(1)))
         for code, href in re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', text):
             seen.append((f"hreflang:{rel}:{code}", href))
-        if 'hreflang="x-default"' in text:
+        if is_translated(path):
+            if "hreflang=" in text:
+                fail(f"{rel} is noindex but still has hreflang")
+            if "noindex" not in text:
+                fail(f"{rel} translation is missing noindex")
+        elif 'hreflang="x-default"' in text:
             codes = set(re.findall(r'hreflang="([^"]+)"', text))
-            need = set(LANGS) | GENERIC | {"x-default"}
-            if not need <= codes:
-                fail(f"{rel} missing hreflang {sorted(need - codes)}")
+            if codes != EN_HREFLANG:
+                fail(f"{rel} hreflang set is {sorted(codes)}")
         for match in re.finditer(r"https://siliconplay\.app[^\s\"'<>]*", text):
             url = match.group(0).rstrip(".,)")
             if re.search(r"/blog/[a-z0-9-]+$", url):
@@ -204,6 +266,12 @@ def check_structured() -> None:
         for slug in POSTS:
             path = ROOT / prefix / "blog" / slug / "index.html" if prefix else ROOT / "blog" / slug / "index.html"
             check_jsonld(path, {"BlogPosting", "BreadcrumbList"})
+    for slug in EN_ONLY_POSTS:
+        path = ROOT / "blog" / slug / "index.html"
+        if not path.is_file():
+            fail(f"missing english guide {slug}")
+            continue
+        check_jsonld(path, {"BlogPosting", "BreadcrumbList"})
 
 
 def check_content() -> None:
@@ -221,8 +289,8 @@ def check_content() -> None:
             fail(f"{home.relative_to(ROOT)} h1 missing brand: {h1s[:1]}")
         if any(re.sub(r"\s+", "", h) == "SiliconPlay" for h in h1s):
             fail(f"{home.relative_to(ROOT)} still has a bare SiliconPlay h1")
-        if "fonts.googleapis" in text or "pagead2.googlesyndication.com" in text:
-            fail(f"{home.relative_to(ROOT)} still loads fonts or AdSense")
+        if "fonts.googleapis" in text:
+            fail(f"{home.relative_to(ROOT)} still loads fonts")
         if "compare/" not in text:
             fail(f"{home.relative_to(ROOT)} does not link to compare")
     ko = (ROOT / "ko/index.html").read_text(encoding="utf-8")
@@ -252,27 +320,33 @@ def check_content() -> None:
         rel = path.relative_to(ROOT).as_posix()
         if "fonts.googleapis" in text:
             fail(f"render-blocking font in {rel}")
-        blocking = 'script async src="https://pagead2.googlesyndication.com' in text
-        lazy = "pointerdown" in text and "pagead2.googlesyndication.com" in text
-        is_home = rel == "index.html" or rel in {f"{prefix}/index.html" for prefix in PREFIXES if prefix}
-        if blocking:
-            fail(f"blocking AdSense in {rel}")
-        if is_home and "pagead2.googlesyndication.com" in text:
-            fail(f"AdSense on home {rel}")
-        if "pagead2.googlesyndication.com" in text and not lazy and not is_home:
-            fail(f"AdSense is not lazy in {rel}")
+    for path in ROOT.rglob("*.html"):
+        text = path.read_text(encoding="utf-8")
+        rel = path.relative_to(ROOT).as_posix()
+        if ADSENSE_SCRIPT not in text or ADSENSE_META not in text:
+            fail(f"AdSense head tag missing in {rel}")
+        if 'href="/about/"' not in text or 'href="/contact/"' not in text or 'href="/privacy.html"' not in text:
+            fail(f"About, Contact, or Privacy link missing in {rel}")
     for rel, digest in PROTECTED.items():
         got = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
         if got != digest:
             fail(f"{rel} hash changed")
-    for path in ROOT.rglob("*"):
-        if not path.is_file():
-            continue
-        if "download" not in path.parts:
-            continue
-        # download pages must not gain AdSense
-        if "pagead2" in path.read_text(encoding="utf-8", errors="ignore"):
-            fail(f"AdSense appeared in {path.relative_to(ROOT)}")
+    for slug in LONG_POSTS:
+        path = ROOT / "blog" / slug / "index.html"
+        article = re.search(r"<article>(.*)</article>", path.read_text(encoding="utf-8"), re.S)
+        chunk = article.group(1) if article else ""
+        plain = re.sub(r"<[^>]+>", " ", chunk)
+        count = len(re.findall(r"[A-Za-z0-9']+", plain))
+        if count < 1000:
+            fail(f"{slug} is {count} words, need 1000+")
+    about = (ROOT / "about" / "index.html").read_text(encoding="utf-8")
+    contact = (ROOT / "contact" / "index.html").read_text(encoding="utf-8")
+    if "28.148.946 RYAN ANTHONY GIBO - ME" not in about or "Brazil" not in about:
+        fail("about page is missing the company or Brazil")
+    if "siliconplay.app@gmail.com" not in contact or "katzdoll@gmail.com" not in contact:
+        fail("contact page is missing an email address")
+    if "28.148.946 RYAN ANTHONY GIBO - ME" not in contact or "Brazil" not in contact:
+        fail("contact page is missing the company or Brazil")
     key = "c7e4a91b2d08f6e35a0c4b7d9e1f83a6"
     key_file = ROOT / f"{key}.txt"
     if not key_file.is_file() or key_file.read_text(encoding="utf-8").strip() != key:

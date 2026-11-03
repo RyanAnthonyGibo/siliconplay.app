@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How SiliconPlay draws Android graphics with Metal</title>
+<meta name="description" content="Vulkan in SiliconPlay is drawn by Metal, with shaders in safe math mode so foliage renders. What that does and does not guarantee.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How SiliconPlay draws Android graphics with Metal">
+<meta property="og:description" content="Vulkan in SiliconPlay is drawn by Metal, with shaders in safe math mode so foliage renders. What that does and does not guarantee.">
+<meta property="og:url" content="https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How SiliconPlay draws Android graphics with Metal">
+<meta name="twitter:description" content="Vulkan in SiliconPlay is drawn by Metal, with shaders in safe math mode so foliage renders. What that does and does not guarantee.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "Vulkan, Metal, and safe-math shaders in SiliconPlay",
+  "description": "Vulkan in SiliconPlay is drawn by Metal, with shaders in safe math mode so foliage renders. What that does and does not guarantee.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/",
+  "url": "https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Vulkan, Metal, and safe-math shaders in SiliconPlay", "item": "https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>Vulkan, Metal, and safe-math shaders in SiliconPlay</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>People ask whether <a href="/">SiliconPlay</a> “uses Metal” as if that were a switch next to a quality slider. The accurate sentence is shorter and more specific. Android games in this app speak Vulkan. That Vulkan is drawn by Metal. Shaders are compiled in safe math mode so foliage renders correctly. The Mac app does not install a kernel extension to do it, and it does not leave a background service behind to keep doing it. This page is what those sentences mean when you are staring at a game that looks wrong, and what they do not mean.</p>
+
+    <h2>Two graphics APIs, one window</h2>
+    <p>Android on the tablet is Android 16, ARM64, running on the Mac’s ARM cores through Apple’s Hypervisor framework. The system image is the Play image by default, or the Google APIs image if you created a rooted tablet. The drawing path does not change between those images. A game that renders with Vulkan is translated onto Metal by the Mac side. I wrote the Mac app from scratch. Under the hood, the emulator is Google’s official Android Emulator. The <a href="/licenses.html">licenses page</a> names that emulator, the SDK pieces, and QEMU as part of the emulator.</p>
+    <p>I am not going to claim a game that only speaks an older graphics API gets the same path, because I have not published that. If a title’s own help says it needs a particular GPU feature, believe the title. SiliconPlay is not a compatibility list of store games.</p>
+    <p>MuMu Player Pro, for comparison, describes its Mac path as translating games’ OpenGL ES to Metal. That is their sentence, from their product, and it is a different sentence from this one. BlueStacks Air is a gaming-focused emulator on Apple silicon that runs Android 13, per its own requirements as of September 2026. I am not going to borrow either product’s graphics claims and paste them onto SiliconPlay. The compare page lines the products up by the job they are good at: <a href="/compare/">Android emulators for Mac</a>.</p>
+
+    <h2>Why safe math mode is in the sentence</h2>
+    <p>Shaders compiled in safe math mode are there so foliage renders correctly. That is the bug the mode exists to avoid: plants, grass, and similar alpha-tested geometry coming out wrong when the shader compiler takes a fast path the game did not survive. It is not a general “makes everything prettier” flag, and it is not a frame-rate mode. I do not have a toggle to document for turning it off. If your copy of version 1.0.0 does not show a shader switch, that is because I am not describing one.</p>
+    <p>If foliage is still wrong, do not start by hunting a hidden compiler flag. Check the boring causes first. The game’s own graphics setting may be on a preset that draws a simpler tree. The window may be so small that you are looking at a scaled-down picture and calling it a missing texture. The package may not be the ARM64 build the tablet can run, in which case you may be looking at a failure state rather than a shader bug. <a href="/blog/apks-that-do-not-install-or-open/">APKs that do not install or open</a> covers the architecture stop.</p>
+
+    <h2>The only numbers I will stand behind</h2>
+    <p>On a MacBook Pro with M3 Max, a demanding 3D game reached up to 60 fps, at render resolutions up to 2560×1440, with 7–43 ms from the key to the game. Results vary by game, Mac, and settings. I have not published per-chip benchmarks for M1–M6, so this page will not grow a table that pretends I did. Newer chips have more headroom. That is a description of the hardware, not a measurement of SiliconPlay on each one. If a game stutters, lower its graphics settings inside the game first.</p>
+    <p>The default tablet is 1920×1080 at 320 dpi. That is the panel. A game’s render resolution is chosen by the game, up to what we measured in that one test. Do not add those numbers together, and do not assume 2560×1440 is a menu item I forgot to name. It is a measured ceiling from that session, not a documented settings path.</p>
+    <p>Key-to-game latency in that range includes the keymap, because the test was a key. Direct touch is a pointer, not that measurement. I am not going to quote a separate mouse number I do not have.</p>
+
+    <h2>What is not in the graphics path</h2>
+    <ul>
+      <li>No kernel extension. Approving one in System Settings is not a step in this app.</li>
+      <li>No background service that keeps drawing after you quit.</li>
+      <li>No bundled extra software that installs a filter, a recorder, or a driver beside the app.</li>
+      <li>No host-folder mount that would let a game read textures straight out of a Finder directory. The image does not mount a host folder as a live disk.</li>
+    </ul>
+    <p>Delete SiliconPlay and the Mac app is gone. The SDK folder you chose still holds the emulator and the system image, because those were a download, not a feature of the graphics translator. SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>.</p>
+
+    <h2>Input still has to hit the picture</h2>
+    <p>Metal does not decide where a touch lands. The keymap does, after you accept one. Direct touch is the default until then. If the game looks right and the buttons feel late or dead, you are in the input articles, not this one. Start with <a href="/blog/typing-game-keys-and-direct-touch/">typing, game keys, and direct touch</a>. The overlay is toggled with Command-Shift-G. A stuck finger is Shift-Escape. Neither of those is a graphics setting.</p>
+    <p>When a shortcut list belongs on a graphics page, it is because people press them while they are trying to see the picture. Command-I stays first so it is never buried under display keys.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Shortcuts you may hit while looking at the picture</caption>
+        <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Command-I</td><td>Import an APK and install it. Not a display control.</td></tr>
+          <tr><td>F12, or Command-K</td><td>Toggle Typing and Game keys.</td></tr>
+          <tr><td>Command-Shift-G</td><td>Show or hide the on-screen game buttons, which sit on top of the picture.</td></tr>
+          <tr><td>Escape</td><td>Leave fullscreen. Outside fullscreen, Android Back while the display is focused.</td></tr>
+          <tr><td>Shift-Escape</td><td>Release every virtual finger.</td></tr>
+          <tr><td>F10</td><td>Switch to direct touch, for a menu that wants a finger.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Toggle fullscreen and save a screenshot are named in the Shortcuts list. The key next to each label is drawn by the menu and is not stored as a separate readable string in version 1.0.0, so I will not invent it. Open the menu on your copy. A screenshot of a wrong shader is more useful to me than a description of “the trees look off,” if you <a href="/contact/">write to me</a>.</p>
+
+    <h2>A sensible order when the picture is wrong</h2>
+    <ol>
+      <li>Confirm the instance is the Android 16 tablet and the game actually got past its loading screen. A crash back to the home screen is not a shader problem.</li>
+      <li>Lower the game’s own graphics preset one step. That is the game’s control, and it is the first thing that changes fill rate.</li>
+      <li>Hide the overlay with Command-Shift-G so you are not judging foliage through a button.</li>
+      <li>Leave fullscreen with Escape if you want to compare the windowed picture with another window on the Mac.</li>
+      <li>If only alpha-tested plants are wrong and everything else is fine, say that specifically. Safe math mode is the mitigation this app already compiles with. A report that names the game and the chip is something I can use. A report that says “Metal is broken” is not.</li>
+    </ol>
+    <p>Supported Macs are M1 through M6 in that line, tested on macOS Tahoe and macOS 27 Golden Gate. The graphics path is the same app on each of them. Headroom is not. <a href="/blog/which-macs-run-siliconplay/">Which Macs run SiliconPlay</a> is the support matrix, without a fake chart.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pro Mode, the SDK folder, and where files live</title>
+<meta name="description" content="What Pro Mode shows in SiliconPlay, where the Android SDK download goes, and what remains after you delete the app.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Pro Mode, the SDK folder, and where files live">
+<meta property="og:description" content="What Pro Mode shows in SiliconPlay, where the Android SDK download goes, and what remains after you delete the app.">
+<meta property="og:url" content="https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pro Mode, the SDK folder, and where files live">
+<meta name="twitter:description" content="What Pro Mode shows in SiliconPlay, where the Android SDK download goes, and what remains after you delete the app.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "Pro Mode, the SDK folder, and the files SiliconPlay leaves behind",
+  "description": "What Pro Mode shows in SiliconPlay, where the Android SDK download goes, and what remains after you delete the app.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/",
+  "url": "https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Pro Mode, the SDK folder, and the files SiliconPlay leaves behind", "item": "https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>Pro Mode, the SDK folder, and the files SiliconPlay leaves behind</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>There are three piles of files once <a href="/">SiliconPlay</a> has run, and people delete the wrong one. The Mac app is the thing in Applications. The SDK folder is the place you chose for Google’s emulator, platform-tools, and the system image. SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>. Pro Mode is not a fourth pile. It is a view on the main window. This page separates them so a reinstall does not surprise you.</p>
+
+    <h2>What the main window shows when Pro Mode is off</h2>
+    <p>Pro Mode is off until you turn it on. Off, the main window stays on Start, Stop, and Create New Instance. That is enough to boot the Android 16 tablet, quit it, and make another instance. It is the view I expect most people to live in. Turning Pro Mode on does not make the tablet faster, and it does not enable root. Root is a different system image, described in <a href="/blog/root-versus-play-store-image/">root and the Play image</a>.</p>
+    <p>You turn Pro Mode on from the toolbar, the View menu, or Settings. On, the main window also shows hardware, keymaps, and diagnostics. The glass bubble on the emulator window does not wait for that switch. The bubble still has edit, overlay, opacity, size, and reset. Drag the bubble to move it. The spot is saved on the profile.</p>
+    <p>Diagnostics are there to be read when something failed. I am not going to invent a list of log lines or a support code. If a line on that panel names a missing tool, believe the line. The JDK case is the one the app already phrases for you: <code>/usr/bin/java</code> on macOS is a stub, and the message points at <code>brew install openjdk@17</code>, after which you run the package step again.</p>
+
+    <h2>The SDK folder is a download, not a cache you can ignore</h2>
+    <p>SiliconPlay does not ship Google’s emulator or the system image inside the DMG. First run accepts the Android SDK license on this Mac, then downloads command-line tools, the Apple silicon emulator, platform-tools, and the Play arm64 system image into the folder you pick. If you already have an SDK with emulator, adb, and sdkmanager, you can point at that folder and skip a second copy.</p>
+    <p>That folder is yours. Deleting SiliconPlay does not delete it. Deleting it while the app is installed means the next start has to download again, or you have to point at another SDK. The Play image and, if you created one, the Google APIs image both live in that SDK world. They are large. Look at the folder size before you blame the Mac app for “taking the disk.” The app in Applications is not the system image.</p>
+    <p>adb from platform-tools is how copies get to <code>/sdcard/SiliconPlay</code> inside the tablet. The image does not mount a host folder as a live disk. Do not go looking for the SDK folder inside the Android files app. It is a Mac folder.</p>
+
+    <h2>The Application Support folder</h2>
+    <p>SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>. That is the Mac-side state: the sort of thing a profile and the app’s own bookkeeping live in. I am not going to itemize every file in that directory for version 1.0.0, because a list I guess at would be wrong the next time a file is renamed. If you are resetting the Mac side and you want the app to start clean, quit SiliconPlay and move that folder aside. Leave the SDK folder if you do not want to download Android again. Leave the Applications copy if you still want the app.</p>
+    <p>Keymaps you edit are part of using the app, and Pro Mode is one place they show up. The editor itself is available from the bubble without Pro Mode: drag a button, click to rebind, drag the gold dot to resize, Done to save, Cancel to restore. A shared keymap file has to be valid JSON in the format SiliconPlay accepts, or it is rejected.</p>
+
+    <h2>Uninstall, in the order that matches the piles</h2>
+    <ol>
+      <li>Quit the app. Stop the instance first if it is running.</li>
+      <li>Delete SiliconPlay from Applications. There is no kernel extension to unload and no background service to disable. The app is gone.</li>
+      <li>If you also want the Mac-side state gone, remove <code>~/Library/Application Support/SiliconPlay</code>.</li>
+      <li>If you also want the emulator and system images gone, remove the SDK folder you chose. If that folder is an SDK you use for other work, do not remove it. Pointing SiliconPlay at it did not make it exclusive.</li>
+    </ol>
+    <p>Nothing in that list removes your Google account, and nothing in it reaches into a game account. Sign-in happened inside Play Store on the tablet. SiliconPlay never saw the password. Deleting the image deletes the tablet’s local copy of that session. It does not delete the Google account.</p>
+
+    <h2>What Pro Mode will not tell you</h2>
+    <ul>
+      <li>It will not publish a frame rate I have not measured. The only published run is a MacBook Pro with M3 Max: up to 60 fps in a demanding 3D game, render resolution up to 2560×1440, 7–43 ms key-to-game. Results vary. Pro Mode is not that test.</li>
+      <li>It will not change Command-I, F12, or the overlay chord. Those are in the shortcut list regardless of the switch.</li>
+      <li>It will not install a split APK or an XAPK. This version does not install those formats.</li>
+      <li>It will not make the Play image accept adb root.</li>
+    </ul>
+
+    <h2>Shortcuts while you are looking at the main window</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Shortcuts that stay available with Pro Mode on or off</caption>
+        <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Command-I</td><td>Import an APK and install it into the running Android.</td></tr>
+          <tr><td>F12, or Command-K</td><td>Toggle Typing and Game keys.</td></tr>
+          <tr><td>Command-Shift-G</td><td>Show or hide the on-screen game-button overlay.</td></tr>
+          <tr><td>Escape</td><td>Leave fullscreen, or Android Back when the window is not fullscreen and the display is focused.</td></tr>
+          <tr><td>Shift-Escape</td><td>Release every virtual finger.</td></tr>
+          <tr><td>F10</td><td>Switch to direct touch.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Start or stop the selected instance is a named Shortcuts action without a key string I can quote from version 1.0.0. The button on the main window is Start and Stop. Use the button if you do not want to open the menu. The first-run sequence that fills the SDK folder is in <a href="/blog/first-run-android-16-on-mac/">how the first run sets up Android 16</a>.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>
