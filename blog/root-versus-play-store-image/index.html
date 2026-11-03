@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Optional root and the Play image in SiliconPlay</title>
+<meta name="description" content="Why root is off by default, why the Play image refuses adb root, and how the Google APIs tablet is a second instance.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/root-versus-play-store-image/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/root-versus-play-store-image/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/root-versus-play-store-image/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/root-versus-play-store-image/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Optional root and the Play image in SiliconPlay">
+<meta property="og:description" content="Why root is off by default, why the Play image refuses adb root, and how the Google APIs tablet is a second instance.">
+<meta property="og:url" content="https://siliconplay.app/blog/root-versus-play-store-image/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Optional root and the Play image in SiliconPlay">
+<meta name="twitter:description" content="Why root is off by default, why the Play image refuses adb root, and how the Google APIs tablet is a second instance.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "Optional root, the Play image, and why they are two tablets",
+  "description": "Why root is off by default, why the Play image refuses adb root, and how the Google APIs tablet is a second instance.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/root-versus-play-store-image/",
+  "url": "https://siliconplay.app/blog/root-versus-play-store-image/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Optional root, the Play image, and why they are two tablets", "item": "https://siliconplay.app/blog/root-versus-play-store-image/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>Optional root, the Play image, and why they are two tablets</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>Root in <a href="/">SiliconPlay</a> is optional, and it starts off. That sentence is the whole product decision. A normal Play tablet stays a normal Play tablet. Root is a different tablet, on a different system image, created when you ask for adb root. This page is why those cannot be the same tablet, what you lose when you switch, and how to install a package on either one without mixing the files up.</p>
+
+    <h2>Leave it off unless you need adb root</h2>
+    <p>If you are installing from Google Play, signing in, and playing, you do not want root. The Play image is the one first run downloads: Android 16, ARM64, Google Play included, landscape tablet at 1920×1080 and 320 dpi, auto-rotate off. Play Store on that image is Google’s store, not a store I bundled. SiliconPlay never sees the password you type there.</p>
+    <p>The Play image refuses adb root. That is not a setting I hid. Turning root on does not flip a bit inside the Play tablet. A rooted tablet uses the Google APIs image instead. Play Store is not included on that tablet. The APIs image is downloaded the first time you create one. If you need both Play sign-in and root, those are two different tablets, not a switch you can flip on a Play image.</p>
+    <p>I would rather you keep the Play tablet for the account you care about, and create the APIs tablet when a test actually needs root. SiliconPlay does not modify games. Optional root does not change that. Follow each game’s terms. An account ban is the game’s rule, not something this app can appeal.</p>
+
+    <h2>What you are creating</h2>
+    <p>The main window, with Pro Mode off, shows Start, Stop, and Create New Instance. Create New Instance is how a second tablet comes into existence. Pro Mode, in the toolbar, the View menu, and Settings, adds hardware, keymaps, and diagnostics. It does not replace Create New Instance, and it is not the root switch.</p>
+    <p>Name the instances in your own head even if the default name is Android 16 Tablet. One of them has Play. One of them, after you ask for root, is the APIs image and has adb root and no Play Store. Installing a Play-only app on the APIs tablet will not grow a store. Signing into Play on the Play tablet will not grant adb root.</p>
+    <p>There is no kernel extension and no background service attached to either tablet. Delete the Mac app when you are done and the app is gone. SDK files stay in the SDK folder you picked, including the APIs image you downloaded. SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>.</p>
+
+    <h2>Installing on the tablet you meant</h2>
+    <p>Start the instance you mean to install onto. Then use one of these. Command-I is first because it is the shortcut, and because it is easy to fire at the wrong window if two instances are up.</p>
+    <ol>
+      <li>Command-I imports an APK and installs it into the running Android.</li>
+      <li>Drop an <code>.apk</code> file on that instance.</li>
+      <li>Use adb. Files copied that way go to <code>/sdcard/SiliconPlay</code> on the device adb is talking to.</li>
+    </ol>
+    <p>Split APKs and XAPK archives are not installed by this version, on either image. The images do not mount a host folder as a live disk. If adb lists more than one device because more than one instance is running, look at which one you started. I am not going to invent an adb serial flag the app’s help text does not document. Start the instance you want, and do not assume a copy landed on both.</p>
+
+    <h2>What root is for, in this app</h2>
+    <p>Root here means you can use adb root on the APIs tablet. It is the developer case: a test that needs system-level access, not a graphics boost and not a way to modify a game. I have not published a list of extra root tools beyond that. If a guide on another site tells you SiliconPlay ships a particular root utility, it is ahead of what this app documents. Do not follow it.</p>
+    <p>Everyday gaming stays on the Play image with root off. That is the default for a reason. The keyboard mapping, the Metal graphics path, and Command-I all work on the Play tablet without root. None of them require the APIs image.</p>
+
+    <h2>Graphics and input do not move when you change images</h2>
+    <p>Both tablets are ARM64 Android running on the Mac’s ARM cores through Apple’s Hypervisor framework. Vulkan is drawn by Metal, with shaders compiled in safe math mode so foliage renders correctly. That path is the Mac app, not a property of the Play package. Switching to the APIs image does not turn it off, and it does not raise the only measurement I have published. On a MacBook Pro with M3 Max, a demanding 3D game reached up to 60 fps at render resolutions up to 2560×1440, with 7–43 ms key-to-game latency. Results vary by game, Mac, and settings. I have not published a separate number for the APIs image, so I will not make one up.</p>
+    <p>Direct touch stays the default on either tablet. A keymap you edit is a profile in SiliconPlay. Accepting a community preset is still a choice, not an automatic load. The shortcut chords do not change because you created a second instance.</p>
+
+    <h2>Shortcuts while you are deciding</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Shortcuts that matter while you work on either tablet</caption>
+        <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Command-I</td><td>Import an APK and install it into the running Android.</td></tr>
+          <tr><td>F12, or Command-K</td><td>Toggle Typing and Game keys.</td></tr>
+          <tr><td>Command-Shift-G</td><td>Show or hide the on-screen overlay.</td></tr>
+          <tr><td>Escape</td><td>Leave fullscreen, or Android Back when the window is not fullscreen and the display is focused.</td></tr>
+          <tr><td>Shift-Escape</td><td>Release every virtual finger.</td></tr>
+          <tr><td>F10</td><td>Switch to direct touch.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The Shortcuts list also names “sync input across running instances” without a readable key string in version 1.0.0. The action exists as a name. I do not know the chord from the help text, so I will not print one. Open Shortcuts on your copy and read it. Do not assume sync is on. Two tablets do not share taps unless that action says they do.</p>
+
+    <h2>A clean way to keep both</h2>
+    <ol>
+      <li>Finish first run so the Play tablet exists. Sign in there if you need the store. Steps are in <a href="/blog/first-run-android-16-on-mac/">the first-run guide</a>.</li>
+      <li>Leave root off on that tablet.</li>
+      <li>When a test needs adb root, create the APIs instance and let the image download.</li>
+      <li>Install the package under test with Command-I onto the instance you started.</li>
+      <li>Delete the Mac app later if you want it gone. Delete the SDK folder yourself if you also want the images gone.</li>
+    </ol>
+    <p>Source for the emulator and the SDK pieces is named on the <a href="/licenses.html">licenses page</a>. The Mac app around them, including this root choice, is SiliconPlay’s. The source of the Mac app is not published. Licenses for the third-party components ship with the app.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

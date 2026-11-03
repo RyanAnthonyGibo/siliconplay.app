@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Typing, game keys, and direct touch in SiliconPlay</title>
+<meta name="description" content="How SiliconPlay decides whether a key is text, a mapped touch, or a Mac shortcut, and how to get unstuck.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/typing-game-keys-and-direct-touch/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/typing-game-keys-and-direct-touch/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/typing-game-keys-and-direct-touch/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/typing-game-keys-and-direct-touch/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Typing, game keys, and direct touch in SiliconPlay">
+<meta property="og:description" content="How SiliconPlay decides whether a key is text, a mapped touch, or a Mac shortcut, and how to get unstuck.">
+<meta property="og:url" content="https://siliconplay.app/blog/typing-game-keys-and-direct-touch/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Typing, game keys, and direct touch in SiliconPlay">
+<meta name="twitter:description" content="How SiliconPlay decides whether a key is text, a mapped touch, or a Mac shortcut, and how to get unstuck.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "Typing, game keys, and direct touch: where your keys go",
+  "description": "How SiliconPlay decides whether a key is text, a mapped touch, or a Mac shortcut, and how to get unstuck.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/typing-game-keys-and-direct-touch/",
+  "url": "https://siliconplay.app/blog/typing-game-keys-and-direct-touch/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Typing, game keys, and direct touch: where your keys go", "item": "https://siliconplay.app/blog/typing-game-keys-and-direct-touch/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>Typing, game keys, and direct touch: where your keys go</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>A key on a Mac can mean three different things once <a href="/">SiliconPlay</a> is open, and the app will do exactly one of them. It will hand the key to Android as text. It will turn the key into a touch on a button you placed. Or it will keep the key as a Mac command and never send it to the game. Almost every “my keyboard does nothing” report is one of those three, chosen correctly, and surprising because the toolbar was showing a different mode than the one you remembered.</p>
+
+    <h2>Direct touch is the start</h2>
+    <p>Direct touch is the default. The pointer is a finger. That is the right mode for a Play Store page, a login form you would rather click, a shop, or an app you are testing that has ordinary buttons. No keymap is loaded just because the app opened, and a community preset for a known game stays off until you accept it. Until you accept a suggestion, game keys are not in effect.</p>
+    <p>F10 switches to direct touch on purpose, including when you were in a mapped layout and a menu wants a real finger. Empty space on the picture still clicks the game when the overlay is up. The overlay is not a pane of glass over the whole window.</p>
+
+    <h2>Click the image, or the keys have no target</h2>
+    <p>Click the Android image so the keyboard goes to the keymap. Keys still work while the SiliconPlay window is focused. The first time the app follows the emulator’s own window, macOS asks for Accessibility. Until you allow that, keep the SiliconPlay window focused and the keys still land. If you deny Accessibility and then click the emulator window, macOS is doing what you asked: the follow does not happen. Focus the SiliconPlay window again. I wrote the longer version of that permission in <a href="/blog/when-keys-go-to-the-wrong-place/">when keys go to the wrong place</a>.</p>
+    <p>Command-key menu shortcuts stay with macOS. They are not typed into the game. Command-I imports an APK. Command-K is the mode switch, shared with F12. Those chords never become the letters i or k inside Android.</p>
+
+    <h2>Typing, and the field that switches for you</h2>
+    <p>A focused text field switches the toolbar to Typing. In Typing, the keyboard goes to Android as text. That is how you enter a username, a chat line, or a search. You do not map WASD for that. You leave Game keys.</p>
+    <p>F12 or Command-K toggles Typing and Game keys. Game keys uses the keymap. Typing sends the keyboard to Android. If you are in a field and the letters are moving a character instead of filling the box, you are in Game keys. Press F12 or Command-K. If you are in a fight and the letters are appearing in a leftover chat box, you are in Typing. Same chord, the other way.</p>
+    <p>The field can switch you to Typing by itself. That is intentional. A game that opens a text box has asked for text. When you close the box, check the toolbar before you assume the keymap is back. If it still says Typing, press F12 or Command-K.</p>
+
+    <h2>Game keys need a layout</h2>
+    <p>Game keys do nothing useful until a keymap is on. Accept the preset the app offers for the game in front, or apply MMORPG (WASD) yourself and move the buttons. The generic preset is not tied to one package, so it will not appear on its own. Positions are fractions of the game picture, from 0 to 1, origin at the top left, so they scale when the window changes size. Treat the shipped positions as a starting point.</p>
+    <p>Edit layout: drag a button to move it, click it to rebind a key or a mouse button, drag the gold dot to resize. You can add a WASD joystick, a camera drag, a tap, a long-press, a swipe, or a repeat. Done saves. Cancel puts the profile back to how it was when you opened Edit. Escape, while rebinding, cancels the “press a key or mouse button” capture. It does not save, and it does not send Back in that moment.</p>
+    <p>On the emulator window, a glass bubble follows the window. Drag the bubble to move it. Click it for the overlay, opacity, size, edit, and reset. That spot is saved on the profile. Command-Shift-G shows or hides the on-screen game buttons. Hiding them does not delete the keymap.</p>
+
+    <h2>The shortcut list, Command-I first</h2>
+    <p>These are the chords version 1.0.0 states in words. I confirmed Command-I separately. If a chord is not here, I could not verify it from that build, so it is not here.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Mode and overlay shortcuts in SiliconPlay 1.0.0</caption>
+        <thead><tr><th>Keys</th><th>What changes</th></tr></thead>
+        <tbody>
+          <tr><td>Command-I</td><td>Import an APK and install it into Android. This is a Mac command, not a game key.</td></tr>
+          <tr><td>F12, or Command-K</td><td>Toggle Typing and Game keys.</td></tr>
+          <tr><td>Command-Shift-G</td><td>Show or hide the on-screen game-button overlay.</td></tr>
+          <tr><td>Escape</td><td>Leave fullscreen. When the window is not fullscreen, Escape is Android Back while the display is focused.</td></tr>
+          <tr><td>Shift-Escape</td><td>Release every virtual finger.</td></tr>
+          <tr><td>F10</td><td>Switch to direct touch.</td></tr>
+          <tr><td>Escape, while rebinding</td><td>Cancel the key or mouse capture.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Escape does two jobs, and they depend on fullscreen. In fullscreen it leaves fullscreen. Outside fullscreen, with the display focused, it is Android Back. Shift-Escape is the one that lets go of every virtual finger if a button stayed down. People mix those up and then think Back is broken. Read the row again before you rebind Escape.</p>
+
+    <h2>A controller is not a third mode</h2>
+    <p>A chip can listen for a key and a gamepad button at the same time. In the default MMORPG layout, skill 1 is both the 1 key and gamepad X, jump is both Space and gamepad B, and skills 2, 4, and 6 also have a gamepad button. The controller presses the same on-screen buttons the keyboard does. It is not a separate control scheme with its own mode in the toolbar. If Game keys are off, the controller is not secretly in a different mode. Turn Game keys on, with a layout loaded, or stay on direct touch and use the pointer.</p>
+
+    <h2>A short path when the mode feels wrong</h2>
+    <ol>
+      <li>Look at the toolbar. It says Typing or it is on game keys. Believe the toolbar.</li>
+      <li>If you wanted text, press F12 or Command-K until it says Typing, and click the field.</li>
+      <li>If you wanted the keymap, press F12 or Command-K the other way, and confirm you accepted a preset or applied MMORPG (WASD).</li>
+      <li>If a finger is stuck down, press Shift-Escape.</li>
+      <li>If a menu wants a real tap, press F10.</li>
+      <li>If you needed to install a file in the middle of all this, press Command-I. It does not depend on the mode.</li>
+    </ol>
+    <p>Pro Mode does not change these chords. It shows hardware, keymaps, and diagnostics on the main window when you turn it on from the toolbar, the View menu, or Settings. The bubble on the emulator window still has edit, overlay, opacity, size, and reset either way.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

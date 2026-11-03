@@ -8,12 +8,12 @@
     <lastBuildDate>Wed, 28 Oct 2026 21:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/vi/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Giả lập Android miễn phí cho Mac M1, M2, M3, M4 và M5: SiliconPlay so với BlueStacks, MuMu và các phần mềm khác</title>
+      <title>Giả lập Android miễn phí cho Mac M1–M6: SiliconPlay so với BlueStacks, MuMu và các phần mềm khác</title>
       <link>https://siliconplay.app/vi/blog/free-android-emulator-mac-m1-m5-comparison/</link>
       <guid isPermaLink="true">https://siliconplay.app/vi/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
       <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>So sánh giả lập Android miễn phí cho Mac M1–M5: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion và UTM. Giá, quảng cáo, gán phím và root, kiểm tra ngày 28/10/2026.</description>
+      <description>So sánh giả lập Android miễn phí cho Mac M1–M6: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion và UTM. Giá, quảng cáo, gán phím và root, kiểm tra ngày 28/10/2026.</description>
     </item>
     <item>
       <title>Giả lập Android cho Mac M1 và M4: cài đặt từng bước</title>
@@ -21,7 +21,7 @@
       <guid isPermaLink="true">https://siliconplay.app/vi/blog/android-emulator-mac-m1-m4-setup/</guid>
       <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Cách cài giả lập Android trên Mac M1, M2, M3, M4 hoặc M5: SiliconPlay, Google Play, cài APK bằng Command-I và gán phím.</description>
+      <description>Cách cài giả lập Android trên Mac M1–M6: SiliconPlay, Google Play, cài APK bằng Command-I và gán phím.</description>
     </item>
     <item>
       <title>Gán phím trên giả lập Android cho Mac: nút trên màn hình và bố cục từng game</title>
@@ -48,12 +48,12 @@
       <description>Root tùy chọn, cài bằng adb, và máy tính bảng ARM64 Android 16 trên Apple Silicon. Thử APK mà không cần giữ IDE mở.</description>
     </item>
     <item>
-      <title>Giả lập Android cho Mac M1, M2, M3, M4 và M5</title>
+      <title>Giả lập Android cho Mac M1–M6</title>
       <link>https://siliconplay.app/vi/blog/android-emulator-mac-m1-m2-m3-m4/</link>
       <guid isPermaLink="true">https://siliconplay.app/vi/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Giả lập Android miễn phí cho Mac M1, M2, M3, M4, M5 và chip mới hơn. ARM64 gốc, Metal, bàn phím, tay cầm và root tùy chọn để lập trình.</description>
+      <description>Giả lập Android miễn phí cho Mac M1–M6 và chip mới hơn. ARM64 gốc, Metal, bàn phím, tay cầm và root tùy chọn để lập trình.</description>
     </item>
     <item>
       <title>Đang tìm thứ thay BlueStacks trên Mac? Thử SiliconPlay</title>
@@ -61,7 +61,7 @@
       <guid isPermaLink="true">https://siliconplay.app/vi/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Đang tìm thứ thay BlueStacks trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.</description>
+      <description>Đang tìm thứ thay BlueStacks trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M6, có Metal và root tùy chọn.</description>
     </item>
     <item>
       <title>Đang tìm thứ thay MuMu Player trên Mac? Thử SiliconPlay</title>
@@ -69,7 +69,7 @@
       <guid isPermaLink="true">https://siliconplay.app/vi/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Đang tìm thứ thay MuMu Player trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M5 và đời mới hơn, có Metal và root tùy chọn.</description>
+      <description>Đang tìm thứ thay MuMu Player trên Mac? SiliconPlay là giả lập Android miễn phí từ M1 tới M6, có Metal và root tùy chọn.</description>
     </item>
   </channel>
 </rss>

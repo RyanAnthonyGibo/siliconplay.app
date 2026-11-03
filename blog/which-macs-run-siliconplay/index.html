@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Which Macs run SiliconPlay</title>
+<meta name="description" content="SiliconPlay runs on Apple silicon from M1 through M6. It has been tested on macOS Tahoe and macOS 27 Golden Gate. Here is what that includes and what was actually measured.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/which-macs-run-siliconplay/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/which-macs-run-siliconplay/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/which-macs-run-siliconplay/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/which-macs-run-siliconplay/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Which Macs run SiliconPlay">
+<meta property="og:description" content="SiliconPlay runs on Apple silicon from M1 through M6. It has been tested on macOS Tahoe and macOS 27 Golden Gate. Here is what that includes and what was actually measured.">
+<meta property="og:url" content="https://siliconplay.app/blog/which-macs-run-siliconplay/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Which Macs run SiliconPlay">
+<meta name="twitter:description" content="SiliconPlay runs on Apple silicon from M1 through M6. It has been tested on macOS Tahoe and macOS 27 Golden Gate. Here is what that includes and what was actually measured.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "Which Macs run SiliconPlay, and which macOS version was tested",
+  "description": "SiliconPlay runs on Apple silicon from M1 through M6. It has been tested on macOS Tahoe and macOS 27 Golden Gate. Here is what that includes and what was actually measured.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/which-macs-run-siliconplay/",
+  "url": "https://siliconplay.app/blog/which-macs-run-siliconplay/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Which Macs run SiliconPlay, and which macOS version was tested", "item": "https://siliconplay.app/blog/which-macs-run-siliconplay/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>Which Macs run SiliconPlay, and which macOS version was tested</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>The support line for <a href="/">SiliconPlay</a> is short on purpose. Mac computers with Apple silicon: M1–M6, including Pro, Max, and Ultra. I have tested it on macOS Tahoe and macOS 27 Golden Gate. If you try another macOS version, tell me how it goes. This page is that line unpacked, so you can tell a real limit from a number I have not published.</p>
+
+    <h2>The chip list is the product boundary</h2>
+    <p>SiliconPlay runs Android 16 on the Mac’s ARM cores through Apple’s Hypervisor framework. The emulator underneath is the Apple silicon build of Google’s official Android Emulator. That is why the chip list is not a performance hint. It is the set of machines the app is built to run on. A Mac outside that list is not a “slower but fine” case I forgot to time. It is outside the app.</p>
+    <p>Pro, Max, and Ultra are included because they are the same chips with more CPU and GPU cores, not because I maintain a separate build for each badge. The DMG is one app. First run downloads the Apple silicon emulator and the Play arm64 system image into an SDK folder you choose. The tablet it creates is the same default on each of those Macs: 1920×1080, 320 dpi, landscape, auto-rotate off, named Android 16 Tablet.</p>
+
+    <h2>Tested on macOS Tahoe and macOS 27 Golden Gate</h2>
+    <p>Tested means I ran it on those two versions and I am willing to talk about them. It does not mean I ran a matrix of every older system and stamped them. If you are on another macOS version, you can still try the app. I want the report more than I want to prohibit the attempt. Use the <a href="/contact/">contact page</a> and say the macOS version, the chip, and what stopped. “It did not work” is not a report I can fix.</p>
+    <p>Other Mac software in the same comparison has its own version lines, and I will not merge them into this one. Mac.apk, which is a different project, needs macOS 26.4 or later and is an alpha that runs apps without an emulator. That requirement is theirs. Genymotion Desktop on Apple silicon needs Rosetta. That requirement is theirs. SiliconPlay’s tested versions are macOS Tahoe and macOS 27 Golden Gate.</p>
+
+    <h2>What was measured, and on which Mac</h2>
+    <p>One machine has published numbers. A MacBook Pro with M3 Max, in a demanding 3D game, reached up to 60 fps, at render resolutions up to 2560×1440, with 7–43 ms key-to-game input latency. Results vary by game, Mac, and settings. I have not published the same test on an M1, an M2, an M4, an M5, or an M6. Putting those chips in a table with invented frame rates would be a lie with neat columns. I will not do it.</p>
+    <p>What I will say, without pretending it is a benchmark: newer chips have more headroom, and headroom matters most in heavy 3D games. If a game stutters, lower its graphics settings inside the game before you decide the Mac is “unsupported.” An app that shipped with no ARM64 build will not run on any chip in the list. The tablet is ARM64. Most current apps include an ARM64 build. The ones that do not fail the same way on an M1 and on an M6.</p>
+    <p>The 1920×1080 default is the tablet panel, not the M3 Max render figure. Do not read 2560×1440 as the size of the window the app creates. It is how far that one measured game was pushed.</p>
+
+    <h2>Same app, same first run</h2>
+    <p>The setup does not fork by chip. Download the DMG, drag SiliconPlay to Applications, open it, and let it download Android. The license you accept is the Android SDK license. The download is command-line tools, the Apple silicon emulator, platform-tools, and the Play arm64 image, unless you point at an SDK that already has emulator, adb, and sdkmanager. If setup stops because macOS has no JDK, the app says so and points at <code>brew install openjdk@17</code>. Then you run the package step again. That message is about the JDK stub at <code>/usr/bin/java</code>, not about which M-series chip you bought.</p>
+    <p>There is no kernel extension to allow on one chip and not another, and no background service. Delete the app and it is gone. The SDK folder remains until you delete it. SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>.</p>
+
+    <h2>What “will not run” means in practice</h2>
+    <ul>
+      <li>A package with no ARM64 build. The install path cannot invent the missing library. See <a href="/blog/apks-that-do-not-install-or-open/">APKs that do not install or open</a>.</li>
+      <li>A split APK or an XAPK. This version does not install those formats, on any Mac.</li>
+      <li>A rooted Play tablet. The Play image refuses adb root on every chip. Root is a second tablet on the Google APIs image. See <a href="/blog/root-versus-play-store-image/">root and the Play image</a>.</li>
+      <li>A game that needs a preset SiliconPlay does not ship. You can still play it with direct touch, or apply MMORPG (WASD) and move the buttons. The absence of a preset is not a chip problem.</li>
+    </ul>
+
+    <h2>Shortcuts, which also do not change by chip</h2>
+    <p>Version 1.0.0 uses the same chords on every supported Mac. Command-I is first.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Shortcuts in SiliconPlay 1.0.0</caption>
+        <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Command-I</td><td>Import an APK and install it into Android.</td></tr>
+          <tr><td>F12, or Command-K</td><td>Toggle Typing and Game keys.</td></tr>
+          <tr><td>Command-Shift-G</td><td>Show or hide the on-screen game-button overlay.</td></tr>
+          <tr><td>Escape</td><td>Leave fullscreen. Outside fullscreen, Android Back while the display is focused.</td></tr>
+          <tr><td>Shift-Escape</td><td>Release every virtual finger.</td></tr>
+          <tr><td>F10</td><td>Switch to direct touch.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Other actions are named in the Shortcuts list without a key string I can quote: start or stop the selected instance, toggle fullscreen, save a screenshot, start or stop screen recording, edit the key map, show or hide the Android buttons, and sync input across running instances. Read the chord in the app. It is drawn by the menu.</p>
+
+    <h2>How to tell me about a Mac I have not measured</h2>
+    <p>If you want a useful note, include the chip (M1–M6, and which of Pro, Max, or Ultra if it has one), the macOS version, the game or the APK, and whether the failure was first-run download, install, drawing, or input. A screen recording is an action the Shortcuts list names. I still will not guess its chord here. If you can capture one from the menu, it is better than a paragraph.</p>
+    <p>I build SiliconPlay on my own. The company behind the site and the app is 28.148.946 RYAN ANTHONY GIBO - ME, in Brazil. That is on the <a href="/about/">about page</a> and the <a href="/privacy.html">privacy notice</a>. Feedback is what I have instead of a lab full of every Mac. The M3 Max numbers stay the M3 Max numbers until I publish more.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

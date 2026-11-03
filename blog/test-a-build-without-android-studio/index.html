@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test an APK on a Mac without keeping Android Studio open</title>
+<meta name="description" content="Use SiliconPlay to install a build on a real ARM64 Android 16 tablet without a full IDE in the way, including the JDK and SDK choices.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/test-a-build-without-android-studio/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/test-a-build-without-android-studio/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/test-a-build-without-android-studio/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/test-a-build-without-android-studio/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Test an APK on a Mac without keeping Android Studio open">
+<meta property="og:description" content="Use SiliconPlay to install a build on a real ARM64 Android 16 tablet without a full IDE in the way, including the JDK and SDK choices.">
+<meta property="og:url" content="https://siliconplay.app/blog/test-a-build-without-android-studio/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Test an APK on a Mac without keeping Android Studio open">
+<meta name="twitter:description" content="Use SiliconPlay to install a build on a real ARM64 Android 16 tablet without a full IDE in the way, including the JDK and SDK choices.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "Test an APK on Apple silicon without keeping Android Studio open",
+  "description": "Use SiliconPlay to install a build on a real ARM64 Android 16 tablet without a full IDE in the way, including the JDK and SDK choices.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/test-a-build-without-android-studio/",
+  "url": "https://siliconplay.app/blog/test-a-build-without-android-studio/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Test an APK on Apple silicon without keeping Android Studio open", "item": "https://siliconplay.app/blog/test-a-build-without-android-studio/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>Test an APK on Apple silicon without keeping Android Studio open</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>Android Studio is the right place to edit a project. It is a lot of window for the question “did this APK install and open.” <a href="/">SiliconPlay</a> is a Mac app in front of a real ARM64 Android 16 tablet, using Google’s official Android Emulator underneath. I wrote the Mac app from scratch. You can install a build and tap through it without keeping the IDE in front. This page is that loop, including the places it honestly stops.</p>
+
+    <h2>What you are borrowing from the SDK, and what you are not</h2>
+    <p>The DMG does not contain the emulator or the system image. First run accepts the Android SDK license and downloads command-line tools, the Apple silicon emulator, platform-tools, and the Play arm64 image into a folder you choose. If you already have an SDK from Android Studio with emulator, adb, and sdkmanager, point SiliconPlay at that folder instead of downloading a second copy. You can then quit the IDE. The emulator process SiliconPlay starts does not need the IDE window to stay open.</p>
+    <p>The default tablet is landscape, 1920×1080, 320 dpi, auto-rotate off, on the Android 16 Play image, named Android 16 Tablet. That is a real system image, not a screenshot of a phone. Google Play is on that image. SiliconPlay never sees the Play password. A test that needs adb root does not use this image. The Play image refuses adb root. Create the Google APIs tablet for that, and accept that it has no Play Store. Both can exist. They are not a toggle.</p>
+    <p>If setup stops because there is no JDK, the app says so. <code>/usr/bin/java</code> is a stub on macOS. The message points at <code>brew install openjdk@17</code>. Install it and run the package step again. Android Studio’s embedded JDK is not automatically the JDK that stub is pointing at. Follow the message on screen if it differs from this page. This page is version 1.0.0.</p>
+
+    <h2>The install loop</h2>
+    <ol>
+      <li>Start the instance. Pro Mode can stay off. The main window shows Start, Stop, and Create New Instance.</li>
+      <li>Press Command-I and choose the <code>.apk</code>, or drop the file on the instance.</li>
+      <li>Or use adb from the platform-tools in the SDK folder you selected. Copies go to <code>/sdcard/SiliconPlay</code>.</li>
+      <li>Open the app on the tablet with direct touch. The pointer is a finger. You do not need a keymap to tap through a UI you built.</li>
+      <li>When you have a new build, install it again the same way. Stop the instance only when you are done, not between two installs, unless the new package needs a clean process you have decided to restart.</li>
+    </ol>
+    <p>Split APKs and XAPK archives are not installed by this version. If your Gradle task only emits splits, produce a single APK for this loop or install another way. I am not documenting a flag I have not shipped. The image also does not mount the project directory as a live disk. adb, Command-I, or a drop are how the file moves.</p>
+    <p>An APK with no ARM64 build will not run. The tablet is arm64, on the Mac’s ARM cores, through Apple’s Hypervisor framework. Most current apps include an ARM64 build. A build you configured for something else will not start native code here. <a href="/blog/apks-that-do-not-install-or-open/">Why an APK does not open</a> separates that from a bad install.</p>
+
+    <h2>When the thing you are testing is a game</h2>
+    <p>Direct touch remains the right default for menus. If you need keys, accept a community preset if one is offered, or apply MMORPG (WASD) and move the buttons. The preset stays off until you accept it. F12 or Command-K toggles Typing and Game keys. A focused text field switches to Typing on its own, which is what you want when the build asks for a login.</p>
+    <p>Vulkan is drawn by Metal, with shaders in safe math mode so foliage renders correctly. The only published performance note is from a MacBook Pro with M3 Max: up to 60 fps in a demanding 3D game, render resolution up to 2560×1440, 7–43 ms key-to-game. Results vary by game, Mac, and settings. I have not published numbers for your project. Do not quote mine as if they were.</p>
+
+    <h2>Pro Mode, when the UI is not enough</h2>
+    <p>Turn Pro Mode on from the toolbar, the View menu, or Settings when you want hardware, keymaps, and diagnostics on the main window. Leave it off when you want Start, Stop, and Create New Instance and nothing else. The bubble on the emulator window still edits the keymap, the overlay, opacity, size, and reset without Pro Mode. Diagnostics are a view, not a second emulator.</p>
+    <p>There is no kernel extension and no background service. When the test week is over, delete the app from Applications. The SDK folder stays, which is what you want if Android Studio still uses it. SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>. Move that folder aside if you want the Mac-side state gone and the SDK left in place. Details are in <a href="/blog/pro-mode-sdk-folder-and-app-files/">Pro Mode and the files</a>.</p>
+
+    <h2>Shortcuts in the test loop</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Shortcuts while you install and poke at a build</caption>
+        <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Command-I</td><td>Import an APK and install it into the running Android.</td></tr>
+          <tr><td>F12, or Command-K</td><td>Toggle Typing and Game keys.</td></tr>
+          <tr><td>Command-Shift-G</td><td>Show or hide the on-screen overlay.</td></tr>
+          <tr><td>Escape</td><td>Leave fullscreen, or Android Back when not fullscreen and the display is focused.</td></tr>
+          <tr><td>Shift-Escape</td><td>Release every virtual finger.</td></tr>
+          <tr><td>F10</td><td>Switch to direct touch.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Start or stop the selected instance, save a screenshot, and start or stop screen recording are named in the Shortcuts list. The chords are drawn by the menu in version 1.0.0 and are not stored as text I can copy here. A screenshot of a layout bug is still the right artifact. Open the menu and use the action it labels.</p>
+    <p>The Mac has to be Apple silicon, M1 through M6, and the versions I have tested are macOS Tahoe and macOS 27 Golden Gate. The source of the Mac app is not published. Third-party licenses, including the Android Emulator and QEMU, are on the <a href="/licenses.html">licenses page</a> and ship inside the app. If a build installs on the tablet and fails only in Studio’s own emulator, say which image each one was using when you <a href="/contact/">write</a>. Those are often not the same Android.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

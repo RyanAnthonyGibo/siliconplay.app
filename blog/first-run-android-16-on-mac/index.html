@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First run: Android 16 on a Mac with SiliconPlay</title>
+<meta name="description" content="What SiliconPlay downloads on first launch, the Android 16 tablet it creates, and what to do if setup stops on a missing JDK.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/first-run-android-16-on-mac/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/first-run-android-16-on-mac/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/first-run-android-16-on-mac/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/first-run-android-16-on-mac/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="First run: Android 16 on a Mac with SiliconPlay">
+<meta property="og:description" content="What SiliconPlay downloads on first launch, the Android 16 tablet it creates, and what to do if setup stops on a missing JDK.">
+<meta property="og:url" content="https://siliconplay.app/blog/first-run-android-16-on-mac/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-03">
+<meta property="article:modified_time" content="2026-11-03">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="First run: Android 16 on a Mac with SiliconPlay">
+<meta name="twitter:description" content="What SiliconPlay downloads on first launch, the Android 16 tablet it creates, and what to do if setup stops on a missing JDK.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "BlogPosting"],
+  "headline": "First run: how SiliconPlay sets up Android 16 on a Mac",
+  "description": "What SiliconPlay downloads on first launch, the Android 16 tablet it creates, and what to do if setup stops on a missing JDK.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "name": "Ryan Gibo" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": { "@type": "ImageObject", "url": "https://siliconplay.app/assets/icon-512.png" }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/first-run-android-16-on-mac/",
+  "url": "https://siliconplay.app/blog/first-run-android-16-on-mac/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "SiliconPlay", "item": "https://siliconplay.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siliconplay.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "First run: how SiliconPlay sets up Android 16 on a Mac", "item": "https://siliconplay.app/blog/first-run-android-16-on-mac/" }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
+  <article>
+    <h1>First run: how SiliconPlay sets up Android 16 on a Mac</h1>
+    <p class="byline">By Ryan Gibo · <time datetime="2026-11-03">3 November 2026</time></p>
+<p>The first launch of <a href="/">SiliconPlay</a> is the step people skip past in a hurry, and it is the step that decides whether the rest of the app makes sense. The DMG does not contain Android. It does not contain Google’s emulator. Opening the app the first time is a request to download those pieces, accept the Android SDK license on this Mac, and create one tablet. This page is that sequence, in the order the app actually does it, with the stops I have seen and the ones the app itself tells you about.</p>
+
+    <h2>What you need before you open the DMG</h2>
+    <p>SiliconPlay is a Mac app for Apple silicon only. That means a Mac with Apple silicon from M1 through M6, including Pro, Max, and Ultra. I have tested it on macOS Tahoe and macOS 27 Golden Gate. I have not certified other macOS versions. If you are on something else, the honest instruction is to try it and <a href="/contact/">tell me</a> what happened, rather than for me to guess.</p>
+    <p>You do not need Android Studio open, and you do not need a second Android device. You do need enough disk space for an SDK download: command-line tools, the Apple silicon emulator, platform-tools, and a Play arm64 system image. The app asks you to pick the folder those files land in. If you already keep an Android SDK on this Mac and it has emulator, adb, and sdkmanager, you can point SiliconPlay at that folder instead of downloading a second copy.</p>
+    <p>A Google account is only required if you want to install from the Play Store after the tablet exists. The first-run download itself is the SDK, not a store login.</p>
+
+    <h2>Install the Mac app</h2>
+    <ol>
+      <li><a href="/download/">Download SiliconPlay.dmg</a>.</li>
+      <li>Open the disk image and drag SiliconPlay to Applications.</li>
+      <li>Open SiliconPlay from Applications. If macOS asks whether you want to open an app from a downloaded disk image, confirm it. That prompt is macOS, not a SiliconPlay account.</li>
+    </ol>
+    <p>There is no kernel extension to approve and no background service to leave running. When you later delete the app, the Mac app is gone. Files you downloaded into the SDK folder stay there until you delete that folder yourself. SiliconPlay’s own files live under <code>~/Library/Application Support/SiliconPlay</code>.</p>
+
+    <h2>What “download Android and start” actually does</h2>
+    <p>The first run asks you to download Android and start. Saying yes does four things that are easy to blur together.</p>
+    <p>First, it accepts the Android SDK license on this Mac. That license is Google’s, for the SDK components the app is about to fetch. SiliconPlay is not a store and it does not replace that license click.</p>
+    <p>Second, it downloads Google’s command-line tools, the Apple silicon build of the emulator, platform-tools (that is where adb comes from), and the Play arm64 system image. The image is Android 16 with Google Play, built for ARM64. An app that shipped without an ARM64 build will not run on it. Most current apps include one. I go further on that limit in <a href="/blog/apks-that-do-not-install-or-open/">APKs that do not install or open</a>.</p>
+    <p>Third, it creates one landscape tablet named Android 16 Tablet and opens that tablet in its own window. The default tablet is 1920×1080 at 320 dpi, landscape, with auto-rotate off, on the Android 16 Play image. I did not pick those numbers as a suggestion. They are the defaults this version creates.</p>
+    <p>Fourth, it stops. You are looking at an Android home screen in a window, not at a game yet. Google Play shows up because that image includes it. It is not a store I bundled inside the DMG. On the Android home screen, open Play Store and sign in. SiliconPlay never sees that password. The sign-in steps, and what the Mac app does not receive, are in <a href="/blog/google-play-sign-in-on-the-tablet/">signing in to Google Play</a>.</p>
+
+    <h2>If setup stops because there is no JDK</h2>
+    <p>macOS ships <code>/usr/bin/java</code> as a stub. Tapping it does not give you a Java compiler. Some SDK package steps need a real JDK. When that is the reason setup stops, the app says so. The message points at:</p>
+    <p><code>brew install openjdk@17</code></p>
+    <p>Install that, then run the package step again from the app. I am not going to invent a second workaround. If the message on your screen names a different command, follow the message. It is looking at your Mac. This page is looking at version 1.0.0.</p>
+    <p>Homebrew itself is not part of SiliconPlay. If you do not have it, the app’s message is still the place to start, because that is the failure it knows how to describe. Do not copy a random JDK from a forum into the SDK folder and hope sdkmanager notices.</p>
+
+    <h2>Pointing at an SDK you already have</h2>
+    <p>If Android Studio, or a previous command-line install, already put emulator, adb, and sdkmanager on this Mac, choose that SDK folder when SiliconPlay asks. The app can use it instead of downloading a second copy. The folder still has to be the one that actually contains those tools. A folder of APKs, or a folder that only has platform sources, is not an SDK the app can start from.</p>
+    <p>Using an existing SDK does not change the tablet SiliconPlay creates, and it does not turn the Play image into a rooted image. Root is a different tablet, created later, on the Google APIs image, because the Play image refuses adb root. Leave that until you need it. The split is explained in <a href="/blog/root-versus-play-store-image/">root and the Play image</a>.</p>
+
+    <h2>After the window is open</h2>
+    <p>The main window, with Pro Mode off, stays on Start, Stop, and Create New Instance. Pro Mode is off until you turn it on. It lives in the toolbar, the View menu, and Settings. Turned on, the main window also shows hardware, keymaps, and diagnostics. You do not need it to play or to install the first app.</p>
+    <p>Direct touch is the default. The pointer is a finger. Click the Android image if you want the keyboard to go to a keymap later. Nothing about the first run loads a keymap for you. A suggested preset, when a known game is in front, stays off until you accept it.</p>
+    <p>To put a file on the tablet, start the instance first. Then drop an <code>.apk</code> file, or press Command-I to import an APK and install it. Split APKs and XAPK archives are not installed by this version. You can also install with adb. Files copied that way go to <code>/sdcard/SiliconPlay</code>. The image does not mount a host folder as a live disk, so a directory you share in Finder will not appear inside Android on its own.</p>
+
+    <h2>What I would check before you call the first run broken</h2>
+    <ul>
+      <li>The Mac is Apple silicon, M1 through M6 in that line. A machine outside that list is outside what this app is built for.</li>
+      <li>The SDK folder you picked is writable, and the download was allowed to finish. A half-written image will not boot into a tablet named Android 16 Tablet.</li>
+      <li>If the app named a missing JDK, the package step was run again after <code>brew install openjdk@17</code>, not just after reading the message.</li>
+      <li>You are starting the instance before you try to install an APK. Command-I on a stopped instance has nothing to install into.</li>
+      <li>You are not expecting Play Store on a rooted APIs tablet. That combination is two tablets, not a checkbox on the Play image.</li>
+    </ul>
+    <p>The measurement I have published for graphics is separate from first run. On a MacBook Pro with M3 Max, a demanding 3D game reached up to 60 fps at render resolutions up to 2560×1440, with 7–43 ms from key to game. Results vary by game, Mac, and settings. I have not published per-chip numbers, and the first-run tablet being 1920×1080 does not mean every game renders at 1920×1080. The panel size and a game’s internal resolution are different things.</p>
+
+    <h2>Where to go next</h2>
+    <p>If the tablet is up and you want a game on it, use <a href="/blog/install-apk-with-command-i/">installing an APK</a> or the Play sign-in page. If the keyboard is hitting the wrong place, read <a href="/blog/typing-game-keys-and-direct-touch/">typing, game keys, and direct touch</a> before you rebind anything. The shortcut list, with Command-I first, is the <a href="/blog/android-emulator-mac-shortcuts/">keyboard list taken from version 1.0.0</a>.</p>
+
+    <p><a class="cta" href="/download/">Download SiliconPlay for Mac</a></p>
+    <p class="more"><a href="/blog/">All articles</a> · <a href="/compare/">Compare Android emulators for Mac</a> · <a href="/">SiliconPlay homepage</a></p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

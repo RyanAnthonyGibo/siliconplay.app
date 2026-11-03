@@ -5,15 +5,111 @@
     <link>https://siliconplay.app/blog/</link>
     <description>Articles about SiliconPlay, a free Android emulator for Apple Silicon Macs.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 21:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Free Android emulator for Mac M1, M2, M3, M4 and M5: SiliconPlay vs BlueStacks, MuMu and more</title>
+      <title>First run: how SiliconPlay sets up Android 16 on a Mac</title>
+      <link>https://siliconplay.app/blog/first-run-android-16-on-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/first-run-android-16-on-mac/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>What the first launch downloads, the tablet it creates, and the JDK message.</description>
+    </item>
+    <item>
+      <title>Install an APK on SiliconPlay: Command-I, drag and drop, and adb</title>
+      <link>https://siliconplay.app/blog/install-apk-with-command-i/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/install-apk-with-command-i/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Three ways onto the tablet, and the packages version 1.0.0 will not install.</description>
+    </item>
+    <item>
+      <title>Typing, game keys, and direct touch: where your keys go</title>
+      <link>https://siliconplay.app/blog/typing-game-keys-and-direct-touch/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/typing-game-keys-and-direct-touch/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>How a key becomes text, a touch, or a Mac command.</description>
+    </item>
+    <item>
+      <title>Optional root, the Play image, and why they are two tablets</title>
+      <link>https://siliconplay.app/blog/root-versus-play-store-image/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/root-versus-play-store-image/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Why the Play image refuses adb root, and what the APIs tablet does not include.</description>
+    </item>
+    <item>
+      <title>Vulkan, Metal, and safe-math shaders in SiliconPlay</title>
+      <link>https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/vulkan-metal-and-safe-math-shaders/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>What the graphics path does, and the only numbers that were measured.</description>
+    </item>
+    <item>
+      <title>Which Macs run SiliconPlay, and which macOS version was tested</title>
+      <link>https://siliconplay.app/blog/which-macs-run-siliconplay/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/which-macs-run-siliconplay/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>M1 through M6, tested on macOS Tahoe and macOS 27 Golden Gate, without invented benchmarks.</description>
+    </item>
+    <item>
+      <title>WASD, a gamepad, and the on-screen buttons in SiliconPlay</title>
+      <link>https://siliconplay.app/blog/wasd-gamepad-and-on-screen-buttons/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/wasd-gamepad-and-on-screen-buttons/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>The default keymap, how a controller shares those buttons, and how to move one.</description>
+    </item>
+    <item>
+      <title>Pro Mode, the SDK folder, and the files SiliconPlay leaves behind</title>
+      <link>https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/pro-mode-sdk-folder-and-app-files/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>What stays after you delete the app, and what Pro Mode actually shows.</description>
+    </item>
+    <item>
+      <title>Sign in to Google Play on the Android 16 tablet</title>
+      <link>https://siliconplay.app/blog/google-play-sign-in-on-the-tablet/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/google-play-sign-in-on-the-tablet/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>The store is on the Play image. The Mac app never sees the password.</description>
+    </item>
+    <item>
+      <title>When keys go to the wrong place: focus, Accessibility, and stuck fingers</title>
+      <link>https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/when-keys-go-to-the-wrong-place/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Four ways a key misses, and the chord that fixes each one.</description>
+    </item>
+    <item>
+      <title>Why an APK does not install or open on SiliconPlay</title>
+      <link>https://siliconplay.app/blog/apks-that-do-not-install-or-open/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/apks-that-do-not-install-or-open/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Split packages, XAPK archives, and builds with no ARM64 library.</description>
+    </item>
+    <item>
+      <title>Test an APK on Apple silicon without keeping Android Studio open</title>
+      <link>https://siliconplay.app/blog/test-a-build-without-android-studio/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/test-a-build-without-android-studio/</guid>
+      <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>The install loop, the JDK stub, and when to point at an SDK you already have.</description>
+    </item>
+    <item>
+      <title>Free Android emulator for Mac M1–M6: SiliconPlay vs BlueStacks, MuMu and more</title>
       <link>https://siliconplay.app/blog/free-android-emulator-mac-m1-m5-comparison/</link>
       <guid isPermaLink="true">https://siliconplay.app/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
       <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Free Android emulators for Mac M1 to M5 compared: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion and UTM. Prices, ads, key mapping and root, checked 28 Oct 2026.</description>
+      <description>Free Android emulators for Mac M1 through M6 compared: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion and UTM. Prices, ads, key mapping and root, checked 28 Oct 2026.</description>
     </item>
     <item>
       <title>Android emulator on a Mac M1 or M4: step-by-step setup</title>
@@ -21,7 +117,7 @@
       <guid isPermaLink="true">https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/</guid>
       <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>How to set up an Android emulator on a Mac M1, M2, M3, M4 or M5: install SiliconPlay, sign in to Google Play, install an APK with Command-I and map your keys.</description>
+      <description>How to set up an Android emulator on a Mac M1–M6: install SiliconPlay, sign in to Google Play, install an APK with Command-I and map your keys.</description>
     </item>
     <item>
       <title>Android emulator keyboard mapping on Mac: on-screen buttons and per-game layouts</title>
@@ -48,12 +144,12 @@
       <description>Optional root, adb install, and a real ARM64 Android 16 tablet on Apple Silicon. Test an APK without keeping a full IDE open.</description>
     </item>
     <item>
-      <title>Android Emulator for Mac M1, M2, M3, M4 &amp; M5</title>
+      <title>Android Emulator for Mac M1–M6</title>
       <link>https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4/</link>
       <guid isPermaLink="true">https://siliconplay.app/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Free Android emulator for Mac M1, M2, M3, M4, and M5 (and newer). Native ARM64, Metal graphics, keyboard and gamepad controls, optional root for developers.</description>
+      <description>Free Android emulator for Mac M1 through M6. Native ARM64, Metal graphics, keyboard and gamepad controls, optional root for developers.</description>
     </item>
     <item>
       <title>Looking for a BlueStacks Alternative on Mac? Try SiliconPlay</title>
@@ -61,7 +157,7 @@
       <guid isPermaLink="true">https://siliconplay.app/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Looking for a BlueStacks alternative on Mac? SiliconPlay is a free, native ARM64 Android emulator for M1, M2, M3, M4, M5, and newer chips, with Metal graphics and optional root.</description>
+      <description>Looking for a BlueStacks alternative on Mac? SiliconPlay is a free, native ARM64 Android emulator for M1–M6,, with Metal graphics and optional root.</description>
     </item>
     <item>
       <title>Looking for a MuMu Player Alternative on Mac? Try SiliconPlay</title>
@@ -69,7 +165,7 @@
       <guid isPermaLink="true">https://siliconplay.app/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Looking for a MuMu Player alternative on Mac? SiliconPlay is a free Android emulator for M1 to M5 and newer chips, with Metal graphics and optional root.</description>
+      <description>Looking for a MuMu Player alternative on Mac? SiliconPlay is a free Android emulator for M1 through M6 chips, with Metal graphics and optional root.</description>
     </item>
   </channel>
 </rss>

@@ -8,12 +8,12 @@
     <lastBuildDate>Wed, 28 Oct 2026 21:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/ja/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Mac M1・M2・M3・M4・M5で使える無料Androidエミュレーター：SiliconPlay、BlueStacks、MuMuなどを比較</title>
+      <title>Mac M1–M6で使える無料Androidエミュレーター：SiliconPlay、BlueStacks、MuMuなどを比較</title>
       <link>https://siliconplay.app/ja/blog/free-android-emulator-mac-m1-m5-comparison/</link>
       <guid isPermaLink="true">https://siliconplay.app/ja/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
       <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Mac M1〜M5向けの無料Androidエミュレーターを比較：SiliconPlay、BlueStacks Air、MuMu Player Pro、Android Studio、Genymotion、UTM。料金、広告、キー割り当て、root を2026年10月28日に確認。</description>
+      <description>Mac M1〜M6向けの無料Androidエミュレーターを比較：SiliconPlay、BlueStacks Air、MuMu Player Pro、Android Studio、Genymotion、UTM。料金、広告、キー割り当て、root を2026年10月28日に確認。</description>
     </item>
     <item>
       <title>Mac M1・M4でAndroidエミュレーターを使う：導入手順</title>
@@ -21,7 +21,7 @@
       <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-m1-m4-setup/</guid>
       <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Mac M1、M2、M3、M4、M5にAndroidエミュレーターを入れる手順。SiliconPlayの導入、Google Play、Command-IでのAPK、キー割り当て。</description>
+      <description>Mac M1–M6にAndroidエミュレーターを入れる手順。SiliconPlayの導入、Google Play、Command-IでのAPK、キー割り当て。</description>
     </item>
     <item>
       <title>MacのAndroidエミュレータでキーマッピングする: 画面上のボタンとゲーム別の配置</title>
@@ -48,12 +48,12 @@
       <description>必要なときだけのroot、adbでのインストール、Apple Silicon上のARM64 Android 16タブレットです。IDEを開いたままにしなくてもAPKを試せます。</description>
     </item>
     <item>
-      <title>Mac M1、M2、M3、M4、M5向けAndroidエミュレーター</title>
+      <title>Mac M1–M6向けAndroidエミュレーター</title>
       <link>https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4/</link>
       <guid isPermaLink="true">https://siliconplay.app/ja/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>M1、M2、M3、M4、M5とそれ以降のMac向け無料Androidエミュレーター。ネイティブARM64、Metal、キーボード、ゲームパッド、開発用の任意root。</description>
+      <description>M1–M6のMac向け無料Androidエミュレーター。ネイティブARM64、Metal、キーボード、ゲームパッド、開発用の任意root。</description>
     </item>
     <item>
       <title>MacのBlueStacks代替を探していますか？ SiliconPlayを試してください</title>
@@ -61,7 +61,7 @@
       <guid isPermaLink="true">https://siliconplay.app/ja/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>MacのBlueStacks代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
+      <description>MacのBlueStacks代替を探していますか？ SiliconPlayはM1からM6以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
     </item>
     <item>
       <title>MacのMuMu Player代替を探していますか？ SiliconPlayを試してください</title>
@@ -69,7 +69,7 @@
       <guid isPermaLink="true">https://siliconplay.app/ja/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>MacのMuMu Player代替を探していますか？ SiliconPlayはM1からM5以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
+      <description>MacのMuMu Player代替を探していますか？ SiliconPlayはM1からM6以降向けの無料Androidエミュレーターです。Metalと任意のrootがあります。</description>
     </item>
   </channel>
 </rss>

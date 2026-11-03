@@ -8,12 +8,12 @@
     <lastBuildDate>Wed, 28 Oct 2026 21:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/id/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Emulator Android gratis untuk Mac M1, M2, M3, M4 dan M5: SiliconPlay vs BlueStacks, MuMu dan lainnya</title>
+      <title>Emulator Android gratis untuk Mac M1–M6: SiliconPlay vs BlueStacks, MuMu dan lainnya</title>
       <link>https://siliconplay.app/id/blog/free-android-emulator-mac-m1-m5-comparison/</link>
       <guid isPermaLink="true">https://siliconplay.app/id/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
       <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Perbandingan emulator Android gratis untuk Mac M1–M5: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion dan UTM. Harga, iklan, key mapping dan root, dicek 28/10/2026.</description>
+      <description>Perbandingan emulator Android gratis untuk Mac M1–M6: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion dan UTM. Harga, iklan, key mapping dan root, dicek 28/10/2026.</description>
     </item>
     <item>
       <title>Emulator Android untuk Mac M1 dan M4: cara pasang langkah demi langkah</title>
@@ -21,7 +21,7 @@
       <guid isPermaLink="true">https://siliconplay.app/id/blog/android-emulator-mac-m1-m4-setup/</guid>
       <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Cara memasang emulator Android di Mac M1, M2, M3, M4, atau M5: SiliconPlay, Google Play, APK lewat Command-I, dan pemetaan tombol.</description>
+      <description>Cara memasang emulator Android di Mac M1–M6: SiliconPlay, Google Play, APK lewat Command-I, dan pemetaan tombol.</description>
     </item>
     <item>
       <title>Pemetaan keyboard di emulator Android untuk Mac: tombol layar dan tata letak tiap game</title>
@@ -48,12 +48,12 @@
       <description>Root opsional, pasang lewat adb, dan tablet ARM64 Android 16 di Apple Silicon. Uji APK tanpa IDE yang tetap terbuka.</description>
     </item>
     <item>
-      <title>Emulator Android untuk Mac M1, M2, M3, M4, dan M5</title>
+      <title>Emulator Android untuk Mac M1–M6</title>
       <link>https://siliconplay.app/id/blog/android-emulator-mac-m1-m2-m3-m4/</link>
       <guid isPermaLink="true">https://siliconplay.app/id/blog/android-emulator-mac-m1-m2-m3-m4/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Emulator Android gratis untuk Mac M1, M2, M3, M4, M5, dan chip yang lebih baru. ARM64 asli, Metal, keyboard, gamepad, dan root opsional untuk pengembangan.</description>
+      <description>Emulator Android gratis untuk Mac M1–M6, dan chip yang lebih baru. ARM64 asli, Metal, keyboard, gamepad, dan root opsional untuk pengembangan.</description>
     </item>
     <item>
       <title>Mencari alternatif BlueStacks di Mac? Coba SiliconPlay</title>
@@ -61,7 +61,7 @@
       <guid isPermaLink="true">https://siliconplay.app/id/blog/bluestacks-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Mencari alternatif BlueStacks di Mac? SiliconPlay adalah emulator Android gratis dari M1 sampai M5 dan yang lebih baru, dengan Metal dan root opsional.</description>
+      <description>Mencari alternatif BlueStacks di Mac? SiliconPlay adalah emulator Android gratis dari M1 sampai M6, dengan Metal dan root opsional.</description>
     </item>
     <item>
       <title>Mencari alternatif MuMu Player di Mac? Coba SiliconPlay</title>
@@ -69,7 +69,7 @@
       <guid isPermaLink="true">https://siliconplay.app/id/blog/mumu-player-alternative-mac/</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Mencari alternatif MuMu Player di Mac? SiliconPlay adalah emulator Android gratis dari M1 sampai M5 dan yang lebih baru, dengan Metal dan root opsional.</description>
+      <description>Mencari alternatif MuMu Player di Mac? SiliconPlay adalah emulator Android gratis dari M1 sampai M6, dengan Metal dan root opsional.</description>
     </item>
   </channel>
 </rss>
