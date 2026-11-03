@@ -170,7 +170,7 @@
     <h1>给 Apple Silicon 上的开发者用的、可以 root 的安卓模拟器</h1>
     <p class="byline">作者： Ryan Gibo · <time datetime="2026-10-27">2026年10月27日</time></p>
     <p>如果只是想看一个 APK 能不能跑，把整套 IDE 打开会多出不少步骤。<a href="/zh-hans/">SiliconPlay</a> 是放在一台真实安卓平板前面的小型 Mac 软件：ARM64、Android 16、Apple Silicon。我是 Ryan，这款软件是我从零写的。底层用的是官方 Android Emulator。<a href="/licenses.html">许可声明</a>里写着这套模拟器，以及随它而来的 SDK 组件。</p>
-    <p>它只面向 Apple Silicon，从 M1 到 M6，以及这条产品线里更新的芯片，包括 Pro、Max 和 Ultra。它在 Apple Silicon 的 ARM 核心上原生运行，从 M1 到 M6 。到目前为止，我只在 macOS Tahoe 和 macOS 27 Golden Gate 上测试过。如果你试了别的 macOS 版本，把结果 <a href="mailto:katzdoll@gmail.com">发给我</a>。我宁可听到实情，也不想靠猜。</p>
+    <p>它只面向 Apple Silicon，从 M1 到 M6，以及这条产品线里更新的芯片，包括 Pro、Max 和 Ultra。它在 Apple Silicon 的 ARM 核心上原生运行，从 M1 到 M6 。到目前为止，我只在 macOS Tahoe 和 macOS 27 Golden Gate 上测试过。如果你试了别的 macOS 版本，把结果 <a href="mailto:siliconplay.app@gmail.com">发给我</a>。我宁可听到实情，也不想靠猜。</p>
     <h2>你实际拿到的是什么</h2>
     <p>下载包里没有 Google 的模拟器，也没有系统镜像。第一次运行会请你下载安卓并开始。这一步会在这台 Mac 上接受 Android SDK 许可，然后把 Google 的 command-line tools、Apple silicon 模拟器、platform-tools，以及 Play 的 arm64 系统镜像，下载到你选定的 SDK 文件夹。软件会创建一台横屏平板，名字是 Android 16 Tablet，并在它自己的窗口里打开。默认平板是 1920×1080、320 dpi、横屏、关闭自动旋转，系统是 Android 16 Play 镜像。</p>
     <p>等这套镜像就位，Google Play 才会出现。它不是我塞进软件里的商店。在安卓主屏幕上打开 Play Store 再登录。那个密码 SiliconPlay 看不到。如果你已经有带 emulator、adb 和 sdkmanager 的 SDK，可以把软件指到那个文件夹，不必再下一份。</p>

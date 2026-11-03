@@ -343,8 +343,16 @@ def check_content() -> None:
     contact = (ROOT / "contact" / "index.html").read_text(encoding="utf-8")
     if "28.148.946 RYAN ANTHONY GIBO - ME" not in about or "Brazil" not in about:
         fail("about page is missing the company or Brazil")
-    if "siliconplay.app@gmail.com" not in contact or "katzdoll@gmail.com" not in contact:
+    if "siliconplay.app@gmail.com" not in contact:
         fail("contact page is missing an email address")
+    retired = "katz" + "doll"
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        if path.suffix.lower() not in {".html", ".js", ".txt", ".xml", ".css", ".json", ".py"}:
+            continue
+        if retired in path.read_text(encoding="utf-8", errors="ignore").lower():
+            fail(f"retired contact email still in {path.relative_to(ROOT)}")
     if "28.148.946 RYAN ANTHONY GIBO - ME" not in contact or "Brazil" not in contact:
         fail("contact page is missing the company or Brazil")
     key = "c7e4a91b2d08f6e35a0c4b7d9e1f83a6"

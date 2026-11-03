@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "katzdoll@gmail.com"; // contact address used by every envelope icon
+const CONTACT_EMAIL = "siliconplay.app@gmail.com"; // contact address used by every envelope icon
 (()=>{
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const root=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
