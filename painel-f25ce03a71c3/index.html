@@ -38,22 +38,22 @@ svg{width:100%;height:120px;display:block}
   
   <div><h1>Painel SiliconPlay</h1><div class="mu" id="upd">Carregando…</div></div>
   <div class="ctl">
-    <select id="rng" title="Período"><option value="d1">Últimas 24 h</option><option value="d7">Últimos 7 dias</option><option value="all" selected>Desde o início</option></select>
+    <select id="rng" title="Período"><option value="all" selected>Desde o início</option><option value="d7">Últimos 7 dias</option><option value="d1">Últimas 24 h</option></select>
     <label class="mu"><input type="checkbox" id="auto" checked> Atualizar a cada 90 s</label>
     <button class="pri" id="btn">Atualizar</button>
   </div>
 </header>
 
 <div class="grid">
-  <div class="card"><h2>Downloads (total)</h2><div class="big" id="dlTotal">–</div><div class="delta" id="dlDelta"></div></div>
+  <div class="card"><h2>Downloads no GitHub</h2><div class="big" id="dlTotal">–</div><div class="mu">todas as versões, desde o lançamento (não muda com o período)</div><div class="delta" id="dlDelta"></div></div>
   <div class="card"><h2>Visitas</h2><div class="big" id="visits">–</div><div class="mu" id="visitsSub"></div></div>
   <div class="card"><h2>Visualizações de página</h2><div class="big" id="views">–</div><div class="mu" id="viewsSub"></div></div>
-  <div class="card"><h2>Cliques em Baixar</h2><div class="big" id="dlClicks">–</div><div class="mu">página /download/ no período</div></div>
+  <div class="card"><h2>Cliques em Baixar no site</h2><div class="big" id="dlClicks">–</div><div class="mu" id="dlClicksSub">aberturas da página /download/ no período</div></div>
 </div>
 
 <div class="grid">
-  <div class="card"><h2>Downloads por versão</h2><table id="rel"></table><div class="note">Fonte: GitHub Releases, ao vivo.</div></div>
-  <div class="card"><h2>Downloads por país</h2><table id="dlc"></table><div class="note">Contagem de quem passou por siliconplay.app/download/. Links diretos para o GitHub não entram aqui.</div></div>
+  <div class="card"><h2>Downloads no GitHub por versão</h2><table id="rel"></table><div class="note">Fonte: GitHub Releases, ao vivo.</div></div>
+  <div class="card"><h2>Cliques em Baixar por país</h2><table id="dlc"></table><div class="note">Quantas vezes a página siliconplay.app/download/ foi aberta, por país, no período. Quem baixa por link direto do GitHub não entra aqui, por isso este número é menor que o total do GitHub.</div></div>
 </div>
 
 <div class="card" style="margin-bottom:14px"><h2 id="chartH">Visitas por hora</h2><svg id="chart" viewBox="0 0 1000 120" preserveAspectRatio="none"></svg><div class="mu" id="chartLbl"></div></div>
@@ -64,6 +64,11 @@ svg{width:100%;height:120px;display:block}
   <div class="card"><h2>Páginas mais vistas</h2><table id="paths"></table></div>
 </div>
 <div class="note" id="cfNote"></div>
+<div class="card note" style="margin-top:14px"><b>Como ler os números.</b>
+<b>Downloads no GitHub</b>: total real de downloads dos arquivos das versões (inclui links diretos), sempre desde o lançamento.
+<b>Visualizações</b>: cada página carregada. <b>Visitas</b>: entradas no site vindas de fora (outro site ou link direto); navegar entre páginas do site conta como visualização, não como nova visita.
+<b>Cliques em Baixar</b>: aberturas da página /download/.
+Visitas, visualizações e cliques vêm do Cloudflare Web Analytics, que só vê navegadores sem bloqueador de anúncios. Os três períodos são somados a partir dos mesmos blocos de 24 h, então "desde o início" ≥ "7 dias" ≥ "24 h" e cada tabela soma o total do cartão.</div>
 </main>
 <script>
 (function(){
@@ -88,6 +93,13 @@ function table(el,head,rows,valIdx){
     return '<td class="n">'+(typeof c==="number"?fmt.format(c):c)+"</td>"}).join("")+"</tr>"});
   el.innerHTML=h;
 }
+function topRows(list,n,keyFn,cols){
+  var rows=list.slice(0,n).map(function(x){return [keyFn(x)].concat(cols.map(function(c){return x[c]}))});
+  var rest=list.slice(n);
+  if(rest.length){rows.push(['<span class="mu">Outros ('+rest.length+')</span>'].concat(cols.map(function(c){return rest.reduce(function(s,x){return s+x[c]},0)})))}
+  return rows;
+}
+function totalRow(el,cols,vals){el.insertAdjacentHTML("beforeend","<tr><th>Total</th>"+vals.map(function(v){return '<th class="n">'+fmt.format(v)+"</th>"}).join("")+"</tr>")}
 function gh(){
   return fetch("https://api.github.com/repos/"+REPO+"/releases?per_page=50",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("GitHub "+r.status);return r.json()}).then(function(rels){
     var total=0,rows=[];
@@ -118,18 +130,20 @@ function renderCf(){
   $("chartH").textContent=daily?"Visitas por dia":"Visitas por hora";
   $("visits").textContent=fmt.format(r.visits);$("visitsSub").textContent=lbl;
   $("views").textContent=fmt.format(r.views);$("viewsSub").textContent=lbl;
-  var dsum=0;r.downloadsByCountry.forEach(function(x){dsum+=x.views});$("dlClicks").textContent=fmt.format(dsum);
-  table($("dlc"),["País","Downloads"],r.downloadsByCountry.map(function(x){return [cname(x.k),x.views]}),1);
-  if(!r.downloadsByCountry.length)$("dlc").innerHTML='<tr><td class="mu">Ainda sem registros neste período.</td></tr>';
-  table($("ctry"),["País","Visitas","Views"],r.countries.map(function(x){return [cname(x.k),x.visits,x.views]}),1);
-  table($("ref"),["Origem","Visitas"],r.referers.map(function(x){return [esc(x.k||"Direto / sem referência"),x.visits]}),1);
-  table($("paths"),["Página","Views"],r.paths.map(function(x){return [esc(x.k),x.views]}),1);
+  var dl=r.downloads!=null?r.downloads:r.downloadsByCountry.reduce(function(s,x){return s+x.views},0);
+  $("dlClicks").textContent=fmt.format(dl);$("dlClicksSub").textContent="aberturas da página /download/ · "+lbl;
+  table($("dlc"),["País","Cliques"],topRows(r.downloadsByCountry,15,function(x){return cname(x.k)},["views"]),1);
+  if(!r.downloadsByCountry.length)$("dlc").innerHTML='<tr><td class="mu">Ainda sem registros neste período.</td></tr>';else totalRow($("dlc"),1,[dl]);
+  var refs=r.referers.filter(function(x){return x.visits>0});
+  table($("ctry"),["País","Visitas","Views"],topRows(r.countries,15,function(x){return cname(x.k)},["visits","views"]),1);totalRow($("ctry"),2,[r.visits,r.views]);
+  table($("ref"),["Origem","Visitas"],topRows(refs,15,function(x){return esc(x.k||"Direto / sem referência")},["visits"]),1);totalRow($("ref"),1,[r.visits]);
+  table($("paths"),["Página","Views"],topRows(r.paths,15,function(x){return esc(x.k)},["views"]),1);totalRow($("paths"),1,[r.views]);
   var hs=r.hourly, mx=1; hs.forEach(function(x){mx=Math.max(mx,x.visits)});
   var w=1000/Math.max(hs.length,1), s="";
   hs.forEach(function(x,i){var h=Math.max(1,110*x.visits/mx);s+='<rect x="'+(i*w+1)+'" y="'+(118-h)+'" width="'+Math.max(1,w-2)+'" height="'+h+'" fill="var(--ac)" rx="2"><title>'+tl(x.k)+": "+x.visits+" visitas</title></rect>"});
   $("chart").innerHTML=s;
   $("chartLbl").textContent=hs.length?("de "+tl(hs[0].k)+" até "+tl(hs[hs.length-1].k)+" · pico "+fmt.format(mx)+(daily?" visitas/dia":" visitas/h")):"";
-  $("cfNote").textContent="";
+  $("cfNote").textContent=r.sampled?"Obs.: algumas horas da noite do lançamento (26/10) foram guardadas pelo Cloudflare por amostragem, então esses poucos números são estimativas.":"";
 }
 function refresh(){
   if(busy)return;busy=true;$("btn").disabled=true;$("btn").textContent="Atualizando…";
