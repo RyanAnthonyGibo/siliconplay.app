@@ -25,7 +25,7 @@ LANGS = [
 GENERIC = {"en", "es", "pt", "zh"}
 PROTECTED = {
     "download/index.html": "0213a24079008de006b47dcd83ee1cb7639d188dd3a11e5e1734772525e99c90",
-    "painel-f25ce03a71c3/index.html": "685b49924876be11f3e5d4bf9d703043286bb88b568ff5e37a579f60cab72285",
+    "painel-f25ce03a71c3/index.html": "ee9fc4c9816571eba9df46268c85c320173884b6020b2e09547765d5b5d2fcf6",
 }
 EN_HREFLANG = {"en-US", "en", "x-default"}
 ADSENSE_SCRIPT = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>'
@@ -355,6 +355,19 @@ def check_content() -> None:
             fail(f"retired contact email still in {path.relative_to(ROOT)}")
     if "28.148.946 RYAN ANTHONY GIBO - ME" not in contact or "Brazil" not in contact:
         fail("contact page is missing the company or Brazil")
+    robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
+    if "Disallow: /painel-f25ce03a71c3/" not in robots:
+        fail("robots.txt should disallow the stats dashboard")
+    if "Sitemap: https://siliconplay.app/sitemap.xml" not in robots:
+        fail("robots.txt is missing the sitemap line")
+    for path in html_files():
+        text = path.read_text(encoding="utf-8")
+        rel = path.relative_to(ROOT).as_posix()
+        head, _, body = text.partition("</head>")
+        if re.search(r'<a href="[^"]*feed\.xml"', body):
+            fail(f"{rel} links to feed.xml as a page")
+        if "/blog/" in f"/{rel}" and 'type="application/rss+xml"' not in head:
+            fail(f"{rel} is missing the RSS autodiscovery link")
     key = "c7e4a91b2d08f6e35a0c4b7d9e1f83a6"
     key_file = ROOT / f"{key}.txt"
     if not key_file.is_file() or key_file.read_text(encoding="utf-8").strip() != key:

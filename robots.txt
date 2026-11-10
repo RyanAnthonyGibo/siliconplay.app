@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /painel-f25ce03a71c3/
 
 Sitemap: https://siliconplay.app/sitemap.xml
