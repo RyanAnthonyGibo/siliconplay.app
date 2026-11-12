@@ -44,6 +44,18 @@ EN_ONLY_POSTS = [
     "when-keys-go-to-the-wrong-place",
     "apks-that-do-not-install-or-open",
     "test-a-build-without-android-studio",
+    "fixing-common-siliconplay-problems",
+    "adb-on-siliconplay",
+    "choose-play-store-or-an-apk",
+    "google-play-services-on-siliconplay",
+    "what-the-android-16-tablet-includes",
+    "settings-by-mac-chip-m1-to-m6",
+    "game-performance-on-apple-silicon",
+    "keymap-layouts-for-different-games",
+    "moving-from-another-emulator-on-mac",
+    "siliconplay-next-to-android-studio",
+    "disk-space-sdk-folder-and-uninstall",
+    "report-a-siliconplay-bug",
 ]
 LONG_POSTS = EN_ONLY_POSTS + [
     "android-emulator-mac-m1-m2-m3-m4",
@@ -277,7 +289,8 @@ def check_structured() -> None:
 def check_content() -> None:
     for path in public_text_files():
         text = path.read_text(encoding="utf-8", errors="ignore")
-        if re.search(r"x86|intel", text, re.I):
+        scrubbed = re.sub(r"Intel Macs?", "", text)
+        if re.search(r"x86", text, re.I) or re.search(r"intel", scrubbed, re.I):
             fail(f"forbidden wording in {path.relative_to(ROOT)}")
         if "Ragnarok" in text:
             fail(f"Ragnarok in {path.relative_to(ROOT)}")

@@ -59,7 +59,7 @@
 <main class="doc">
   <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a></p></div>
   <h1>About SiliconPlay</h1>
-  <p class="doc-meta">Who makes the app, and what the app actually is</p>
+  <p class="doc-meta">Who makes the app, and what the app actually is. Updated 12 November 2026.</p>
 
   <p>SiliconPlay is a free Android emulator for Mac computers with Apple silicon. I made it so a game or an APK can run on the Mac’s own ARM cores, with graphics drawn by Metal, without a kernel extension and without a background service left behind when you quit. The current version is 1.0.0. This page is the plain account of who operates it and what I have and have not tested. The <a href="/blog/">blog</a> is where the step-by-step guides live.</p>
 
@@ -68,8 +68,11 @@
   <p>The source of the Mac app is not published. Licenses for the third-party components that ship with a build are included in the app and summarized on the <a href="/licenses.html">licenses page</a>. Those notices name Google’s Android Emulator, parts of the Android SDK, and QEMU as part of the emulator. I wrote the Mac app around that emulator: the window, the keymap, and the choices described on this site. I did not write Android.</p>
   <p>If you need a person rather than a page, use the <a href="/contact/">contact page</a>. The address is printed there as text: siliconplay.app@gmail.com.</p>
 
+  <h2>Why I built it</h2>
+  <p>I wanted Android games on my Mac, and a quick way to try an APK, with controls that made sense at a keyboard. The emulators I tried did not meet that. The ones that came closer kept the part I actually wanted behind a paid plan. SiliconPlay is the app I wrote instead. It is free. It is built on the official Android ARM64 emulator. I rewrote the graphics translation libraries for compatibility and frame rate, and I added on-screen game controls, optional root, and shortcuts for development and for playing. I did not write Android. The <a href="/terms/">terms</a> are the rules for using it. The <a href="/blog/">blog</a> is the long version of how it behaves.</p>
+
   <h2>What the app runs</h2>
-  <p>Supported Macs are M1–M6, including Pro, Max, and Ultra. I have tested SiliconPlay on macOS Tahoe and macOS 27 Golden Gate. I have not certified other macOS versions. If you try one, I want the report, with the version and the chip, more than I want to guess.</p>
+  <p>Supported Macs are M1–M6, including Pro, Max, and Ultra. It is not compatible with Intel Macs. I have tested SiliconPlay on macOS Tahoe and macOS 27 Golden Gate. I have not certified other macOS versions. If you try one, I want the report, with the version and the chip, more than I want to guess.</p>
   <p>Android 16 runs natively on the Mac’s ARM cores through Apple’s Hypervisor framework. The DMG does not contain the emulator or the system image. The first launch asks you to accept the Android SDK license and downloads Google’s command-line tools, the Apple silicon emulator, platform-tools, and the Play arm64 system image into a folder you choose. You can point the app at an SDK you already have if that folder contains emulator, adb, and sdkmanager. The tablet it creates is landscape, 1920×1080 at 320 dpi, auto-rotate off, and named Android 16 Tablet.</p>
   <p>Google Play on that tablet is the store from the Play image, not a store I bundled. SiliconPlay never sees the password you type there. Vulkan is drawn by Metal. Shaders are compiled in safe math mode so foliage renders correctly. On a MacBook Pro with M3 Max I measured up to 60 fps in a demanding 3D game, at render resolutions up to 2560×1440, with 7–43 ms from key to game. Results vary by game, Mac, and settings. I have not published per-chip benchmarks, and I will not invent them.</p>
 
