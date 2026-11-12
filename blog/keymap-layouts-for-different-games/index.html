@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>On-screen controls for different Android games on a Mac | SiliconPlay</title>
+<meta name="description" content="How to turn the WASD preset into a layout for different games, and when direct touch is the right call.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/keymap-layouts-for-different-games/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/keymap-layouts-for-different-games/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/keymap-layouts-for-different-games/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/keymap-layouts-for-different-games/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="On-screen controls for different Android games on a Mac">
+<meta property="og:description" content="How to turn the WASD preset into a layout for different games, and when direct touch is the right call.">
+<meta property="og:url" content="https://siliconplay.app/blog/keymap-layouts-for-different-games/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="On-screen controls for different Android games on a Mac">
+<meta name="twitter:description" content="How to turn the WASD preset into a layout for different games, and when direct touch is the right call.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "On-screen controls for different Android games on a Mac",
+  "description": "How to turn the WASD preset into a layout for different games, and when direct touch is the right call.",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo",
+    "url": "https://siliconplay.app/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/keymap-layouts-for-different-games/",
+  "url": "https://siliconplay.app/blog/keymap-layouts-for-different-games/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://siliconplay.app/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "On-screen controls for different Android games on a Mac",
+      "item": "https://siliconplay.app/blog/keymap-layouts-for-different-games/"
+    }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a></p></div>
+  <article>
+    <h1>On-screen controls for different Android games on a Mac</h1>
+    <p class="byline">By <a href="/about/">Ryan Gibo</a> · Updated <time datetime="2026-11-12">12 November 2026</time></p>
+<p>Most Android games expect a finger. SiliconPlay’s default is that finger: direct touch, nothing mapped, until you accept a layout. The mapper is the same tool on every game. What changes is where you put the buttons, and whether a given screen wants keys at all. This page is how I lay that out for the kinds of games people actually open, without pretending I ship a preset for every title on Play.</p>
+<p>The app is <a href="/">SiliconPlay</a>. I wrote the Mac side, including the on-screen controls, around the official Android ARM64 emulator. It runs on Apple silicon from M1 through M6. It is not compatible with Intel Macs. I have tested it on macOS Tahoe and macOS 27 Golden Gate.</p>
+
+<h2>Before you edit anything</h2>
+<p>Start the instance. Click the Android image so keys have a target. If you are in a text field, the toolbar switches to Typing and your keyboard becomes text. That is correct for a login box and wrong for a fight. F12 or Command-K flips Typing and Game keys. F10 forces direct touch when a menu is fighting your keymap.</p>
+<p>A suggested preset, when the app offers one for a known game, stays off until you accept it. The generic preset, MMORPG (WASD), is not tied to one game. Apply it, then move, resize, and rebind. Full editing mechanics are in <a href="/blog/android-emulator-mac-keyboard-mapping/">keyboard mapping on Mac</a>. This page is the part about what to aim the buttons at.</p>
+<p>A controller does not get a private map. It presses the same on-screen buttons. If a button is in the wrong corner for your thumb, move the button. Do not go looking for a second gamepad profile I have not documented.</p>
+
+<h2>The default bindings, so the later sections have names</h2>
+<div class="table-wrap">
+<table>
+<caption>MMORPG (WASD) defaults in version 1.0.0</caption>
+<thead><tr><th>Control</th><th>Default</th></tr></thead>
+<tbody>
+<tr><td>Move</td><td>W A S D, or the arrow keys, on the same stick</td></tr>
+<tr><td>Attack</td><td>J, held</td></tr>
+<tr><td>Skills 1 through 6</td><td>The number keys 1 2 3 4 5 6. Gamepad face and shoulder buttons also land on 1, 2, 4, and 6 in this preset (gamepad X, gamepad Y, right shoulder, right trigger).</td></tr>
+</tbody>
+</table>
+</div>
+<p>Those are the defaults in the file, not a recommendation that every game is an MMORPG. If your game has two buttons, you will hide or ignore the rest. Command-Shift-G shows or hides the overlay. Empty space on the picture still clicks the game, which matters when a button is covering a dialog.</p>
+
+<h2>Shortcut list, Cmd+I first</h2>
+<p>You will install the game before you map it. The install chord is not a mapping chord. It is first anyway.</p>
+<div class="table-wrap">
+<table>
+<caption>Chords while you are placing buttons</caption>
+<thead><tr><th>Keys</th><th>Use</th></tr></thead>
+<tbody>
+<tr><td>Cmd+I</td><td>Import an APK and install it. The menu shows Command-I.</td></tr>
+<tr><td>F12, or Command-K</td><td>Typing versus game keys.</td></tr>
+<tr><td>Command-Shift-G</td><td>Show or hide the overlay.</td></tr>
+<tr><td>F10</td><td>Direct touch, for a menu or a map that should not be walking.</td></tr>
+<tr><td>Escape, while rebinding</td><td>Cancel the “press a key or mouse button” capture.</td></tr>
+<tr><td>Shift-Escape</td><td>Release every virtual finger if a drag left one down.</td></tr>
+<tr><td>Escape</td><td>Leave fullscreen, or Android Back outside fullscreen when the display is focused.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>A game that moves with WASD and taps skills</h2>
+<p>This is the case the default file already matches. Apply MMORPG (WASD). Put the stick where the game’s movement area is, which on a lot of mobile titles is the left half of the screen, not a tiny D-pad in the corner. Size it so a full press does not also hit a UI button beside it. Put J on the primary action. Put 1–6 on the skill tray, or delete the ones the game does not have by not using them. I would rather you have two well placed buttons than six covering the fight.</p>
+<p>Hold versus tap matters. Attack in this preset is held. If the game treats a held finger as a continuous attack, that is what you want. If the game opens a charged menu when the finger stays down, you will hate J until you rebind that button to a tap. The mapper can rebind. I am describing the default, not locking you to it.</p>
+
+<h2>A game that is click-to-move</h2>
+<p>WASD is the wrong first idea. The game wants a finger on the ground. Direct touch, or F10 if a keymap is already loaded, is the honest control. You can still map one or two keys onto the skill buttons at the edge of the screen, and leave movement as a click. Do not stretch the WASD stick across the whole world and then be surprised that walking and camera-dragging are the same gesture. They are the same gesture in that genre. A keymap will not invent a right-mouse camera the game does not have.</p>
+
+<h2>A twin-stick game</h2>
+<p>You want two regions: move, and aim or fire. The default file has one stick. Use it for move. Put a held button, the attack chip, under your other hand, in the region where the game reads the aiming finger. If the game uses a second virtual stick rather than a button, a single held button will feel wrong, and you should say so by editing: place the control where the second stick’s touch area is, and test in the tutorial, not in a live match. I am not going to claim the default preset is a twin-stick layout. It is not.</p>
+<p>A controller helps here because the physical sticks already exist. They still drive the on-screen controls, so the on-screen stick has to sit on the game’s move area or the left gamepad stick will drag the wrong pixels.</p>
+
+<h2>A menu, an inventory, or a shop</h2>
+<p>Switch to direct touch or Typing. Game keys in a menu produce accidental walks and skill casts. F10 is the short way back to a finger. When a search box is focused, Typing is what you want, and the app switches to it for a focused text field. If it did not, use F12 or Command-K. Then click the image again when you go back to the fight, and switch to game keys on purpose.</p>
+
+<h2>A rhythm game or anything that cares about a exact tap</h2>
+<p>Mapping a key to a lane can work. It can also feel late if the button’s hit region is fat and you are hitting the edge. Shrink the button to the lane. Do not stack six skill buttons on top of the judgment line. I have not published a rhythm-game latency number. The 7–43 ms key-to-game range is from a demanding 3D game on an M3 Max, not from a note highway. If a rhythm game feels off, say which one and whether direct touch felt different from the key. That comparison is more useful to me than a request for a global offset I have not shipped.</p>
+
+<h2>Per game, saved how you leave it</h2>
+<p>Layouts are per game in the sense that you edit the buttons for the game in front of you and you can keep a keymap for it. I am not going to describe an export format I have not documented as a stable file you should hand-edit. If you download a keymap someone posted, treat it as untrusted until you look at where the buttons sit. A layout for a different resolution, or for a different skin of the same game, will put J on a chat button. The warning is the same one in <a href="/blog/wasd-gamepad-and-on-screen-buttons/">WASD, the gamepad, and the on-screen buttons</a>.</p>
+<p>Pro Mode shows keymaps among other diagnostics. You do not need Pro Mode to play or to move a button. It is off until you turn it on, from the toolbar, the View menu, or Settings.</p>
+
+<h2>FAQ</h2>
+<h3>Do I have to map keys?</h3>
+<p>No. Direct touch is the default and it is a complete way to play. Mapping is for when you want a keyboard or a pad.</p>
+<h3>Why did my keymap not load for this game?</h3>
+<p>Because nothing loads until you accept it. A known-game suggestion is still a suggestion.</p>
+<h3>Can one layout serve every game?</h3>
+<p>The WASD preset can start a lot of them. It will be wrong for click-to-move and for menus. Switch modes instead of forcing one stick onto every screen.</p>
+<h3>The button works in the tutorial and not in combat.</h3>
+<p>The game moved the touch target. Reposition the button on the combat HUD, not on the tutorial HUD. Shift-Escape if a finger from the tutorial is still down.</p>
+
+<p class="more">More input notes: <a href="/blog/typing-game-keys-and-direct-touch/">typing, game keys, and direct touch</a>, <a href="/blog/android-emulator-mac-shortcuts/">the shortcut list</a>, <a href="/blog/when-keys-go-to-the-wrong-place/">when a key misses</a>.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · <a href="/contact/">Contact</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

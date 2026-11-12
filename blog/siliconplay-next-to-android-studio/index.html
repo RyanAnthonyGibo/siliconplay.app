@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Use SiliconPlay next to Android Studio without keeping the IDE open | SiliconPlay</title>
+<meta name="description" content="When Studio is the right tool, when SiliconPlay is, and how one SDK folder can serve both.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/siliconplay-next-to-android-studio/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/siliconplay-next-to-android-studio/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/siliconplay-next-to-android-studio/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/siliconplay-next-to-android-studio/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Use SiliconPlay next to Android Studio without keeping the IDE open">
+<meta property="og:description" content="When Studio is the right tool, when SiliconPlay is, and how one SDK folder can serve both.">
+<meta property="og:url" content="https://siliconplay.app/blog/siliconplay-next-to-android-studio/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Use SiliconPlay next to Android Studio without keeping the IDE open">
+<meta name="twitter:description" content="When Studio is the right tool, when SiliconPlay is, and how one SDK folder can serve both.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "Use SiliconPlay next to Android Studio without keeping the IDE open",
+  "description": "When Studio is the right tool, when SiliconPlay is, and how one SDK folder can serve both.",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo",
+    "url": "https://siliconplay.app/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/siliconplay-next-to-android-studio/",
+  "url": "https://siliconplay.app/blog/siliconplay-next-to-android-studio/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://siliconplay.app/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Use SiliconPlay next to Android Studio without keeping the IDE open",
+      "item": "https://siliconplay.app/blog/siliconplay-next-to-android-studio/"
+    }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a></p></div>
+  <article>
+    <h1>Use SiliconPlay next to Android Studio without keeping the IDE open</h1>
+    <p class="byline">By <a href="/about/">Ryan Gibo</a> · Updated <time datetime="2026-11-12">12 November 2026</time></p>
+<p>Android Studio and SiliconPlay can sit on the same Mac. They are not substitutes. Studio is the IDE, the device manager, and the official emulator with the full UI around it. SiliconPlay is the Mac app I built so I can boot an Android 16 tablet, install a build, and play or poke at it without keeping that IDE open. Under both, when you point them at the same tools, you are looking at the official Android emulator family. This page is how I keep them from stepping on each other.</p>
+<p>SiliconPlay runs on Apple silicon, M1 through M6, including Pro, Max, and Ultra. It is not compatible with Intel Macs. I have tested it on macOS Tahoe and macOS 27 Golden Gate. Studio’s own system requirements are Google’s. I am not going to restate them from memory.</p>
+
+<h2>When I open which</h2>
+<ul>
+<li>I open Studio when I am editing the project, reading a stack in the IDE, or I need a device profile Studio already defines.</li>
+<li>I open SiliconPlay when I want the guest up for a game, for a quick APK check, or for on-screen controls. The keymap, the WASD preset, and Cmd+I are the point of this app. Studio does not grow those because SiliconPlay is installed.</li>
+<li>I do not keep both emulators running while I am judging a single install. Two guests means <code>adb devices</code> has two lines, and the next install is a coin flip unless I select one.</li>
+</ul>
+
+<h2>One SDK folder, on purpose</h2>
+<p>SiliconPlay’s first run can download command-line tools, the Apple silicon emulator, platform-tools, and the Play arm64 image into a folder you choose. If Studio already put <code>emulator</code>, <code>adb</code>, and <code>sdkmanager</code> on the Mac, point SiliconPlay at that folder and skip the second copy. A folder of project source is not an SDK. A folder that only has an APK output is not one either.</p>
+<p>Pointing at Studio’s SDK does not turn Studio’s phone AVD into SiliconPlay’s tablet. SiliconPlay creates its own instance: landscape, 1920×1080, 320 dpi, auto-rotate off, Android 16 Play image, named Android 16 Tablet. Your other AVDs stay in Studio. I am not importing them and I am not going to document a checkbox that would.</p>
+<p>The inverse is also true. Installing SiliconPlay does not register a device inside Studio’s device manager. If you want the debugger UI, run the emulator Studio launched. If you want this tablet, launch it from SiliconPlay and use adb from the SDK you pointed at.</p>
+
+<h2>The install loop without the IDE</h2>
+<ol>
+<li>Build in Studio, or with whatever Gradle invocation you already trust. I am not replacing your build system.</li>
+<li>Quit Studio’s emulator if it is running, or decide you are installing to that one and not to SiliconPlay. Check <code>adb devices</code> with the adb inside the SDK folder.</li>
+<li>Start the SiliconPlay instance and wait for the home screen.</li>
+<li>Install the single APK. Cmd+I is first. Dropping the <code>.apk</code> on the window is the same install. <code>adb install -r</code> is the loop when the file is already on disk and you do not want a dialog.</li>
+<li>If the package is a bundle, an XAPK, or a split set, this version will not install it. Produce a single APK, or install from Play on the Play image.</li>
+<li>Click the Android image before you expect keys to hit the app. The IDE and the terminal steal focus, and that is not a guest bug.</li>
+</ol>
+<p>The JDK story is the Mac’s, not a rivalry between the two apps. If SiliconPlay’s setup stops because <code>/usr/bin/java</code> is a stub, the message points at <code>brew install openjdk@17</code>. Studio may already have satisfied its own JDK requirement and left the stub in place for everything else. Follow the message you are looking at.</p>
+
+<h2>Root and Play, which Studio users already know as two images</h2>
+<p>You already know a Play system image refuses the usual root switch. SiliconPlay does not special-case that. The Play tablet will not take adb root. A rooted tablet is a second instance on the Google APIs image, and it does not include Play Store. If your app needs Play services, test it on the Play tablet. If your test needs root, test that part on the APIs tablet. Do not spend an afternoon installing Play APKs onto the rooted image. I will not support that as a configuration. The write-up is <a href="/blog/root-versus-play-store-image/">root versus the Play image</a>.</p>
+
+<h2>Logs and the debugger</h2>
+<p>SiliconPlay’s Pro Mode shows hardware, keymaps, and diagnostics. It does not replace Studio’s debugger. <code>adb logcat</code> from that SDK’s platform-tools is the log, once <code>adb devices</code> shows the tablet you are watching. I am not documenting a JDWP button inside SiliconPlay. If you need breakpoints, use Studio against an emulator it launched, or attach your own tooling to the device adb already lists. I will not invent the attach dialog.</p>
+
+<h2>Games you are testing, not just apps</h2>
+<p>This is the gap Studio leaves open on purpose. A game that wants a finger can stay on direct touch. A game that you want on WASD gets the MMORPG preset only after you accept it, and then you move the buttons. That work is <a href="/blog/keymap-layouts-for-different-games/">layouts for different games</a>. None of it syncs back into Studio, and Studio’s extended controls do not become SiliconPlay keymaps.</p>
+<p>Screenshot and screen recording exist as named actions in version 1.0.0. The chords are drawn in the app’s Shortcuts list and are not a separate string I can quote, so I will not. Use the menu. For a bug you are sending me, the report page is <a href="/blog/report-a-siliconplay-bug/">what to include</a>.</p>
+
+<h2>Disk, because two tools love to download the same image</h2>
+<p>If you let SiliconPlay download a full SDK beside Studio’s SDK, you now have two. That is allowed. It is also how a laptop fills up. Prefer one folder when the tools match. If they do not match, because you need a Studio package SiliconPlay is not using, keep both and remember which adb is on your PATH. Call adb by path from the folder the running emulator belongs to. The cleanup rules are in <a href="/blog/disk-space-sdk-folder-and-uninstall/">disk space and uninstall</a>. Deleting SiliconPlay.app does not delete Studio’s SDK. Deleting a shared SDK deletes it for both.</p>
+
+<h2>Shortcuts in this loop</h2>
+<div class="table-wrap">
+<table>
+<caption>The chords I use between Terminal, Studio, and the tablet</caption>
+<thead><tr><th>Keys</th><th>Use</th></tr></thead>
+<tbody>
+<tr><td>Cmd+I</td><td>Install the APK you just built, once the SiliconPlay instance is running.</td></tr>
+<tr><td>F12, or Command-K</td><td>Get out of Typing if a text field stole the keyboard during a login in the app under test.</td></tr>
+<tr><td>F10</td><td>Direct touch, when you need a finger on a permission dialog.</td></tr>
+<tr><td>Command-Shift-G</td><td>Hide the overlay if it is covering a dialog you need to read.</td></tr>
+<tr><td>Shift-Escape</td><td>Release a stuck virtual finger after a bad click.</td></tr>
+<tr><td>Escape</td><td>Leave fullscreen so you can see Studio beside the guest.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>FAQ</h2>
+<h3>Do I have to uninstall Studio?</h3>
+<p>No. They coexist. Do not run both emulators unless you are ready to pick a device in adb.</p>
+<h3>Will my Studio AVDs show up in SiliconPlay?</h3>
+<p>No. SiliconPlay creates the Android 16 tablet described above. Your other virtual devices stay in Studio.</p>
+<h3>Can I debug a game’s native crash from here?</h3>
+<p>You can get logcat. The IDE’s debugger is still Studio’s. I am not wrapping it.</p>
+<h3>The app installs in Studio’s emulator and not here.</h3>
+<p>Check the ABI and the package shape. This guest is ARM64. Split APKs and XAPK files stop at the door. A single APK with an ARM64 library is the file Cmd+I can install.</p>
+
+<p class="more">The shorter sibling is <a href="/blog/test-a-build-without-android-studio/">test a build without keeping Studio open</a>. adb details are in <a href="/blog/adb-on-siliconplay/">adb on SiliconPlay</a>.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · <a href="/contact/">Contact</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

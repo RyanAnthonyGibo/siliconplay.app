@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Move from BlueStacks, MuMu, or Android Studio to SiliconPlay | SiliconPlay</title>
+<meta name="description" content="What does not copy across, how to reinstall games, and how to point SiliconPlay at an SDK you already have.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/moving-from-another-emulator-on-mac/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/moving-from-another-emulator-on-mac/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/moving-from-another-emulator-on-mac/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/moving-from-another-emulator-on-mac/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Move from BlueStacks, MuMu, or Android Studio to SiliconPlay">
+<meta property="og:description" content="What does not copy across, how to reinstall games, and how to point SiliconPlay at an SDK you already have.">
+<meta property="og:url" content="https://siliconplay.app/blog/moving-from-another-emulator-on-mac/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Move from BlueStacks, MuMu, or Android Studio to SiliconPlay">
+<meta name="twitter:description" content="What does not copy across, how to reinstall games, and how to point SiliconPlay at an SDK you already have.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "Move from BlueStacks, MuMu, or Android Studio to SiliconPlay",
+  "description": "What does not copy across, how to reinstall games, and how to point SiliconPlay at an SDK you already have.",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo",
+    "url": "https://siliconplay.app/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/moving-from-another-emulator-on-mac/",
+  "url": "https://siliconplay.app/blog/moving-from-another-emulator-on-mac/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://siliconplay.app/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Move from BlueStacks, MuMu, or Android Studio to SiliconPlay",
+      "item": "https://siliconplay.app/blog/moving-from-another-emulator-on-mac/"
+    }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a></p></div>
+  <article>
+    <h1>Move from BlueStacks, MuMu, or Android Studio to SiliconPlay</h1>
+    <p class="byline">By <a href="/about/">Ryan Gibo</a> · Updated <time datetime="2026-11-12">12 November 2026</time></p>
+<p>Moving to SiliconPlay is mostly a reinstall, not a migration. The other app’s virtual disk is not a file I can mount, and I am not going to pretend a “import your BlueStacks data” button exists in version 1.0.0. What you can bring is the APK you still have, the Google account you can sign in with, and the muscle memory for where the buttons were. What you cannot bring is the other emulator’s system image, its keymap files, or a promise that a game’s local save is sitting in a folder I know the path of.</p>
+<p>I built <a href="/">SiliconPlay</a> because the emulators I was using did not do what I needed. Some of them were close and then kept the useful part behind a paid plan. The app is free. It runs only on Apple silicon, M1 through M6, including Pro, Max, and Ultra. It is not compatible with Intel Macs. I have tested it on macOS Tahoe and macOS 27 Golden Gate. If you are coming from a Windows emulator article, stop there: this is a Mac app for those chips, not a port of a Windows player.</p>
+
+<h2>What stays behind</h2>
+<ul>
+<li>The other app’s virtual disk. SiliconPlay boots the Android 16 image it downloaded, or the SDK you point it at. It does not open another product’s disk image.</li>
+<li>That product’s keymaps. A preset made for a different mapper does not drop onto SiliconPlay’s buttons. You accept a layout here, or you edit one. The generic preset is MMORPG (WASD).</li>
+<li>A shared folder you set up in the other app. This guest does not mount a host directory as a live disk. Files you copy with adb go to <code>/sdcard/SiliconPlay</code>.</li>
+<li>Local saves that lived only inside the old virtual disk, unless the game also saved to a cloud account. I cannot see which of your games do that. Sign in and check before you delete the old app.</li>
+<li>Split APK sets and XAPK archives you were installing over there. Version 1.0.0 does not install those formats.</li>
+</ul>
+
+<h2>A sane order</h2>
+<ol>
+<li>Leave the old emulator installed until the game you care about is running here. Deleting it first is how you discover the save was local.</li>
+<li>Install SiliconPlay from the DMG, drag it to Applications, and let the first run download Android. The license click is Google’s Android SDK license. The download is command-line tools, the Apple silicon emulator, platform-tools, and the Play arm64 image. Details are in <a href="/blog/first-run-android-16-on-mac/">the first-run guide</a>.</li>
+<li>If Android Studio, or a previous command-line SDK, already has <code>emulator</code>, <code>adb</code>, and <code>sdkmanager</code>, point SiliconPlay at that folder instead of downloading a second copy. A folder that only holds another commercial emulator’s private files is not that SDK. Do not point at it and hope.</li>
+<li>On the Play tablet, open Play Store and sign in. Install the game from Play if it is listed. That build is the one Play thinks matches an ARM64 device, which is what this tablet is.</li>
+<li>If you must sideload, use a single APK. Cmd+I is the shortcut. Drag and drop works on a running instance. The package still needs an ARM64 library.</li>
+<li>Click the Android image. Stay on direct touch until you know the game renders. Then accept a keymap and move the buttons. Do this per game. There is no import of the other app’s control scheme.</li>
+<li>Only then uninstall the old emulator, after you have opened the game and seen the account or the save you expected.</li>
+</ol>
+
+<h2>From a gaming player</h2>
+<p>BlueStacks Air and MuMu Player are gaming-oriented apps that also run on Apple silicon. I am not going to recap their licensing here. Check those vendors for how they license their own apps. What matters for the move is the data, not the brand.</p>
+<p>If you liked their preset for a specific game, you will not find that preset as a file you can drop on SiliconPlay. Apply MMORPG (WASD), then drag the on-screen buttons until they cover the touch controls. Attack is J, held, in that default. Skills are 1 through 6. A controller uses the same buttons rather than a second map. The editing steps live in <a href="/blog/android-emulator-mac-keyboard-mapping/">keyboard mapping</a> and the genre notes are in <a href="/blog/keymap-layouts-for-different-games/">layouts for different games</a>.</p>
+<p>Multiple instances are a place people get stuck. If the old app let you run two games at once, SiliconPlay can run more than one instance, and it can sync input across them. The Play image and a rooted image are still different tablets. Do not “migrate” by copying a second game onto a rooted APIs tablet and then looking for Play.</p>
+
+<h2>From Android Studio</h2>
+<p>Studio’s emulator is the same family of emulator. That is why an existing SDK folder can be reused when it actually contains the tools. SiliconPlay will still create its own tablet: Android 16, Play image, 1920×1080, landscape, auto-rotate off. It does not adopt a phone-shaped AVD you made in Studio and rename it. If you need a particular device profile, sensors, or the IDE’s debugger UI, stay in Studio for that job. SiliconPlay is the window I use when I want the guest up without living in the IDE, with on-screen controls if the thing I am running is a game.</p>
+<p>Do not run both emulators against confusion. If <code>adb devices</code> lists two lines, you have two guests. Installs go to one of them. Quit the one you are not using, or select the device on purpose. More of that workflow is in <a href="/blog/siliconplay-next-to-android-studio/">SiliconPlay next to Android Studio</a>.</p>
+
+<h2>From a general virtual machine</h2>
+<p>UTM and other general VM apps can boot an Android build you installed yourself. That disk is yours. SiliconPlay will not convert it. Export whatever you need as files, then <code>adb push</code> them to <code>/sdcard/SiliconPlay</code> after the SiliconPlay tablet is running. A game installed inside that VM has to be installed again here, from Play or from a single APK. Graphics are a different path. I am not going to claim your old VM’s settings map onto anything in this app.</p>
+
+<h2>Accounts</h2>
+<p>Sign in fresh on the new tablet. The old emulator’s session does not move. The Mac app never sees the Play password. If a game uses its own account on top of Google, you sign in to that too, inside the game, and you follow that game’s terms. Root is optional and off. I turn it on only when I am doing development that needs adb root, on the APIs image, not to “bring a game across.”</p>
+
+<h2>After the old app is gone</h2>
+<p>Deleting the other emulator does not delete SiliconPlay’s SDK folder, and deleting SiliconPlay does not delete the other app’s files. They are different piles. SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>. The SDK folder is the one you chose, and it remains until you delete it, because it is Google’s emulator and system image. If disk space was why you switched, read <a href="/blog/disk-space-sdk-folder-and-uninstall/">disk space and uninstall</a> before you remove both and then wonder why a folder remains.</p>
+
+<h2>FAQ</h2>
+<h3>Can I point SiliconPlay at BlueStacks’ or MuMu’s folder?</h3>
+<p>Only if that folder is a real Android SDK containing emulator, adb, and sdkmanager. A private app-support directory is not that. Pointing at it will not import your games.</p>
+<h3>My save is gone. Can you recover the old disk?</h3>
+<p>No. I do not have your old virtual disk, and SiliconPlay does not read it. If you have not deleted the old app yet, open the game there and see whether the save is cloud-side. If you already deleted it, recovery is whatever backup you had, not a feature in this app.</p>
+<h3>The controls feel different.</h3>
+<p>They will, until you place the buttons. Direct touch is the default on purpose. Nothing loads a keymap for you on first run, including a preset the app might offer for a known game. You accept it.</p>
+<h3>Do I need a paid plan to finish the move?</h3>
+<p>No. SiliconPlay is free. I am not going to describe anyone else’s license on this page. Check the vendor you are leaving if you still have an account with them.</p>
+
+<p class="more">Next: <a href="/blog/android-emulator-mac-m1-m4-setup/">setup</a>, <a href="/blog/choose-play-store-or-an-apk/">Play or an APK</a>, <a href="/compare/">the comparison</a>, <a href="/blog/bluestacks-alternative-mac/">the BlueStacks notes</a>.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · <a href="/contact/">Contact</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

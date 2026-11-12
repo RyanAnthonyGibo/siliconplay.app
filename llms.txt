@@ -11,5 +11,21 @@ SiliconPlay is a free Android emulator for Mac. It runs on Apple Silicon, from M
 - Blog: https://siliconplay.app/blog/
 - Download: https://siliconplay.app/download/
 - Privacy: https://siliconplay.app/privacy.html
+- Terms: https://siliconplay.app/terms/
 - Licenses: https://siliconplay.app/licenses.html
 - GitHub: https://github.com/RyanAnthonyGibo/siliconplay.app
+
+## Guides added 12 November 2026
+
+- Fix the usual SiliconPlay problems, in the order I would check them: https://siliconplay.app/blog/fixing-common-siliconplay-problems/
+- Use adb with SiliconPlay: install, push, and logcat: https://siliconplay.app/blog/adb-on-siliconplay/
+- Install from Google Play or from an APK on SiliconPlay: https://siliconplay.app/blog/choose-play-store-or-an-apk/
+- Google Play and Play services on the SiliconPlay tablet: https://siliconplay.app/blog/google-play-services-on-siliconplay/
+- What the Android 16 tablet in SiliconPlay includes, and what it does not: https://siliconplay.app/blog/what-the-android-16-tablet-includes/
+- SiliconPlay settings by Mac chip, from M1 to M6: https://siliconplay.app/blog/settings-by-mac-chip-m1-to-m6/
+- Game performance in SiliconPlay: what to change, and the one measurement I trust: https://siliconplay.app/blog/game-performance-on-apple-silicon/
+- On-screen controls for different Android games on a Mac: https://siliconplay.app/blog/keymap-layouts-for-different-games/
+- Move from BlueStacks, MuMu, or Android Studio to SiliconPlay: https://siliconplay.app/blog/moving-from-another-emulator-on-mac/
+- Use SiliconPlay next to Android Studio without keeping the IDE open: https://siliconplay.app/blog/siliconplay-next-to-android-studio/
+- Disk space, the SDK folder, and uninstalling SiliconPlay: https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/
+- Screenshots, screen recording, and a bug report I can act on: https://siliconplay.app/blog/report-a-siliconplay-bug/

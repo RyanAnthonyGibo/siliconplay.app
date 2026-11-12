@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Use adb with SiliconPlay: install, push, and logcat | SiliconPlay</title>
+<meta name="description" content="Where adb lives on a SiliconPlay Mac, how to install a single APK, and which paths version 1.0.0 actually uses.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/adb-on-siliconplay/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/adb-on-siliconplay/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/adb-on-siliconplay/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/adb-on-siliconplay/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Use adb with SiliconPlay: install, push, and logcat">
+<meta property="og:description" content="Where adb lives on a SiliconPlay Mac, how to install a single APK, and which paths version 1.0.0 actually uses.">
+<meta property="og:url" content="https://siliconplay.app/blog/adb-on-siliconplay/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Use adb with SiliconPlay: install, push, and logcat">
+<meta name="twitter:description" content="Where adb lives on a SiliconPlay Mac, how to install a single APK, and which paths version 1.0.0 actually uses.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "Use adb with SiliconPlay: install, push, and logcat",
+  "description": "Where adb lives on a SiliconPlay Mac, how to install a single APK, and which paths version 1.0.0 actually uses.",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo",
+    "url": "https://siliconplay.app/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/adb-on-siliconplay/",
+  "url": "https://siliconplay.app/blog/adb-on-siliconplay/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://siliconplay.app/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Use adb with SiliconPlay: install, push, and logcat",
+      "item": "https://siliconplay.app/blog/adb-on-siliconplay/"
+    }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a></p></div>
+  <article>
+    <h1>Use adb with SiliconPlay: install, push, and logcat</h1>
+    <p class="byline">By <a href="/about/">Ryan Gibo</a> · Updated <time datetime="2026-11-12">12 November 2026</time></p>
+<p>adb is the Android debug bridge. On a SiliconPlay Mac it is not a second app you go and find. The first run downloads Google’s platform-tools into the SDK folder, and adb is in that package, next to the Apple silicon emulator and the system image. If you pointed SiliconPlay at an SDK you already had, the adb you should use is the one inside that folder, not a random copy left on the PATH from an old install.</p>
+<p>I built <a href="/">SiliconPlay</a> on the official Android ARM64 emulator. The Mac app around it, the window, the on-screen controls, and the shortcuts, is mine. adb is still Google’s tool. This page is how I actually use it with version 1.0.0, and where I stop rather than invent a flag the app does not document.</p>
+
+<h2>What has to be true before adb can see the tablet</h2>
+<p>The instance has to be running. A stopped tablet has nothing for adb to talk to. Start it from the main window, wait until the Android home screen is up, and only then reach for the terminal. Command-I has the same requirement. If the instance is stopped, import has nowhere to install.</p>
+<p>You also have to be looking at the instance you think you are looking at. SiliconPlay can create more than one. The Play image and a rooted Google APIs image are two tablets, not a checkbox on one tablet. adb follows the instance that is running. If both are up, do not assume the next install landed on the window in front of you. The <a href="/blog/root-versus-play-store-image/">root versus Play image</a> page is the split. This page assumes you have already picked one.</p>
+<p>SiliconPlay is for Apple silicon only, M1 through M6, including Pro, Max, and Ultra. It is not compatible with Intel Macs. I have tested it on macOS Tahoe and macOS 27 Golden Gate. If you are on another macOS version, try it and tell me what adb did. I would rather have the report than a guess.</p>
+
+<h2>Where the binary is</h2>
+<p>The SDK folder is the one you chose on first run, or the one you pointed at because it already contained <code>emulator</code>, <code>adb</code>, and <code>sdkmanager</code>. platform-tools sits inside that folder. A folder of APKs is not an SDK. A folder that only has platform sources is not one either.</p>
+<p>I am not going to tell you to copy adb into <code>/usr/local/bin</code>. Call it by path from the SDK you actually handed to SiliconPlay, or <code>cd</code> there and run it. If <code>adb version</code> prints a build you do not recognize, you are on a different install than the tablet. That mistake looks like “adb works, the app does not.” It is the other way around.</p>
+<p>The Mac app does not mount a host folder as a live disk. Finder will not show the tablet’s storage as a volume, and a directory you share in some other emulator will not appear inside Android on its own. Files you copy with adb go to <code>/sdcard/SiliconPlay</code>. That path is the one this version uses. I am not documenting a second drop folder.</p>
+
+<h2>Install a single APK</h2>
+<p>For a normal single-file APK, the path I want you to learn first is still inside the app. The shortcut list starts with Cmd+I.</p>
+<div class="table-wrap">
+<table>
+<caption>Shortcuts that sit next to an adb session</caption>
+<thead><tr><th>Keys</th><th>What it does in version 1.0.0</th></tr></thead>
+<tbody>
+<tr><td>Cmd+I</td><td>Import an APK and install it into the running Android instance. The app menu draws this as Command-I.</td></tr>
+<tr><td>F12, or Command-K</td><td>Switch Typing and Game keys, after you are done in the terminal and you click the Android image.</td></tr>
+<tr><td>Command-Shift-G</td><td>Show or hide the on-screen game buttons.</td></tr>
+<tr><td>Escape</td><td>Leave fullscreen. Outside fullscreen, with the display focused, it is Android Back.</td></tr>
+<tr><td>Shift-Escape</td><td>Release every virtual finger, if a button stayed down while you were alt-tabbed into Terminal.</td></tr>
+</tbody>
+</table>
+</div>
+<p>Dropping an <code>.apk</code> on the window does the same install as Cmd+I. Use adb when you are already in a build loop and you do not want the file dialog. <code>adb install</code> on a single APK is the command. Replace an existing package with <code>adb install -r</code> when you are iterating on your own build. I am not adding extra flags for downgrades or test-only installs. If you need those, you already know them, and they are adb’s flags, not a SiliconPlay feature.</p>
+<p>This version does not install split APKs or XAPK archives, whether you drag them or hand them to adb as one file. A bundle is not one APK. If the package has no ARM64 build, it will not run on this tablet on any chip from M1 to M6. The failure is the package, not adb being “broken on Apple silicon.” More cases are in <a href="/blog/apks-that-do-not-install-or-open/">APKs that do not install or open</a>.</p>
+
+<h2>Push a file, then stop</h2>
+<p>When the thing you need on the tablet is not an installable package, push it:</p>
+<p><code>adb push your-file /sdcard/SiliconPlay/</code></p>
+<p>That is the destination I will stand behind, because it is the one the app uses for files copied this way. Do not invent a shared-folder mount and then file a bug because Finder is empty. The image does not work that way in version 1.0.0.</p>
+<p>Pull is the reverse, and it is ordinary adb. I use it when a game or a test run wrote a log or a screenshot into that folder and I want it on the Mac. I am not going to pretend SiliconPlay has a file browser for this. The terminal is the file browser.</p>
+
+<h2>logcat, without a fake UI</h2>
+<p>Pro Mode, off by default, adds hardware, keymaps, and diagnostics to the main window. It is not a logcat viewer, and I am not going to describe menus it does not have. The log is still adb:</p>
+<p><code>adb logcat</code></p>
+<p>Run that only after the instance is up and this adb is the one from the SDK folder SiliconPlay is using. If the output is silent, the usual reason is that you are attached to nothing, or to a different emulator you left running from Android Studio. Quit the other one, or be explicit with adb’s device selection once <code>adb devices</code> shows you more than one line. I am not publishing a serial number or a port for SiliconPlay. Read what <code>adb devices</code> prints on your Mac. That list is the truth for that moment.</p>
+<p>Filter the log to your package when the firehose is useless. A crash that happens before your process starts will not show your tag. Look at the lines around the launch, not at the last line after you have already clicked around for a minute.</p>
+
+<h2>A loop I actually use</h2>
+<ol>
+<li>Start the SiliconPlay instance and leave that window up.</li>
+<li>From the SDK’s platform-tools, run <code>adb devices</code> and confirm one device that is the tablet you are watching.</li>
+<li>Install with Cmd+I, or with <code>adb install -r</code> on a single APK.</li>
+<li>If it does not open, check the package for an ARM64 library before you touch graphics settings.</li>
+<li>If it opens and then dies, <code>adb logcat</code> while you reproduce it once.</li>
+<li>Click the Android image before you expect the keyboard to hit the game. The terminal still owns the keys until you do.</li>
+</ol>
+<p>The JDK stub on macOS is a first-run problem, not an adb problem. If setup stopped because <code>/usr/bin/java</code> is only a stub, the app’s message points at <code>brew install openjdk@17</code>. Install that and run the package step again. adb will not download the system image for you.</p>
+
+<h2>What I will not tell you to do</h2>
+<ul>
+<li>I will not give you a root command on the Play image. That image refuses adb root. Root is a second tablet on the Google APIs image, and that image has no Play Store.</li>
+<li>I will not tell you to patch a game. SiliconPlay does not modify games. Follow the game’s own terms if the account matters to you.</li>
+<li>I will not invent a wireless-debugging toggle. Version 1.0.0 does not document one, so this page does not have one.</li>
+<li>I will not quote frame rates for adb. Input latency and fps were measured in a game on one Mac, and they have nothing to do with whether <code>adb devices</code> lists a tablet.</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>Does Cmd+I use adb?</h3>
+<p>The app installs the APK you import. You do not have to open Terminal for that path. adb is there when you want the same install from a script or a build folder.</p>
+<h3>Can I use Android Studio’s adb?</h3>
+<p>Only if SiliconPlay is using that same SDK folder, the one that contains emulator, adb, and sdkmanager. Two SDKs means two adb binaries, and they will confuse you the first time both emulators are running.</p>
+<h3>Why does adb say unauthorized or show an empty list?</h3>
+<p>Empty means the instance is not running, or this adb is not the one for that emulator. I have not shipped a separate “authorize this computer” step for version 1.0.0, so I am not going to invent the dialog. Start the tablet, check <code>adb devices</code> with the SDK’s own adb, and only then debug the package.</p>
+<h3>Where do pushed files show up in the guest?</h3>
+<p><code>/sdcard/SiliconPlay</code>. If a file manager in the guest does not show it, look at that path anyway. The Mac will not mount it.</p>
+
+<p class="more">Related: <a href="/blog/install-apk-with-command-i/">installing an APK with Cmd+I</a>, <a href="/blog/test-a-build-without-android-studio/">testing a build without keeping Android Studio open</a>, <a href="/blog/siliconplay-next-to-android-studio/">using SiliconPlay next to Android Studio</a>, and <a href="/blog/pro-mode-sdk-folder-and-app-files/">the SDK folder</a>.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · <a href="/contact/">Contact</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

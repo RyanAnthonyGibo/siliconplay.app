@@ -5,8 +5,104 @@
     <link>https://siliconplay.app/blog/</link>
     <description>Articles about SiliconPlay, a free Android emulator for Apple Silicon Macs.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 18:00:00 GMT</lastBuildDate>
     <atom:link href="https://siliconplay.app/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Fix the usual SiliconPlay problems, in the order I would check them</title>
+      <link>https://siliconplay.app/blog/fixing-common-siliconplay-problems/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/fixing-common-siliconplay-problems/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>A single checklist for a failed first run, an APK that will not install, a bad picture, and keys that miss.</description>
+    </item>
+    <item>
+      <title>Use adb with SiliconPlay: install, push, and logcat</title>
+      <link>https://siliconplay.app/blog/adb-on-siliconplay/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/adb-on-siliconplay/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Where adb lives on a SiliconPlay Mac, how to install a single APK, and which paths version 1.0.0 actually uses.</description>
+    </item>
+    <item>
+      <title>Install from Google Play or from an APK on SiliconPlay</title>
+      <link>https://siliconplay.app/blog/choose-play-store-or-an-apk/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/choose-play-store-or-an-apk/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>How to choose the Play tablet or a single APK, and which file shapes version 1.0.0 will not install.</description>
+    </item>
+    <item>
+      <title>Google Play and Play services on the SiliconPlay tablet</title>
+      <link>https://siliconplay.app/blog/google-play-services-on-siliconplay/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/google-play-services-on-siliconplay/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>Which system image includes the store, what sign-in does not send to the Mac, and what to do when an app asks for Play services.</description>
+    </item>
+    <item>
+      <title>What the Android 16 tablet in SiliconPlay includes, and what it does not</title>
+      <link>https://siliconplay.app/blog/what-the-android-16-tablet-includes/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/what-the-android-16-tablet-includes/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>The default panel, Play versus the APIs image, no shared Mac folder, and the package formats this version will not install.</description>
+    </item>
+    <item>
+      <title>SiliconPlay settings by Mac chip, from M1 to M6</title>
+      <link>https://siliconplay.app/blog/settings-by-mac-chip-m1-to-m6/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/settings-by-mac-chip-m1-to-m6/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>What is the same on every Apple silicon Mac, what was measured on an M3 Max, and what to change in the game first.</description>
+    </item>
+    <item>
+      <title>Game performance in SiliconPlay: what to change, and the one measurement I trust</title>
+      <link>https://siliconplay.app/blog/game-performance-on-apple-silicon/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/game-performance-on-apple-silicon/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>How to read the M3 Max numbers, why the tablet panel is not the render resolution, and what to change when a game stutters.</description>
+    </item>
+    <item>
+      <title>On-screen controls for different Android games on a Mac</title>
+      <link>https://siliconplay.app/blog/keymap-layouts-for-different-games/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/keymap-layouts-for-different-games/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>How to turn the WASD preset into a layout for different games, and when direct touch is the right call.</description>
+    </item>
+    <item>
+      <title>Move from BlueStacks, MuMu, or Android Studio to SiliconPlay</title>
+      <link>https://siliconplay.app/blog/moving-from-another-emulator-on-mac/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/moving-from-another-emulator-on-mac/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>What does not copy across, how to reinstall games, and how to point SiliconPlay at an SDK you already have.</description>
+    </item>
+    <item>
+      <title>Use SiliconPlay next to Android Studio without keeping the IDE open</title>
+      <link>https://siliconplay.app/blog/siliconplay-next-to-android-studio/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/siliconplay-next-to-android-studio/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>When Studio is the right tool, when SiliconPlay is, and how one SDK folder can serve both.</description>
+    </item>
+    <item>
+      <title>Disk space, the SDK folder, and uninstalling SiliconPlay</title>
+      <link>https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>What the first-run download stores, what deleting the app leaves behind, and the order to remove the piles.</description>
+    </item>
+    <item>
+      <title>Screenshots, screen recording, and a bug report I can act on</title>
+      <link>https://siliconplay.app/blog/report-a-siliconplay-bug/</link>
+      <guid isPermaLink="true">https://siliconplay.app/blog/report-a-siliconplay-bug/</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+      <dc:creator>Ryan Gibo</dc:creator>
+      <description>What version 1.0.0 can capture, which facts to put in the email, and what not to send.</description>
+    </item>
     <item>
       <title>First run: how SiliconPlay sets up Android 16 on a Mac</title>
       <link>https://siliconplay.app/blog/first-run-android-16-on-mac/</link>
@@ -109,7 +205,7 @@
       <guid isPermaLink="true">https://siliconplay.app/blog/free-android-emulator-mac-m1-m5-comparison/</guid>
       <pubDate>Wed, 28 Oct 2026 21:00:00 GMT</pubDate>
       <dc:creator>Ryan Gibo</dc:creator>
-      <description>Free Android emulators for Mac M1 through M6 compared: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion and UTM. Prices, ads, key mapping and root, checked 28 Oct 2026.</description>
+      <description>Free Android emulators for Mac M1 through M6 compared: SiliconPlay, BlueStacks Air, MuMu Player Pro, Android Studio, Genymotion and UTM. What each one is for, without a price list.</description>
     </item>
     <item>
       <title>Android emulator on a Mac M1 or M4: step-by-step setup</title>

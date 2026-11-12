@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-US"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Disk space, the SDK folder, and uninstalling SiliconPlay | SiliconPlay</title>
+<meta name="description" content="What the first-run download stores, what deleting the app leaves behind, and the order to remove the piles.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/">
+<meta property="og:site_name" content="SiliconPlay">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Disk space, the SDK folder, and uninstalling SiliconPlay">
+<meta property="og:description" content="What the first-run download stores, what deleting the app leaves behind, and the order to remove the piles.">
+<meta property="og:url" content="https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://siliconplay.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:author" content="Ryan Gibo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Disk space, the SDK folder, and uninstalling SiliconPlay">
+<meta name="twitter:description" content="What the first-run download stores, what deleting the app leaves behind, and the order to remove the piles.">
+<meta name="twitter:image" content="https://siliconplay.app/assets/og.png">
+<meta name="twitter:image:alt" content="SiliconPlay app icon and the words Free Android emulator for Apple Silicon Macs">
+<link rel="alternate" type="application/rss+xml" title="SiliconPlay Blog" href="https://siliconplay.app/blog/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "BlogPosting"
+  ],
+  "headline": "Disk space, the SDK folder, and uninstalling SiliconPlay",
+  "description": "What the first-run download stores, what deleting the app leaves behind, and the order to remove the piles.",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Gibo",
+    "url": "https://siliconplay.app/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiliconPlay",
+    "url": "https://siliconplay.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://siliconplay.app/assets/icon-512.png"
+    }
+  },
+  "image": "https://siliconplay.app/assets/og.png",
+  "mainEntityOfPage": "https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/",
+  "url": "https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/"
+}
+</script>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('sp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};</script>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SiliconPlay",
+      "item": "https://siliconplay.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://siliconplay.app/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Disk space, the SDK folder, and uninstalling SiliconPlay",
+      "item": "https://siliconplay.app/blog/disk-space-sdk-folder-and-uninstall/"
+    }
+  ]
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-8721719872183277">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+</head><body class="docpage">
+<div class="wall" aria-hidden="true"></div>
+<main class="doc article">
+  <div class="doc-bar"><p class="doc-nav"><a href="/"><img src="/assets/favicon-32.png" width="16" height="16" alt="SiliconPlay icon"> SiliconPlay</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a></p></div>
+  <article>
+    <h1>Disk space, the SDK folder, and uninstalling SiliconPlay</h1>
+    <p class="byline">By <a href="/about/">Ryan Gibo</a> · Updated <time datetime="2026-11-12">12 November 2026</time></p>
+<p>SiliconPlay’s DMG is the small part. The large part is the Android SDK download: Google’s command-line tools, the Apple silicon emulator, platform-tools, and the Play arm64 system image. That pile stays when you delete the app, because it is not a hidden driver and it is not a cache I am allowed to sneak out from under you. This page is what each pile is, how to tell them apart, and the order to delete them if you actually want the disk space back.</p>
+<p>The app is for Apple silicon, M1 through M6, including Pro, Max, and Ultra. It is not compatible with Intel Macs. I have tested it on macOS Tahoe and macOS 27 Golden Gate. Disk layout does not change by chip.</p>
+
+<h2>Three piles</h2>
+<h3>The app</h3>
+<p>SiliconPlay.app lives in Applications if you dragged it there from the DMG. Deleting that bundle removes the Mac app. There is no kernel extension to approve on the way out, and no background service to unload. Quit the app first so you are not deleting a running copy.</p>
+<h3>The SDK folder</h3>
+<p>This is the folder you chose when the first run said it would download Android, or the existing SDK you pointed at because it already contained <code>emulator</code>, <code>adb</code>, and <code>sdkmanager</code>. If you pointed at a SDK you use for Android Studio, that folder is not “SiliconPlay’s.” Deleting it will break Studio too. If SiliconPlay created the download in a folder you made for it, that folder is the one that holds the emulator and the system image for this app.</p>
+<p>I am not going to publish a single path like “it is always ~/Library/Android” because the app asks you where to put it. You picked. If you do not remember, Pro Mode shows more of the main window, including hardware and diagnostics, and the first-run choice is the fact to recover. Pro Mode is in the toolbar, the View menu, and Settings. It is off until you turn it on. I will not invent a “reveal SDK in Finder” chord. If the menu on your build has one, it is drawn there. If I have not verified the chord, it is not in this article.</p>
+<h3>Application Support</h3>
+<p>SiliconPlay’s own files are under <code>~/Library/Application Support/SiliconPlay</code>. That is the app’s folder, separate from the SDK download. Keymaps and the app’s own state live on the SiliconPlay side of that line. The system image does not.</p>
+
+<h2>What a delete does not do</h2>
+<ul>
+<li>It does not sign you out of Google Play on Google’s servers. The tablet was a device on the account. Remove it from the account on Google’s side if you want it gone from the device list. The password was never sent to the Mac app.</li>
+<li>It does not delete some other emulator’s files. BlueStacks, MuMu, Studio, and UTM keep their own directories.</li>
+<li>It does not remove Homebrew’s JDK if you installed <code>openjdk@17</code> because setup asked. That JDK is Homebrew’s. Leave it if other tools use it.</li>
+<li>It does not erase a guest you created and then pointed at a shared SDK. Know which folder is shared before you empty it.</li>
+</ul>
+
+<h2>An order that matches the piles</h2>
+<ol>
+<li>Quit SiliconPlay. If an instance is running, stop it first.</li>
+<li>If you might want the games again, confirm cloud saves or accept the loss. I cannot export another format for you in version 1.0.0. The guest does not mount a host folder, so there is no live disk in Finder to copy. Files you pushed with adb are in <code>/sdcard/SiliconPlay</code> on the guest, which goes away with that image.</li>
+<li>Delete SiliconPlay from Applications if you want the app gone.</li>
+<li>Delete <code>~/Library/Application Support/SiliconPlay</code> if you want the app’s own files gone.</li>
+<li>Delete the SDK folder only if it is the one SiliconPlay downloaded for itself and nothing else points at it. If Studio uses it, do not.</li>
+</ol>
+<p>The inverse order is how people delete the SDK, discover Studio broke, and then re-download gigabytes they still needed. Look at the folder before you empty it. If you see a tree you did not create, stop.</p>
+
+<h2>How big it is</h2>
+<p>I am not going to print a byte count and let it rot. The Play arm64 system image plus the emulator and platform-tools is a real download, large enough that a half-finished copy and a finished copy are a disk problem, not a rounding error. A second instance does not always mean a second full image download, but it does mean a second guest’s data. If you created a rooted APIs tablet beside the Play tablet, you have two guests. Removing one instance inside the app is not the same as deleting the SDK folder.</p>
+<p>If the first download failed halfway, the folder can be large and still unbootable. That is not a reason to download a second copy into a second folder and keep both. Delete the broken folder you created for the attempt, then run setup once into a folder you mean to keep. The JDK message is separate. <code>brew install openjdk@17</code> does not replace a truncated image. It unblocks the package step the app named.</p>
+
+<h2>Reinstalling later</h2>
+<p>Drag the app back to Applications and point it at the SDK folder if you kept one. If the folder still has emulator, adb, and sdkmanager, you can skip fetching a second copy. If you deleted the image, you will download it again. Your Play sign-in does not survive the deleted image. You sign in again on the new tablet. Keymaps in Application Support do not survive if you deleted that folder. You place buttons again. That is the cost of a clean disk, and it is a better outcome than a mystery folder you are afraid to touch.</p>
+
+<h2>Shortcuts that matter while you are looking at the main window</h2>
+<p>You are not in the game. You are deciding what to delete. The install chord is still the first line, because the shortcut list is a list and Cmd+I stays at the top even when you are not installing.</p>
+<div class="table-wrap">
+<table>
+<caption>Chords that are easy to hit by accident while cleaning up</caption>
+<thead><tr><th>Keys</th><th>What it will do if an instance is up</th></tr></thead>
+<tbody>
+<tr><td>Cmd+I</td><td>Import an APK into the running instance. Do not press it while you are sorting files unless you mean to install one.</td></tr>
+<tr><td>Escape</td><td>Leave fullscreen, or Back.</td></tr>
+<tr><td>Shift-Escape</td><td>Release virtual fingers. Harmless if you are not in a game. Useful if you alt-tabbed out of one.</td></tr>
+</tbody>
+</table>
+</div>
+<p>Start, stop, and create instance are in the main window with Pro Mode off. I am not assigning them chords here. The menu draws those chords, and this build does not store them as a separate string I can quote. Open the menu on your copy.</p>
+
+<h2>FAQ</h2>
+<h3>I deleted the app and a huge folder remains. Is that a leftover driver?</h3>
+<p>No. It is the SDK download, or a SDK you already had. There is no kernel extension in this app.</p>
+<h3>Can I move the SDK folder to an external disk?</h3>
+<p>Only if you are willing to point the app at the new place and that disk is mounted when you start. I have not certified external disks. If the volume is asleep, the emulator will not be where the app left it. Try it if you need to, and tell me the macOS version and the chip if it fails.</p>
+<h3>Does emptying Trash remove the guest from my Google account?</h3>
+<p>No. Account device lists are Google’s. Trash is the Mac.</p>
+<h3>Where is this written from the app’s point of view?</h3>
+<p><a href="/blog/pro-mode-sdk-folder-and-app-files/">Pro Mode and the files the app leaves</a> is the companion page. This one is the disk-space version of the same facts.</p>
+
+<p class="more">Also see <a href="/blog/first-run-android-16-on-mac/">what the first run downloads</a> and <a href="/blog/report-a-siliconplay-bug/">what to send if a delete did not do what you expected</a>.</p>
+  </article>
+  <footer>
+    <p>SiliconPlay is not affiliated with Apple Inc. or Google LLC. Android is a trademark of Google LLC. Mac, macOS and Metal are trademarks of Apple Inc.</p>
+    <p><a href="/about/">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">Licenses &amp; open-source notices</a> · <a href="/contact/">Contact</a> · © 2026 SiliconPlay</p>
+  </footer>
+</main>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>

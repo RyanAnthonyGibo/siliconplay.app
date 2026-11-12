@@ -27,6 +27,7 @@ your Mac with Apple silicon.
 <span class="h">## Requirements</span>
 - Mac with Apple silicon (M1 through M6)
 - Tested on macOS Tahoe and macOS 27 Golden Gate
+- Not compatible with Intel Macs.
 
 <span class="h">## Free</span>
 SiliconPlay is free. Optionally support the project
