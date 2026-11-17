@@ -1,6 +1,14 @@
 {
   "ads": [
     {
+      "id": "siliconplay-update-soon",
+      "imageURL": "https://siliconplay.app/assets/icon-512.png",
+      "title": "New SiliconPlay coming soon 🙌🏻",
+      "subtitle": "Bug fixes, automatic updates, scroll-wheel zoom, and better compatibility.",
+      "clickURL": "https://siliconplay.app/download/",
+      "weight": 6
+    },
+    {
       "id": "support-monthly",
       "imageURL": "https://siliconplay.app/ads/support.png",
       "title": "Support SiliconPlay",
