@@ -2,9 +2,12 @@
 
 SiliconPlay is a free Android emulator for Mac. It runs on Apple Silicon, from M1 through M6. Android 16 runs natively on the Mac's ARM cores. The app was built from scratch by Ryan and uses the official Android Emulator underneath. Optional root is off by default. It has been tested on macOS Tahoe and macOS 27 Golden Gate; reports from other macOS versions are welcome.
 
+Current version: 1.1.0 (19 November 2026). What changed: https://siliconplay.app/whats-new/
+
 ## Key URLs
 
 - Home: https://siliconplay.app/
+- What's new in 1.1.0: https://siliconplay.app/whats-new/
 - About: https://siliconplay.app/about/
 - Contact: https://siliconplay.app/contact/
 - Comparison: https://siliconplay.app/compare/

@@ -24,7 +24,7 @@ LANGS = [
 ]
 GENERIC = {"en", "es", "pt", "zh"}
 PROTECTED = {
-    "download/index.html": "0213a24079008de006b47dcd83ee1cb7639d188dd3a11e5e1734772525e99c90",
+    "download/index.html": "cd8a40871902c7cc8a426258cb8d411924ce017825e7e17e5a43dc2d28d8a4da",
     "painel-f25ce03a71c3/index.html": "ee9fc4c9816571eba9df46268c85c320173884b6020b2e09547765d5b5d2fcf6",
 }
 EN_HREFLANG = {"en-US", "en", "x-default"}
@@ -263,12 +263,22 @@ def check_structured() -> None:
         if len(questions) != visible or visible == 0:
             fail(f"{home.relative_to(ROOT)} FAQ JSON-LD {len(questions)} != visible {visible}")
         app = next(n for n in data["@graph"] if n["@type"] == "SoftwareApplication")
-        if app.get("softwareVersion") != "1.0.0":
+        if app.get("softwareVersion") != "1.1.0":
             fail(f"{home.relative_to(ROOT)} softwareVersion")
         if "screenshot" in app or "aggregateRating" in app:
             fail(f"{home.relative_to(ROOT)} has screenshot or rating")
         if app["offers"].get("price") != "0":
             fail(f"{home.relative_to(ROOT)} offer price")
+    news = [ROOT / "whats-new/index.html"] + [ROOT / p / "whats-new/index.html" for p in PREFIXES if p]
+    if not all(p.is_file() for p in news):
+        fail("expected 21 whats-new pages")
+    for page in news:
+        if page.is_file():
+            check_jsonld(page, {"WebPage", "BreadcrumbList", "SoftwareApplication"})
+    for home in homes:
+        rel = "/whats-new/" if home.parent == ROOT else f"/{home.parent.name}/whats-new/"
+        if f'href="{rel}"' not in home.read_text(encoding="utf-8"):
+            fail(f"{home.relative_to(ROOT)} does not link to {rel}")
     compares = [ROOT / "compare/index.html"] + [ROOT / p / "compare/index.html" for p in PREFIXES if p]
     if len(compares) != 21 or not all(p.is_file() for p in compares):
         fail("expected 21 compare pages")
