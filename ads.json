@@ -1,12 +1,12 @@
 {
   "ads": [
     {
-      "id": "siliconplay-update-soon",
+      "id": "siliconplay-1-1-0-update",
       "imageURL": "https://siliconplay.app/assets/icon-512.png",
-      "title": "New SiliconPlay coming soon 🙌🏻",
-      "subtitle": "Bug fixes, automatic updates, scroll-wheel zoom, and better compatibility.",
-      "clickURL": "https://siliconplay.app/download/",
-      "weight": 6
+      "title": "SiliconPlay was updated to 1.1.0 🙌🏻",
+      "subtitle": "Download the new version: automatic updates, scroll-wheel zoom, and a right-click menu for instances.",
+      "clickURL": "https://siliconplay.app/whats-new/",
+      "weight": 12
     },
     {
       "id": "support-monthly",
