@@ -1,10 +1,10 @@
 {
   "ads": [
     {
-      "id": "siliconplay-1-1-1-update",
+      "id": "siliconplay-1-1-2-update",
       "imageURL": "https://siliconplay.app/assets/icon-512.png",
-      "title": "SiliconPlay was updated to 1.1.1 🙌🏻",
-      "subtitle": "Download the new version: more reliable Android startup and clearer error messages.",
+      "title": "SiliconPlay was updated to 1.1.2 🙌🏻",
+      "subtitle": "Download the new version: fluid trackpad scrolling, scroll sensitivity, and fixes for older macOS.",
       "clickURL": "https://siliconplay.app/whats-new/",
       "weight": 12
     },

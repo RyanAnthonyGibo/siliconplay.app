@@ -24,7 +24,7 @@ LANGS = [
 ]
 GENERIC = {"en", "es", "pt", "zh"}
 PROTECTED = {
-    "download/index.html": "5b4e1e2f977c47b8e4b7f0d0959288640de0c8f17ea9c6a1224fcd993e370372",
+    "download/index.html": "70435f96e1ee94f69295e21ea61bb6c989c21728d37db85a7ff521e043c779de",
     "painel-f25ce03a71c3/index.html": "ee9fc4c9816571eba9df46268c85c320173884b6020b2e09547765d5b5d2fcf6",
 }
 EN_HREFLANG = {"en-US", "en", "x-default"}
@@ -263,7 +263,7 @@ def check_structured() -> None:
         if len(questions) != visible or visible == 0:
             fail(f"{home.relative_to(ROOT)} FAQ JSON-LD {len(questions)} != visible {visible}")
         app = next(n for n in data["@graph"] if n["@type"] == "SoftwareApplication")
-        if app.get("softwareVersion") != "1.1.1":
+        if app.get("softwareVersion") != "1.1.2":
             fail(f"{home.relative_to(ROOT)} softwareVersion")
         if "screenshot" in app or "aggregateRating" in app:
             fail(f"{home.relative_to(ROOT)} has screenshot or rating")
