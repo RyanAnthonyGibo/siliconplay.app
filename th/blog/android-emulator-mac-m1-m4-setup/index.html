@@ -1,11 +1,33 @@
 <!doctype html>
 <html lang="th"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, follow">
 <title>โปรแกรมจำลอง Android สำหรับ Mac M1 และ M4: ติดตั้งทีละขั้นตอน | SiliconPlay</title>
 <meta name="description" content="วิธีติดตั้งอีมูเลเตอร์ Android บน Mac M1–M6: SiliconPlay, Google Play, ติดตั้ง APK ด้วย Command-I และการแมปปุ่ม">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://siliconplay.app/th/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/android-emulator-mac-m1-m4-setup/">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/android-emulator-mac-m1-m4-setup/">
 <link rel="alternate" type="application/rss+xml" title="บล็อก SiliconPlay" href="https://siliconplay.app/th/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="โปรแกรมจำลอง Android สำหรับ Mac M1 และ M4: ติดตั้งทีละขั้นตอน | SiliconPlay">
@@ -87,6 +109,48 @@
 </script>
 <meta name="google-adsense-account" content="ca-pub-8721719872183277">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://siliconplay.app/th/blog/android-emulator-mac-m1-m4-setup/",
+  "inLanguage": "th",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ใช้กับ Mac M1 ได้ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ M1–M6 รวมถึง Pro, Max และ Ultra"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต้องใช้ macOS เวอร์ชันไหน",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ผมทดสอบ SiliconPlay บน macOS Tahoe และ macOS 27 Golden Gate ถ้าเวอร์ชันอื่นทำงานต่างออกไป บอกผมได้เลย"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "นี่คืออีมูเลเตอร์ของ Google หรือเปล่า",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "เบื้องหลังใช่ คือ Android Emulator ตัวทางการของ Google ส่วนหน้าตาและการแมปปุ่มควบคุมเป็นของ SiliconPlay เอง เขียนขึ้นใหม่ทั้งหมด"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต้อง root ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ต้อง root เป็นตัวเลือกและปิดไว้โดยค่าเริ่มต้น มีไว้สำหรับนักพัฒนาที่ต้องการ"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body class="docpage">
 <div class="wall" aria-hidden="true"></div>
@@ -115,7 +179,7 @@
       <li>ลงชื่อเข้าใช้ Google Play แล้วติดตั้งเกมและแอปของคุณ ถ้าจะติดตั้งไฟล์ APK ให้กด Command-I</li>
       <li>คลิกที่ภาพ Android โหมดเริ่มต้นคือการสัมผัสโดยตรง ถ้าจะเล่นด้วยคีย์บอร์ด ให้ยอมรับพรีเซ็ตที่ SiliconPlay แนะนำสำหรับเกมของคุณ หรือใช้ MMORPG (WASD) แล้วย้ายปุ่ม</li>
     </ol>
-    <p><a class="cta" href="/download/">ดาวน์โหลด SiliconPlay สำหรับ Mac</a></p>
+    <p><a class="cta" href="/th/download/">ดาวน์โหลด SiliconPlay สำหรับ Mac</a></p>
 
     <h2>ปุ่มลัดที่ควรรู้ก่อน</h2>
     <ul>
@@ -155,7 +219,8 @@
   <footer>
     <p>SiliconPlay ไม่ได้เกี่ยวข้องกับ Apple Inc. หรือ Google LLC. Android เป็นเครื่องหมายการค้าของ Google LLC. Mac, macOS และ Metal เป็นเครื่องหมายการค้าของ Apple Inc.</p>
     <p><a href="/about/">เกี่ยวกับ</a> · <a href="/privacy.html">ความเป็นส่วนตัว</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">สัญญาอนุญาตและหมายเหตุโอเพนซอร์ส</a> · <a href="/contact/">ติดต่อ</a> · © 2026 SiliconPlay</p>
-  </footer>
+  <nav class="langlinks" aria-label="ภาษา"><a href="/blog/android-emulator-mac-m1-m4-setup/" hreflang="en-US" lang="en-US">English</a><a href="/pt-br/blog/android-emulator-mac-m1-m4-setup/" hreflang="pt-BR" lang="pt-BR">Português</a><a href="/es-mx/blog/android-emulator-mac-m1-m4-setup/" hreflang="es-MX" lang="es-MX">Español (MX)</a><a href="/es-es/blog/android-emulator-mac-m1-m4-setup/" hreflang="es-ES" lang="es-ES">Español (ES)</a><a href="/fr/blog/android-emulator-mac-m1-m4-setup/" hreflang="fr" lang="fr">Français</a><a href="/de/blog/android-emulator-mac-m1-m4-setup/" hreflang="de" lang="de">Deutsch</a><a href="/it/blog/android-emulator-mac-m1-m4-setup/" hreflang="it" lang="it">Italiano</a><a href="/nl/blog/android-emulator-mac-m1-m4-setup/" hreflang="nl" lang="nl">Nederlands</a><a href="/pl/blog/android-emulator-mac-m1-m4-setup/" hreflang="pl" lang="pl">Polski</a><a href="/ru/blog/android-emulator-mac-m1-m4-setup/" hreflang="ru" lang="ru">Русский</a><a href="/uk/blog/android-emulator-mac-m1-m4-setup/" hreflang="uk" lang="uk">Українська</a><a href="/tr/blog/android-emulator-mac-m1-m4-setup/" hreflang="tr" lang="tr">Türkçe</a><a href="/ar/blog/android-emulator-mac-m1-m4-setup/" hreflang="ar" lang="ar">العربية</a><a href="/hi/blog/android-emulator-mac-m1-m4-setup/" hreflang="hi" lang="hi">हिन्दी</a><a href="/id/blog/android-emulator-mac-m1-m4-setup/" hreflang="id" lang="id">Indonesia</a><a href="/th/blog/android-emulator-mac-m1-m4-setup/" hreflang="th" lang="th" aria-current="page">ไทย</a><a href="/vi/blog/android-emulator-mac-m1-m4-setup/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/ja/blog/android-emulator-mac-m1-m4-setup/" hreflang="ja" lang="ja">日本語</a><a href="/ko/blog/android-emulator-mac-m1-m4-setup/" hreflang="ko" lang="ko">한국어</a><a href="/zh-hans/blog/android-emulator-mac-m1-m4-setup/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-hant/blog/android-emulator-mac-m1-m4-setup/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+</footer>
 </main>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

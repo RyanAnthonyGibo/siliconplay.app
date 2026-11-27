@@ -90,6 +90,48 @@
 </script>
 <meta name="google-adsense-account" content="ca-pub-8721719872183277">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://siliconplay.app/blog/google-play-services-on-siliconplay/",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does SiliconPlay include the Play Store in the DMG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The first run downloads the Play arm64 system image, unless your existing SDK already supplies what the app needs. The store is on that image."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Play and root on one tablet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on this Play image. It refuses adb root. Root is the other instance, and that instance does not include the store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The app says my device is not certified. What can you do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I am not going to promise a certification workaround. Play’s device checks are Google’s. If the Play image’s own Play Store is signed in and updating apps, start from that fact and tell me the exact sentence on screen if a specific app still refuses. I will not ship a “fix integrity” toggle I do not have."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a Play password stored on the Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by SiliconPlay. Do not send the password to siliconplay.app@gmail.com. I will not ask for it."
+      }
+    }
+  ]
+}
+</script>
 </head><body class="docpage">
 <div class="wall" aria-hidden="true"></div>
 <main class="doc article">

@@ -1,11 +1,33 @@
 <!doctype html>
 <html lang="vi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, follow">
 <title>Gán phím trên giả lập Android cho Mac | SiliconPlay</title>
 <meta name="description" content="Gán bàn phím và tay cầm thành chạm trong SiliconPlay trên Mac. Nút trên màn hình, bố cục từng game, và keymap WASD mặc định.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/android-emulator-mac-keyboard-mapping/">
 <link rel="alternate" type="application/rss+xml" title="Blog SiliconPlay" href="https://siliconplay.app/vi/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="Gán phím trên giả lập Android cho Mac | SiliconPlay">
@@ -89,7 +111,7 @@
       "name": "Lấy keymap cho game của tôi ở đâu?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dùng preset mà ứng dụng đưa ra, hoặc áp MMORPG (WASD) rồi sửa. Tệp từ nơi khác phải là JSON stardroid.keymap hợp lệ."
+        "text": "Dùng preset mà ứng dụng đưa ra, hoặc áp MMORPG (WASD) rồi sửa. Tệp từ nơi khác phải là JSON SiliconPlay keymap hợp lệ."
       }
     }
   ]
@@ -210,7 +232,7 @@
     <p>Minecraft là ví dụ rõ của một bố cục không dùng bản chung. Preset của nó dùng WASD để đi, chuột trái để phá, chuột phải để dùng, Space để nhảy, E cho inventory, 1 đến 3 cho hotbar, và chuột phải để nhìn. Game có nút nằm ở các góc khác nhau cần một lượt chỉnh như vậy, không phải hàng MMORPG dọc mép dưới.</p>
     <p>Cùng bản dựng này còn có preset cho Genshin Impact, Roblox, Call of Duty Mobile và Clash of Clans. Tôi không giả vờ rằng một bố cục vừa mọi game. Nhận gợi ý, chơi một lát, rồi dời các chip.</p>
     <h2>Tìm keymap trên mạng</h2>
-    <p>Bản đáng tin là bản trong ứng dụng. Nếu bạn gặp một bố cục ai đó đăng lên, tệp phải là keymap của SiliconPlay: JSON có format id là <code>stardroid.keymap</code>. Tệp không phải JSON hợp lệ của định dạng đó sẽ bị từ chối. Vị trí trong tệp chia sẻ được vẽ cho màn hình của người khác, nên hãy mở trình sửa và chỉnh nút cho khớp màn hình của bạn.</p>
+    <p>Bản đáng tin là bản trong ứng dụng. Nếu bạn gặp một bố cục ai đó đăng lên, tệp phải là keymap của SiliconPlay: JSON có format id là <code>SiliconPlay keymap</code>. Tệp không phải JSON hợp lệ của định dạng đó sẽ bị từ chối. Vị trí trong tệp chia sẻ được vẽ cho màn hình của người khác, nên hãy mở trình sửa và chỉnh nút cho khớp màn hình của bạn.</p>
     <p>Pro Mode, trên thanh công cụ, menu View và Settings, hiện phần cứng, keymap và chẩn đoán ở cửa sổ chính. Nó tắt cho đến khi bạn bật. Bong bóng trên cửa sổ giả lập vẫn có sửa, lớp phủ, độ mờ, kích thước và đặt lại.</p>
     <h2>Câu hỏi</h2>
     <h3>SiliconPlay chạy trên những Mac nào?</h3>
@@ -220,14 +242,15 @@
     <h3>Tôi dùng tay cầm được không?</h3>
     <p>Được. Nút gamepad nhấn đúng các chip trên màn hình như bàn phím. Bố cục MMORPG đã gán vài skill và nút nhảy.</p>
     <h3>Lấy keymap cho game của tôi ở đâu?</h3>
-    <p>Dùng preset mà ứng dụng đưa ra, hoặc áp MMORPG (WASD) rồi sửa. Tệp từ nơi khác phải là JSON stardroid.keymap hợp lệ.</p>
-    <p><a class="cta" href="/download/">Tải SiliconPlay cho Mac</a></p>
+    <p>Dùng preset mà ứng dụng đưa ra, hoặc áp MMORPG (WASD) rồi sửa. Tệp từ nơi khác phải là JSON SiliconPlay keymap hợp lệ.</p>
+    <p><a class="cta" href="/vi/download/">Tải SiliconPlay cho Mac</a></p>
     <p class="more">Thêm trên blog: <a href="/vi/blog/android-emulator-mac-shortcuts/">các phím tắt bàn phím</a>, <a href="/vi/blog/rooted-android-emulator-mac/">dùng SiliconPlay để thử APK</a>, và <a href="/vi/blog/android-emulator-mac-m1-m2-m3-m4/">SiliconPlay trên M1 đến M6 và đời mới hơn</a>. Hoặc về <a href="/vi/">trang chủ SiliconPlay</a>.</p>
   </article>
   <footer>
     <p>SiliconPlay không liên kết với Apple Inc. hay Google LLC. Android là nhãn hiệu của Google LLC. Mac, macOS và Metal là nhãn hiệu của Apple Inc.</p>
     <p><a href="/about/">Giới thiệu</a> · <a href="/privacy.html">Quyền riêng tư</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">Giấy phép và ghi chú mã nguồn mở</a> · <a href="/contact/">Liên hệ</a> · © 2026 SiliconPlay</p>
-  </footer>
+  <nav class="langlinks" aria-label="Ngôn ngữ"><a href="/blog/android-emulator-mac-keyboard-mapping/" hreflang="en-US" lang="en-US">English</a><a href="/pt-br/blog/android-emulator-mac-keyboard-mapping/" hreflang="pt-BR" lang="pt-BR">Português</a><a href="/es-mx/blog/android-emulator-mac-keyboard-mapping/" hreflang="es-MX" lang="es-MX">Español (MX)</a><a href="/es-es/blog/android-emulator-mac-keyboard-mapping/" hreflang="es-ES" lang="es-ES">Español (ES)</a><a href="/fr/blog/android-emulator-mac-keyboard-mapping/" hreflang="fr" lang="fr">Français</a><a href="/de/blog/android-emulator-mac-keyboard-mapping/" hreflang="de" lang="de">Deutsch</a><a href="/it/blog/android-emulator-mac-keyboard-mapping/" hreflang="it" lang="it">Italiano</a><a href="/nl/blog/android-emulator-mac-keyboard-mapping/" hreflang="nl" lang="nl">Nederlands</a><a href="/pl/blog/android-emulator-mac-keyboard-mapping/" hreflang="pl" lang="pl">Polski</a><a href="/ru/blog/android-emulator-mac-keyboard-mapping/" hreflang="ru" lang="ru">Русский</a><a href="/uk/blog/android-emulator-mac-keyboard-mapping/" hreflang="uk" lang="uk">Українська</a><a href="/tr/blog/android-emulator-mac-keyboard-mapping/" hreflang="tr" lang="tr">Türkçe</a><a href="/ar/blog/android-emulator-mac-keyboard-mapping/" hreflang="ar" lang="ar">العربية</a><a href="/hi/blog/android-emulator-mac-keyboard-mapping/" hreflang="hi" lang="hi">हिन्दी</a><a href="/id/blog/android-emulator-mac-keyboard-mapping/" hreflang="id" lang="id">Indonesia</a><a href="/th/blog/android-emulator-mac-keyboard-mapping/" hreflang="th" lang="th">ไทย</a><a href="/vi/blog/android-emulator-mac-keyboard-mapping/" hreflang="vi" lang="vi" aria-current="page">Tiếng Việt</a><a href="/ja/blog/android-emulator-mac-keyboard-mapping/" hreflang="ja" lang="ja">日本語</a><a href="/ko/blog/android-emulator-mac-keyboard-mapping/" hreflang="ko" lang="ko">한국어</a><a href="/zh-hans/blog/android-emulator-mac-keyboard-mapping/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-hant/blog/android-emulator-mac-keyboard-mapping/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+</footer>
 </main>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

@@ -90,6 +90,48 @@
 </script>
 <meta name="google-adsense-account" content="ca-pub-8721719872183277">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://siliconplay.app/blog/adb-on-siliconplay/",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Cmd+I use adb?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app installs the APK you import. You do not have to open Terminal for that path. adb is there when you want the same install from a script or a build folder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Android Studio’s adb?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if SiliconPlay is using that same SDK folder, the one that contains emulator, adb, and sdkmanager. Two SDKs means two adb binaries, and they will confuse you the first time both emulators are running."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does adb say unauthorized or show an empty list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Empty means the instance is not running, or this adb is not the one for that emulator. I have not shipped a separate “authorize this computer” step for version 1.0.0, so I am not going to invent the dialog. Start the tablet, check adb devices with the SDK’s own adb, and only then debug the package."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do pushed files show up in the guest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "/sdcard/SiliconPlay. If a file manager in the guest does not show it, look at that path anyway. The Mac will not mount it."
+      }
+    }
+  ]
+}
+</script>
 </head><body class="docpage">
 <div class="wall" aria-hidden="true"></div>
 <main class="doc article">

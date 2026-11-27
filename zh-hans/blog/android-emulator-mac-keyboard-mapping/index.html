@@ -1,11 +1,33 @@
 <!doctype html>
 <html lang="zh-Hans"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, follow">
 <title>Mac安卓模拟器的按键映射 | SiliconPlay</title>
 <meta name="description" content="在 Mac 上的 SiliconPlay 里把键盘和手柄映射成触摸。含屏幕按钮、分游戏布局，以及默认 WASD 键位。">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/android-emulator-mac-keyboard-mapping/">
 <link rel="alternate" type="application/rss+xml" title="SiliconPlay 博客" href="https://siliconplay.app/zh-hans/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="Mac安卓模拟器的按键映射 | SiliconPlay">
@@ -89,7 +111,7 @@
       "name": "去哪里找我这个游戏的键位？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "用软件给出的预设，或者自己套用 MMORPG (WASD) 再改。别处来的文件必须是合法的 stardroid.keymap JSON。"
+        "text": "用软件给出的预设，或者自己套用 MMORPG (WASD) 再改。别处来的文件必须是合法的 SiliconPlay keymap JSON。"
       }
     }
   ]
@@ -210,7 +232,7 @@
     <p>Minecraft 很能说明什么叫“不是那套通用布局”。它的预设用 WASD 移动，左键用来破坏，右键用来使用，Space 跳跃，E 打开物品栏，1 到 3 是快捷栏，鼠标右键用来转动视角。按钮散在不同角落的游戏，需要的是这种调整，而不是沿底边排一排 MMORPG 按钮。</p>
     <p>同一个版本里还有 Genshin Impact、Roblox、Call of Duty Mobile 和 Clash of Clans 的预设。我不会假装一套布局能套住所有这些游戏。接受建议，玩一会儿，再把按钮挪到位。</p>
     <h2>到网上找键位</h2>
-    <p>靠得住的是软件里的那一份。如果你找到别人发出来的布局，它必须是 SiliconPlay 的键位文件：format id 为 <code>stardroid.keymap</code> 的 JSON。不是这个格式的合法 JSON，会被拒绝。共享文件里的位置是按别人的屏幕画的，所以打开编辑器，把按钮对齐到你自己的画面上。</p>
+    <p>靠得住的是软件里的那一份。如果你找到别人发出来的布局，它必须是 SiliconPlay 的键位文件：format id 为 <code>SiliconPlay keymap</code> 的 JSON。不是这个格式的合法 JSON，会被拒绝。共享文件里的位置是按别人的屏幕画的，所以打开编辑器，把按钮对齐到你自己的画面上。</p>
     <p>Pro Mode 在工具栏、View 菜单和 Settings 里。打开之后，主窗口会显示硬件、键位和诊断信息。你不打开，它就一直关着。模拟器窗口上的气泡仍然有编辑、叠加层、不透明度、大小和重置。</p>
     <h2>问题</h2>
     <h3>SiliconPlay 能在哪些 Mac 上运行？</h3>
@@ -220,14 +242,15 @@
     <h3>能用手柄吗？</h3>
     <p>能。手柄按下的是和键盘相同的屏幕按钮。MMORPG 布局里，若干技能和跳跃已经绑好了。</p>
     <h3>去哪里找我这个游戏的键位？</h3>
-    <p>用软件给出的预设，或者自己套用 MMORPG (WASD) 再改。别处来的文件必须是合法的 stardroid.keymap JSON。</p>
-    <p><a class="cta" href="/download/">下载 Mac 版 SiliconPlay</a></p>
+    <p>用软件给出的预设，或者自己套用 MMORPG (WASD) 再改。别处来的文件必须是合法的 SiliconPlay keymap JSON。</p>
+    <p><a class="cta" href="/zh-hans/download/">下载 Mac 版 SiliconPlay</a></p>
     <p class="more">博客里还有：<a href="/zh-hans/blog/android-emulator-mac-shortcuts/">键盘快捷键</a>、<a href="/zh-hans/blog/rooted-android-emulator-mac/">用 SiliconPlay 测试 APK</a>，以及 <a href="/zh-hans/blog/android-emulator-mac-m1-m2-m3-m4/">M1 到 M6 及更新芯片上的 SiliconPlay</a>。也可以回到 <a href="/zh-hans/">SiliconPlay 首页</a>。</p>
   </article>
   <footer>
     <p>SiliconPlay 与 Apple Inc. 和 Google LLC 没有关系。Android 是 Google LLC 的商标。Mac、macOS 和 Metal 是 Apple Inc. 的商标。</p>
     <p><a href="/about/">关于</a> · <a href="/privacy.html">隐私</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">许可与开源声明</a> · <a href="/contact/">联系</a> · © 2026 SiliconPlay</p>
-  </footer>
+  <nav class="langlinks" aria-label="语言"><a href="/blog/android-emulator-mac-keyboard-mapping/" hreflang="en-US" lang="en-US">English</a><a href="/pt-br/blog/android-emulator-mac-keyboard-mapping/" hreflang="pt-BR" lang="pt-BR">Português</a><a href="/es-mx/blog/android-emulator-mac-keyboard-mapping/" hreflang="es-MX" lang="es-MX">Español (MX)</a><a href="/es-es/blog/android-emulator-mac-keyboard-mapping/" hreflang="es-ES" lang="es-ES">Español (ES)</a><a href="/fr/blog/android-emulator-mac-keyboard-mapping/" hreflang="fr" lang="fr">Français</a><a href="/de/blog/android-emulator-mac-keyboard-mapping/" hreflang="de" lang="de">Deutsch</a><a href="/it/blog/android-emulator-mac-keyboard-mapping/" hreflang="it" lang="it">Italiano</a><a href="/nl/blog/android-emulator-mac-keyboard-mapping/" hreflang="nl" lang="nl">Nederlands</a><a href="/pl/blog/android-emulator-mac-keyboard-mapping/" hreflang="pl" lang="pl">Polski</a><a href="/ru/blog/android-emulator-mac-keyboard-mapping/" hreflang="ru" lang="ru">Русский</a><a href="/uk/blog/android-emulator-mac-keyboard-mapping/" hreflang="uk" lang="uk">Українська</a><a href="/tr/blog/android-emulator-mac-keyboard-mapping/" hreflang="tr" lang="tr">Türkçe</a><a href="/ar/blog/android-emulator-mac-keyboard-mapping/" hreflang="ar" lang="ar">العربية</a><a href="/hi/blog/android-emulator-mac-keyboard-mapping/" hreflang="hi" lang="hi">हिन्दी</a><a href="/id/blog/android-emulator-mac-keyboard-mapping/" hreflang="id" lang="id">Indonesia</a><a href="/th/blog/android-emulator-mac-keyboard-mapping/" hreflang="th" lang="th">ไทย</a><a href="/vi/blog/android-emulator-mac-keyboard-mapping/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/ja/blog/android-emulator-mac-keyboard-mapping/" hreflang="ja" lang="ja">日本語</a><a href="/ko/blog/android-emulator-mac-keyboard-mapping/" hreflang="ko" lang="ko">한국어</a><a href="/zh-hans/blog/android-emulator-mac-keyboard-mapping/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a><a href="/zh-hant/blog/android-emulator-mac-keyboard-mapping/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+</footer>
 </main>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

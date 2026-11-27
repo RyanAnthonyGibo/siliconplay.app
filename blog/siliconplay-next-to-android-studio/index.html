@@ -90,6 +90,48 @@
 </script>
 <meta name="google-adsense-account" content="ca-pub-8721719872183277">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://siliconplay.app/blog/siliconplay-next-to-android-studio/",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I have to uninstall Studio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. They coexist. Do not run both emulators unless you are ready to pick a device in adb."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my Studio AVDs show up in SiliconPlay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SiliconPlay creates the Android 16 tablet described above. Your other virtual devices stay in Studio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I debug a game’s native crash from here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can get logcat. The IDE’s debugger is still Studio’s. I am not wrapping it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The app installs in Studio’s emulator and not here.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the ABI and the package shape. This guest is ARM64. Split APKs and XAPK files stop at the door. A single APK with an ARM64 library is the file Cmd+I can install."
+      }
+    }
+  ]
+}
+</script>
 </head><body class="docpage">
 <div class="wall" aria-hidden="true"></div>
 <main class="doc article">

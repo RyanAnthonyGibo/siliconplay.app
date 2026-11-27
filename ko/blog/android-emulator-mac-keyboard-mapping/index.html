@@ -1,11 +1,33 @@
 <!doctype html>
 <html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, follow">
 <title>맥 안드로이드 에뮬레이터 키 매핑 | SiliconPlay</title>
 <meta name="description" content="맥의 SiliconPlay에서 키보드와 컨트롤러를 터치로 바꿉니다. 화면 버튼, 게임별 배치, 기본 WASD 키 맵을 다룹니다.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="en-US" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="x-default" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="en" href="https://siliconplay.app/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="pt-BR" href="https://siliconplay.app/pt-br/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="es-MX" href="https://siliconplay.app/es-mx/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="es-ES" href="https://siliconplay.app/es-es/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="fr" href="https://siliconplay.app/fr/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="de" href="https://siliconplay.app/de/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="it" href="https://siliconplay.app/it/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="nl" href="https://siliconplay.app/nl/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="pl" href="https://siliconplay.app/pl/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ru" href="https://siliconplay.app/ru/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="uk" href="https://siliconplay.app/uk/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="tr" href="https://siliconplay.app/tr/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ar" href="https://siliconplay.app/ar/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="hi" href="https://siliconplay.app/hi/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="id" href="https://siliconplay.app/id/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="th" href="https://siliconplay.app/th/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="vi" href="https://siliconplay.app/vi/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ja" href="https://siliconplay.app/ja/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="ko" href="https://siliconplay.app/ko/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="zh-Hans" href="https://siliconplay.app/zh-hans/blog/android-emulator-mac-keyboard-mapping/">
+<link rel="alternate" hreflang="zh-Hant" href="https://siliconplay.app/zh-hant/blog/android-emulator-mac-keyboard-mapping/">
 <link rel="alternate" type="application/rss+xml" title="SiliconPlay 블로그" href="https://siliconplay.app/ko/blog/feed.xml">
 <meta property="og:site_name" content="SiliconPlay">
 <meta property="og:title" content="맥 안드로이드 에뮬레이터 키 매핑 | SiliconPlay">
@@ -89,7 +111,7 @@
       "name": "내 게임용 키 맵은 어디에서 구합니까?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "앱이 제안하는 프리셋을 쓰거나, MMORPG (WASD)를 직접 적용한 뒤 고칩니다. 다른 곳에서 온 파일은 올바른 stardroid.keymap JSON이어야 합니다."
+        "text": "앱이 제안하는 프리셋을 쓰거나, MMORPG (WASD)를 직접 적용한 뒤 고칩니다. 다른 곳에서 온 파일은 올바른 SiliconPlay keymap JSON이어야 합니다."
       }
     }
   ]
@@ -210,7 +232,7 @@
     <p>Minecraft은 일반 배치가 아닌 예가 분명합니다. 그 프리셋은 이동에 WASD, 부수기에 왼쪽 클릭, 사용에 오른쪽 클릭, 점프에 Space, 인벤토리에 E, 단축 막대에 1에서 3, 시선에 마우스 오른쪽 버튼을 씁니다. 버튼이 다른 모서리에 있는 게임은 아래쪽 MMORPG 줄이 아니라 이런 맞추기가 필요합니다.</p>
     <p>같은 빌드에는 Genshin Impact, Roblox, Call of Duty Mobile, Clash of Clans용 프리셋도 들어 있습니다. 배치 하나가 모두에 맞는다고 말하지 않겠습니다. 제안을 받아들이고, 잠시 플레이한 다음 칩을 옮기십시오.</p>
     <h2>온라인에서 키 맵 찾기</h2>
-    <p>믿을 수 있는 사본은 앱 안에 있는 것입니다. 누군가 올려 둔 배치를 찾았다면, 그 파일은 SiliconPlay 키 맵이어야 합니다. format id가 <code>stardroid.keymap</code>인 JSON입니다. 그 형식에 맞지 않는 JSON은 거부됩니다. 공유 파일의 위치는 다른 사람의 화면에 맞춰 그려져 있습니다. 편집기를 열고 버튼을 자신의 화면에 맞추십시오.</p>
+    <p>믿을 수 있는 사본은 앱 안에 있는 것입니다. 누군가 올려 둔 배치를 찾았다면, 그 파일은 SiliconPlay 키 맵이어야 합니다. format id가 <code>SiliconPlay keymap</code>인 JSON입니다. 그 형식에 맞지 않는 JSON은 거부됩니다. 공유 파일의 위치는 다른 사람의 화면에 맞춰 그려져 있습니다. 편집기를 열고 버튼을 자신의 화면에 맞추십시오.</p>
     <p>Pro Mode는 도구 막대, View 메뉴, Settings에 있습니다. 켜면 메인 창에 하드웨어, 키 맵, 진단이 나옵니다. 직접 켜기 전까지는 꺼져 있습니다. 에뮬레이터 창의 거품에는 편집, 오버레이, 불투명도, 크기, 초기화가 그대로 있습니다.</p>
     <h2>질문</h2>
     <h3>SiliconPlay는 어떤 Mac에서 됩니까?</h3>
@@ -220,14 +242,15 @@
     <h3>컨트롤러를 쓸 수 있습니까?</h3>
     <p>쓸 수 있습니다. 게임패드 버튼은 키보드와 같은 화면 칩을 누릅니다. MMORPG 배치에는 몇몇 스킬과 점프가 이미 연결되어 있습니다.</p>
     <h3>내 게임용 키 맵은 어디에서 구합니까?</h3>
-    <p>앱이 제안하는 프리셋을 쓰거나, MMORPG (WASD)를 직접 적용한 뒤 고칩니다. 다른 곳에서 온 파일은 올바른 stardroid.keymap JSON이어야 합니다.</p>
-    <p><a class="cta" href="/download/">Mac용 SiliconPlay 다운로드</a></p>
+    <p>앱이 제안하는 프리셋을 쓰거나, MMORPG (WASD)를 직접 적용한 뒤 고칩니다. 다른 곳에서 온 파일은 올바른 SiliconPlay keymap JSON이어야 합니다.</p>
+    <p><a class="cta" href="/ko/download/">Mac용 SiliconPlay 다운로드</a></p>
     <p class="more">블로그에서 더 보기: <a href="/ko/blog/android-emulator-mac-shortcuts/">키보드 단축키</a>, <a href="/ko/blog/rooted-android-emulator-mac/">SiliconPlay로 APK 시험하기</a>, <a href="/ko/blog/android-emulator-mac-m1-m2-m3-m4/">M1부터 M6와 그 이후의 SiliconPlay</a>. 또는 <a href="/ko/">SiliconPlay 홈</a>으로 돌아갑니다.</p>
   </article>
   <footer>
     <p>SiliconPlay는 Apple Inc. 및 Google LLC와 관련이 없습니다. Android는 Google LLC의 상표입니다. Mac, macOS, Metal은 Apple Inc.의 상표입니다.</p>
     <p><a href="/about/">소개</a> · <a href="/privacy.html">개인정보</a> · <a href="/terms/">Terms</a> · <a href="/licenses.html">라이선스와 오픈소스 고지</a> · <a href="/contact/">연락</a> · © 2026 SiliconPlay</p>
-  </footer>
+  <nav class="langlinks" aria-label="언어"><a href="/blog/android-emulator-mac-keyboard-mapping/" hreflang="en-US" lang="en-US">English</a><a href="/pt-br/blog/android-emulator-mac-keyboard-mapping/" hreflang="pt-BR" lang="pt-BR">Português</a><a href="/es-mx/blog/android-emulator-mac-keyboard-mapping/" hreflang="es-MX" lang="es-MX">Español (MX)</a><a href="/es-es/blog/android-emulator-mac-keyboard-mapping/" hreflang="es-ES" lang="es-ES">Español (ES)</a><a href="/fr/blog/android-emulator-mac-keyboard-mapping/" hreflang="fr" lang="fr">Français</a><a href="/de/blog/android-emulator-mac-keyboard-mapping/" hreflang="de" lang="de">Deutsch</a><a href="/it/blog/android-emulator-mac-keyboard-mapping/" hreflang="it" lang="it">Italiano</a><a href="/nl/blog/android-emulator-mac-keyboard-mapping/" hreflang="nl" lang="nl">Nederlands</a><a href="/pl/blog/android-emulator-mac-keyboard-mapping/" hreflang="pl" lang="pl">Polski</a><a href="/ru/blog/android-emulator-mac-keyboard-mapping/" hreflang="ru" lang="ru">Русский</a><a href="/uk/blog/android-emulator-mac-keyboard-mapping/" hreflang="uk" lang="uk">Українська</a><a href="/tr/blog/android-emulator-mac-keyboard-mapping/" hreflang="tr" lang="tr">Türkçe</a><a href="/ar/blog/android-emulator-mac-keyboard-mapping/" hreflang="ar" lang="ar">العربية</a><a href="/hi/blog/android-emulator-mac-keyboard-mapping/" hreflang="hi" lang="hi">हिन्दी</a><a href="/id/blog/android-emulator-mac-keyboard-mapping/" hreflang="id" lang="id">Indonesia</a><a href="/th/blog/android-emulator-mac-keyboard-mapping/" hreflang="th" lang="th">ไทย</a><a href="/vi/blog/android-emulator-mac-keyboard-mapping/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/ja/blog/android-emulator-mac-keyboard-mapping/" hreflang="ja" lang="ja">日本語</a><a href="/ko/blog/android-emulator-mac-keyboard-mapping/" hreflang="ko" lang="ko" aria-current="page">한국어</a><a href="/zh-hans/blog/android-emulator-mac-keyboard-mapping/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-hant/blog/android-emulator-mac-keyboard-mapping/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+</footer>
 </main>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ebf9abc28f487282469b38ed706bb4"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>
