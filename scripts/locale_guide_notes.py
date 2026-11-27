@@ -3,7 +3,7 @@
 
 DOWNLOAD_JS = r"""
 (function () {
-  var DMG = "https://github.com/RyanAnthonyGibo/siliconplay.app/releases/download/v1.1.2/SiliconPlay.dmg";
+  var DMG = "https://github.com/RyanAnthonyGibo/siliconplay.app/releases/download/v1.1.3/SiliconPlay.dmg";
   var RUM = "cloudflareinsights.com";
   var left = false;
   var rumStarted = false;
@@ -131,11 +131,11 @@ DOWNLOAD = {
     "": _dl(
         "en-US", "en_US",
         "Download SiliconPlay for Mac (M1–M6)",
-        "Download SiliconPlay 1.1.2, a free Android emulator for Apple Silicon Macs from M1 through M6. Tested on macOS Tahoe and macOS 27 Golden Gate. Not compatible with Intel Macs.",
+        "Download SiliconPlay 1.1.3, a free Android emulator for Apple Silicon Macs from M1 through M6. Tested on macOS Tahoe and macOS 27 Golden Gate. Not compatible with Intel Macs.",
         "Download SiliconPlay for Mac",
         "Preparing the download…",
         "The download should start in a moment. If it does not, use the link.",
-        "SiliconPlay is a free Android emulator for Macs with Apple silicon, from M1 through M6. The file is SiliconPlay.dmg, version 1.1.2. The DMG is the Mac app. Android itself downloads the first time you open it.",
+        "SiliconPlay is a free Android emulator for Macs with Apple silicon, from M1 through M6. The file is SiliconPlay.dmg, version 1.1.3. The DMG is the Mac app. Android itself downloads the first time you open it.",
         "Download SiliconPlay for Mac",
         "After the file arrives",
         [

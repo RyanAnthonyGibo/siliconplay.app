@@ -69,7 +69,7 @@ GNU GPL version 2.
 
 <a href="privacy.html">Privacy</a> · <a href="mailto:${CONTACT_EMAIL}">Contact</a>`},
  terminal:{t:'Terminal — zsh',w:540,h:300,cls:'term',html:`<span class="p">~ %</span> siliconplay --version
-SiliconPlay 1.1.2
+SiliconPlay 1.1.3
   guest      Android 16 (arm64)
   hypervisor Apple Hypervisor.framework
   graphics   Vulkan → Metal (safe math)
@@ -113,7 +113,7 @@ tick();setInterval(tick,15000);
 /* menus */
 function closeMenus(){$$('.menu').forEach(m=>{m.classList.remove('open');m.firstElementChild.setAttribute('aria-expanded','false')})}
 $$('.menu>button').forEach(b=>{
- b.addEventListener('click',e=>{e.stopPropagation();const m=b.parentElement,was=m.classList.contains('open');closeMenus();if(!was){m.classList.add('open');b.setAttribute('aria-expanded','true');const f=$('a',m);f&&f.focus()}});
+ b.addEventListener('click',e=>{e.stopPropagation();const m=b.parentElement,was=m.classList.contains('open');closeMenus();if(!was){m.classList.add('open');b.setAttribute('aria-expanded','true');const f=$('a',m);f&&f.focus({preventScroll:true})}});
  b.addEventListener('mouseenter',()=>{if($('.menu.open')&&!b.parentElement.classList.contains('open'))b.click()});
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.menu'))closeMenus()});

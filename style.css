@@ -25,13 +25,15 @@ button{font:inherit;color:inherit}
 .wall::after{content:"";position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 #desk{position:fixed;inset:0;overflow:hidden;user-select:none}
 /* menubar */
-.menubar{position:absolute;top:0;left:0;right:0;height:26px;display:flex;align-items:center;gap:2px;padding:0 10px;background:var(--bar);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);z-index:1000;font-size:13px;overflow-x:auto}
+.menubar{position:absolute;top:0;left:0;right:0;height:26px;display:flex;align-items:center;flex-wrap:nowrap;gap:2px;padding:0 10px;z-index:1000;font-size:13px;overflow:visible}
+.menubar::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bar);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);pointer-events:none}
 .mb-logo{display:flex;padding:0 8px}.mb-logo img{border-radius:3px}
-.menu{position:relative}
-.menu>button{background:none;border:0;padding:3px 9px;border-radius:5px;cursor:default}
+.menu{position:relative;overflow:visible}
+.menu.open{z-index:3}
+.menu>button{background:none;border:0;padding:3px 9px;border-radius:5px;cursor:default;white-space:nowrap;line-height:16px}
 .menu>button.mb-app{font-weight:600}
 .menu>button:hover,.menu>button[aria-expanded=true]{background:rgba(127,127,127,.25)}
-.drop{display:none;position:absolute;top:24px;left:0;min-width:220px;padding:5px;border-radius:9px;background:var(--win);border:1px solid var(--winb);box-shadow:0 12px 40px rgba(0,0,0,.25);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px)}
+.drop{display:none;position:absolute;top:calc(100% + 4px);left:0;z-index:5;min-width:220px;padding:5px;border-radius:9px;background:var(--win);border:1px solid var(--winb);box-shadow:0 12px 40px rgba(0,0,0,.25);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px)}
 .menu.open .drop{display:block}
 .drop a{display:block;padding:4px 10px;border-radius:5px;color:var(--fg);text-decoration:none}
 .drop a:hover,.drop a:focus{background:#3d6cff;color:#fff;outline:0}
@@ -39,7 +41,7 @@ button{font:inherit;color:inherit}
 .mb-right{margin-left:auto;display:flex;align-items:center;gap:12px}
 .mb-theme{background:none;border:0;display:flex;padding:3px;border-radius:5px;cursor:pointer}.mb-theme:hover{background:rgba(127,127,127,.25)}
 .menu,.mb-link,.mb-logo{flex:0 0 auto}
-.mb-link{padding:3px 9px;border-radius:5px;color:var(--fg);text-decoration:none;white-space:nowrap}
+.mb-link{padding:3px 9px;border-radius:5px;color:var(--fg);text-decoration:none;white-space:nowrap;line-height:16px}
 .mb-link:hover,.mb-link:focus-visible{background:rgba(127,127,127,.25)}
 #clock{font-variant-numeric:tabular-nums}
 /* desktop icons */
@@ -219,7 +221,7 @@ a.app,a.dk{text-decoration:none;color:inherit}
 /* type scale (macOS: body 13, headline 13/600, title3 15, title2 17, title1 22; iOS body 17, caption 12, footnote 13) */
 html,body,button,input{font-family:var(--font);-webkit-font-smoothing:antialiased}
 .mono,.term,.sbody.mono,.sbody.term,code,pre{font-family:var(--mono)}
-.menubar{font-size:13px;height:24px;padding:0 var(--s2)}
+.menubar{font-size:13px;height:24px;padding:0 var(--s2);overflow:visible}
 .menubar button,.mb-app{font-size:13px}
 .mb-app{font-weight:700}
 .body{font-size:13px;line-height:1.45;padding:var(--s3) var(--s4)}

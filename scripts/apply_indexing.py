@@ -82,7 +82,7 @@ THIN = {
     "free-android-emulator-mac-m1-m5-comparison",
 }
 NO_HREFLANG_KEYS = {"privacy.html", "licenses.html"}
-DMG = "https://github.com/RyanAnthonyGibo/siliconplay.app/releases/download/v1.1.2/SiliconPlay.dmg"
+DMG = "https://github.com/RyanAnthonyGibo/siliconplay.app/releases/download/v1.1.3/SiliconPlay.dmg"
 BEACON = "74ebf9abc28f487282469b38ed706bb4"
 ADSENSE_META = '<meta name="google-adsense-account" content="ca-pub-8721719872183277">'
 ADSENSE_SCRIPT = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>'
@@ -195,7 +195,7 @@ def download_page(prefix: str) -> str:
                 "name": "SiliconPlay",
                 "operatingSystem": pack["os"],
                 "applicationCategory": "DeveloperApplication",
-                "softwareVersion": "1.1.2",
+                "softwareVersion": "1.1.3",
                 "inLanguage": lang,
                 "url": url,
                 "downloadUrl": DMG,
