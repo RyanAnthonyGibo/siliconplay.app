@@ -421,6 +421,9 @@ body.docpage{background:var(--bg)}
 .langswitch select{max-width:8.6rem;border:0;background:transparent;color:inherit;font:inherit;padding:2px 4px;border-radius:5px;cursor:pointer}
 .menubar .langswitch select{height:22px;padding:0 2px;font-size:12px;line-height:22px}
 .langswitch select:hover,.langswitch select:focus-visible{background:rgba(127,127,127,.25);outline:none}
+.langlinks{display:flex;flex-wrap:wrap;gap:4px 10px;margin:10px 0 0;font-size:12px;line-height:1.6}
+.langlinks a[aria-current="page"]{font-weight:650;color:inherit;text-decoration:none}
+#phone .langlinks{justify-content:center;padding:2px 16px 8px;position:relative;z-index:2}
 .doc-bar{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:22px}
 .doc-bar .doc-nav{margin-bottom:0;min-width:0}
 .phone-site-nav{position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 12px;padding:8px 14px 0;font-size:13px;font-weight:600}

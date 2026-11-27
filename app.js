@@ -69,7 +69,7 @@ GNU GPL version 2.
 
 <a href="privacy.html">Privacy</a> · <a href="mailto:${CONTACT_EMAIL}">Contact</a>`},
  terminal:{t:'Terminal — zsh',w:540,h:300,cls:'term',html:`<span class="p">~ %</span> siliconplay --version
-SiliconPlay 1.0
+SiliconPlay 1.1.2
   guest      Android 16 (arm64)
   hypervisor Apple Hypervisor.framework
   graphics   Vulkan → Metal (safe math)

@@ -17,17 +17,26 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 HOST = "https://siliconplay.app"
-SKIP_PARTS = {"download", "painel-f25ce03a71c3"}
+SKIP_PARTS = {"painel-f25ce03a71c3"}
 LANGS = [
     "en-US", "pt-BR", "es-MX", "es-ES", "fr", "de", "it", "nl", "pl", "ru",
     "uk", "tr", "ar", "hi", "id", "th", "vi", "ja", "ko", "zh-Hans", "zh-Hant",
 ]
 GENERIC = {"en", "es", "pt", "zh"}
 PROTECTED = {
-    "download/index.html": "70435f96e1ee94f69295e21ea61bb6c989c21728d37db85a7ff521e043c779de",
+    "download/index.html": "ed0e0c8c55866aae3782fb606634d62394e226afb6afaf6192d17a446663da17",
     "painel-f25ce03a71c3/index.html": "ee9fc4c9816571eba9df46268c85c320173884b6020b2e09547765d5b5d2fcf6",
 }
 EN_HREFLANG = {"en-US", "en", "x-default"}
+HREFLANG_CODE = {
+    "": "en-US",
+    "pt-br": "pt-BR",
+    "es-mx": "es-MX",
+    "es-es": "es-ES",
+    "zh-hans": "zh-Hans",
+    "zh-hant": "zh-Hant",
+}
+NO_HREFLANG = {"privacy.html", "licenses.html"}
 ADSENSE_SCRIPT = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721719872183277" crossorigin="anonymous"></script>'
 ADSENSE_META = '<meta name="google-adsense-account" content="ca-pub-8721719872183277">'
 # English-only guides. Translations of these slugs are not published.
@@ -141,72 +150,101 @@ def public_url(path: Path) -> str:
     return f"{HOST}/{rel}"
 
 
-def indexable_english_urls() -> set[str]:
-    urls = set()
+def page_key(path: Path) -> tuple[str, str]:
+    rel = path.relative_to(ROOT)
+    parts = rel.parts
+    if parts and parts[0] in {p for p in PREFIXES if p}:
+        prefix = parts[0]
+        rest = parts[1:]
+    else:
+        prefix = ""
+        rest = parts
+    if rest[-1] == "index.html":
+        key = "/".join(rest[:-1])
+    else:
+        key = "/".join(rest)
+    return prefix, key
+
+
+def hreflang_code(prefix: str) -> str:
+    return HREFLANG_CODE.get(prefix, prefix)
+
+
+def indexable_pages() -> list[Path]:
+    pages = []
     for path in ROOT.rglob("*.html"):
-        if is_translated(path):
-            continue
-        if any(part in SKIP_PARTS for part in path.parts):
+        if "painel-f25ce03a71c3" in path.parts:
             continue
         text = path.read_text(encoding="utf-8")
-        if 'name="robots"' in text and "noindex" in text:
+        rel = path.relative_to(ROOT).as_posix()
+        if "noindex" in text:
+            fail(f"{rel} still has noindex")
             continue
-        urls.add(public_url(path))
-    return urls
+        pages.append(path)
+    return pages
 
 
 def check_urls() -> None:
     seen = []
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    if "feed.xml" in sitemap:
+        fail("sitemap lists a feed")
+    if "painel-f25ce03a71c3" in sitemap:
+        fail("sitemap includes the stats dashboard")
     locs = re.findall(r"<loc>([^<]+)</loc>", sitemap)
-    expected = indexable_english_urls()
+    pages = indexable_pages()
+    expected = {public_url(path) for path in pages}
     if set(locs) != expected:
         missing = sorted(expected - set(locs))[:8]
         extra = sorted(set(locs) - expected)[:8]
-        fail(f"sitemap urls {len(locs)} != english indexable {len(expected)} missing {missing} extra {extra}")
-    if any("/pt-br/" in loc or "/de/" in loc or "/ja/" in loc for loc in locs):
-        fail("sitemap still lists a translation")
+        fail(f"sitemap urls {len(locs)} != indexable {len(expected)} missing {missing} extra {extra}")
     if sitemap.count("<lastmod>") != len(locs):
         fail("a sitemap url is missing lastmod")
-    if "/download/" in sitemap or "painel-f25ce03a71c3" in sitemap:
-        fail("sitemap includes a protected path")
-    for loc in locs:
-        seen.append(("sitemap", loc))
-        hrefs = []
-    # hreflang inside each url block: English self-references only.
-    # Translations are noindex, so they are not alternates.
-    for block in re.findall(r"<url>(.*?)</url>", sitemap, re.S):
-        loc = re.search(r"<loc>([^<]+)</loc>", block).group(1)
-        alts = re.findall(r'hreflang="([^"]+)" href="([^"]+)"', block)
-        if loc.endswith("/privacy.html") or loc.endswith("/licenses.html"):
-            if alts:
-                fail(f"privacy/licenses should not carry hreflang: {loc}")
-            continue
-        codes = {code for code, _ in alts}
-        if codes != EN_HREFLANG:
-            fail(f"sitemap hreflang set for {loc} is {sorted(codes)}")
-        for code, href in alts:
-            if href != loc:
-                fail(f"sitemap hreflang {code} for {loc} points at {href}")
-            seen.append((f"sitemap:{code}", href))
-
-    for path in html_files():
+    if not any(loc.endswith("/download/") for loc in locs):
+        fail("sitemap is missing the download pages")
+    clusters: dict[str, dict[str, str]] = {}
+    for path in pages:
+        prefix, key = page_key(path)
+        clusters.setdefault(key, {})[prefix] = public_url(path)
+    head_sets: dict[str, set[tuple[str, str]]] = {}
+    for path in pages:
         text = path.read_text(encoding="utf-8")
         rel = path.relative_to(ROOT).as_posix()
+        prefix, key = page_key(path)
         canon = re.search(r'<link rel="canonical" href="([^"]+)"', text)
-        if canon:
+        if not canon:
+            fail(f"{rel} is missing a canonical")
+        else:
             seen.append((f"canonical:{rel}", canon.group(1)))
-        for code, href in re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', text):
+            if canon.group(1) != public_url(path):
+                fail(f"{rel} canonical is {canon.group(1)}")
+        alts = re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', text)
+        if key in NO_HREFLANG:
+            if alts:
+                fail(f"{rel} should not carry hreflang")
+        else:
+            expected_alts = set()
+            present = clusters[key]
+            if "" in present:
+                en = present[""]
+                expected_alts.add(("en-US", en))
+                expected_alts.add(("en", en))
+                expected_alts.add(("x-default", en))
+            for item, href in present.items():
+                if item:
+                    expected_alts.add((hreflang_code(item), href))
+            got = set(alts)
+            if got != expected_alts:
+                fail(f"{rel} hreflang mismatch missing {sorted(expected_alts - got)[:3]} extra {sorted(got - expected_alts)[:3]}")
+            head_sets.setdefault(key, got)
+            if head_sets[key] != got:
+                fail(f"{rel} hreflang set differs inside {key}")
+        for code, href in alts:
             seen.append((f"hreflang:{rel}:{code}", href))
-        if is_translated(path):
-            if "hreflang=" in text:
-                fail(f"{rel} is noindex but still has hreflang")
-            if "noindex" not in text:
-                fail(f"{rel} translation is missing noindex")
-        elif 'hreflang="x-default"' in text:
-            codes = set(re.findall(r'hreflang="([^"]+)"', text))
-            if codes != EN_HREFLANG:
-                fail(f"{rel} hreflang set is {sorted(codes)}")
+        if 'http-equiv="refresh"' in text or 'location.replace("/download/")' in text:
+            fail(f"{rel} still refreshes or redirects")
+        if 'href="index.html"' in text:
+            fail(f"{rel} links to index.html")
         for match in re.finditer(r"https://siliconplay\.app[^\s\"'<>]*", text):
             url = match.group(0).rstrip(".,)")
             if re.search(r"/blog/[a-z0-9-]+$", url):
@@ -214,6 +252,43 @@ def check_urls() -> None:
         for href in re.findall(r'(?:href|value)="([^"]+)"', text):
             if re.search(r"(?:^|/)blog/[a-z0-9-]+$", href) and "feed" not in href:
                 fail(f"{rel} relative blog url missing trailing slash: {href}")
+            if href.startswith("/") and not href.endswith("/") and not re.search(r"\.[a-z0-9]+$", href.split("?")[0], re.I):
+                if "feed" not in href:
+                    fail(f"{rel} directory link missing trailing slash: {href}")
+
+    for block in re.findall(r"<url>(.*?)</url>", sitemap, re.S):
+        loc = re.search(r"<loc>([^<]+)</loc>", block).group(1)
+        seen.append(("sitemap", loc))
+        alts = re.findall(r'hreflang="([^"]+)" href="([^"]+)"', block)
+        if loc.endswith("/privacy.html") or loc.endswith("/licenses.html"):
+            if alts:
+                fail(f"privacy/licenses should not carry hreflang: {loc}")
+            continue
+        # Sitemap alternates must match the page head, ignoring order.
+        # Find the page whose public url is loc.
+        key = None
+        for candidate, present in clusters.items():
+            if loc in present.values():
+                key = candidate
+                break
+        if key is None:
+            fail(f"sitemap loc has no page cluster: {loc}")
+            continue
+        if set(alts) != head_sets.get(key, set()):
+            fail(f"sitemap hreflang for {loc} does not match the page head")
+        for code, href in alts:
+            seen.append((f"sitemap:{code}", href))
+
+    painel = ROOT / "painel-f25ce03a71c3" / "index.html"
+    if "noindex" not in painel.read_text(encoding="utf-8"):
+        fail("stats dashboard lost noindex")
+    for prefix in PREFIXES:
+        if not prefix:
+            continue
+        path = ROOT / prefix / "download" / "index.html"
+        text = path.read_text(encoding="utf-8")
+        if f'href="https://siliconplay.app/{prefix}/download/"' not in text and f'canonical" href="https://siliconplay.app/{prefix}/download/"' not in text:
+            fail(f"{prefix} download is not self-canonical")
 
     bad = [(src, url, classify(url)) for src, url in seen if classify(url) != "200"]
     if bad:
